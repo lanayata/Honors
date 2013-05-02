@@ -45,7 +45,9 @@ float tzoom = 0.3;
 // plane (0) or not (1)
 float flatness = 0;
 float tflatness = 0;
-String mode;
+
+String mode = "none";
+String layout = "orbital";
 
 // add controls (e.g. zoom, sort selection)
 Controls controls; 
@@ -319,6 +321,7 @@ void sortBySize() {
 }
 
 void sortByTemp() {
+      mode = "temp";
   // Raise the planets off of the plane according to their temperature
   for (int i = 0; i < planets.size(); i++) {
     planets.get(i).tz = map(planets.get(i).temp, minTemp, maxTemp, 0, 500);
@@ -330,6 +333,7 @@ void sortByESL() {
   for (int i = 0; i < planets.size(); i++) {
     planets.get(i).tz = map(planets.get(i).ESLg, 0, 1, 0, 500);
   }
+   mode = "ESL";
 }
 
 void unSort() {
@@ -368,17 +372,20 @@ void keyPressed() {
     //toggleFlatness(1);
     yMax = maxTemp;
     yMin = minTemp;
+ 
   } 
   
-  else if (key == '0') {
+  else if (key == '0') { 
     // TODO Earth needs to be placed at center of data
     sortByESL(); //Sort data by earth similarity index
     yLabel = "Surface ESL";
     xLabel = "Interior ESL";
-    mode = "ESL";
-   // toggleFlatness(1);
+
+    //toggleFlatness(1);
     yMax = 1.0;
     yMin = 0.0;
+    
+    mode = "ESL";
   } 
   
   else if (key == '`') {
@@ -400,6 +407,12 @@ void keyPressed() {
 
 void toggleFlatness(float f) {
   tflatness = f;
+  if (layout.equals("orbital")){
+  layout = "graph";
+  }
+  else {
+  layout = "orbital";
+  }
   if (tflatness == 1) {
     trot.x = PI/2;
     trot.z = -PI/2;

@@ -69,6 +69,10 @@ class ExoPlanet {
   float pixelAxis;
   float z = 0;
   float tz = 0;
+  float x;
+  float tx = 0;
+  float y;
+  float ty = 0;
 
   // ESI for comparing to Earth similarity
   float ESLs;
@@ -79,9 +83,10 @@ class ExoPlanet {
 
   boolean feature = false;
   String label = "";
+  Kepler2012 kepler;
 
   // Constructor function
-  ExoPlanet(Kepler2012 kep) {};
+  ExoPlanet(Kepler2012 kep) {kepler = kep;};
   
   // Load exoplanet data from a comma-delimited string (see key at top of class)
   ExoPlanet fromCSV2012(String[] sa) {
@@ -90,6 +95,9 @@ class ExoPlanet {
     radius = float(sa[2]);
     axis = float(sa[3]);
     temp = float(sa[4]);
+       ESLi = float(sa[35]);
+    ESLs = float(sa[36]);
+    ESLg = float(sa[37]);
     return(this);
   }
 
@@ -124,6 +132,8 @@ class ExoPlanet {
   void update() {
     theta += thetaSpeed;
     z += (tz - z) * 0.1;
+    x += (tx - x) * 0.1;
+    y += (ty - y) * 0.1;
   }
 
   // Draw
@@ -132,8 +142,13 @@ class ExoPlanet {
     if (axis > 1.06 && feature) {
       apixelAxis = ((1.06 + ((axis - 1.06) * ( 1 - flatness))) * AU) + axis * 10;
     }
-    float x = sin(theta * (1 - flatness)) * apixelAxis;
-    float y = cos(theta * (1 - flatness)) * apixelAxis;
+  
+    else if (label.equals("Earth") && mode.equals("ESL") && layout.equals("orbital")){
+      apixelAxis = ESLg;
+    }
+   
+    x = sin(theta * (1 - flatness)) * apixelAxis;
+    y = cos(theta * (1 - flatness)) * apixelAxis;
     pushMatrix();
     translate(x, y, z);
     // Billboard
