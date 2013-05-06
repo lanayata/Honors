@@ -8,6 +8,7 @@
  */
 
 // Import libraries
+import napplet.*;
 import processing.opengl.*;
   import controlP5.*;
 import java.awt.Frame;
@@ -59,6 +60,7 @@ boolean draggingZoomSlider = false;
 ExoPlanet selectedPlanet = null;
     Textarea textArea;
 ControlFrame cf;
+  NAppletManager nappletManager;
 
 private ControlP5 cp5;
 
@@ -86,8 +88,8 @@ void setup() {
   
   controls = new Controls();
   showControls = 1;
-
-
+nappletManager = new NAppletManager(this);
+   //  nappletManager.createWindowedNApplet("MeanWindow",10,10);
 }
 
 void getPlanets(String url, boolean is2012) {
@@ -327,6 +329,7 @@ void draw() {
 }
 ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
   Frame f = new Frame(theName);
+  System.out.println("jere"+f);
   ControlFrame p = new ControlFrame(this, theWidth, theHeight);
   f.add(p);
   p.init();
@@ -459,7 +462,12 @@ void mousePressed(){
       textArea.setText("Kepler Plantary Index (KOI):\t"+selectedPlanet.KOI +"\nTemperature: \t"+selectedPlanet.temp
       +"\nGravity: \t"+selectedPlanet.KOI+"\nZone Class: \t"+selectedPlanet.zone_class+"\nMass Class: \t"+selectedPlanet.mass_class
       +"\nComposition Class: \t"+selectedPlanet.composition_class+"\nHabitable Class: \t"+selectedPlanet.habitable_class
-      +"\nAtmosphere Class: \t"+selectedPlanet.atmosphere_class+"\nTechnology Discovered By: \t"+selectedPlanet.disc_tech+"\nYear Discovered: \t"+selectedPlanet.disc_year);
+      +"\nAtmosphere Class: \t"+selectedPlanet.atmosphere_class+"\nTechnology Discovered By: \t"+selectedPlanet.disc_tech
+      +"\nYear Discovered: \t"+selectedPlanet.disc_year
+      +"\nESLg: \t"+selectedPlanet.ESLg
+      +"\nESLi: \t"+selectedPlanet.ESLi
+        +"\nESLs: \t"+selectedPlanet.ESLs
+      );
       break;
     }
   }
@@ -502,4 +510,11 @@ public class ControlFrame extends PApplet {
 
   
 }
+public class MeanWindow extends NApplet {   
+ 
+  public void setup() {    size(250, 250);    nappletCloseable = false; 
+// Not actually necessary, false by default.  
+  }  
+public void draw() {    background(100, 0, 0);    stroke(255);    fill(255);        }  
 
+} 
