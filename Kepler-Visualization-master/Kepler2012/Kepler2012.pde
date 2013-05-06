@@ -9,6 +9,8 @@
 
 // Import libraries
 import processing.opengl.*;
+  import controlP5.*;
+import java.awt.Frame;
 PFont label = createFont("Arial", 96);
 
 // Here's the big list that will hold all of our planets
@@ -48,19 +50,30 @@ float tflatness = 0;
 
 String mode = "none";
 String layout = "orbital";
-
 // add controls (e.g. zoom, sort selection)
 Controls controls; 
 int showControls;
 boolean draggingZoomSlider = false;
+//PFrame f;
+//secondApplet s;
+ExoPlanet selectedPlanet = null;
+    Textarea textArea;
+ControlFrame cf;
+
+private ControlP5 cp5;
 
 void setup() {
-  size(displayWidth, displayHeight, OPENGL);
+  //f = new PFrame();
+  size(displayWidth, displayHeight-300, OPENGL);
   background(0);
   smooth();  
-
   textFont(label, 96);
 
+  cp5 = new ControlP5(this);
+  // by calling function addControlFrame() a
+  // new frame is created and an instance of class
+  // ControlFrame is instanziated.
+  cf = addControlFrame("Exoplanet Controls", displayWidth,250);
   // Because NASA released their data from 2011 and 2012 in somewhat
   // different formats, there are two functions to load the data and populate
   // the 'galaxy'.
@@ -73,7 +86,8 @@ void setup() {
   
   controls = new Controls();
   showControls = 1;
-  
+
+
 }
 
 void getPlanets(String url, boolean is2012) {
@@ -214,6 +228,7 @@ void draw() {
        trot.x += (pmouseY - mouseY) * 0.01;
        trot.z += (pmouseX - mouseX) * 0.01;
      }
+     
   }
 
 
@@ -226,7 +241,7 @@ void draw() {
   }
     
   // We want the center to be in the middle and slightly down when flat, and to the left and down when raised
-  translate(width/2 - (width * flatness * 0.4), height/2 + (160 * rot.x));
+  translate(width/2 - (width * flatness * 0.2), height/2 + (160 * rot.x));
   rotateX(rot.x);
   rotateZ(rot.z);
   scale(zoom);
@@ -306,14 +321,24 @@ void draw() {
       p.render();
     }
   }    
- 
-
   
 
   
 }
-
+ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
+  Frame f = new Frame(theName);
+  ControlFrame p = new ControlFrame(this, theWidth, theHeight);
+  f.add(p);
+  p.init();
+  f.setTitle(theName);
+  f.setSize(p.w, p.h);
+  f.setLocation(100, 100);
+  f.setResizable(false);
+  f.setVisible(true);
+  return p;
+}
 void sortBySize() {
+        mode = "size";
   // Raise the planets off of the plane according to their size
   for (int i = 0; i < planets.size(); i++) {
     planets.get(i).tz = map(planets.get(i).radius, 0, maxSize, 0, 500);
@@ -331,7 +356,7 @@ void sortByTemp() {
 void sortByESL() {
   // Raise the planets off of the plane according to their ESL
   for (int i = 0; i < planets.size(); i++) {
-    planets.get(i).tz = map(planets.get(i).ESLg, 0, 1, 0, 500);
+    planets.get(i).tz = map(planets.get(i).ESLs, 0, 1, 0, 500);
   }
    mode = "ESL";
 }
@@ -362,14 +387,16 @@ void keyPressed() {
     sortBySize(); 
     //toggleFlatness(1);
     yLabel = "Planet Size (Earth Radii)";
+    xLabel = "Semi-major Axis (Astronomical Units)";
     yMax = maxSize;
     yMin = 0;
   } 
   else if (key == '2') {
     sortByTemp(); 
-    trot.x = PI/2;
+    //trot.x = PI/2;
     yLabel = "Temperature (Kelvin)";
     //toggleFlatness(1);
+    xLabel = "Semi-major Axis (Astronomical Units)";
     yMax = maxTemp;
     yMin = minTemp;
  
@@ -384,7 +411,6 @@ void keyPressed() {
     //toggleFlatness(1);
     yMax = 1.0;
     yMin = 0.0;
-    
     mode = "ESL";
   } 
   
@@ -426,5 +452,54 @@ void mouseReleased() {
    draggingZoomSlider = false;
 }
 
+void mousePressed(){
+       for (int i = 0; i < planets.size(); i++) {
+    if(planets.get(i).overPlanet()){
+      selectedPlanet = planets.get(i);
+      textArea.setText("Kepler Plantary Index (KOI):\t"+selectedPlanet.KOI +"\nTemperature: \t"+selectedPlanet.temp
+      +"\nGravity: \t"+selectedPlanet.KOI+"\nZone Class: \t"+selectedPlanet.zone_class+"\nMass Class: \t"+selectedPlanet.mass_class
+      +"\nComposition Class: \t"+selectedPlanet.composition_class+"\nHabitable Class: \t"+selectedPlanet.habitable_class
+      +"\nAtmosphere Class: \t"+selectedPlanet.atmosphere_class+"\nTechnology Discovered By: \t"+selectedPlanet.disc_tech+"\nYear Discovered: \t"+selectedPlanet.disc_year);
+      break;
+    }
+  }
+}
+public class ControlFrame extends PApplet {
+  int w, h;
+  int abc = 100;
+    ControlP5 cp5;
 
+  Object parent;
+  public void setup() {
+    size(w, h);
+    frameRate(25);
+    cp5 = new ControlP5(this);
+      textArea = cp5.addTextarea("txt")
+                  .setPosition(0,0)
+                  .setSize(250,500)                 
+                  .setFont(createFont("arial",12))
+                  .setLineHeight(14)
+                  //.setColor(color(128))
+                  .setColorBackground(color(255,100))
+                  .setColorForeground(color(255,100));
+                  ;
+                  textArea.setText("No Planet Selected");
+  }
+  public void draw() {
+      background(abc);
+  }
+  private ControlFrame() {
+  }
+  public ControlFrame(Object theParent, int theWidth, int theHeight) {
+    parent = theParent;
+    w = theWidth;
+    h = theHeight;
+  }
+  public ControlP5 control() {
+    return cp5;
+  }
+
+
+  
+}
 

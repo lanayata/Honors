@@ -70,20 +70,28 @@ class ExoPlanet {
   float z = 0;
   float tz = 0;
   float x;
-  float tx = 0;
   float y;
-  float ty = 0;
 
   // ESI for comparing to Earth similarity
   float ESLs;
   float ESLi;
   float ESLg;
-
+ float apixelAxis;
   color col;
-
+  boolean planetOver;
   boolean feature = false;
   String label = "";
   Kepler2012 kepler;
+  
+   String zone_class;
+   String mass_class;
+   String composition_class;
+   String atmosphere_class;
+   String habitable_class;
+   float gravity;
+   int disc_year;
+    String disc_tech;
+  
 
   // Constructor function
   ExoPlanet(Kepler2012 kep) {kepler = kep;};
@@ -98,6 +106,14 @@ class ExoPlanet {
        ESLi = float(sa[35]);
     ESLs = float(sa[36]);
     ESLg = float(sa[37]);
+          zone_class = sa[21];
+        mass_class = sa[22];
+    composition_class = sa[23];
+     atmosphere_class = sa[24];
+    habitable_class = sa[25];
+      gravity = float(sa[26]);
+    disc_year = int(sa[42]);
+      disc_tech = sa[43];
     return(this);
   }
 
@@ -112,6 +128,14 @@ class ExoPlanet {
     ESLi = float(sa[35]);
     ESLs = float(sa[36]);
     ESLg = float(sa[37]);
+        zone_class = sa[21];
+        mass_class = sa[22];
+    composition_class = sa[23];
+     atmosphere_class = sa[24];
+    habitable_class = sa[25];
+    gravity = float(sa[26]);
+    disc_year = int(sa[43]);
+      disc_tech = sa[42];
     return(this);
   }
 
@@ -130,25 +154,40 @@ class ExoPlanet {
 
   // Update
   void update() {
+//UPDATE THE Z AXIS WHILE PROVIDING TRANSITION MOVEMENT//
     theta += thetaSpeed;
     z += (tz - z) * 0.1;
-    x += (tx - x) * 0.1;
-    y += (ty - y) * 0.1;
+ 
+ //UPDATE THE X AND Y AXIS OF THE EXOPLANETS//
+       apixelAxis = pixelAxis;
+       //Existing code, still not sure what it does
+    if (axis > 1.06 && feature) {
+      apixelAxis = ((1.06 + ((axis - 1.06) * ( 1 - flatness))) * AU) + axis * 10;
+    }
+  // move earth to center of orbit if in ESL mode and orbital view
+     if (label.equals("Earth") && mode.equals("ESL") && layout.equals("orbital")){
+      apixelAxis = ESLg;
+    }
+  // place exoplanets by their ESL on X axis if in graph view and mode is ESL
+      else if (!label.equals("Earth") && mode.equals("ESL") && layout.equals("graph")){
+        apixelAxis = Math.abs(ESLi*AU);
+    
+    }
+     x = sin(theta * (1 - flatness)) * apixelAxis;
+     y = cos(theta * (1 - flatness)) * apixelAxis;
+    //CHECK IF CURSER IS OVER PLANET
+    //if ( overPlanet(x, y, z, pixelRadius+10) ) {
+   //   planetOver = true;
+    //  System.out.print(KOI);
+     //     System.out.println(" ON");
+   // } else {
+    //  planetOver = false;
+    //} 
+    
   }
 
   // Draw
   void render() {
-    float apixelAxis = pixelAxis;
-    if (axis > 1.06 && feature) {
-      apixelAxis = ((1.06 + ((axis - 1.06) * ( 1 - flatness))) * AU) + axis * 10;
-    }
-  
-    else if (label.equals("Earth") && mode.equals("ESL") && layout.equals("orbital")){
-      apixelAxis = ESLg;
-    }
-   
-    x = sin(theta * (1 - flatness)) * apixelAxis;
-    y = cos(theta * (1 - flatness)) * apixelAxis;
     pushMatrix();
     translate(x, y, z);
     // Billboard
@@ -186,5 +225,20 @@ class ExoPlanet {
     ellipse(0, 0, pixelRadius, pixelRadius);
     popMatrix();
   }
+  
+  
+  
+  boolean overPlanet() {
+  float clickX = screenX(x,y,z) - mouseX;
+  float clickY = screenY(x,y,z) - mouseY;
+  if (sqrt(sq(clickX) + sq(clickY)) < pixelRadius/2 ) {
+    System.out.println("KOI:"+KOI);
+    return true;
+  } else {
+    return false;
+  }
+}
+
+  
 }
 
