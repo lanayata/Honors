@@ -43,14 +43,11 @@ float tempMax = maxTemp;
   
   void controlEvent(ControlEvent event) {
   if(event.isFrom("Temperature Range")) {
-    // min and max values are stored in an array.
-    // access this array with controller().arrayValue().
-    // min is at index 0, max is at index 1.
     minTemp = event.getController().getArrayValue(0);
     maxTemp = event.getController().getArrayValue(1);
-    filterData();
-    println("range update, done.");
+
   }
+      filterData();
   
 }
 
@@ -81,10 +78,12 @@ void keyPressed() {
   }
 
 public void filterData(){
-  for (int i = 0; i < planets.size(); i++){
-   ExoPlanet p = planets.get(i);
+  planets.clear();
+  for (int i = 0; i < allPlanets.size(); i++){
+   ExoPlanet p = allPlanets.get(i);
+   //  Sort by Temp
     if (p.temp > minTemp && p.temp < maxTemp){
-      System.out.println("KOI: "+p.KOI);
+      planets.add(p);
     }
   
     }

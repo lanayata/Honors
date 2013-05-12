@@ -114,7 +114,10 @@ void getPlanets(String url, boolean is2012) {
       p.label = p.KOI;
     } 
   }
-  planets = allPlanets;
+    for (int i = 0; i < allPlanets.size(); i++)
+  {
+  planets.add(allPlanets.get(i));
+}
 }
 
 void updatePlanetColors()
@@ -319,11 +322,16 @@ void draw() {
 
   // Render the planets
   for (int i = 0; i < planets.size(); i++) {
+  try{
     ExoPlanet p = planets.get(i);
+        if(p!=null){
     if (p.vFlag < 4) {
       p.update();
       p.render();
     }
+    }
+  }
+  catch(Exception e){System.out.println("Error");}
   }    
   
 
