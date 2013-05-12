@@ -5,8 +5,6 @@ public class ControlFrame extends PApplet {
 int myColorBackground = color(0,0,0);
 Range range;
 
-float tempMin = minTemp;
-float tempMax = maxTemp;
 
   Object parent;
   public void setup() {
@@ -31,7 +29,21 @@ float tempMax = maxTemp;
              .setSize(200,40)
              .setHandleSize(20)
              .setRange(minTemp,maxTemp)
-             .setRangeValues(maxTemp/4,maxTemp/3)
+             .setRangeValues(minTemp,maxTemp)
+             // after the initialization we turn broadcast back on again
+             .setBroadcast(true)
+             .setColorForeground(color(255,40))
+             .setColorBackground(color(255,40))  
+             ;
+             //
+              //Slider for size
+              range = cp5.addRange("Size Range")
+             .setBroadcast(false) 
+             .setPosition(300,50)
+             .setSize(200,40)
+             .setHandleSize(20)
+             .setRange(minSize,maxSize)
+             .setRangeValues(minSize,maxSize)
              // after the initialization we turn broadcast back on again
              .setBroadcast(true)
              .setColorForeground(color(255,40))
@@ -45,7 +57,10 @@ float tempMax = maxTemp;
   if(event.isFrom("Temperature Range")) {
     minTemp = event.getController().getArrayValue(0);
     maxTemp = event.getController().getArrayValue(1);
-
+  }
+    if(event.isFrom("Size Range")) {
+    minSize = event.getController().getArrayValue(0);
+    maxSize = event.getController().getArrayValue(1);
   }
       filterData();
   
@@ -83,7 +98,9 @@ public void filterData(){
    ExoPlanet p = allPlanets.get(i);
    //  Sort by Temp
     if (p.temp > minTemp && p.temp < maxTemp){
+      if (p.radius > minSize && p.radius < maxSize){
       planets.add(p);
+      }
     }
   
     }
