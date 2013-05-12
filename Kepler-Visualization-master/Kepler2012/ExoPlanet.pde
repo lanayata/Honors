@@ -231,7 +231,7 @@ class ExoPlanet {
   boolean overPlanet() {
   float clickX = screenX(x,y,z) - mouseX;
   float clickY = screenY(x,y,z) - mouseY;
-  if (sqrt(sq(clickX) + sq(clickY)) < pixelRadius/2 ) {
+  if (sqrt(sq(clickX) + sq(clickY)) < pixelRadius/2+10 ) {
     System.out.println("KOI:"+KOI);
     return true;
   } else {

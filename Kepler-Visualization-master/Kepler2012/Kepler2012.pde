@@ -10,86 +10,86 @@
 // Import libraries
 import napplet.*;
 import processing.opengl.*;
-  import controlP5.*;
+import controlP5.*;
 import java.awt.Frame;
+
+// Set up font
 PFont label = createFont("Arial", 96);
-
 // Here's the big list that will hold all of our planets
+ArrayList<ExoPlanet> allPlanets = new ArrayList();
 ArrayList<ExoPlanet> planets = new ArrayList();
-
 // Conversion constants
 float ER = 1;           // Earth Radius, in pixels
 float AU = 1500;        // Astronomical Unit, in pixels
 float YEAR = 50000;     // One year, in frames
-
 // Max/Min numbers
 float maxTemp = 3257;
 float minTemp = 3257;
-
 float yMax = 10;
 float yMin = 0;
-
 float maxSize = 0;
 float minSize = 1000000;
-
 // Axis labels
 String xLabel = "Semi-major Axis (Astronomical Units)";
 String yLabel = "Temperature (Kelvin)";
-
 // Rotation Vectors - control the main 3D space
 PVector rot = new PVector();
 PVector trot = new PVector();
-
 // Master zoom
 float zoom = 0;
 float tzoom = 0.3;
-
 // This is a zero-one weight that controls whether the planets are flat on the
 // plane (0) or not (1)
 float flatness = 0;
 float tflatness = 0;
-
-String mode = "none";
-String layout = "orbital";
 // add controls (e.g. zoom, sort selection)
 Controls controls; 
 int showControls;
 boolean draggingZoomSlider = false;
-//PFrame f;
-//secondApplet s;
-ExoPlanet selectedPlanet = null;
-    Textarea textArea;
-ControlFrame cf;
-  NAppletManager nappletManager;
 
-private ControlP5 cp5;
+
+//////////////////////
+// Owens Changes
+//////////////////////
+// Store what mode the visualisation is in ie:ESL 
+String mode = "none";
+// Store what layout the visualisation is in (orbital or graph)
+String layout = "orbital";
+// Selected planet that was last clicked on
+ExoPlanet selectedPlanet = null;
+// Set up second window
+Textarea textArea;
+ControlFrame cf;
+//NAppletManager nappletManager;
+//
+ControlP5 cp5;
 
 void setup() {
-  //f = new PFrame();
   size(displayWidth, displayHeight-300, OPENGL);
   background(0);
   smooth();  
   textFont(label, 96);
-
-  cp5 = new ControlP5(this);
-  // by calling function addControlFrame() a
-  // new frame is created and an instance of class
-  // ControlFrame is instanziated.
-  cf = addControlFrame("Exoplanet Controls", displayWidth,250);
   // Because NASA released their data from 2011 and 2012 in somewhat
   // different formats, there are two functions to load the data and populate
   // the 'galaxy'.
   getPlanets(sketchPath + "/data/KeplerData.csv", false);
-  println(planets.size());
   getPlanets(sketchPath + "/data/planets2012_2.csv", true);
-  println(planets.size());
   addMarkerPlanets();
   updatePlanetColors();
-  
+  cp5 = new ControlP5(this);
   controls = new Controls();
   showControls = 1;
-nappletManager = new NAppletManager(this);
-   //  nappletManager.createWindowedNApplet("MeanWindow",10,10);
+
+////////
+//Owens Changes
+////////
+  
+  cf = addControlFrame("Exoplanet Controls", displayWidth,250);
+  
+  //Set up slider for planet ESLg
+
+  //
+ /////////////// 
 }
 
 void getPlanets(String url, boolean is2012) {
@@ -104,7 +104,7 @@ void getPlanets(String url, boolean is2012) {
     else {
       p = new ExoPlanet(this).fromCSV(split(pArray[i], ",")).init();
     }
-    planets.add(p);
+    allPlanets.add(p);
     maxSize = max(p.radius, maxSize);
     minSize = min(p.radius, minSize);
 
@@ -114,22 +114,23 @@ void getPlanets(String url, boolean is2012) {
       p.label = p.KOI;
     } 
   }
+  planets = allPlanets;
 }
 
 void updatePlanetColors()
 {
   // Calculate overall min/max temps (will include the marker planets this way)
-  for (int i = 0; i < planets.size(); i++)
+  for (int i = 0; i < allPlanets.size(); i++)
   {
-    ExoPlanet p = planets.get(i);
+    ExoPlanet p = allPlanets.get(i);
     maxTemp = max(p.temp, maxTemp);
     minTemp = min(abs(p.temp), minTemp);
   }
 
   colorMode(HSB);
-  for (int i = 0; i < planets.size(); i++)
+  for (int i = 0; i < allPlanets.size(); i++)
   {
-    ExoPlanet p = planets.get(i);
+    ExoPlanet p = allPlanets.get(i);
 
     if (0 < p.temp)
     {
@@ -159,7 +160,7 @@ void addMarkerPlanets() {
   mars.ESLi = 0.815;
   mars.ESLg = 0.697;
   mars.init();
-  planets.add(mars);
+  allPlanets.add(mars);
 
   ExoPlanet earth = new ExoPlanet(this);
   earth.period = 365;
@@ -172,7 +173,7 @@ void addMarkerPlanets() {
   earth.feature = true;
   earth.label = "Earth";
   earth.init();
-  planets.add(earth);
+  allPlanets.add(earth);
 
   ExoPlanet jupiter = new ExoPlanet(this);
   jupiter.period = 4331;
@@ -185,7 +186,7 @@ void addMarkerPlanets() {
   jupiter.feature = true;
   jupiter.label = "Jupiter";
   jupiter.init();
-  planets.add(jupiter);
+  allPlanets.add(jupiter);
 
   ExoPlanet mercury = new ExoPlanet(this);
   mercury.period = 87.969;
@@ -198,7 +199,7 @@ void addMarkerPlanets() {
   mercury.feature = true;
   mercury.label = "Mercury";
   mercury.init();
-  planets.add(mercury);
+  allPlanets.add(mercury);
 }
 
 void draw() {
@@ -240,6 +241,7 @@ void draw() {
   // show controls
   if (showControls == 1) {
      controls.render(); 
+
   }
     
   // We want the center to be in the middle and slightly down when flat, and to the left and down when raised
@@ -346,6 +348,9 @@ void sortBySize() {
   for (int i = 0; i < planets.size(); i++) {
     planets.get(i).tz = map(planets.get(i).radius, 0, maxSize, 0, 500);
   }
+   for (int i = 0; i < allPlanets.size(); i++) {
+    allPlanets.get(i).tz = map(allPlanets.get(i).radius, 0, maxSize, 0, 500);
+  }
 }
 
 void sortByTemp() {
@@ -354,12 +359,18 @@ void sortByTemp() {
   for (int i = 0; i < planets.size(); i++) {
     planets.get(i).tz = map(planets.get(i).temp, minTemp, maxTemp, 0, 500);
   }
+    for (int i = 0; i < allPlanets.size(); i++) {
+    allPlanets.get(i).tz = map(allPlanets.get(i).temp, minTemp, maxTemp, 0, 500);
+  }
 }
 
 void sortByESL() {
   // Raise the planets off of the plane according to their ESL
   for (int i = 0; i < planets.size(); i++) {
     planets.get(i).tz = map(planets.get(i).ESLs, 0, 1, 0, 500);
+  }
+   for (int i = 0; i < allPlanets.size(); i++) {
+    allPlanets.get(i).tz = map(allPlanets.get(i).ESLs, 0, 1, 0, 500);
   }
    mode = "ESL";
 }
@@ -368,6 +379,9 @@ void unSort() {
   // Put all of the planets back onto the plane
   for (int i = 0; i < planets.size(); i++) {
     planets.get(i).tz = 0;
+  }
+    for (int i = 0; i < allPlanets.size(); i++) {
+    allPlanets.get(i).tz = 0;
   }
 }
 
@@ -459,10 +473,16 @@ void mousePressed(){
        for (int i = 0; i < planets.size(); i++) {
     if(planets.get(i).overPlanet()){
       selectedPlanet = planets.get(i);
-      textArea.setText("Kepler Plantary Index (KOI):\t"+selectedPlanet.KOI +"\nTemperature: \t"+selectedPlanet.temp
-      +"\nGravity: \t"+selectedPlanet.KOI+"\nZone Class: \t"+selectedPlanet.zone_class+"\nMass Class: \t"+selectedPlanet.mass_class
-      +"\nComposition Class: \t"+selectedPlanet.composition_class+"\nHabitable Class: \t"+selectedPlanet.habitable_class
-      +"\nAtmosphere Class: \t"+selectedPlanet.atmosphere_class+"\nTechnology Discovered By: \t"+selectedPlanet.disc_tech
+      textArea.setText(
+      "Kepler Plantary Index (KOI): \t"+selectedPlanet.KOI 
+      +"\nTemperature: \t"+selectedPlanet.temp
+      +"\nGravity: \t"+selectedPlanet.KOI
+      +"\nZone Class: \t"+selectedPlanet.zone_class
+      +"\nMass Class: \t"+selectedPlanet.mass_class
+      +"\nComposition Class: \t"+selectedPlanet.composition_class
+      +"\nHabitable Class: \t"+selectedPlanet.habitable_class
+      +"\nAtmosphere Class: \t"+selectedPlanet.atmosphere_class
+      +"\nTechnology Discovered By: \t"+selectedPlanet.disc_tech
       +"\nYear Discovered: \t"+selectedPlanet.disc_year
       +"\nESLg: \t"+selectedPlanet.ESLg
       +"\nESLi: \t"+selectedPlanet.ESLi
@@ -472,49 +492,12 @@ void mousePressed(){
     }
   }
 }
-public class ControlFrame extends PApplet {
-  int w, h;
-  int abc = 100;
-    ControlP5 cp5;
 
-  Object parent;
-  public void setup() {
-    size(w, h);
-    frameRate(25);
-    cp5 = new ControlP5(this);
-      textArea = cp5.addTextarea("txt")
-                  .setPosition(0,0)
-                  .setSize(250,500)                 
-                  .setFont(createFont("arial",12))
-                  .setLineHeight(14)
-                  //.setColor(color(128))
-                  .setColorBackground(color(255,100))
-                  .setColorForeground(color(255,100));
-                  ;
-                  textArea.setText("No Planet Selected");
-  }
-  public void draw() {
-      background(abc);
-  }
-  private ControlFrame() {
-  }
-  public ControlFrame(Object theParent, int theWidth, int theHeight) {
-    parent = theParent;
-    w = theWidth;
-    h = theHeight;
-  }
-  public ControlP5 control() {
-    return cp5;
-  }
-
-
-  
-}
-public class MeanWindow extends NApplet {   
- 
-  public void setup() {    size(250, 250);    nappletCloseable = false; 
-// Not actually necessary, false by default.  
-  }  
-public void draw() {    background(100, 0, 0);    stroke(255);    fill(255);        }  
-
-} 
+//public class MeanWindow extends NApplet {   
+// 
+//  public void setup() {    size(250, 250);    nappletCloseable = false; 
+//// Not actually necessary, false by default.  
+//  }  
+//public void draw() {    background(100, 0, 0);    stroke(255);    fill(255);        }  
+//
+//} 
