@@ -333,9 +333,10 @@ void draw() {
     }
     }
   }
-  catch(Exception e){System.out.println("Error");
-e.printStackTrace();
+  catch(IndexOutOfBoundsException e){
+
 }
+
   }    
   
 
@@ -497,11 +498,3 @@ void mousePressed(){
   }
 }
 
-//public class MeanWindow extends NApplet {   
-// 
-//  public void setup() {    size(250, 250);    nappletCloseable = false; 
-//// Not actually necessary, false by default.  
-//  }  
-//public void draw() {    background(100, 0, 0);    stroke(255);    fill(255);        }  
-//
-//} 
