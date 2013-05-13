@@ -155,7 +155,6 @@ public void filterData(){
     if (p.temp >= minTemp && p.temp <= maxTemp){
       if (p.radius >= minSize && p.radius <= maxSize){
         if (p.ESLg >= minESL && p.ESLg <= maxESL){
-          System.out.println(parseFloat(p.KOI)+">>"+ (parseFloat(p.KOI) >= minKOI && parseFloat(p.KOI) <= maxKOI));
                   if (parseFloat(p.KOI) >= minKOI && parseFloat(p.KOI) <= maxKOI){
       planets.add(p);
                   }

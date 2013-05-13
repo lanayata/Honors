@@ -344,7 +344,7 @@ void draw() {
 }
 ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
   Frame f = new Frame(theName);
-  System.out.println("jere"+f);
+  
   ControlFrame p = new ControlFrame(this, theWidth, theHeight);
   f.add(p);
   p.init();
