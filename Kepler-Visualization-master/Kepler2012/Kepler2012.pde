@@ -112,8 +112,8 @@ void getPlanets(String url, boolean is2012) {
 
     // These are two planets from the 2011 data set that I wanted to feature.
     if (p.KOI.equals("326.01") || p.KOI.equals("314.02")) {
-      p.feature = true;
-      p.label = p.KOI;
+     // p.feature = true;
+    //  p.label = p.KOI;
     } 
   }
     for (int i = 0; i < allPlanets.size(); i++)
@@ -333,7 +333,9 @@ void draw() {
     }
     }
   }
-  catch(Exception e){System.out.println("Error");}
+  catch(Exception e){System.out.println("Error");
+e.printStackTrace();
+}
   }    
   
 
@@ -384,9 +386,7 @@ void unSort() {
   for (int i = 0; i < planets.size(); i++) {
     planets.get(i).tz = 0;
   }
-    for (int i = 0; i < allPlanets.size(); i++) {
-    allPlanets.get(i).tz = 0;
-  }
+  mode = "none";
 }
 
 void keyPressed() {

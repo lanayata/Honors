@@ -56,13 +56,14 @@ Range range;
              .setPosition(300,100)
              .setSize(200,40)
              .setHandleSize(20)
-             .setRange(0,1)
-             .setRangeValues(0,1)
+             .setRange(0.0,1.0)
+             .setRangeValues(0.0,1.0)
              // after the initialization we turn broadcast back on again
              .setBroadcast(true)
              .setColorForeground(color(255,40))
              .setColorBackground(color(255,40)) 
             ; 
+            filterData();
              //
                noStroke();        
   }
@@ -72,11 +73,11 @@ Range range;
     minTemp = event.getController().getArrayValue(0);
     maxTemp = event.getController().getArrayValue(1);
   }
-    if(event.isFrom("Size Range")) {
+    else if(event.isFrom("Size Range")) {
     minSize = event.getController().getArrayValue(0);
     maxSize = event.getController().getArrayValue(1);
   }
-     if(event.isFrom("Earth Similarity Index Range")) {
+     else if(event.isFrom("Earth Similarity Index Range")) {
     minESL = event.getController().getArrayValue(0);
     maxESL = event.getController().getArrayValue(1);
   }
@@ -114,18 +115,20 @@ public void filterData(){
   planets.clear();
   for (int i = 0; i < allPlanets.size(); i++){
    ExoPlanet p = allPlanets.get(i);
+   if (p.feature) {  planets.add(p);continue;}
    //  Sort by Temp
     if (p.temp >= minTemp && p.temp <= maxTemp){
       if (p.radius >= minSize && p.radius <= maxSize){
-      //   if (p.ESLg >= minESL && p.ESLg <= maxESL){
+        if (p.ESLg >= minESL && p.ESLg <= maxESL){
       planets.add(p);
      
-      // }
+      }
        }}
   }
   if (mode.equals("ESL")) sortByESL();
   else if (mode.equals("temp")) sortByTemp();
   else if (mode.equals("size")) sortBySize();
+  else if (mode.equals("none")) unSort();
 }  
 }
 
