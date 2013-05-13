@@ -4,7 +4,8 @@ public class ControlFrame extends PApplet {
     ControlP5 cp5;
 int myColorBackground = color(0,0,0);
 Range range;
-
+  float minESL = 0;
+  float maxESL = 1;
 
   Object parent;
   public void setup() {
@@ -49,6 +50,19 @@ Range range;
              .setColorForeground(color(255,40))
              .setColorBackground(color(255,40))  
              ;
+             //Slider for ESL
+              range = cp5.addRange("Earth Similarity Index Range")
+             .setBroadcast(false) 
+             .setPosition(300,100)
+             .setSize(200,40)
+             .setHandleSize(20)
+             .setRange(0,1)
+             .setRangeValues(0,1)
+             // after the initialization we turn broadcast back on again
+             .setBroadcast(true)
+             .setColorForeground(color(255,40))
+             .setColorBackground(color(255,40)) 
+            ; 
              //
                noStroke();        
   }
@@ -62,19 +76,23 @@ Range range;
     minSize = event.getController().getArrayValue(0);
     maxSize = event.getController().getArrayValue(1);
   }
+     if(event.isFrom("Earth Similarity Index Range")) {
+    minESL = event.getController().getArrayValue(0);
+    maxESL = event.getController().getArrayValue(1);
+  }
       filterData();
   
 }
 
 
 void keyPressed() {
-  switch(key) {
-    case('1'):range.setLowValue(0);break;
-    case('2'):range.setLowValue(100);break;
-    case('3'):range.setHighValue(120);break;
-    case('4'):range.setHighValue(200);break;
-    case('5'):range.setRangeValues(40,60);break;
-  }
+//  switch(key) {
+//    case('1'):rankepler.ge.setLowValue(0);break;
+//    case('2'):range.setLowValue(100);break;
+//    case('3'):range.setHighValue(120);break;
+//    case('4'):range.setHighValue(200)//;break;
+//    case('5'):range.setRangeValues(40,6;break;
+//  }
 }
   
   public void draw() {
@@ -97,16 +115,18 @@ public void filterData(){
   for (int i = 0; i < allPlanets.size(); i++){
    ExoPlanet p = allPlanets.get(i);
    //  Sort by Temp
-    if (p.temp > minTemp && p.temp < maxTemp){
-      if (p.radius > minSize && p.radius < maxSize){
+    if (p.temp >= minTemp && p.temp <= maxTemp){
+      if (p.radius >= minSize && p.radius <= maxSize){
+      //   if (p.ESLg >= minESL && p.ESLg <= maxESL){
       planets.add(p);
-      }
-    }
-  
-    }
-}
-
-  
+     
+      // }
+       }}
+  }
+  if (mode.equals("ESL")) sortByESL();
+  else if (mode.equals("temp")) sortByTemp();
+  else if (mode.equals("size")) sortBySize();
+}  
 }
 
 

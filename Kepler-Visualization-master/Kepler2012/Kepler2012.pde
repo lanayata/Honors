@@ -104,6 +104,8 @@ void getPlanets(String url, boolean is2012) {
     else {
       p = new ExoPlanet(this).fromCSV(split(pArray[i], ",")).init();
     }
+    if (p.ESLi <0 || p.ESLs <0 || p.ESLg <0) 
+    System.out.println("KOI: "+p.KOI+"  ESLi: "+p.ESLi+"  ESLs: "+p.ESLs+"  ESLg: "+p.ESLg);
     allPlanets.add(p);
     maxSize = max(p.radius, maxSize);
     minSize = min(p.radius, minSize);
@@ -353,30 +355,24 @@ ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
 void sortBySize() {
         mode = "size";
   // Raise the planets off of the plane according to their size
-  for (int i = 0; i < planets.size(); i++) {
-    planets.get(i).tz = map(planets.get(i).radius, 0, maxSize, 0, 500);
-  }
    for (int i = 0; i < allPlanets.size(); i++) {
     allPlanets.get(i).tz = map(allPlanets.get(i).radius, 0, maxSize, 0, 500);
   }
+  
 }
 
 void sortByTemp() {
       mode = "temp";
-  // Raise the planets off of the plane according to their temperature
-  for (int i = 0; i < planets.size(); i++) {
-    planets.get(i).tz = map(planets.get(i).temp, minTemp, maxTemp, 0, 500);
-  }
+  // Raise the planets off of the plane according to their 2temperature
+
     for (int i = 0; i < allPlanets.size(); i++) {
     allPlanets.get(i).tz = map(allPlanets.get(i).temp, minTemp, maxTemp, 0, 500);
   }
+
 }
 
 void sortByESL() {
   // Raise the planets off of the plane according to their ESL
-  for (int i = 0; i < planets.size(); i++) {
-    planets.get(i).tz = map(planets.get(i).ESLs, 0, 1, 0, 500);
-  }
    for (int i = 0; i < allPlanets.size(); i++) {
     allPlanets.get(i).tz = map(allPlanets.get(i).ESLs, 0, 1, 0, 500);
   }

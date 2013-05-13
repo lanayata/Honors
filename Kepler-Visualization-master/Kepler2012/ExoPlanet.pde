@@ -170,7 +170,7 @@ class ExoPlanet {
     }
   // place exoplanets by their ESL on X axis if in graph view and mode is ESL
       else if (!label.equals("Earth") && mode.equals("ESL") && layout.equals("graph")){
-        apixelAxis = Math.abs(ESLi*AU);
+        apixelAxis = ESLi*AU;
     
     }
      x = sin(theta * (1 - flatness)) * apixelAxis;
