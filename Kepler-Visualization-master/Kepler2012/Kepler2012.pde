@@ -164,6 +164,7 @@ void addMarkerPlanets() {
   mars.ESLs = 0.595;
   mars.ESLi = 0.815;
   mars.ESLg = 0.697;
+  mars.corePlanet = true;
   mars.init();
   allPlanets.add(mars);
 
@@ -177,6 +178,7 @@ void addMarkerPlanets() {
   earth.ESLg = 1;
   earth.feature = true;
   earth.label = "Earth";
+  earth.corePlanet = true;
   earth.init();
   allPlanets.add(earth);
 
@@ -190,6 +192,7 @@ void addMarkerPlanets() {
   jupiter.ESLg = 0.292;
   jupiter.feature = true;
   jupiter.label = "Jupiter";
+  jupiter.corePlanet = true;
   jupiter.init();
   allPlanets.add(jupiter);
 
@@ -203,6 +206,7 @@ void addMarkerPlanets() {
   mercury.ESLg = 0.596;
   mercury.feature = true;
   mercury.label = "Mercury";
+  mercury.corePlanet = true;
   mercury.init();
   allPlanets.add(mercury);
 }
@@ -478,6 +482,8 @@ void mousePressed(){
        for (int i = 0; i < planets.size(); i++) {
     if(planets.get(i).overPlanet()){
       selectedPlanet = planets.get(i);
+      selectedPlanet.feature = true;
+      selectedPlanet.label = "Selected: KOI- "+selectedPlanet.KOI;
       textArea.setText(
       "Kepler Plantary Index (KOI): \t"+selectedPlanet.KOI 
       +"\nTemperature: \t"+selectedPlanet.temp
@@ -493,6 +499,20 @@ void mousePressed(){
       +"\nESLi: \t"+selectedPlanet.ESLi
         +"\nESLs: \t"+selectedPlanet.ESLs
       );
+            
+            for (int j = 0; j < planets.size(); j++) {
+              if (i == j){continue;}
+               System.out.println(selectedPlanet.sun_name);
+             if (planets.get(j).sun_name!=null && planets.get(j).sun_name.equals(selectedPlanet.sun_name)){
+                planets.get(j).feature = true;
+                planets.get(j).label = "Same Star: KOI-"+planets.get(j).KOI;
+             }
+             else {          
+               planets.get(j).feature = false;
+              }
+              
+             }
+      
       break;
     }
   }

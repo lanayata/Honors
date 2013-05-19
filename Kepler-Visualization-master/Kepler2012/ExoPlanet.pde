@@ -93,7 +93,7 @@ class ExoPlanet {
     String disc_tech;
     String sun_name;
     String constellation;
-  
+  boolean corePlanet = false;
 
   // Constructor function
   ExoPlanet(Kepler2012 kep) {kepler = kep;};
@@ -116,6 +116,8 @@ class ExoPlanet {
       gravity = float(sa[26]);
     disc_year = int(sa[43]);
       disc_tech = sa[42];
+             sun_name = sa[44];
+      constellation = sa[45];
       
     return(this);
   }
@@ -139,6 +141,8 @@ class ExoPlanet {
     gravity = float(sa[26]);
     disc_year = int(sa[43]);
       disc_tech = sa[42];
+        sun_name = sa[44];
+      constellation = sa[45];
     return(this);
   }
 
@@ -164,7 +168,7 @@ class ExoPlanet {
  //UPDATE THE X AND Y AXIS OF THE EXOPLANETS//
        apixelAxis = pixelAxis;
        //Existing code, still not sure what it does
-    if (axis > 1.06 && feature) {
+    if (axis > 1.06 && (feature || corePlanet)) {
       apixelAxis = ((1.06 + ((axis - 1.06) * ( 1 - flatness))) * AU) + axis * 10;
     }
   // move earth to center of orbit if in ESL mode and orbital view
@@ -197,7 +201,7 @@ class ExoPlanet {
     rotateZ(-rot.z);
     rotateX(-rot.x);
     noStroke();
-    if (feature) {
+    if (feature||corePlanet) {
       translate(0, 0, 1);
       stroke(255, 255);
       strokeWeight(2);
@@ -235,7 +239,6 @@ class ExoPlanet {
   float clickX = screenX(x,y,z) - mouseX;
   float clickY = screenY(x,y,z) - mouseY;
   if (sqrt(sq(clickX) + sq(clickY)) < pixelRadius/2+10 ) {
-    System.out.println("KOI:"+KOI);
     return true;
   } else {
     return false;
