@@ -91,6 +91,8 @@ class ExoPlanet {
    float gravity;
    int disc_year;
     String disc_tech;
+    String sun_name;
+    String constellation;
   
 
   // Constructor function
@@ -112,8 +114,9 @@ class ExoPlanet {
      atmosphere_class = sa[24];
     habitable_class = sa[25];
       gravity = float(sa[26]);
-    disc_year = int(sa[42]);
-      disc_tech = sa[43];
+    disc_year = int(sa[43]);
+      disc_tech = sa[42];
+      
     return(this);
   }
 
