@@ -180,7 +180,7 @@ class ExoPlanet {
         apixelAxis = ESLi*AU;
     
     }
-    if (!pausedVis){
+    if (!pausedVis || layout.equals("graph")){
      x = sin(theta * (1 - flatness)) * apixelAxis;
      y = cos(theta * (1 - flatness)) * apixelAxis;
     }

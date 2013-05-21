@@ -96,8 +96,8 @@ Range range;
             ; 
               cp5.addButton("pause")
      .setValue(0)
-     .setPosition(100,100)
-     .setSize(200,19)
+     .setPosition(displayWidth-100, 0)
+     .setSize(100,50)
      ;
             filterData();
              //
