@@ -180,8 +180,10 @@ class ExoPlanet {
         apixelAxis = ESLi*AU;
     
     }
+    if (!pausedVis){
      x = sin(theta * (1 - flatness)) * apixelAxis;
      y = cos(theta * (1 - flatness)) * apixelAxis;
+    }
     //CHECK IF CURSER IS OVER PLANET
     //if ( overPlanet(x, y, z, pixelRadius+10) ) {
    //   planetOver = true;

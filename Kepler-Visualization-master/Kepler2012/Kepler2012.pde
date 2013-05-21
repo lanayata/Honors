@@ -46,6 +46,7 @@ float tflatness = 0;
 Controls controls; 
 int showControls;
 boolean draggingZoomSlider = false;
+boolean pausedVis = true;
 
 
 //////////////////////

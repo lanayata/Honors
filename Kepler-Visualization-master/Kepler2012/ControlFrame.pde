@@ -8,7 +8,7 @@ Range range;
   float maxESL = 1;
   float minKOI = 10000;
   float maxKOI = 0;
-  
+  Button pauseButton;
   Object parent;
   
   
@@ -94,10 +94,20 @@ Range range;
              .setColorForeground(color(255,40))
              .setColorBackground(color(255,40)) 
             ; 
+              cp5.addButton("pause")
+     .setValue(0)
+     .setPosition(100,100)
+     .setSize(200,19)
+     ;
             filterData();
              //
                noStroke();        
   }
+  public void pause(int val) {
+    System.out.println(paused);
+
+}
+
   
   void controlEvent(ControlEvent event) {
   if(event.isFrom("Temperature Range")) {
@@ -117,8 +127,11 @@ Range range;
     maxKOI = event.getController().getArrayValue(1);
   }
       filterData();
-  
-}
+  if (event.isFrom("pause")) {
+  if (pausedVis) pausedVis = false;
+  else if (!pausedVis)pausedVis = true;
+   System.out.println("after"+pausedVis);
+  } }
 
 
 void keyPressed() {
