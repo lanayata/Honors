@@ -8,7 +8,6 @@ Range range;
   float maxESL = 1;
   float minKOI = 10000;
   float maxKOI = 0;
-  Button pauseButton;
   Object parent;
   
   
@@ -17,7 +16,7 @@ Range range;
     {
    
       ExoPlanet p = allPlanets.get(i);
-         if (p.feature) continue;
+         if (p.corePlanet) continue;
       maxKOI = max(parseFloat(p.KOI), maxKOI);
       minKOI = min(parseFloat(p.KOI), minKOI);
     }
@@ -99,17 +98,19 @@ Range range;
      .setPosition(displayWidth-100, 0)
      .setSize(100,50)
      ;
+                cp5.addButton("Grey out other planets")
+     .setValue(0)
+     .setPosition(displayWidth-100, 110)
+     .setSize(100,50)
+     ;
             filterData();
              //
                noStroke();        
   }
-  public void pause(int val) {
-    System.out.println(paused);
-
-}
 
   
   void controlEvent(ControlEvent event) {
+    try{
   if(event.isFrom("Temperature Range")) {
     minTemp = event.getController().getArrayValue(0);
     maxTemp = event.getController().getArrayValue(1);
@@ -126,12 +127,20 @@ Range range;
     minKOI = event.getController().getArrayValue(0);
     maxKOI = event.getController().getArrayValue(1);
   }
+    
       filterData();
+
   if (event.isFrom("pause")) {
   if (pausedVis) pausedVis = false;
-  else if (!pausedVis)pausedVis = true;
-   System.out.println("after"+pausedVis);
-  } }
+  else pausedVis = true;
+  }
+  if (event.isFrom("Grey out other planets")) {
+     if(greyOutPlanets) greyOutPlanets = false;
+     else greyOutPlanets = true;
+  } 
+    }
+    catch(Exception e){e.printStackTrace();}
+}
 
 
 void keyPressed() {
@@ -163,7 +172,11 @@ public void filterData(){
   planets.clear();
   for (int i = 0; i < allPlanets.size(); i++){
    ExoPlanet p = allPlanets.get(i);
-   if (p.feature) {  planets.add(p);continue;}
+    
+   if (p.feature || p.corePlanet) {  
+   planets.add(p);
+   continue;
+   }
    //  Sort by Temp
     if (p.temp >= minTemp && p.temp <= maxTemp){
       if (p.radius >= minSize && p.radius <= maxSize){

@@ -46,7 +46,9 @@ float tflatness = 0;
 Controls controls; 
 int showControls;
 boolean draggingZoomSlider = false;
-boolean pausedVis = true;
+
+boolean pausedVis = true; // if visualisation paused
+boolean greyOutPlanets = true;
 
 
 //////////////////////
@@ -160,7 +162,6 @@ void addMarkerPlanets() {
   mars.radius = 0.533;
   mars.axis = 1.523;
   mars.temp = 212;
-  mars.feature = true;
   mars.label = "Mars";
   mars.ESLs = 0.595;
   mars.ESLi = 0.815;
@@ -177,7 +178,6 @@ void addMarkerPlanets() {
   earth.ESLs = 1;
   earth.ESLi = 1;
   earth.ESLg = 1;
-  earth.feature = true;
   earth.label = "Earth";
   earth.corePlanet = true;
   earth.init();
@@ -191,7 +191,6 @@ void addMarkerPlanets() {
   jupiter.ESLs = 0.238;
   jupiter.ESLi = 0.360;
   jupiter.ESLg = 0.292;
-  jupiter.feature = true;
   jupiter.label = "Jupiter";
   jupiter.corePlanet = true;
   jupiter.init();
@@ -205,7 +204,6 @@ void addMarkerPlanets() {
   mercury.ESLs = 0.422;
   mercury.ESLi = 0.840;
   mercury.ESLg = 0.596;
-  mercury.feature = true;
   mercury.label = "Mercury";
   mercury.corePlanet = true;
   mercury.init();
@@ -500,19 +498,22 @@ void mousePressed(){
       +"\nESLi: \t"+selectedPlanet.ESLi
         +"\nESLs: \t"+selectedPlanet.ESLs
       );
-            
+          ArrayList<ExoPlanet> toUnFeature = new ArrayList<ExoPlanet>();
             for (int j = 0; j < planets.size(); j++) {
-              if (i == j){continue;}
-               System.out.println(selectedPlanet.sun_name);
-             if (planets.get(j).sun_name!=null && planets.get(j).sun_name.equals(selectedPlanet.sun_name)){
-                planets.get(j).feature = true;
-                planets.get(j).label = "Same Star: KOI-"+planets.get(j).KOI;
+              ExoPlanet p = planets.get(j);
+              if (i != j){
+             if (p.sun_name!=null && p.sun_name.equals(selectedPlanet.sun_name)){
+               p.feature = true;
+               p.label = "Same Star: KOI-"+p.KOI;
              }
-             else {          
-               planets.get(j).feature = false;
+             else {        
+              toUnFeature.add(p);
               }
-              
              }
+            }
+            for (int j = 0; j < toUnFeature.size(); j++) {
+            toUnFeature.get(j).feature = false;
+            }
       
       break;
     }

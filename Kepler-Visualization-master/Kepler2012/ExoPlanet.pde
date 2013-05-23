@@ -229,7 +229,13 @@ class ExoPlanet {
       }
       popMatrix();
     }
+    //if user has selected to grey out planets then grey out planets not featured or core
+    if (!greyOutPlanets || (corePlanet || feature)){
     fill(col);
+    }
+    else if (!corePlanet || !feature){
+    fill(188,188,188);
+    }
     noStroke();
     ellipse(0, 0, pixelRadius, pixelRadius);
     popMatrix();
