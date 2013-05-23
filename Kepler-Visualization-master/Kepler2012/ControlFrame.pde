@@ -110,24 +110,29 @@ Range range;
 
   
   void controlEvent(ControlEvent event) {
+      boolean hasChanged = false; // only dilter at end of method if ranges have changed
     try{
   if(event.isFrom("Temperature Range")) {
+    hasChanged = true;
     minTemp = event.getController().getArrayValue(0);
     maxTemp = event.getController().getArrayValue(1);
   }
     else if(event.isFrom("Size Range")) {
+          hasChanged = true;
     minSize = event.getController().getArrayValue(0);
     maxSize = event.getController().getArrayValue(1);
   }
      else if(event.isFrom("Earth Similarity Index Range")) {
+           hasChanged = true;
     minESL = event.getController().getArrayValue(0);
     maxESL = event.getController().getArrayValue(1);
   }
      else if(event.isFrom("KOI Range")) {
+           hasChanged = true;
     minKOI = event.getController().getArrayValue(0);
     maxKOI = event.getController().getArrayValue(1);
   }
-    
+    if (hasChanged)
       filterData();
 
   if (event.isFrom("pause")) {
@@ -169,6 +174,7 @@ void keyPressed() {
   }
 
 public void filterData(){
+
   planets.clear();
   for (int i = 0; i < allPlanets.size(); i++){
    ExoPlanet p = allPlanets.get(i);
