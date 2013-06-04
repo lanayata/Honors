@@ -1,33 +1,39 @@
 \contentsline {chapter}{\numberline {1}Motivation}{1}
 \contentsline {chapter}{\numberline {2}Literature Review}{3}
+\contentsline {section}{\numberline {2.1}Layout of Multiple Views for Volume Visualization: A User Study}{3}
+\contentsline {section}{\numberline {2.2}Interactive Design Metric Visualization: Visual Metric Support for User Interface Design}{3}
 \contentsline {chapter}{\numberline {3}Research On Prior Solutions}{5}
 \contentsline {section}{\numberline {3.1}Worlds: The Kepler Planet Candidates - Non Interactive}{5}
-\contentsline {section}{\numberline {3.2}The Kepler Orrery and The Kepler Orrery 2 - Non interactive}{5}
-\contentsline {section}{\numberline {3.3}The Kepler Visualization Tool }{5}
-\contentsline {section}{\numberline {3.4}Celestia - Interactive}{6}
-\contentsline {chapter}{\numberline {4}Technology}{7}
-\contentsline {section}{\numberline {4.1}Requirements of Technology}{7}
-\contentsline {section}{\numberline {4.2}Technology Option Exploration}{7}
-\contentsline {subsection}{\numberline {4.2.1}Java using Swing or Processing}{7}
-\contentsline {subsection}{\numberline {4.2.2}D3 (Data-Driven Documents)}{8}
-\contentsline {subsection}{\numberline {4.2.3}Prefuse}{8}
-\contentsline {section}{\numberline {4.3}Choosing My Solution}{8}
-\contentsline {section}{\numberline {4.4}My Chosen Solution}{9}
-\contentsline {section}{\numberline {4.5}Existing work on Kepler Visualization Tool}{9}
-\contentsline {subsection}{\numberline {4.5.1}Existing Layouts}{10}
-\contentsline {subsection}{\numberline {4.5.2}Existing Interaction Techniques}{10}
-\contentsline {chapter}{\numberline {5}Visualisation Requirements}{11}
-\contentsline {section}{\numberline {5.1}Required User Interactions}{11}
-\contentsline {section}{\numberline {5.2}Required Visual Elements}{11}
-\contentsline {section}{\numberline {5.3}Layout Requirements}{11}
-\contentsline {chapter}{\numberline {6}Visualisation Design}{13}
-\contentsline {section}{\numberline {6.1}User Interface Design}{13}
-\contentsline {section}{\numberline {6.2}Screen Mockup: Visualisation Interaction Panel(Panel 1)}{13}
-\contentsline {section}{\numberline {6.3}Screen Mockup: Selected Planet Panel (Panel 2)}{13}
-\contentsline {section}{\numberline {6.4}Screen Mockup: Comparison to Earth panel (Panel 3)}{13}
-\contentsline {section}{\numberline {6.5}Screen Mockup: Main panel (Panel 4)}{13}
-\contentsline {subsection}{\numberline {6.5.1}Earth Similarity Index (ESIs, ESIi, ESIg) }{13}
-\contentsline {chapter}{\numberline {7}Progress}{15}
-\contentsline {section}{\numberline {7.1}Difficulties encountered with implementation}{15}
-\contentsline {chapter}{\numberline {8}Future Plans}{17}
-\contentsline {chapter}{\numberline {9}Conclusion}{19}
+\contentsline {section}{\numberline {3.2}The Kepler Orrery and The Kepler Orrery 2 - Non interactive}{6}
+\contentsline {section}{\numberline {3.3}The Kepler Visualization Tool }{6}
+\contentsline {section}{\numberline {3.4}Celestia - Interactive}{7}
+\contentsline {chapter}{\numberline {4}Technology}{9}
+\contentsline {section}{\numberline {4.1}Requirements of Technology}{9}
+\contentsline {section}{\numberline {4.2}Technology Option Exploration}{9}
+\contentsline {subsection}{\numberline {4.2.1}Java using Swing or Processing}{9}
+\contentsline {subsection}{\numberline {4.2.2}D3 (Data-Driven Documents)}{10}
+\contentsline {subsection}{\numberline {4.2.3}Prefuse}{10}
+\contentsline {section}{\numberline {4.3}Choosing My Solution}{11}
+\contentsline {section}{\numberline {4.4}My Chosen Solution}{12}
+\contentsline {section}{\numberline {4.5}Existing work on Kepler Visualization Tool}{13}
+\contentsline {subsection}{\numberline {4.5.1}Existing Layouts}{13}
+\contentsline {subsection}{\numberline {4.5.2}Existing Interaction Techniques}{13}
+\contentsline {chapter}{\numberline {5}Visualisation Requirements}{15}
+\contentsline {section}{\numberline {5.1}Required User Interactions}{15}
+\contentsline {section}{\numberline {5.2}Required Visual Elements}{15}
+\contentsline {section}{\numberline {5.3}Layout Requirements}{15}
+\contentsline {chapter}{\numberline {6}Visualisation Design}{17}
+\contentsline {section}{\numberline {6.1}User Interface Design}{17}
+\contentsline {section}{\numberline {6.2}Screen Mockup: Visualisation Interaction Panel(Panel 1)}{17}
+\contentsline {section}{\numberline {6.3}Screen Mockup: Selected Planet Panel (Panel 2)}{18}
+\contentsline {section}{\numberline {6.4}Screen Mockup: Comparison to Earth panel (Panel 3)}{19}
+\contentsline {section}{\numberline {6.5}Screen Mockup: Main panel (Panel 4)}{19}
+\contentsline {subsection}{\numberline {6.5.1}Earth Similarity Index (ESIs, ESIi, ESIg) }{19}
+\contentsline {chapter}{\numberline {7}Progress}{21}
+\contentsline {section}{\numberline {7.1}Progress Made}{21}
+\contentsline {section}{\numberline {7.2}Difficulties encountered with implementation}{21}
+\contentsline {chapter}{\numberline {8}Future Plans}{23}
+\contentsline {section}{\numberline {8.1}Implementation}{23}
+\contentsline {section}{\numberline {8.2}Evaluation}{23}
+\contentsline {section}{\numberline {8.3}Report}{23}
+\contentsline {chapter}{\numberline {9}Conclusion}{25}

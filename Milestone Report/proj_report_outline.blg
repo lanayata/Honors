@@ -1,13 +1,12 @@
 This is BibTeX, Version 0.99d (Web2C 2012)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: proj_report_outline.aux
-A level-1 auxiliary file: acknowledge.aux
 The style file: acm.bst
 Database file #1: sample.bib
 Warning--I didn't find a database entry for "dataset"
 You've used 6 entries,
             2253 wiz_defined-function locations,
-            563 strings with 4756 characters,
+            562 strings with 4741 characters,
 and the built_in function-call counts, 1736 in all, are:
 = -- 171
 > -- 62
