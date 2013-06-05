@@ -4,9 +4,12 @@ The top-level auxiliary file: proj_report_outline.aux
 The style file: acm.bst
 Database file #1: sample.bib
 Warning--I didn't find a database entry for "dataset"
+Warning--I didn't find a database entry for "kepler"
+Warning--I didn't find a database entry for "d3"
+Warning--I didn't find a database entry for "prefuse"
 You've used 6 entries,
             2253 wiz_defined-function locations,
-            562 strings with 4741 characters,
+            565 strings with 4756 characters,
 and the built_in function-call counts, 1736 in all, are:
 = -- 171
 > -- 62
@@ -45,4 +48,4 @@ warning$ -- 0
 while$ -- 18
 width$ -- 7
 write$ -- 71
-(There was 1 warning)
+(There were 4 warnings)
