@@ -3,53 +3,45 @@
 \contentsline {section}{\numberline {1.2}Problem Description}{1}
 \contentsline {section}{\numberline {1.3}Proposed Solution}{1}
 \contentsline {section}{\numberline {1.4}Variations from Project Proposal}{2}
+\contentsline {subsection}{\numberline {1.4.1}Changed Technology Requirements}{2}
+\contentsline {subsection}{\numberline {1.4.2}Changed Visualisation Requirements}{2}
 \contentsline {section}{\numberline {1.5}Contributions}{2}
-\contentsline {chapter}{\numberline {2}Prior Work}{3}
-\contentsline {section}{\numberline {2.1}Literature Review}{3}
-\contentsline {subsection}{\numberline {2.1.1}Layout of Multiple Views for Volume Visualization: A User Study}{3}
-\contentsline {subsection}{\numberline {2.1.2}Interactive Design Metric Visualization: Visual Metric Support for User Interface Design}{3}
-\contentsline {subsection}{\numberline {2.1.3}A Survey on Multivariate Data Visualization}{3}
-\contentsline {subsection}{\numberline {2.1.4}Exploratory Visualization of Multivariate Data with Variable Quality}{3}
-\contentsline {subsection}{\numberline {2.1.5}Design Patterns for Rapid Visualization Prototyping}{3}
-\contentsline {subsection}{\numberline {2.1.6}The effect of Interface Consistency and Cognitive Load on user performance in an information search task}{3}
-\contentsline {subsection}{\numberline {2.1.7}Evaluating Information Visualizations: Issues and Opportunities}{3}
-\contentsline {subsection}{\numberline {2.1.8}Interactive Visualisation of a News Clips Network}{3}
-\contentsline {subsection}{\numberline {2.1.9}The State of hte Art in Flow Visualisation: Feature Extraction and Tracking}{3}
-\contentsline {subsection}{\numberline {2.1.10}Superconductor: A Language for Big Data Visualisation}{3}
-\contentsline {subsection}{\numberline {2.1.11}Interactive Visualization of planet movements for Highschool Education}{3}
-\contentsline {subsection}{\numberline {2.1.12}Evaluationg Information Visualisations}{3}
-\contentsline {subsection}{\numberline {2.1.13}The Qualitative Experiment in HCI: Definition, Occurances, Value and Use}{3}
-\contentsline {section}{\numberline {2.2}Visualisation Review}{3}
-\contentsline {subsection}{\numberline {2.2.1}Worlds: The Kepler Planet Candidates - Non Interactive}{3}
-\contentsline {subsection}{\numberline {2.2.2}The Kepler Orrery and The Kepler Orrery 2 - Non interactive}{4}
-\contentsline {subsection}{\numberline {2.2.3}The Kepler Visualization Tool }{5}
-\contentsline {subsection}{\numberline {2.2.4}Celestia - Interactive}{5}
-\contentsline {chapter}{\numberline {3}Technology and Design}{7}
-\contentsline {section}{\numberline {3.1}Technology Option Exploration}{7}
-\contentsline {subsection}{\numberline {3.1.1}Java using Swing or Processing}{7}
-\contentsline {subsection}{\numberline {3.1.2}D3 (Data-Driven Documents)}{7}
-\contentsline {subsection}{\numberline {3.1.3}Prefuse}{8}
-\contentsline {section}{\numberline {3.2}Design Decisions}{9}
-\contentsline {section}{\numberline {3.3}Choosing My Solution}{9}
-\contentsline {section}{\numberline {3.4}My Chosen Solution}{9}
-\contentsline {section}{\numberline {3.5}Existing work on Kepler Visualization Tool}{11}
-\contentsline {subsection}{\numberline {3.5.1}Existing Layouts}{11}
-\contentsline {subsection}{\numberline {3.5.2}Existing Interaction Techniques}{11}
-\contentsline {chapter}{\numberline {4}Visualisation Design}{13}
-\contentsline {section}{\numberline {4.1}Required User Interactions}{13}
-\contentsline {section}{\numberline {4.2}Required Visual Elements}{13}
-\contentsline {section}{\numberline {4.3}Layout Requirements}{13}
-\contentsline {section}{\numberline {4.4}User Interface Design}{14}
-\contentsline {section}{\numberline {4.5}Screen Mockup: Visualisation Interaction Panel(Panel 1)}{14}
-\contentsline {section}{\numberline {4.6}Screen Mockup: Selected Planet Panel (Panel 2)}{15}
-\contentsline {section}{\numberline {4.7}Screen Mockup: Comparison to Earth panel (Panel 3)}{16}
-\contentsline {section}{\numberline {4.8}Screen Mockup: Main panel (Panel 4)}{16}
-\contentsline {subsection}{\numberline {4.8.1}Earth Similarity Index (ESIs, ESIi, ESIg) }{16}
+\contentsline {chapter}{\numberline {2}Prior Work}{5}
+\contentsline {section}{\numberline {2.1}Literature Review}{5}
+\contentsline {subsection}{\numberline {2.1.1}Layout of Multiple Views for Volume Visualization: A User Study}{5}
+\contentsline {subsection}{\numberline {2.1.2}A Survey on Multivariate Data Visualization}{5}
+\contentsline {subsection}{\numberline {2.1.3}Exploratory Visualization of Multivariate Data with Variable Quality }{5}
+\contentsline {subsection}{\numberline {2.1.4}Design Patterns for Rapid Visualization Prototyping}{6}
+\contentsline {subsection}{\numberline {2.1.5}Interactive Visualisation of a News Clips Network }{6}
+\contentsline {subsection}{\numberline {2.1.6}Position Statement Evaluating Information Visualizations: Issues and Opportunities}{6}
+\contentsline {section}{\numberline {2.2}Visualisation Review}{7}
+\contentsline {subsection}{\numberline {2.2.1}Worlds: The Kepler Planet Candidates - Non Interactive}{7}
+\contentsline {subsection}{\numberline {2.2.2}The Kepler Orrery and The Kepler Orrery 2 - Non interactive}{7}
+\contentsline {subsection}{\numberline {2.2.3}Celestia - Interactive}{8}
+\contentsline {subsection}{\numberline {2.2.4}Kepler Visualisation Tool}{9}
+\contentsline {chapter}{\numberline {3}Technology and Design}{11}
+\contentsline {section}{\numberline {3.1}Choosing My Technology}{11}
+\contentsline {subsection}{\numberline {3.1.1}Java using Swing or Processing}{11}
+\contentsline {section}{\numberline {3.2}Existing work on Kepler Visualization Tool \cite {kepler_article}}{12}
+\contentsline {subsection}{\numberline {3.2.1}Existing Layouts}{13}
+\contentsline {subsection}{\numberline {3.2.2}Existing Interaction Techniques}{13}
+\contentsline {chapter}{\numberline {4}Visualisation Design}{15}
+\contentsline {section}{\numberline {4.1}Required User Interactions}{15}
+\contentsline {section}{\numberline {4.2}Layout Requirements}{15}
 \contentsline {chapter}{\numberline {5}Progress}{17}
 \contentsline {section}{\numberline {5.1}Progress Made}{17}
-\contentsline {section}{\numberline {5.2}Difficulties encountered with implementation}{17}
-\contentsline {chapter}{\numberline {6}Future Plans}{19}
-\contentsline {section}{\numberline {6.1}Implementation}{19}
-\contentsline {section}{\numberline {6.2}Evaluation}{19}
-\contentsline {section}{\numberline {6.3}Report}{19}
-\contentsline {chapter}{\numberline {7}Conclusion}{21}
+\contentsline {section}{\numberline {5.2}Difficulties encountered with implementation}{18}
+\contentsline {chapter}{\numberline {6}Future Plans}{21}
+\contentsline {section}{\numberline {6.1}Implementation}{21}
+\contentsline {section}{\numberline {6.2}Evaluation}{21}
+\contentsline {section}{\numberline {6.3}Report}{22}
+\contentsline {chapter}{\numberline {7}Summary}{25}
+\contentsline {chapter}{\numberline {A}Appendix}{29}
+\contentsline {section}{\numberline {A.1}Technology Option Exploration}{29}
+\contentsline {subsection}{\numberline {A.1.1}D3 (Data-Driven Documents)}{29}
+\contentsline {subsection}{\numberline {A.1.2}Prefuse}{29}
+\contentsline {section}{\numberline {A.2}Screen Mockups}{30}
+\contentsline {subsection}{\numberline {A.2.1}Screen Mockup: Visualisation Interaction Panel(Panel 1)}{30}
+\contentsline {subsection}{\numberline {A.2.2}Screen Mockup: Selected Planet Panel (Panel 2)}{30}
+\contentsline {subsection}{\numberline {A.2.3}Screen Mockup: Main panel (Panel 4)}{31}
+\contentsline {subsubsection}{Earth Similarity Index (ESIs, ESIi, ESIg) }{31}

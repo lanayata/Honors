@@ -8,6 +8,7 @@ Range range;
   float maxESL = 1;
   float minKOI = 10000;
   float maxKOI = 0;
+
   Object parent;
   
   
@@ -59,8 +60,8 @@ Range range;
              .setPosition(300,50)
              .setSize(200,40)
              .setHandleSize(20)
-             .setRange(minTemp,maxTemp)
-             .setRangeValues(minTemp,maxTemp)
+             .setRange(globalMinTemp,globalMaxTemp)
+             .setRangeValues(globalMinTemp,globalMaxTemp)
              // after the initialization we turn broadcast back on again
              .setBroadcast(true)
              .setColorForeground(color(255,40))
@@ -73,8 +74,8 @@ Range range;
              .setPosition(300,100)
              .setSize(200,40)
              .setHandleSize(20)
-             .setRange(minSize,maxSize)
-             .setRangeValues(minSize,maxSize)
+             .setRange(globalMinSize,globalMaxSize)
+             .setRangeValues(globalMinSize,globalMaxSize)
              // after the initialization we turn broadcast back on again
              .setBroadcast(true)
              .setColorForeground(color(255,40))
@@ -111,29 +112,57 @@ Range range;
   
   void controlEvent(ControlEvent event) {
       boolean hasChanged = false; // only dilter at end of method if ranges have changed
+      String changedValue = ""; // need to set max of other values when a range has been changed
     try{
   if(event.isFrom("Temperature Range")) {
-    hasChanged = true;
-    minTemp = event.getController().getArrayValue(0);
-    maxTemp = event.getController().getArrayValue(1);
+    hasChanged = true; changedValue = "temp";
+    globalMinTemp = event.getController().getArrayValue(0);
+    globalMaxTemp = event.getController().getArrayValue(1);
+    planetMinTemp = event.getController().getArrayValue(0);
+    planetMaxTemp = event.getController().getArrayValue(1);
   }
     else if(event.isFrom("Size Range")) {
-          hasChanged = true;
-    minSize = event.getController().getArrayValue(0);
-    maxSize = event.getController().getArrayValue(1);
+          hasChanged = true; changedValue = "size";
+    globalMinSize = event.getController().getArrayValue(0);
+    globalMaxSize = event.getController().getArrayValue(1);
+    planetMinSize = event.getController().getArrayValue(0);
+    planetMaxSize = event.getController().getArrayValue(1);
   }
      else if(event.isFrom("Earth Similarity Index Range")) {
-           hasChanged = true;
+           hasChanged = true; changedValue = "esi";
     minESL = event.getController().getArrayValue(0);
     maxESL = event.getController().getArrayValue(1);
   }
      else if(event.isFrom("KOI Range")) {
-           hasChanged = true;
+           hasChanged = true; changedValue = "koi";
     minKOI = event.getController().getArrayValue(0);
     maxKOI = event.getController().getArrayValue(1);
   }
-    if (hasChanged)
-      filterData();
+    if (hasChanged){
+      // Set Temp ranges to rescale planets
+      if (!changedValue.equals("temp")){
+        planetMinTemp = 3867;
+        planetMaxTemp = 83;
+       for (ExoPlanet p: planets){
+         if (planetMinTemp > p.temp) {planetMinTemp = p.temp;}
+         if (planetMaxTemp < p.temp) {planetMaxTemp = p.temp;}
+       }
+      }
+      // Set Size ranges to rescale planets
+      if (!changedValue.equals("size")){        
+        planetMinSize = 58.06;
+        planetMaxSize =  0.33;
+       for (ExoPlanet p: planets){
+         if (planetMinSize > p.radius) {planetMinSize = p.radius;}
+         if (planetMaxSize < p.radius) {planetMaxSize = p.radius;}
+       }}
+      
+      if (!changedValue.equals("esi")){}
+     
+      if (!changedValue.equals("koi")){}
+      
+      filterData(); 
+    }
 
   if (event.isFrom("pause")) {
   if (pausedVis) pausedVis = false;
@@ -173,8 +202,8 @@ void keyPressed() {
     return cp5;
   }
 
+/** Filter Planets according to filter sliders**/
 public void filterData(){
-
   planets.clear();
   for (int i = 0; i < allPlanets.size(); i++){
    ExoPlanet p = allPlanets.get(i);
@@ -183,16 +212,17 @@ public void filterData(){
    planets.add(p);
    continue;
    }
-   //  Sort by Temp
-    if (p.temp >= minTemp && p.temp <= maxTemp){
-      if (p.radius >= minSize && p.radius <= maxSize){
+   //Apply filters
+    if (p.temp >= globalMinTemp && p.temp <= globalMaxTemp){
+      if (p.radius >= globalMinSize && p.radius <= globalMaxSize){
         if (p.ESLg >= minESL && p.ESLg <= maxESL){
                   if (parseFloat(p.KOI) >= minKOI && parseFloat(p.KOI) <= maxKOI){
-      planets.add(p);
+                    planets.add(p);
                   }
       }
        }}
   }
+  
   if (mode.equals("ESL")) sortByESL();
   else if (mode.equals("temp")) sortByTemp();
   else if (mode.equals("size")) sortBySize();

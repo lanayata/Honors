@@ -3,49 +3,48 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: proj_report_outline.aux
 The style file: acm.bst
 Database file #1: sample.bib
-Warning--I didn't find a database entry for "dataset"
-Warning--I didn't find a database entry for "kepler"
-Warning--I didn't find a database entry for "d3"
-Warning--I didn't find a database entry for "prefuse"
-You've used 6 entries,
+Warning--to sort, need author or key in celestia
+Warning--empty journal in devezas
+Warning--empty journal in dataset
+You've used 28 entries,
             2253 wiz_defined-function locations,
-            565 strings with 4756 characters,
-and the built_in function-call counts, 1736 in all, are:
-= -- 171
-> -- 62
+            676 strings with 8253 characters,
+and the built_in function-call counts, 8409 in all, are:
+= -- 779
+> -- 390
 < -- 0
-+ -- 29
-- -- 20
-* -- 104
-:= -- 291
-add.period$ -- 20
-call.type$ -- 6
-change.case$ -- 25
++ -- 169
+- -- 134
+* -- 538
+:= -- 1340
+add.period$ -- 76
+call.type$ -- 28
+change.case$ -- 150
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 80
-empty$ -- 146
-format.name$ -- 20
-if$ -- 369
+cite$ -- 31
+duplicate$ -- 327
+empty$ -- 726
+format.name$ -- 134
+if$ -- 1789
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 10
-newline$ -- 35
-num.names$ -- 12
-pop$ -- 35
+int.to.str$ -- 28
+missing$ -- 16
+newline$ -- 134
+num.names$ -- 54
+pop$ -- 224
 preamble$ -- 1
-purify$ -- 22
+purify$ -- 123
 quote$ -- 0
-skip$ -- 55
+skip$ -- 253
 stack$ -- 0
-substring$ -- 79
-swap$ -- 20
+substring$ -- 386
+swap$ -- 96
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 16
-warning$ -- 0
-while$ -- 18
-width$ -- 7
-write$ -- 71
-(There were 4 warnings)
+type$ -- 110
+warning$ -- 3
+while$ -- 76
+width$ -- 30
+write$ -- 264
+(There were 3 warnings)

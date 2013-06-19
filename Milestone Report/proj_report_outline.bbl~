@@ -92,13 +92,7 @@ Celestia.
 \bibitem{martin}
 {\sc Martin, S.}
 \newblock Effective visual communication for graphical user interfaces, 1993.
-
-\bibitem{mendel}
-{\sc Mendel, J., and Pak, R.}
-\newblock The effect of interface consistency and cognitive load on user
-  performance in an information search task.
-\newblock {\em Proceedings of the Human Factors and Ergonomics Society Annual
-  Meeting 53}, 22 (2009), 1684--1688.
+\newblock http://web.cs.wpi.edu/~matt/courses/cs563/talks/smartin/int_design.html.
 
 \bibitem{meyerovich}
 {\sc Meyerovich, L.~A., Torok, M.~E., Atkinson, E., and Bodik, R.}
@@ -145,10 +139,5 @@ Celestia.
 \newblock Ontology-based information visualisation.
 \newblock In {\em Information Visualisation, 2001. Proceedings. Fifth
   International Conference on\/} (2001), pp.~546--554.
-
-\bibitem{dataset}
-{\sc Wright, J.~T., Fakhouri, O., Marcy, G.~W., Han, E., Feng, Y., Johnson,
-  J.~A., Howard, A.~W., Valenti, J.~A., Anderson, J., and Piskunov, N.}
-\newblock {The Exoplanet Orbit Database}.
 
 \end{thebibliography}

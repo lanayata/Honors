@@ -17,18 +17,19 @@ import java.awt.Frame;
 PFont label = createFont("Arial", 96);
 // Here's the big list that will hold all of our planets
 ArrayList<ExoPlanet> allPlanets = new ArrayList();
+// List of planets for displaying when filtered
 ArrayList<ExoPlanet> planets = new ArrayList();
 // Conversion constants
 float ER = 1;           // Earth Radius, in pixels
 float AU = 1500;        // Astronomical Unit, in pixels
 float YEAR = 50000;     // One year, in frames
 // Max/Min numbers
-float maxTemp = 3257;
-float minTemp = 3257;
+float globalMaxTemp = 3257;
+float globalMinTemp = 3257;
 float yMax = 10;
 float yMin = 0;
-float maxSize = 0;
-float minSize = 1000000;
+float globalMaxSize = 0;
+float globalMinSize = 1000000;
 // Axis labels
 String xLabel = "Semi-major Axis (Astronomical Units)";
 String yLabel = "Temperature (Kelvin)";
@@ -49,8 +50,10 @@ boolean draggingZoomSlider = false;
 
 boolean pausedVis = true; // if visualisation paused
 boolean greyOutPlanets = true;
-
-
+  float planetMinTemp = 83;
+  float planetMaxTemp = 3867;
+  float planetMinSize = 0.33;
+  float planetMaxSize = 58.06;
 //////////////////////
 // Owens Changes
 //////////////////////
@@ -110,8 +113,8 @@ void getPlanets(String url, boolean is2012) {
     if (p.ESLi <0 || p.ESLs <0 || p.ESLg <0) 
     System.out.println("KOI: "+p.KOI+"  ESLi: "+p.ESLi+"  ESLs: "+p.ESLs+"  ESLg: "+p.ESLg);
     allPlanets.add(p);
-    maxSize = max(p.radius, maxSize);
-    minSize = min(p.radius, minSize);
+    globalMaxSize = max(p.radius, globalMaxSize);
+    globalMinSize = min(p.radius, globalMinSize);
 
     // These are two planets from the 2011 data set that I wanted to feature.
     if (p.KOI.equals("326.01") || p.KOI.equals("314.02")) {
@@ -131,8 +134,8 @@ void updatePlanetColors()
   for (int i = 0; i < allPlanets.size(); i++)
   {
     ExoPlanet p = allPlanets.get(i);
-    maxTemp = max(p.temp, maxTemp);
-    minTemp = min(abs(p.temp), minTemp);
+    globalMaxTemp = max(p.temp, globalMaxTemp);
+    globalMinTemp = min(abs(p.temp), globalMinTemp);
   }
 
   colorMode(HSB);
@@ -142,7 +145,7 @@ void updatePlanetColors()
 
     if (0 < p.temp)
     {
-      float h = map(sqrt(p.temp), sqrt(minTemp), sqrt(maxTemp), 200, 0);
+      float h = map(sqrt(p.temp), sqrt(globalMinTemp), sqrt(globalMaxTemp), 200, 0);
       p.col = color(h, 255, 255);
     }
     else
@@ -361,8 +364,8 @@ ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
 void sortBySize() {
         mode = "size";
   // Raise the planets off of the plane according to their size
-   for (int i = 0; i < allPlanets.size(); i++) {
-    allPlanets.get(i).tz = map(allPlanets.get(i).radius, 0, maxSize, 0, 500);
+   for (int i = 0; i < planets.size(); i++) {
+    planets.get(i).tz = map(planets.get(i).radius, planetMinSize, planetMaxSize, 0, 500);
   }
   
 }
@@ -371,16 +374,16 @@ void sortByTemp() {
       mode = "temp";
   // Raise the planets off of the plane according to their 2temperature
 
-    for (int i = 0; i < allPlanets.size(); i++) {
-    allPlanets.get(i).tz = map(allPlanets.get(i).temp, minTemp, maxTemp, 0, 500);
+    for (int i = 0; i < planets.size(); i++) {
+    planets.get(i).tz = map(planets.get(i).temp, planetMinTemp, planetMaxTemp, 0, 500);
   }
 
 }
 
 void sortByESL() {
   // Raise the planets off of the plane according to their ESL
-   for (int i = 0; i < allPlanets.size(); i++) {
-    allPlanets.get(i).tz = map(allPlanets.get(i).ESLs, 0, 1, 0, 500);
+   for (int i = 0; i < planets.size(); i++) {
+    planets.get(i).tz = map(planets.get(i).ESLs, 0, 1, 0, 500);
   }
    mode = "ESL";
 }
@@ -413,7 +416,7 @@ void keyPressed() {
     //toggleFlatness(1);
     yLabel = "Planet Size (Earth Radii)";
     xLabel = "Semi-major Axis (Astronomical Units)";
-    yMax = maxSize;
+    yMax = globalMaxSize;
     yMin = 0;
   } 
   else if (key == '2') {
@@ -422,8 +425,8 @@ void keyPressed() {
     yLabel = "Temperature (Kelvin)";
     //toggleFlatness(1);
     xLabel = "Semi-major Axis (Astronomical Units)";
-    yMax = maxTemp;
-    yMin = minTemp;
+    yMax = globalMaxTemp;
+    yMin = globalMinTemp;
  
   } 
   
