@@ -18,8 +18,8 @@ Range range;
    
       ExoPlanet p = allPlanets.get(i);
          if (p.corePlanet) continue;
-      maxKOI = max(parseFloat(p.KOI), maxKOI);
-      minKOI = min(parseFloat(p.KOI), minKOI);
+      maxKOI = max(p.KOI, maxKOI);
+      minKOI = min(p.KOI, minKOI);
     }
   
   }
@@ -171,8 +171,9 @@ Range range;
         planetMinKOI = 2771;
         planetMaxKOI = 1;
        for (ExoPlanet p: planets){
-         if (planetMinKOI > parseFloat(p.KOI)) {planetMinKOI = parseFloat(p.KOI);}
-         if (planetMaxKOI < parseFloat(p.KOI)) {planetMaxKOI = parseFloat(p.KOI);}
+         float koi =p.KOI;
+        // if (planetMinKOI > koi) {planetMinKOI = koi;}
+         //if (planetMaxKOI < koi) {planetMaxKOI = koi;}
        }
     }
       
@@ -231,7 +232,7 @@ public void filterData(){
     if (p.temp >= globalMinTemp && p.temp <= globalMaxTemp){
       if (p.radius >= globalMinSize && p.radius <= globalMaxSize){
         if (p.ESIg >= globalMinESI && p.ESIg <= globalMaxESI){
-                  if (parseFloat(p.KOI) >= minKOI && parseFloat(p.KOI) <= maxKOI){
+                  if (p.KOI >= minKOI && p.KOI <= maxKOI){
                     planets.add(p);
                   }
       }

@@ -54,7 +54,7 @@ There are two separate formats for the data - both are listed below.
 
 class ExoPlanet {
   // Data from the imported files
-  String KOI;
+  float KOI;
 
   float period;
   float radius;
@@ -100,7 +100,7 @@ class ExoPlanet {
   
   // Load exoplanet data from a comma-delimited string (see key at top of class)
   ExoPlanet fromCSV2012(String[] sa) {
-    KOI = sa[0];
+    KOI = float(sa[0]);
     period = float(sa[1]);
     radius = float(sa[2]);
     axis = float(sa[3]);
@@ -124,7 +124,7 @@ class ExoPlanet {
 
   // Load exoplanet data from a comma-delimited string (see key at top of class)
   ExoPlanet fromCSV(String[] sa) {
-    KOI = sa[0];
+    KOI = float(sa[0]);
     period = float(sa[6]);
     radius = float(sa[14]);
     axis = float(sa[15]);

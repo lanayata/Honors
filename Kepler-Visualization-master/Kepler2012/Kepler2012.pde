@@ -121,7 +121,7 @@ void getPlanets(String url, boolean is2012) {
     globalMinSize = min(p.radius, globalMinSize);
 
     // These are two planets from the 2011 data set that I wanted to feature.
-    if (p.KOI.equals("326.01") || p.KOI.equals("314.02")) {
+    if (p.KOI == 326.01 || p.KOI == 314.02) {
      // p.feature = true;
     //  p.label = p.KOI;
     } 
