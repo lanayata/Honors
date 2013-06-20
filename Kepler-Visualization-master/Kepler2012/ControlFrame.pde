@@ -4,8 +4,8 @@ public class ControlFrame extends PApplet {
     ControlP5 cp5;
 int myColorBackground = color(0,0,0);
 Range range;
-  float minESL = 0;
-  float maxESL = 1;
+  float globalMinESI = 0;
+  float globalMaxESI = 1;
   float minKOI = 10000;
   float maxKOI = 0;
 
@@ -81,7 +81,7 @@ Range range;
              .setColorForeground(color(255,40))
              .setColorBackground(color(255,40))  
              ;
-             //Slider for ESL
+             //Slider for ESI
               range = cp5.addRange("Earth Similarity Index Range")
              .setBroadcast(false) 
              .setPosition(300,150)
@@ -130,8 +130,10 @@ Range range;
   }
      else if(event.isFrom("Earth Similarity Index Range")) {
            hasChanged = true; changedValue = "esi";
-    minESL = event.getController().getArrayValue(0);
-    maxESL = event.getController().getArrayValue(1);
+    globalMinESI = event.getController().getArrayValue(0);
+    globalMaxESI = event.getController().getArrayValue(1);
+    planetMinESI = event.getController().getArrayValue(0);
+    planetMaxESI = event.getController().getArrayValue(1);
   }
      else if(event.isFrom("KOI Range")) {
            hasChanged = true; changedValue = "koi";
@@ -157,9 +159,22 @@ Range range;
          if (planetMaxSize < p.radius) {planetMaxSize = p.radius;}
        }}
       
-      if (!changedValue.equals("esi")){}
+      if (!changedValue.equals("esi")){  
+        planetMinESI = 1;
+        planetMaxESI = 0;
+       for (ExoPlanet p: planets){
+         if (planetMinESI > p.ESIg) {planetMinESI = p.ESIg;}
+         if (planetMaxESI < p.ESIg) {planetMaxESI = p.ESIg;}
+       }}
      
-      if (!changedValue.equals("koi")){}
+      if (!changedValue.equals("koi")){ 
+        planetMinKOI = 2771;
+        planetMaxKOI = 1;
+       for (ExoPlanet p: planets){
+         if (planetMinKOI > parseFloat(p.KOI)) {planetMinKOI = parseFloat(p.KOI);}
+         if (planetMaxKOI < parseFloat(p.KOI)) {planetMaxKOI = parseFloat(p.KOI);}
+       }
+    }
       
       filterData(); 
     }
@@ -215,7 +230,7 @@ public void filterData(){
    //Apply filters
     if (p.temp >= globalMinTemp && p.temp <= globalMaxTemp){
       if (p.radius >= globalMinSize && p.radius <= globalMaxSize){
-        if (p.ESLg >= minESL && p.ESLg <= maxESL){
+        if (p.ESIg >= globalMinESI && p.ESIg <= globalMaxESI){
                   if (parseFloat(p.KOI) >= minKOI && parseFloat(p.KOI) <= maxKOI){
                     planets.add(p);
                   }
@@ -223,7 +238,7 @@ public void filterData(){
        }}
   }
   
-  if (mode.equals("ESL")) sortByESL();
+  if (mode.equals("ESI")) sortByESI();
   else if (mode.equals("temp")) sortByTemp();
   else if (mode.equals("size")) sortBySize();
   else if (mode.equals("none")) unSort();

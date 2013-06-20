@@ -73,9 +73,9 @@ class ExoPlanet {
   float y;
 
   // ESI for comparing to Earth similarity
-  float ESLs;
-  float ESLi;
-  float ESLg;
+  float ESIs;
+  float ESIi;
+  float ESIg;
  float apixelAxis;
   color col;
   boolean planetOver;
@@ -105,9 +105,9 @@ class ExoPlanet {
     radius = float(sa[2]);
     axis = float(sa[3]);
     temp = float(sa[4]);
-       ESLi = float(sa[35]);
-    ESLs = float(sa[36]);
-    ESLg = float(sa[37]);
+       ESIi = float(sa[35]);
+    ESIs = float(sa[36]);
+    ESIg = float(sa[37]);
           zone_class = sa[21];
         mass_class = sa[22];
     composition_class = sa[23];
@@ -130,9 +130,9 @@ class ExoPlanet {
     axis = float(sa[15]);
     temp = float(sa[16]);
     vFlag = int(sa[18]);
-    ESLi = float(sa[35]);
-    ESLs = float(sa[36]);
-    ESLg = float(sa[37]);
+    ESIi = float(sa[35]);
+    ESIs = float(sa[36]);
+    ESIg = float(sa[37]);
         zone_class = sa[21];
         mass_class = sa[22];
     composition_class = sa[23];
@@ -171,13 +171,13 @@ class ExoPlanet {
     if (axis > 1.06 && (feature || corePlanet)) {
       apixelAxis = ((1.06 + ((axis - 1.06) * ( 1 - flatness))) * AU) + axis * 10;
     }
-  // move earth to center of orbit if in ESL mode and orbital view
-     if (label.equals("Earth") && mode.equals("ESL") && layout.equals("orbital")){
-      apixelAxis = ESLg;
+  // move earth to center of orbit if in ESI mode and orbital view
+     if (label.equals("Earth") && mode.equals("ESI") && layout.equals("orbital")){
+      apixelAxis = ESIg;
     }
-  // place exoplanets by their ESL on X axis if in graph view and mode is ESL
-      else if (!label.equals("Earth") && mode.equals("ESL") && layout.equals("graph")){
-        apixelAxis = ESLi*AU;
+  // place exoplanets by their ESI on X axis if in graph view and mode is ESI
+      else if (!label.equals("Earth") && mode.equals("ESI") && layout.equals("graph")){
+        apixelAxis = ESIi*AU;
     
     }
     if (!pausedVis || layout.equals("graph")){

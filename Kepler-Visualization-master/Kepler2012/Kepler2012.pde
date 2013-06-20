@@ -53,11 +53,15 @@ boolean greyOutPlanets = true;
   float planetMinTemp = 83;
   float planetMaxTemp = 3867;
   float planetMinSize = 0.33;
-  float planetMaxSize = 58.06;
+  float planetMaxSize = 58.06; 
+  float planetMinESI = -1;
+  float planetMaxESI = 2;
+  float planetMinKOI = 1;
+  float planetMaxKOI = 2771;
 //////////////////////
 // Owens Changes
 //////////////////////
-// Store what mode the visualisation is in ie:ESL 
+// Store what mode the visualisation is in ie:ESI 
 String mode = "none";
 // Store what layout the visualisation is in (orbital or graph)
 String layout = "orbital";
@@ -92,7 +96,7 @@ void setup() {
   
   cf = addControlFrame("Exoplanet Controls", displayWidth,250);
   
-  //Set up slider for planet ESLg
+  //Set up slider for planet ESIg
 
   //
  /////////////// 
@@ -110,8 +114,8 @@ void getPlanets(String url, boolean is2012) {
     else {
       p = new ExoPlanet(this).fromCSV(split(pArray[i], ",")).init();
     }
-    if (p.ESLi <0 || p.ESLs <0 || p.ESLg <0) 
-    System.out.println("KOI: "+p.KOI+"  ESLi: "+p.ESLi+"  ESLs: "+p.ESLs+"  ESLg: "+p.ESLg);
+    if (p.ESIi <0 || p.ESIs <0 || p.ESIg <0) 
+    System.out.println("KOI: "+p.KOI+"  ESIi: "+p.ESIi+"  ESIs: "+p.ESIs+"  ESIg: "+p.ESIg);
     allPlanets.add(p);
     globalMaxSize = max(p.radius, globalMaxSize);
     globalMinSize = min(p.radius, globalMinSize);
@@ -166,9 +170,9 @@ void addMarkerPlanets() {
   mars.axis = 1.523;
   mars.temp = 212;
   mars.label = "Mars";
-  mars.ESLs = 0.595;
-  mars.ESLi = 0.815;
-  mars.ESLg = 0.697;
+  mars.ESIs = 0.595;
+  mars.ESIi = 0.815;
+  mars.ESIg = 0.697;
   mars.corePlanet = true;
   mars.init();
   allPlanets.add(mars);
@@ -178,9 +182,9 @@ void addMarkerPlanets() {
   earth.radius = 1;
   earth.axis = 1;
   earth.temp = 254;
-  earth.ESLs = 1;
-  earth.ESLi = 1;
-  earth.ESLg = 1;
+  earth.ESIs = 1;
+  earth.ESIi = 1;
+  earth.ESIg = 1;
   earth.label = "Earth";
   earth.corePlanet = true;
   earth.init();
@@ -191,9 +195,9 @@ void addMarkerPlanets() {
   jupiter.radius = 11.209;
   jupiter.axis = 5.2;
   jupiter.temp = 124;
-  jupiter.ESLs = 0.238;
-  jupiter.ESLi = 0.360;
-  jupiter.ESLg = 0.292;
+  jupiter.ESIs = 0.238;
+  jupiter.ESIi = 0.360;
+  jupiter.ESIg = 0.292;
   jupiter.label = "Jupiter";
   jupiter.corePlanet = true;
   jupiter.init();
@@ -204,9 +208,9 @@ void addMarkerPlanets() {
   mercury.radius = 0.3829;
   mercury.axis = 0.387;
   mercury.temp = 434;
-  mercury.ESLs = 0.422;
-  mercury.ESLi = 0.840;
-  mercury.ESLg = 0.596;
+  mercury.ESIs = 0.422;
+  mercury.ESIi = 0.840;
+  mercury.ESIg = 0.596;
   mercury.label = "Mercury";
   mercury.corePlanet = true;
   mercury.init();
@@ -380,12 +384,12 @@ void sortByTemp() {
 
 }
 
-void sortByESL() {
-  // Raise the planets off of the plane according to their ESL
+void sortByESI() {
+  // Raise the planets off of the plane according to their ESI
    for (int i = 0; i < planets.size(); i++) {
-    planets.get(i).tz = map(planets.get(i).ESLs, 0, 1, 0, 500);
+    planets.get(i).tz = map(planets.get(i).ESIs, planetMinESI, planetMaxESI, 0, 500);
   }
-   mode = "ESL";
+   mode = "ESI";
 }
 
 void unSort() {
@@ -432,14 +436,14 @@ void keyPressed() {
   
   else if (key == '0') { 
     // TODO Earth needs to be placed at center of data
-    sortByESL(); //Sort data by earth similarity index
-    yLabel = "Surface ESL";
-    xLabel = "Interior ESL";
+    sortByESI(); //Sort data by earth similarity index
+    yLabel = "Surface ESI";
+    xLabel = "Interior ESI";
 
     //toggleFlatness(1);
     yMax = 1.0;
     yMin = 0.0;
-    mode = "ESL";
+    mode = "ESI";
   } 
   
   else if (key == '`') {
@@ -497,9 +501,9 @@ void mousePressed(){
       +"\nAtmosphere Class: \t"+selectedPlanet.atmosphere_class
       +"\nTechnology Discovered By: \t"+selectedPlanet.disc_tech
       +"\nYear Discovered: \t"+selectedPlanet.disc_year
-      +"\nESLg: \t"+selectedPlanet.ESLg
-      +"\nESLi: \t"+selectedPlanet.ESLi
-        +"\nESLs: \t"+selectedPlanet.ESLs
+      +"\nESIg: \t"+selectedPlanet.ESIg
+      +"\nESIi: \t"+selectedPlanet.ESIi
+        +"\nESIs: \t"+selectedPlanet.ESIs
       );
           ArrayList<ExoPlanet> toUnFeature = new ArrayList<ExoPlanet>();
             for (int j = 0; j < planets.size(); j++) {
