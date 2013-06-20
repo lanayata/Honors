@@ -395,6 +395,13 @@ void sortByESI() {
   }
    mode = "ESI";
 }
+void sortByKOI() {
+  // Raise the planets off of the plane according to their ESI
+   for (int i = 0; i < planets.size(); i++) {
+    planets.get(i).tz = map(planets.get(i).KOI, planetMinKOI, planetMaxKOI, 0, 500);
+  }
+   mode = "ESI";
+}
 
 void unSort() {
   // Put all of the planets back onto the plane
@@ -494,7 +501,7 @@ void mousePressed(){
     if(planets.get(i).overPlanet()){
       selectedPlanetToCompare = planets.get(i);
       selectedPlanetToCompare.feature = true;
-      selectedPlanetToCompare.label = "Selected: KOI- "+selectedPlanetToCompare.KOI;
+      selectedPlanetToCompare.label = "Compared: KOI- "+selectedPlanetToCompare.KOI;
       textAreaToCompare.setText(
       "Kepler Plantary Index (KOI): \t"+selectedPlanetToCompare.KOI 
       +"\nTemperature: \t"+selectedPlanetToCompare.temp
@@ -520,6 +527,19 @@ void mousePressed(){
        for (int i = 0; i < planets.size(); i++) {
     if(planets.get(i).overPlanet()){
       selectedPlanet = planets.get(i);
+      // Planets in our solar system dont have the required info so specialised message requried
+      if (selectedPlanet.corePlanet){ 
+        textArea.setText(
+      "Planet Name: \t"+selectedPlanet.label 
+      +"\nRadius: \t"+selectedPlanet.radius
+      +"\nTemperature: \t"+selectedPlanet.temp
+      +"\nPeriod (days/year): \t"+selectedPlanet.period
+      +"\nESIg: \t"+selectedPlanet.ESIg
+      +"\nESIi: \t"+selectedPlanet.ESIi
+        +"\nESIs: \t"+selectedPlanet.ESIs
+      );
+      return;
+    }
       selectedPlanet.feature = true;
       selectedPlanet.label = "Selected: KOI- "+selectedPlanet.KOI;
       textArea.setText(

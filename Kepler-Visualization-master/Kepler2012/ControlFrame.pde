@@ -255,7 +255,7 @@ Range range;
      else greyOutPlanets = true;
   } 
     else if (event.isFrom("Sort by KOI")) {
-      //sortByKOI();
+      sortByKOI();
   } 
     else if (event.isFrom("Sort by Temp")) {
       sortByTemp();
@@ -293,7 +293,7 @@ void keyPressed() {
 }
   
   public void draw() {
-    if (selectedPlanet == null){cp5.controller("Compare").hide();}
+    if (selectedPlanet == null || selectedPlanet.corePlanet){cp5.controller("Compare").hide();}
     else {cp5.controller("Compare").show();}
       background(abc);
   
