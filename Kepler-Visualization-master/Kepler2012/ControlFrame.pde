@@ -9,6 +9,7 @@ Range range;
   float minKOI = 10000;
   float maxKOI = 0;
 
+       Button compareButton;
   Object parent;
   
   
@@ -45,7 +46,30 @@ Range range;
                   .setColorForeground(color(255,100));
                   ;
                   textArea.setText("No Planet Selected");
-           
+                  
+           textAreaToCompare = cp5.addTextarea("txtCompare")
+                  .setPosition(1000,0)
+                  .setSize(250,500)                 
+                  .setFont(createFont("arial",12))
+                  .setLineHeight(14)
+                  //.setColor(color(128))
+                  .setColorBackground(color(255,100))
+                  .setColorForeground(color(255,100));
+                  ;
+                  textAreaToCompare.setText("No Planet Selected To Compare");
+                  
+                compareInfo =  cp5.addTextarea("compareInfo")
+                  .setPosition(85,200)
+                  .setSize(160,20)                 
+                  .setFont(createFont("arial",12))
+                  .setLineHeight(14)
+                  //.setColor(color(128))
+                  .setColorBackground(color(0,100,0))
+                  .setColorForeground(color(0,100,0));
+                  ;
+                  compareInfo.setText("Select Planet to Compare");
+                   compareInfo.hide();
+                  
               //Slider for KOI
               range = cp5.addRange("KOI Range")
              .setBroadcast(false) 
@@ -100,37 +124,51 @@ Range range;
              .setColorForeground(color(255,40))
              .setColorBackground(color(255,40)) 
             ; 
-              cp5.addButton("pause")
-     .setValue(0)
-     .setPosition(displayWidth-100, 0)
-     .setSize(100,50)
-     ;
-                cp5.addButton("Grey out other planets")
-     .setValue(0)
-     .setPosition(displayWidth-100, 110)
-     .setSize(100,50)
-     ;
-     
+            
+            // Buttons for changing visualisation state
+               cp5.addButton("Change View")
+              .setPosition(initialX+500,initialY)
+             .setSize(100,40)
+            ;
+                 cp5.addButton("Grey out other planets")
+           .setValue(0)
+            .setPosition(initialX+500,initialY+componentHeight+gap)
+           .setSize(100,40)
+           ;
+           cp5.addButton("Pause")
+           .setValue(0)
+                    .setPosition(initialX+500,initialY+(componentHeight*2)+(gap*2))
+           .setSize(100,40)
+           ;
+                cp5.addButton("Unsort")
+           .setValue(0)
+                    .setPosition(initialX+500,initialY+(componentHeight*3)+(gap*3))
+           .setSize(100,40)
+           ;
+      
+         
+     // Main buttons for sorting data
      cp5.addButton("Sort by KOI")
-     .setValue(0)
       .setPosition(initialX,initialY)
      .setSize(100,40)
      ;
            cp5.addButton("Sort by Temp")
-     .setValue(0)
     .setPosition(initialX,initialY+componentHeight+gap)
      .setSize(100,40)
      ;
       cp5.addButton("Sort by Size")
-     .setValue(0)
       .setPosition(initialX,initialY+(componentHeight*2)+(gap*2))
      .setSize(100,40)
      ;
 
       cp5.addButton("Sort by ESI")
-     .setValue(0)
       .setPosition(initialX,initialY+(componentHeight*3)+(gap*3))
      .setSize(100,40)
+     ;
+     
+      compareButton = cp5.addButton("Compare")
+      .setPosition(0,200)
+     .setSize(80,20)
      ;
             filterData();
              //
@@ -208,27 +246,37 @@ Range range;
       filterData(); 
     }
 
-  if (event.isFrom("pause")) {
-  if (pausedVis) pausedVis = false;
-  else pausedVis = true;
+  if (event.isFrom("Pause")) {
+    if (pausedVis) pausedVis = false;
+    else pausedVis = true;
   }
-  if (event.isFrom("Grey out other planets")) {
+   else if (event.isFrom("Grey out other planets")) {
      if(greyOutPlanets) greyOutPlanets = false;
      else greyOutPlanets = true;
   } 
-    if (event.isFrom("Sort by KOI")) {
+    else if (event.isFrom("Sort by KOI")) {
       //sortByKOI();
   } 
-    if (event.isFrom("Sort by Temp")) {
+    else if (event.isFrom("Sort by Temp")) {
       sortByTemp();
   } 
-    if (event.isFrom("Sort by Size")) {
+    else if (event.isFrom("Sort by Size")) {
       sortBySize();
   } 
-    if (event.isFrom("Sort by ESI")) {
+    else if (event.isFrom("Sort by ESI")) {
       sortByESI();
   } 
-  
+    else if (event.isFrom("Change View")) {
+        tflatness = (tflatness == 1) ? (0):(1);
+    toggleFlatness(tflatness);
+  } 
+    else if (event.isFrom("Unsort")) {
+         unSort();
+  } 
+    else if (event.isFrom("Compare")) {
+         compare = true;
+          compareInfo.show();
+  } 
     }
     catch(Exception e){e.printStackTrace();}
 }
@@ -245,6 +293,8 @@ void keyPressed() {
 }
   
   public void draw() {
+    if (selectedPlanet == null){cp5.controller("Compare").hide();}
+    else {cp5.controller("Compare").show();}
       background(abc);
   
   }

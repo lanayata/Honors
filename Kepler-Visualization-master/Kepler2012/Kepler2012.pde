@@ -67,8 +67,12 @@ String mode = "none";
 String layout = "orbital";
 // Selected planet that was last clicked on
 ExoPlanet selectedPlanet = null;
+ExoPlanet selectedPlanetToCompare = null;
+boolean compare= false;
 // Set up second window
 Textarea textArea;
+Textarea textAreaToCompare;
+Textarea compareInfo;
 ControlFrame cf;
 //NAppletManager nappletManager;
 //
@@ -485,6 +489,34 @@ void mouseReleased() {
 }
 
 void mousePressed(){
+  if (compare == true){
+  for (int i = 0; i < planets.size(); i++) {
+    if(planets.get(i).overPlanet()){
+      selectedPlanetToCompare = planets.get(i);
+      selectedPlanetToCompare.feature = true;
+      selectedPlanetToCompare.label = "Selected: KOI- "+selectedPlanetToCompare.KOI;
+      textAreaToCompare.setText(
+      "Kepler Plantary Index (KOI): \t"+selectedPlanetToCompare.KOI 
+      +"\nTemperature: \t"+selectedPlanetToCompare.temp
+      +"\nGravity: \t"+selectedPlanetToCompare.KOI
+      +"\nZone Class: \t"+selectedPlanetToCompare.zone_class
+      +"\nMass Class: \t"+selectedPlanetToCompare.mass_class
+      +"\nComposition Class: \t"+selectedPlanetToCompare.composition_class
+      +"\nHabitable Class: \t"+selectedPlanetToCompare.habitable_class
+      +"\nAtmosphere Class: \t"+selectedPlanetToCompare.atmosphere_class
+      +"\nTechnology Discovered By: \t"+selectedPlanetToCompare.disc_tech
+      +"\nYear Discovered: \t"+selectedPlanetToCompare.disc_year
+      +"\nESIg: \t"+selectedPlanetToCompare.ESIg
+      +"\nESIi: \t"+selectedPlanetToCompare.ESIi
+        +"\nESIs: \t"+selectedPlanetToCompare.ESIs
+      );
+        compareInfo.hide();
+      compare = false;
+      break;
+    }
+  }
+  }
+  else{
        for (int i = 0; i < planets.size(); i++) {
     if(planets.get(i).overPlanet()){
       selectedPlanet = planets.get(i);
@@ -524,6 +556,6 @@ void mousePressed(){
       
       break;
     }
-  }
+  }}
 }
 
