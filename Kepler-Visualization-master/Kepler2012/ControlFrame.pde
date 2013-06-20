@@ -25,6 +25,12 @@ Range range;
   }
   
   public void setup() {
+    int initialY = 10;
+    int initialX = 300;
+    int buttonInitialY = 0;
+    int buttonInitialX =300;
+    int componentHeight = 40;
+    int gap = 10;
     getMinMax();
     size(w, h);
     frameRate(25);
@@ -43,7 +49,7 @@ Range range;
               //Slider for KOI
               range = cp5.addRange("KOI Range")
              .setBroadcast(false) 
-             .setPosition(300,0)
+             .setPosition(initialX+120,initialY)
              .setSize(200,40)
              .setHandleSize(20)
              .setRange(minKOI,maxKOI)
@@ -57,7 +63,7 @@ Range range;
               //Slider for temperature
               range = cp5.addRange("Temperature Range")
              .setBroadcast(false) 
-             .setPosition(300,50)
+              .setPosition(initialX+120,initialY+componentHeight+gap)
              .setSize(200,40)
              .setHandleSize(20)
              .setRange(globalMinTemp,globalMaxTemp)
@@ -71,7 +77,7 @@ Range range;
               //Slider for size
               range = cp5.addRange("Size Range")
              .setBroadcast(false) 
-             .setPosition(300,100)
+               .setPosition(initialX+120,initialY+(componentHeight*2)+(gap*2))
              .setSize(200,40)
              .setHandleSize(20)
              .setRange(globalMinSize,globalMaxSize)
@@ -84,7 +90,7 @@ Range range;
              //Slider for ESI
               range = cp5.addRange("Earth Similarity Index Range")
              .setBroadcast(false) 
-             .setPosition(300,150)
+              .setPosition(initialX+120,initialY+(componentHeight*3)+(gap*3))
              .setSize(200,40)
              .setHandleSize(20)
              .setRange(0.0,1.0)
@@ -103,6 +109,28 @@ Range range;
      .setValue(0)
      .setPosition(displayWidth-100, 110)
      .setSize(100,50)
+     ;
+     
+     cp5.addButton("Sort by KOI")
+     .setValue(0)
+      .setPosition(initialX,initialY)
+     .setSize(100,40)
+     ;
+           cp5.addButton("Sort by Temp")
+     .setValue(0)
+    .setPosition(initialX,initialY+componentHeight+gap)
+     .setSize(100,40)
+     ;
+      cp5.addButton("Sort by Size")
+     .setValue(0)
+      .setPosition(initialX,initialY+(componentHeight*2)+(gap*2))
+     .setSize(100,40)
+     ;
+
+      cp5.addButton("Sort by ESI")
+     .setValue(0)
+      .setPosition(initialX,initialY+(componentHeight*3)+(gap*3))
+     .setSize(100,40)
      ;
             filterData();
              //
@@ -188,6 +216,19 @@ Range range;
      if(greyOutPlanets) greyOutPlanets = false;
      else greyOutPlanets = true;
   } 
+    if (event.isFrom("Sort by KOI")) {
+      //sortByKOI();
+  } 
+    if (event.isFrom("Sort by Temp")) {
+      sortByTemp();
+  } 
+    if (event.isFrom("Sort by Size")) {
+      sortBySize();
+  } 
+    if (event.isFrom("Sort by ESI")) {
+      sortByESI();
+  } 
+  
     }
     catch(Exception e){e.printStackTrace();}
 }

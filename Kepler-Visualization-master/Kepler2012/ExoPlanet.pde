@@ -208,6 +208,8 @@ class ExoPlanet {
       stroke(255, 255);
       strokeWeight(2);
       noFill();
+       if (greyOutPlanets && (corePlanet || feature)) ellipse(0, 0, pixelRadius*4+10, pixelRadius*4+10);
+       else
       ellipse(0, 0, pixelRadius + 10, pixelRadius + 10); 
       strokeWeight(1);
       pushMatrix();
@@ -237,6 +239,8 @@ class ExoPlanet {
     fill(188,188,188);
     }
     noStroke();
+    if (greyOutPlanets && (corePlanet || feature)) ellipse(0, 0, pixelRadius*4, pixelRadius*4);
+    else
     ellipse(0, 0, pixelRadius, pixelRadius);
     popMatrix();
   }
