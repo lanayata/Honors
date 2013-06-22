@@ -173,8 +173,8 @@ Range range;
             filterData();
              //
                noStroke();  
-           addMouseWheelListener(new MouseWheelListener() { 
-    public void mouseWheelMoved(MouseWheelEvent mwe) { 
+           addMouseWheelListener(new java.awt.event.MouseWheelListener() { 
+    public void mouseWheelMoved(java.awt.event.MouseWheelEvent mwe) { 
       mouseWheel(mwe.getWheelRotation());
   }}); 
       
@@ -341,8 +341,7 @@ public void filterData(){
   else if (mode.equals("none")) unSort();
 }  
 void mouseWheel(int delta) {
-  System.out.println("mouse has moved by " + delta + " units."); 
-  System.out.println(tzoom+">>"+zoom);
+
   if (delta==-1 && tzoom <=3)
   tzoom+=0.2;
   else if (delta == 1 && tzoom >= .1)

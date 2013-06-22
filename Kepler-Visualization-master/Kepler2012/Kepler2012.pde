@@ -11,11 +11,11 @@
 import processing.opengl.*;
 import controlP5.*;
 import java.awt.Frame;
-import java.awt.event.*;
+
 
 // Set up font
 PFont label = createFont("Arial", 96);
-
+PImage sunImage;
 
 // Here's the big list that will hold all of our planets
 ArrayList<ExoPlanet> allPlanets = new ArrayList();
@@ -95,14 +95,10 @@ void setup() {
   cp5 = new ControlP5(this);
   controls = new Controls();
   showControls = 1;
-           frame.addMouseWheelListener(new MouseWheelListener() { 
-    public void mouseWheelMoved(MouseWheelEvent mwe) { 
-      mouseWheel(mwe.getWheelRotation());
-  }}); 
 
   cf = addControlFrame("Exoplanet Controls", displayWidth,250);
    // Add mouse wheel listener for zooming 
-
+  sunImage = loadImage("sun3.png");
 }
 
 void getPlanets(String url, boolean is2012) {
@@ -269,7 +265,8 @@ void draw() {
   scale(zoom);
 
   // Draw the sun
-  fill(255 - (255 * flatness));
+  image(sunImage, -10, -10, 20,20);
+  fill(255,255,0);
   noStroke();
   ellipse(0, 0, 10, 10);
 
@@ -580,12 +577,11 @@ Set the appropriate text area to the correct information about the planet provid
 }
 
 
-void mouseWheel(int delta) {
-  System.out.println("mouse has moved by " + delta + " units."); 
-  System.out.println(tzoom+">>"+zoom);
-  if (delta==-1 && tzoom <=3)
+void mouseWheel(MouseEvent event) {
+  float delta = event.getAmount();
+  if (delta==1 && tzoom <=3)
   tzoom+=0.2;
-  else if (delta == 1 && tzoom >= .1)
+  else if (delta == -1 && tzoom >= .1)
   tzoom-=0.2;
 }
 
