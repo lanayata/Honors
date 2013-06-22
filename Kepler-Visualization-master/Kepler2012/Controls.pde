@@ -15,7 +15,7 @@
  
 */
 
-class Controls {
+class Controls{
    
    int barWidth;   
    int barX;                          // x-coordinate of zoom control
@@ -43,10 +43,9 @@ class Controls {
       sliderHeight = 10;
       sliderX = (barX + (barWidth/2)) - (sliderWidth/2);      
       sliderValue = minZoomValue; 
-      sliderY = minY;     
+      sliderY = minY;  
    }
-   
-   
+
    void render() {
 
       strokeWeight(0.5);     

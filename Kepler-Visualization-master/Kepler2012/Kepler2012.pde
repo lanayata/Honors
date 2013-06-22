@@ -8,13 +8,15 @@
  */
 
 // Import libraries
-import napplet.*;
 import processing.opengl.*;
 import controlP5.*;
 import java.awt.Frame;
+import java.awt.event.*;
 
 // Set up font
 PFont label = createFont("Arial", 96);
+
+
 // Here's the big list that will hold all of our planets
 ArrayList<ExoPlanet> allPlanets = new ArrayList();
 // List of planets for displaying when filtered
@@ -74,7 +76,7 @@ Textarea textArea;
 Textarea textAreaToCompare;
 Textarea compareInfo;
 ControlFrame cf;
-//NAppletManager nappletManager;
+
 //
 ControlP5 cp5;
 
@@ -93,17 +95,14 @@ void setup() {
   cp5 = new ControlP5(this);
   controls = new Controls();
   showControls = 1;
+           frame.addMouseWheelListener(new MouseWheelListener() { 
+    public void mouseWheelMoved(MouseWheelEvent mwe) { 
+      mouseWheel(mwe.getWheelRotation());
+  }}); 
 
-////////
-//Owens Changes
-////////
-  
   cf = addControlFrame("Exoplanet Controls", displayWidth,250);
-  
-  //Set up slider for planet ESIg
+   // Add mouse wheel listener for zooming 
 
-  //
- /////////////// 
 }
 
 void getPlanets(String url, boolean is2012) {
@@ -496,39 +495,60 @@ void mouseReleased() {
 }
 
 void mousePressed(){
+  // If compare button has been pressed then allow secondary selection of planet
   if (compare == true){
-  for (int i = 0; i < planets.size(); i++) {
+    for (int i = 0; i < planets.size(); i++) {
+      if(planets.get(i).overPlanet()){
+        selectedPlanetToCompare = planets.get(i); 
+        selectedPlanetToCompare.feature = true; // Make it a feature planet
+        selectedPlanetToCompare.label = "Compared: KOI- "+selectedPlanetToCompare.KOI; // update label
+        setTextAreaText(textAreaToCompare, selectedPlanetToCompare); // Set second textarea text
+        compareInfo.hide(); // hide compare button
+        compare = false; // Reset compare
+        break;
+      }
+    }
+  }
+  else{
+   for (int i = 0; i < planets.size(); i++) {
     if(planets.get(i).overPlanet()){
-      selectedPlanetToCompare = planets.get(i);
-      selectedPlanetToCompare.feature = true;
-      selectedPlanetToCompare.label = "Compared: KOI- "+selectedPlanetToCompare.KOI;
-      textAreaToCompare.setText(
-      "Kepler Plantary Index (KOI): \t"+selectedPlanetToCompare.KOI 
-      +"\nTemperature: \t"+selectedPlanetToCompare.temp
-      +"\nGravity: \t"+selectedPlanetToCompare.KOI
-      +"\nZone Class: \t"+selectedPlanetToCompare.zone_class
-      +"\nMass Class: \t"+selectedPlanetToCompare.mass_class
-      +"\nComposition Class: \t"+selectedPlanetToCompare.composition_class
-      +"\nHabitable Class: \t"+selectedPlanetToCompare.habitable_class
-      +"\nAtmosphere Class: \t"+selectedPlanetToCompare.atmosphere_class
-      +"\nTechnology Discovered By: \t"+selectedPlanetToCompare.disc_tech
-      +"\nYear Discovered: \t"+selectedPlanetToCompare.disc_year
-      +"\nESIg: \t"+selectedPlanetToCompare.ESIg
-      +"\nESIi: \t"+selectedPlanetToCompare.ESIi
-        +"\nESIs: \t"+selectedPlanetToCompare.ESIs
-      );
-        compareInfo.hide();
-      compare = false;
+      selectedPlanet = planets.get(i);
+     
+      if (selectedPlanet.corePlanet){
+         setTextAreaText(textArea, selectedPlanet); // Planets in our solar system dont have the required info so specialised message requried
+         return;
+      }
+    
+      selectedPlanet.feature = true;
+      selectedPlanet.label = "Selected: KOI- "+selectedPlanet.KOI;
+      setTextAreaText(textArea, selectedPlanet);
+          
+          // Find all sister planets in the same solar system and make them a feature planet.     
+            for (int j = 0; j < planets.size(); j++) {
+              ExoPlanet p = planets.get(j);
+              if (p != selectedPlanet){
+               if (p.sun_name!=null && p.sun_name.equals(selectedPlanet.sun_name)){
+                 p.feature = true;
+                 p.label = "Same Star: KOI-"+p.KOI;
+               }
+               else { 
+                 p.feature = false;       
+               }
+             }
+            }
       break;
     }
   }
-  }
-  else{
-       for (int i = 0; i < planets.size(); i++) {
-    if(planets.get(i).overPlanet()){
-      selectedPlanet = planets.get(i);
-      // Planets in our solar system dont have the required info so specialised message requried
-      if (selectedPlanet.corePlanet){ 
+}
+}
+
+/** 
+Set the appropriate text area to the correct information about the planet provided
+*/
+ void setTextAreaText(Textarea area, ExoPlanet p){
+   
+     // If planet is from our solar system, ie not an Exoplanet then print appropriate fields
+     if (selectedPlanet.corePlanet){ 
         textArea.setText(
       "Planet Name: \t"+selectedPlanet.label 
       +"\nRadius: \t"+selectedPlanet.radius
@@ -538,44 +558,34 @@ void mousePressed(){
       +"\nESIi: \t"+selectedPlanet.ESIi
         +"\nESIs: \t"+selectedPlanet.ESIs
       );
-      return;
     }
-      selectedPlanet.feature = true;
-      selectedPlanet.label = "Selected: KOI- "+selectedPlanet.KOI;
-      textArea.setText(
-      "Kepler Plantary Index (KOI): \t"+selectedPlanet.KOI 
-      +"\nTemperature: \t"+selectedPlanet.temp
-      +"\nGravity: \t"+selectedPlanet.KOI
-      +"\nZone Class: \t"+selectedPlanet.zone_class
-      +"\nMass Class: \t"+selectedPlanet.mass_class
-      +"\nComposition Class: \t"+selectedPlanet.composition_class
-      +"\nHabitable Class: \t"+selectedPlanet.habitable_class
-      +"\nAtmosphere Class: \t"+selectedPlanet.atmosphere_class
-      +"\nTechnology Discovered By: \t"+selectedPlanet.disc_tech
-      +"\nYear Discovered: \t"+selectedPlanet.disc_year
-      +"\nESIg: \t"+selectedPlanet.ESIg
-      +"\nESIi: \t"+selectedPlanet.ESIi
-        +"\nESIs: \t"+selectedPlanet.ESIs
+     // Else planet is outside our solar system so print appropriate fields
+    else{
+   area.setText(
+      "Kepler Plantary Index (KOI): \t"+p.KOI 
+      +"\nTemperature: \t"+p.temp
+      +"\nGravity: \t"+p.KOI
+      +"\nZone Class: \t"+p.zone_class
+      +"\nMass Class: \t"+p.mass_class
+      +"\nComposition Class: \t"+p.composition_class
+      +"\nHabitable Class: \t"+p.habitable_class
+      +"\nAtmosphere Class: \t"+p.atmosphere_class
+      +"\nTechnology Discovered By: \t"+p.disc_tech
+      +"\nYear Discovered: \t"+p.disc_year
+      +"\nESIg: \t"+p.ESIg
+      +"\nESIi: \t"+p.ESIi
+        +"\nESIs: \t"+p.ESIs
       );
-          ArrayList<ExoPlanet> toUnFeature = new ArrayList<ExoPlanet>();
-            for (int j = 0; j < planets.size(); j++) {
-              ExoPlanet p = planets.get(j);
-              if (i != j){
-             if (p.sun_name!=null && p.sun_name.equals(selectedPlanet.sun_name)){
-               p.feature = true;
-               p.label = "Same Star: KOI-"+p.KOI;
-             }
-             else {        
-              toUnFeature.add(p);
-              }
-             }
-            }
-            for (int j = 0; j < toUnFeature.size(); j++) {
-            toUnFeature.get(j).feature = false;
-            }
-      
-      break;
     }
-  }}
+}
+
+
+void mouseWheel(int delta) {
+  System.out.println("mouse has moved by " + delta + " units."); 
+  System.out.println(tzoom+">>"+zoom);
+  if (delta==-1 && tzoom <=3)
+  tzoom+=0.2;
+  else if (delta == 1 && tzoom >= .1)
+  tzoom-=0.2;
 }
 
