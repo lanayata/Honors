@@ -15,32 +15,55 @@ import java.awt.Frame;
 
 // Set up font
 PFont label = createFont("Arial", 96);
+
+
+
+// Images
 PImage sunImage;
 
-// Here's the big list that will hold all of our planets
-ArrayList<ExoPlanet> allPlanets = new ArrayList();
-// List of planets for displaying when filtered
-ArrayList<ExoPlanet> planets = new ArrayList();
+
+// ExoPlanets
+ArrayList<ExoPlanet> allPlanets = new ArrayList(); // Holds all planets
+ArrayList<ExoPlanet> planets = new ArrayList(); // List of planets for displaying when filtered
+
 // Conversion constants
 float ER = 1;           // Earth Radius, in pixels
 float AU = 1500;        // Astronomical Unit, in pixels
 float YEAR = 50000;     // One year, in frames
-// Max/Min numbers
-float globalMaxTemp = 3257;
-float globalMinTemp = 3257;
+
+/////////////////////
+// Max/Min numbers //
+/////////////////////
+  //Scale
 float yMax = 10;
 float yMin = 0;
+  //Global
+float globalMaxTemp = 3257;
+float globalMinTemp = 3257;
 float globalMaxSize = 0;
 float globalMinSize = 1000000;
+  //Planet Specific
+float planetMinTemp = 83;
+float planetMaxTemp = 3867;
+float planetMinSize = 0.33;
+float planetMaxSize = 58.06; 
+float planetMinESI = 0;
+float planetMaxESI = 1;
+float planetMinKOI = 1;
+float planetMaxKOI = 2771;
+
 // Axis labels
 String xLabel = "Semi-major Axis (Astronomical Units)";
 String yLabel = "Temperature (Kelvin)";
+
 // Rotation Vectors - control the main 3D space
 PVector rot = new PVector();
 PVector trot = new PVector();
+
 // Master zoom
 float zoom = 0;
 float tzoom = 0.3;
+
 // This is a zero-one weight that controls whether the planets are flat on the
 // plane (0) or not (1)
 float flatness = 0;
@@ -50,35 +73,24 @@ Controls controls;
 int showControls;
 boolean draggingZoomSlider = false;
 
+//Visualisation State Variables
 boolean pausedVis = true; // if visualisation paused
-boolean greyOutPlanets = true;
-  float planetMinTemp = 83;
-  float planetMaxTemp = 3867;
-  float planetMinSize = 0.33;
-  float planetMaxSize = 58.06; 
-  float planetMinESI = -1;
-  float planetMaxESI = 2;
-  float planetMinKOI = 1;
-  float planetMaxKOI = 2771;
-//////////////////////
-// Owens Changes
-//////////////////////
-// Store what mode the visualisation is in ie:ESI 
-String mode = "none";
-// Store what layout the visualisation is in (orbital or graph)
-String layout = "orbital";
-// Selected planet that was last clicked on
-ExoPlanet selectedPlanet = null;
-ExoPlanet selectedPlanetToCompare = null;
-boolean compare= false;
-// Set up second window
-Textarea textArea;
-Textarea textAreaToCompare;
-Textarea compareInfo;
-ControlFrame cf;
+boolean greyOutPlanets = true; 
+String mode = "none"; // Store what mode the visualisation is in ie:ESI 
+String layout = "orbital"; // Store what layout the visualisation is in (orbital or graph)
+ExoPlanet selectedPlanet = null;// Selected planet that was last clicked on
+ExoPlanet selectedPlanetToCompare = null; // Selected planet to compare
+boolean compare= false; // Compare button clicked boolean
 
-//
-ControlP5 cp5;
+// Second Control frame window 
+ControlP5 cp5; // Library for the control frame
+ControlFrame cf; 
+
+// Text areas in control frame
+Textarea textArea; // main text area
+Textarea textAreaToCompare; // second text area
+Textarea compareInfo; // pop up text area informing user how to compare
+
 
 void setup() {
   size(displayWidth, displayHeight-300, OPENGL);
@@ -97,7 +109,6 @@ void setup() {
   showControls = 1;
 
   cf = addControlFrame("Exoplanet Controls", displayWidth,250);
-   // Add mouse wheel listener for zooming 
   sunImage = loadImage("sun3.png");
 }
 
@@ -365,45 +376,37 @@ ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
   f.setVisible(true);
   return p;
 }
+
+/////////////////////
+// SORTING METHODS //
+/////////////////////
 void sortBySize() {
-        mode = "size";
-  // Raise the planets off of the plane according to their size
-   for (int i = 0; i < planets.size(); i++) {
+  mode = "size";
+   for (int i = 0; i < planets.size(); i++) 
     planets.get(i).tz = map(planets.get(i).radius, planetMinSize, planetMaxSize, 0, 500);
-  }
-  
 }
 
 void sortByTemp() {
-      mode = "temp";
-  // Raise the planets off of the plane according to their 2temperature
-
-    for (int i = 0; i < planets.size(); i++) {
+     mode = "temp";
+    for (int i = 0; i < planets.size(); i++) 
     planets.get(i).tz = map(planets.get(i).temp, planetMinTemp, planetMaxTemp, 0, 500);
-  }
-
 }
 
 void sortByESI() {
-  // Raise the planets off of the plane according to their ESI
-   for (int i = 0; i < planets.size(); i++) {
-    planets.get(i).tz = map(planets.get(i).ESIs, planetMinESI, planetMaxESI, 0, 500);
-  }
    mode = "ESI";
+   for (int i = 0; i < planets.size(); i++) 
+    planets.get(i).tz = map(planets.get(i).ESIg, planetMinESI, planetMaxESI, 0, 500);
+
 }
 void sortByKOI() {
-  // Raise the planets off of the plane according to their ESI
-   for (int i = 0; i < planets.size(); i++) {
+   for (int i = 0; i < planets.size(); i++) 
     planets.get(i).tz = map(planets.get(i).KOI, planetMinKOI, planetMaxKOI, 0, 500);
-  }
-   mode = "ESI";
+   mode = "KOI";
 }
 
 void unSort() {
-  // Put all of the planets back onto the plane
-  for (int i = 0; i < planets.size(); i++) {
+  for (int i = 0; i < planets.size(); i++) 
     planets.get(i).tz = 0;
-  }
   mode = "none";
 }
 
