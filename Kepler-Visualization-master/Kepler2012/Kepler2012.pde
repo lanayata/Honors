@@ -92,6 +92,9 @@ Textarea textAreaToCompare; // second text area
 Textarea compareInfo; // pop up text area informing user how to compare
 
 
+// Main label of system
+String visualisationState="";
+String visualisationLayout="Orbital View";
 void setup() {
   size(displayWidth, displayHeight-300, OPENGL);
   background(0);
@@ -277,9 +280,11 @@ void draw() {
 
   // Draw the sun
   image(sunImage, -10, -10, 20,20);
+
+
   fill(255,255,0);
   noStroke();
-  ellipse(0, 0, 10, 10);
+  //ellipse(0, 0, 10, 10);
 
   // Draw Rings:
   strokeWeight(2);
@@ -343,6 +348,9 @@ void draw() {
 
   popMatrix();
 
+
+
+
   // Render the planets
   for (int i = 0; i < planets.size(); i++) {
   try{
@@ -388,6 +396,7 @@ void sortBySize() {
     xLabel = "Semi-major Axis (Astronomical Units)";
     yMax = globalMaxSize;
     yMin = 0;
+     visualisationState = "Planet Size";
 }
 
 void sortByTemp() {
@@ -398,6 +407,7 @@ void sortByTemp() {
     xLabel = "Semi-major Axis (Astronomical Units)";
     yMax = globalMaxTemp;
     yMin = globalMinTemp;
+     visualisationState = "Temperature";
 }
 
 void sortByESI() {
@@ -409,18 +419,20 @@ void sortByESI() {
     yMax = 1.0;
     yMin = 0.0;
     mode = "ESI";
-
+   visualisationState = "Earth Similarity Index";
 }
 void sortByKOI() {
    for (int i = 0; i < planets.size(); i++) 
     planets.get(i).tz = map(planets.get(i).KOI, planetMinKOI, planetMaxKOI, 0, 500);
    mode = "KOI";
+   visualisationState = "Kepler Object of Interest Index";
 }
 
 void unSort() {
   for (int i = 0; i < planets.size(); i++) 
     planets.get(i).tz = 0;
   mode = "none";
+   visualisationState = "Unordered";
 }
 
 void keyPressed() {
@@ -474,9 +486,11 @@ void toggleFlatness(float f) {
   tflatness = f;
   if (layout.equals("orbital")){
   layout = "graph";
+  visualisationLayout = "Graph View" ;
   }
   else {
   layout = "orbital";
+  visualisationLayout = "Orbital View" ;
   }
   if (tflatness == 1) {
     trot.x = PI/2;

@@ -32,7 +32,7 @@ class Controls{
       barX = 40;
       barWidth = 15;
  
-      minY = 40;
+      minY = 80;
       maxY = minY + height/3 - sliderHeight/2;
            
       minZoomValue = 0.0;
@@ -47,7 +47,12 @@ class Controls{
    }
 
    void render() {
-
+                fill(100, 100, 100);
+         rect(20, 20, 600, 40);
+         
+           fill(2, 52, 77);
+     textSize(30);
+      text(visualisationLayout+": "+visualisationState, 40, 50);
       strokeWeight(0.5);     
       stroke(105, 105, 105); 
       
