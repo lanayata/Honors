@@ -178,21 +178,18 @@ class ExoPlanet {
   // place exoplanets by their ESI on X axis if in graph view and mode is ESI
       else if (!label.equals("Earth") && mode.equals("ESI") && layout.equals("graph")){
         apixelAxis = ESIi*AU;
-    
     }
+    
+     // place exoplanets by their ESI on X axis if in orbital view and mode is ESI
+      else if (!label.equals("Earth") && mode.equals("ESI") && layout.equals("orbital")){
+        apixelAxis = ((1-ESIg)/2)*AU;
+    } 
+
     if (!pausedVis || layout.equals("graph")){
      x = sin(theta * (1 - flatness)) * apixelAxis;
      y = cos(theta * (1 - flatness)) * apixelAxis;
     }
-    //CHECK IF CURSER IS OVER PLANET
-    //if ( overPlanet(x, y, z, pixelRadius+10) ) {
-   //   planetOver = true;
-    //  System.out.print(KOI);
-     //     System.out.println(" ON");
-   // } else {
-    //  planetOver = false;
-    //} 
-    
+
   }
 
   // Draw

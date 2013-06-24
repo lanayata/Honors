@@ -384,18 +384,31 @@ void sortBySize() {
   mode = "size";
    for (int i = 0; i < planets.size(); i++) 
     planets.get(i).tz = map(planets.get(i).radius, planetMinSize, planetMaxSize, 0, 500);
+    yLabel = "Planet Size (Earth Radii)";
+    xLabel = "Semi-major Axis (Astronomical Units)";
+    yMax = globalMaxSize;
+    yMin = 0;
 }
 
 void sortByTemp() {
      mode = "temp";
     for (int i = 0; i < planets.size(); i++) 
     planets.get(i).tz = map(planets.get(i).temp, planetMinTemp, planetMaxTemp, 0, 500);
+    yLabel = "Temperature (Kelvin)";
+    xLabel = "Semi-major Axis (Astronomical Units)";
+    yMax = globalMaxTemp;
+    yMin = globalMinTemp;
 }
 
 void sortByESI() {
    mode = "ESI";
    for (int i = 0; i < planets.size(); i++) 
-    planets.get(i).tz = map(planets.get(i).ESIg, planetMinESI, planetMaxESI, 0, 500);
+    planets.get(i).tz = map(planets.get(i).ESIs, planetMinESI, planetMaxESI, 0, 500);
+    yLabel = "Surface ESI";
+    xLabel = "Interior ESI";
+    yMax = 1.0;
+    yMin = 0.0;
+    mode = "ESI";
 
 }
 void sortByKOI() {
@@ -428,37 +441,21 @@ void keyPressed() {
   if (key == '1') {
     sortBySize(); 
     //toggleFlatness(1);
-    yLabel = "Planet Size (Earth Radii)";
-    xLabel = "Semi-major Axis (Astronomical Units)";
-    yMax = globalMaxSize;
-    yMin = 0;
   } 
   else if (key == '2') {
     sortByTemp(); 
     //trot.x = PI/2;
-    yLabel = "Temperature (Kelvin)";
-    //toggleFlatness(1);
-    xLabel = "Semi-major Axis (Astronomical Units)";
-    yMax = globalMaxTemp;
-    yMin = globalMinTemp;
+
  
   } 
   
   else if (key == '0') { 
-    // TODO Earth needs to be placed at center of data
     sortByESI(); //Sort data by earth similarity index
-    yLabel = "Surface ESI";
-    xLabel = "Interior ESI";
 
-    //toggleFlatness(1);
-    yMax = 1.0;
-    yMin = 0.0;
-    mode = "ESI";
   } 
   
   else if (key == '`') {
     unSort(); 
-    toggleFlatness(0);
   }
   else if (key == '3') {
     trot.x = 1.5;
