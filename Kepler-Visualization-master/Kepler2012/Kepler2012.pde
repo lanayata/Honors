@@ -96,7 +96,7 @@ Textarea compareInfo; // pop up text area informing user how to compare
 String visualisationState="";
 String visualisationLayout="Orbital View";
 void setup() {
-  size(displayWidth, displayHeight-300, OPENGL);
+  size(displayWidth, displayHeight-300, P3D);
   background(0);
   smooth();  
   textFont(label, 96);
@@ -280,27 +280,29 @@ void draw() {
 
   // Draw the sun
   image(sunImage, -10, -10, 20,20);
-
-
-  fill(255,255,0);
-  noStroke();
-  //ellipse(0, 0, 10, 10);
-
+  
+  if (layout.equals("orbital")){
   // Draw Rings:
   strokeWeight(2);
   noFill();
 
   // Draw a 2 AU ring
-  stroke(255, 100 - (90 * flatness));
-  ellipse(0, 0, AU * 2, AU * 2);
-
+  stroke(255, 100);
+  //ellipse(0, 0, AU * 2, AU * 2);
+arc(0, 7 ,AU * 2, AU * 2, PI, TWO_PI);
+arc(0, -7, -AU * 2, -AU * 2, PI, TWO_PI);
   // Draw a 1 AU ring
-  stroke(255, 50 - (40 * flatness));
-  ellipse(0, 0, AU, AU);
+  stroke(255, 100);
+  //ellipse(0, 0, AU, AU);
+ arc(0, 7 ,AU, AU , PI, TWO_PI);
+arc(0, -7, -AU, -AU , PI, TWO_PI);
 
   // Draw a 10 AU ring
-  ellipse(0, 0, AU * 10, AU * 10);
+   arc(0, 7 ,AU * 10, AU * 10 , PI, TWO_PI);
+arc(0, -7, -AU * 10, -AU * 10 , PI, TWO_PI);
 
+  }
+  else {
   // Draw the Y Axis
   stroke(255, 100);
   pushMatrix();
@@ -347,27 +349,37 @@ void draw() {
   text("0.5", AU/2, 17);
 
   popMatrix();
-
-
-
+  }
+  
+long mem = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000;
 
   // Render the planets
   for (int i = 0; i < planets.size(); i++) {
   try{
     ExoPlanet p = planets.get(i);
-        if(p!=null){
-    if (p.vFlag < 4) {
+          if(p!=null){
+       if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
+       println("First Planet: "+p.KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
+       break;
+   }
       p.update();
+        if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
+       println("Second Planet: "+p.KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
+       break;
+   }
       p.render();
-    }
-    }
+   if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
+       println("third Planet: "+p.KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
+       break;
+   }
+          }
   }
+
   catch(IndexOutOfBoundsException e){
-
+e.printStackTrace();
 }
-
   }    
-  
+
 
   
 }
