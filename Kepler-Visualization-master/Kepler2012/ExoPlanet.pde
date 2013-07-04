@@ -194,6 +194,7 @@ class ExoPlanet {
 
   // Draw
   void render() {
+    long mem = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000;
     pushMatrix();
     translate(x, y, z);
     // Billboard
@@ -207,7 +208,7 @@ class ExoPlanet {
       noFill();
        if (greyOutPlanets && (corePlanet || feature)) ellipse(0, 0, pixelRadius*4+10, pixelRadius*4+10);
        else
-      ellipse(0, 0, pixelRadius + 10, pixelRadius + 10); 
+      ellipse(0, 0, (int) pixelRadius + 10, (int) pixelRadius + 10); 
       strokeWeight(1);
       pushMatrix();
       if (label.equals("Earth")) {
@@ -228,6 +229,9 @@ class ExoPlanet {
       }
       popMatrix();
     }
+       if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
+       println("First Call "+KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
+     }
     //if user has selected to grey out planets then grey out planets not featured or core
     if (!greyOutPlanets || (corePlanet || feature)){
     fill(col);
@@ -238,7 +242,14 @@ class ExoPlanet {
     noStroke();
     if (greyOutPlanets && (corePlanet || feature)) ellipse(0, 0, pixelRadius*4, pixelRadius*4);
     else
-    ellipse(0, 0, pixelRadius, pixelRadius);
+     if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
+       println("Second Call "+KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
+     }
+    ellipse(0, 0, (int) pixelRadius, (int) pixelRadius);
+     if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
+       System.gc();
+
+     }
     popMatrix();
   }
   

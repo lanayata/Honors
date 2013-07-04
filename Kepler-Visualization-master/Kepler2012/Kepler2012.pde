@@ -231,6 +231,7 @@ void addMarkerPlanets() {
 }
 
 void draw() {
+   background(0);
   // Ease rotation vectors, zoom
   zoom += (tzoom - zoom) * 0.01;     
   if (zoom < 0)  {
@@ -379,7 +380,7 @@ long mem = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory
 e.printStackTrace();
 }
   }    
-
+ println("MEM USE: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)+"mb, TOTAL: "+Runtime.getRuntime().totalMemory()/1000000+"mb, FREE: "+Runtime.getRuntime().freeMemory()/1000000);
 
   
 }
