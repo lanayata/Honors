@@ -231,7 +231,7 @@ void addMarkerPlanets() {
 }
 
 void draw() {
-   background(0);
+
   // Ease rotation vectors, zoom
   zoom += (tzoom - zoom) * 0.01;     
   if (zoom < 0)  {
