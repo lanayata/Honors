@@ -20,7 +20,7 @@ PFont label = createFont("Arial", 96);
 
 // Images
 PImage sunImage;
-
+PShape oval;
 
 // ExoPlanets
 ArrayList<ExoPlanet> allPlanets = new ArrayList(); // Holds all planets
@@ -96,6 +96,8 @@ Textarea compareInfo; // pop up text area informing user how to compare
 String visualisationState="";
 String visualisationLayout="Orbital View";
 void setup() {
+  oval = loadShape("circle.svg");
+   oval.disableStyle();
   size(displayWidth, displayHeight-300, P3D);
   background(0);
   smooth();  
@@ -292,6 +294,7 @@ void draw() {
   //ellipse(0, 0, AU * 2, AU * 2);
 arc(0, 7 ,AU * 2, AU * 2, PI, TWO_PI);
 arc(0, -7, -AU * 2, -AU * 2, PI, TWO_PI);
+
   // Draw a 1 AU ring
   stroke(255, 100);
   //ellipse(0, 0, AU, AU);

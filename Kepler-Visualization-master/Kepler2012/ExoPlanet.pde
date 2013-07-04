@@ -245,7 +245,9 @@ class ExoPlanet {
      if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
        println("Second Call "+KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
      }
-    ellipse(0, 0, (int) pixelRadius, (int) pixelRadius);
+  //  ellipse(0, 0, (int) pixelRadius, (int) pixelRadius);
+
+       shape(oval, 0-(int) pixelRadius*1.25, 0-(int) pixelRadius*.625, (int) pixelRadius, (int) pixelRadius);
      if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
        System.gc();
 
