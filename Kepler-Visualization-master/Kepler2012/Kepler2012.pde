@@ -98,7 +98,7 @@ String visualisationLayout="Orbital View";
 void setup() {
   oval = loadShape("circle.svg");
    oval.disableStyle();
-  size(displayWidth, displayHeight-300, P3D);
+  size(displayWidth-300, displayHeight, P3D);
   background(0);
   smooth();  
   textFont(label, 96);
@@ -113,7 +113,7 @@ void setup() {
   controls = new Controls();
   showControls = 1;
 
-  cf = addControlFrame("Exoplanet Controls", displayWidth,250);
+  cf = addControlFrame("Exoplanet Controls", 300,displayHeight);
   sunImage = loadImage("sun3.png");
 }
 

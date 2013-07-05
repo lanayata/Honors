@@ -254,8 +254,6 @@ class ExoPlanet {
  
        shape(oval, 0-(int) pixelRadius*1.25, 0-(int) pixelRadius*.625, (int) pixelRadius, (int) pixelRadius);
      if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
-       System.gc();
-
      }
     popMatrix();
   }

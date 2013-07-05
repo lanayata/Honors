@@ -26,8 +26,8 @@ Range range;
   }
   
   public void setup() {
-    int initialY = 10;
-    int initialX = 300;
+    int initialY = 520;
+    int initialX = 10;
     int buttonInitialY = 0;
     int buttonInitialX =300;
     int componentHeight = 40;
@@ -38,7 +38,7 @@ Range range;
     cp5 = new ControlP5(this);
       textArea = cp5.addTextarea("txt")
                   .setPosition(0,0)
-                  .setSize(250,500)                 
+                  .setSize(300,250)                 
                   .setFont(createFont("arial",12))
                   .setLineHeight(14)
                   //.setColor(color(128))
@@ -48,8 +48,8 @@ Range range;
                   textArea.setText("No Planet Selected");
                   
            textAreaToCompare = cp5.addTextarea("txtCompare")
-                  .setPosition(1000,0)
-                  .setSize(250,500)                 
+                  .setPosition(0,260)
+                  .setSize(300,250)                 
                   .setFont(createFont("arial",12))
                   .setLineHeight(14)
                   //.setColor(color(128))
@@ -59,7 +59,7 @@ Range range;
                   textAreaToCompare.setText("No Planet Selected To Compare");
                   
                 compareInfo =  cp5.addTextarea("compareInfo")
-                  .setPosition(85,200)
+                  .setPosition(80,200)
                   .setSize(160,20)                 
                   .setFont(createFont("arial",12))
                   .setLineHeight(14)
@@ -73,8 +73,8 @@ Range range;
               //Slider for KOI
               range = cp5.addRange("KOI Range")
              .setBroadcast(false) 
-             .setPosition(initialX+120,initialY)
-             .setSize(200,40)
+      .setPosition(initialX,initialY+(componentHeight*4)+(gap*4))
+             .setSize(150,40)
              .setHandleSize(20)
              .setRange(minKOI,maxKOI)
              .setRangeValues(minKOI,maxKOI)
@@ -87,8 +87,8 @@ Range range;
               //Slider for temperature
               range = cp5.addRange("Temperature Range")
              .setBroadcast(false) 
-              .setPosition(initialX+120,initialY+componentHeight+gap)
-             .setSize(200,40)
+              .setPosition(initialX,initialY+(componentHeight*5)+(gap*5))
+             .setSize(150,40)
              .setHandleSize(20)
              .setRange(globalMinTemp,globalMaxTemp)
              .setRangeValues(globalMinTemp,globalMaxTemp)
@@ -101,8 +101,8 @@ Range range;
               //Slider for size
               range = cp5.addRange("Size Range")
              .setBroadcast(false) 
-               .setPosition(initialX+120,initialY+(componentHeight*2)+(gap*2))
-             .setSize(200,40)
+                  .setPosition(initialX,initialY+(componentHeight*6)+(gap*6))
+             .setSize(150,40)
              .setHandleSize(20)
              .setRange(globalMinSize,globalMaxSize)
              .setRangeValues(globalMinSize,globalMaxSize)
@@ -114,8 +114,8 @@ Range range;
              //Slider for ESI
               range = cp5.addRange("Earth Similarity Index Range")
              .setBroadcast(false) 
-              .setPosition(initialX+120,initialY+(componentHeight*3)+(gap*3))
-             .setSize(200,40)
+                    .setPosition(initialX,initialY+(componentHeight*7)+(gap*7))
+             .setSize(150,40)
              .setHandleSize(20)
              .setRange(0.0,1.0)
              .setRangeValues(0.0,1.0)
@@ -127,22 +127,22 @@ Range range;
             
             // Buttons for changing visualisation state
                cp5.addButton("Change View")
-              .setPosition(initialX+500,initialY)
+           .setPosition(initialX+110,initialY)
              .setSize(100,40)
             ;
-                 cp5.addButton("Grey out other planets")
+                 cp5.addButton("Highlight Selected")
            .setValue(0)
-            .setPosition(initialX+500,initialY+componentHeight+gap)
+                .setPosition(initialX+110,initialY+(componentHeight*1)+(gap*1))
            .setSize(100,40)
            ;
            cp5.addButton("Pause")
            .setValue(0)
-                    .setPosition(initialX+500,initialY+(componentHeight*2)+(gap*2))
+                        .setPosition(initialX+110,initialY+(componentHeight*2)+(gap*2))
            .setSize(100,40)
            ;
                 cp5.addButton("Unsort")
            .setValue(0)
-                    .setPosition(initialX+500,initialY+(componentHeight*3)+(gap*3))
+                        .setPosition(initialX+110,initialY+(componentHeight*3)+(gap*3))
            .setSize(100,40)
            ;
       
@@ -392,7 +392,7 @@ Range range;
     if (pausedVis) pausedVis = false;
     else pausedVis = true;
   }
-   else if (event.isFrom("Grey out other planets")) {
+   else if (event.isFrom("Highlight Selected")) {
      if(greyOutPlanets) greyOutPlanets = false;
      else greyOutPlanets = true;
   } 
