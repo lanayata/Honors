@@ -51,7 +51,7 @@ class Controls{
          rect(20, 20, 600, 40);
          
            fill(2, 52, 77);
-     textSize(30);
+     textSize(20);
       text(visualisationLayout+": "+visualisationState, 40, 50);
       strokeWeight(0.5);     
       stroke(105, 105, 105); 
