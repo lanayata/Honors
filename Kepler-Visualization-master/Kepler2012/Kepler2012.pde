@@ -345,7 +345,7 @@ arc(0, -7, -AU * 10, -AU * 10 , PI, TWO_PI);
   // Draw X Axis Label
   fill(255, flatness * 255);
   rotateX(-PI/2);
-  text(xLabel, 50 * flatness, 17);
+  text(xLabel, 50 * flatness, 40);
 
   // Draw X Axis min/max
   fill(255, 100 * flatness);
@@ -562,7 +562,7 @@ void mousePressed(){
       selectedPlanet.feature = true;
       selectedPlanet.label = "Selected: KOI- "+selectedPlanet.KOI;
       setTextAreaText(textArea, selectedPlanet);
-          
+           
           // Find all sister planets in the same solar system and make them a feature planet.     
             for (int j = 0; j < planets.size(); j++) {
               ExoPlanet p = planets.get(j);
