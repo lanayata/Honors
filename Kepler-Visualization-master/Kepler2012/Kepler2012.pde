@@ -383,7 +383,7 @@ long mem = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory
 e.printStackTrace();
 }
   }    
- println("MEM USE: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)+"mb, TOTAL: "+Runtime.getRuntime().totalMemory()/1000000+"mb, FREE: "+Runtime.getRuntime().freeMemory()/1000000);
+ //println("MEM USE: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)+"mb, TOTAL: "+Runtime.getRuntime().totalMemory()/1000000+"mb, FREE: "+Runtime.getRuntime().freeMemory()/1000000);
 
   
 }
@@ -406,19 +406,24 @@ ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
 /////////////////////
 void sortBySize() {
   mode = "size";
-   for (int i = 0; i < planets.size(); i++) 
+   for (int i = 0; i < planets.size(); i++) {
     planets.get(i).tz = map(planets.get(i).radius, planetMinSize, planetMaxSize, 0, 500);
+          planets.get(i).difference = 0;
+   }
     yLabel = "Planet Size (Earth Radii)";
     xLabel = "Semi-major Axis (Astronomical Units)";
     yMax = globalMaxSize;
     yMin = 0;
+  
      visualisationState = "Planet Size";
 }
 
 void sortByTemp() {
      mode = "temp";
-    for (int i = 0; i < planets.size(); i++) 
+    for (int i = 0; i < planets.size(); i++) {
     planets.get(i).tz = map(planets.get(i).temp, planetMinTemp, planetMaxTemp, 0, 500);
+              planets.get(i).difference = 0;
+   }
     yLabel = "Temperature (Kelvin)";
     xLabel = "Semi-major Axis (Astronomical Units)";
     yMax = globalMaxTemp;
@@ -428,8 +433,10 @@ void sortByTemp() {
 
 void sortByESI() {
    mode = "ESI";
-   for (int i = 0; i < planets.size(); i++) 
+   for (int i = 0; i < planets.size(); i++) {
     planets.get(i).tz = map(planets.get(i).ESIs, planetMinESI, planetMaxESI, 0, 500);
+              planets.get(i).difference = 0;
+   }
     yLabel = "Surface ESI";
     xLabel = "Interior ESI";
     yMax = 1.0;
@@ -438,16 +445,22 @@ void sortByESI() {
    visualisationState = "Earth Similarity Index";
 }
 void sortByKOI() {
-   for (int i = 0; i < planets.size(); i++) 
+   for (int i = 0; i < planets.size(); i++) {
     planets.get(i).tz = map(planets.get(i).KOI, planetMinKOI, planetMaxKOI, 0, 500);
+              planets.get(i).difference = 0;
+   }
    mode = "KOI";
+
    visualisationState = "Kepler Object of Interest Index";
 }
 
 void unSort() {
-  for (int i = 0; i < planets.size(); i++) 
+  for (int i = 0; i < planets.size(); i++) {
     planets.get(i).tz = 0;
+              planets.get(i).difference = 0;
+   }
   mode = "none";
+  
    visualisationState = "Unordered";
 }
 

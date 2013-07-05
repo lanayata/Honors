@@ -166,13 +166,12 @@ class ExoPlanet {
     z += (tz - z) * 0.1;
  
  //UPDATE THE X AND Y AXIS OF THE EXOPLANETS//
-       apixelAxis = pixelAxis;
        //Existing code, still not sure what it does
     if (axis > 1.06 && (feature || corePlanet)) {
       apixelAxis = ((1.06 + ((axis - 1.06) * ( 1 - flatness))) * AU) + axis * 10;
     }
   // move earth to center of orbit if in ESI mode and orbital view
-     if (label.equals("Earth") && mode.equals("ESI") && layout.equals("orbital")){
+     else if (label.equals("Earth") && mode.equals("ESI") && layout.equals("orbital")){
       apixelAxis = ESIg;
     }
   // place exoplanets by their ESI on X axis if in graph view and mode is ESI
@@ -182,12 +181,21 @@ class ExoPlanet {
     
      // place exoplanets by their ESI on X axis if in orbital view and mode is ESI
       else if (!label.equals("Earth") && mode.equals("ESI") && layout.equals("orbital")){
-        apixelAxis = ((1-ESIg)/2)*AU;
+        apixelAxis += ((((1-ESIg)/2)*AU) - (apixelAxis))*difference;
+            if (difference < 1) 
+          difference += .04;
+ 
     } 
+    else { 
+    apixelAxis += (pixelAxis-apixelAxis)*difference;
+        if (difference < 1) 
+          difference += .04;
+  }
 
     if (!pausedVis || layout.equals("graph")){
      x = sin(theta * (1 - flatness)) * apixelAxis;
      y = cos(theta * (1 - flatness)) * apixelAxis;
+
     }
 
   }
