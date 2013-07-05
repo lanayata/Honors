@@ -622,9 +622,9 @@ Set the appropriate text area to the correct information about the planet provid
 
 void mouseWheel(MouseEvent event) {
   float delta = event.getAmount();
-  if (delta==1 && tzoom <=3)
+  if (delta==-1 && tzoom <=3)
   tzoom+=0.2;
-  else if (delta == -1 && tzoom >= .1)
+  else if (delta == 1 && tzoom >= .1)
   tzoom-=0.2;
 }
 
