@@ -170,26 +170,26 @@ class ExoPlanet {
     }
   // move earth to center of orbit if in ESI mode and orbital view
      else if (label.equals("Earth") && mode.equals("ESI") && layout.equals("orbital")){
-      apixelAxis = ESIg;
+      apixelAxis += (ESIg-apixelAxis)*difference;
     }
   // place exoplanets by their ESI on X axis if in graph view and mode is ESI
       else if (!label.equals("Earth") && mode.equals("ESI") && layout.equals("graph")){
-        apixelAxis = ESIi*AU;
+        apixelAxis += ((ESIi*AU)-apixelAxis)*difference;
     }
     
      // place exoplanets by their ESI on X axis if in orbital view and mode is ESI
       else if (!label.equals("Earth") && mode.equals("ESI") && layout.equals("orbital")){
-        apixelAxis += ((((1-ESIg)/2)*AU) - (apixelAxis))*difference;
-            if (difference < 1) 
-          difference += .04;
+        apixelAxis += ((((1-ESIg)/2)*AU) - apixelAxis)*difference;
+ 
  
     } 
     else { 
     apixelAxis += (pixelAxis-apixelAxis)*difference;
+  }
+  
         if (difference < 1) 
           difference += .04;
-  }
-
+          
     if (!pausedVis || layout.equals("graph")){
      x = sin(theta * (1 - flatness)) * apixelAxis;
      y = cos(theta * (1 - flatness)) * apixelAxis;
@@ -251,8 +251,7 @@ class ExoPlanet {
      if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
        println("Second Call "+KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
      }
-  //  ellipse(0, 0, (int) pixelRadius, (int) pixelRadius);
-
+ 
        shape(oval, 0-(int) pixelRadius*1.25, 0-(int) pixelRadius*.625, (int) pixelRadius, (int) pixelRadius);
      if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
        System.gc();
