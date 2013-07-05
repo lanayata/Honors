@@ -94,7 +94,7 @@ class ExoPlanet {
     String sun_name;
     String constellation;
   boolean corePlanet = false;
-
+  float difference = 0;
   // Constructor function
   ExoPlanet(Kepler2012 kep) {kepler = kep;};
   
@@ -150,12 +150,10 @@ class ExoPlanet {
   ExoPlanet init() {
     pixelRadius = radius * ER;
     pixelAxis = axis * AU;
-
     float periodInYears = period/365;
     float periodInFrames = periodInYears * YEAR;
     theta = random(2 * PI);
     thetaSpeed = (2 * PI) / periodInFrames;
-
     return(this);
   }
 
@@ -164,8 +162,8 @@ class ExoPlanet {
 //UPDATE THE Z AXIS WHILE PROVIDING TRANSITION MOVEMENT//
     theta += thetaSpeed;
     z += (tz - z) * 0.1;
- 
  //UPDATE THE X AND Y AXIS OF THE EXOPLANETS//
+
        //Existing code, still not sure what it does
     if (axis > 1.06 && (feature || corePlanet)) {
       apixelAxis = ((1.06 + ((axis - 1.06) * ( 1 - flatness))) * AU) + axis * 10;
