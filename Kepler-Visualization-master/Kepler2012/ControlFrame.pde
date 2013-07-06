@@ -170,6 +170,143 @@ Range range;
       .setPosition(0,200)
      .setSize(80,20)
      ;
+     //////////////////////////
+     //SAVED HORIZONTAL ASPECT RATIO
+     ///////////////////////////
+//     textArea = cp5.addTextarea("txt")
+//                  .setPosition(0,0)
+//                  .setSize(250,500)                 
+//                  .setFont(createFont("arial",12))
+//                  .setLineHeight(14)
+//                  //.setColor(color(128))
+//                  .setColorBackground(color(255,100))
+//                  .setColorForeground(color(255,100));
+//                  ;
+//                  textArea.setText("No Planet Selected");
+//                  
+//           textAreaToCompare = cp5.addTextarea("txtCompare")
+//                  .setPosition(1000,0)
+//                  .setSize(250,500)                 
+//                  .setFont(createFont("arial",12))
+//                  .setLineHeight(14)
+//                  //.setColor(color(128))
+//                  .setColorBackground(color(255,100))
+//                  .setColorForeground(color(255,100));
+//                  ;
+//                  textAreaToCompare.setText("No Planet Selected To Compare");
+//                  
+//                compareInfo =  cp5.addTextarea("compareInfo")
+//                  .setPosition(85,200)
+//                  .setSize(160,20)                 
+//                  .setFont(createFont("arial",12))
+//                  .setLineHeight(14)
+//                  //.setColor(color(128))
+//                  .setColorBackground(color(0,100,0))
+//                  .setColorForeground(color(0,100,0));
+//                  ;
+//                  compareInfo.setText("Select Planet to Compare");
+//                   compareInfo.hide();
+//                  
+//              //Slider for KOI
+//              range = cp5.addRange("KOI Range")
+//             .setBroadcast(false) 
+//             .setPosition(initialX+120,initialY)
+//             .setSize(200,40)
+//             .setHandleSize(20)
+//             .setRange(minKOI,maxKOI)
+//             .setRangeValues(minKOI,maxKOI)
+//             // after the initialization we turn broadcast back on again
+//             .setBroadcast(true)
+//             .setColorForeground(color(255,40))
+//             .setColorBackground(color(255,40))  
+//             ;
+//             //
+//              //Slider for temperature
+//              range = cp5.addRange("Temperature Range")
+//             .setBroadcast(false) 
+//              .setPosition(initialX+120,initialY+componentHeight+gap)
+//             .setSize(200,40)
+//             .setHandleSize(20)
+//             .setRange(globalMinTemp,globalMaxTemp)
+//             .setRangeValues(globalMinTemp,globalMaxTemp)
+//             // after the initialization we turn broadcast back on again
+//             .setBroadcast(true)
+//             .setColorForeground(color(255,40))
+//             .setColorBackground(color(255,40))  
+//             ;
+//             //
+//              //Slider for size
+//              range = cp5.addRange("Size Range")
+//             .setBroadcast(false) 
+//               .setPosition(initialX+120,initialY+(componentHeight*2)+(gap*2))
+//             .setSize(200,40)
+//             .setHandleSize(20)
+//             .setRange(globalMinSize,globalMaxSize)
+//             .setRangeValues(globalMinSize,globalMaxSize)
+//             // after the initialization we turn broadcast back on again
+//             .setBroadcast(true)
+//             .setColorForeground(color(255,40))
+//             .setColorBackground(color(255,40))  
+//             ;
+//             //Slider for ESI
+//              range = cp5.addRange("Earth Similarity Index Range")
+//             .setBroadcast(false) 
+//              .setPosition(initialX+120,initialY+(componentHeight*3)+(gap*3))
+//             .setSize(200,40)
+//             .setHandleSize(20)
+//             .setRange(0.0,1.0)
+//             .setRangeValues(0.0,1.0)
+//             // after the initialization we turn broadcast back on again
+//             .setBroadcast(true)
+//             .setColorForeground(color(255,40))
+//             .setColorBackground(color(255,40)) 
+//            ; 
+//            
+//            // Buttons for changing visualisation state
+//               cp5.addButton("Change View")
+//              .setPosition(initialX+500,initialY)
+//             .setSize(100,40)
+//            ;
+//                 cp5.addButton("Grey out other planets")
+//           .setValue(0)
+//            .setPosition(initialX+500,initialY+componentHeight+gap)
+//           .setSize(100,40)
+//           ;
+//           cp5.addButton("Pause")
+//           .setValue(0)
+//                    .setPosition(initialX+500,initialY+(componentHeight*2)+(gap*2))
+//           .setSize(100,40)
+//           ;
+//                cp5.addButton("Unsort")
+//           .setValue(0)
+//                    .setPosition(initialX+500,initialY+(componentHeight*3)+(gap*3))
+//           .setSize(100,40)
+//           ;
+//      
+//         
+//     // Main buttons for sorting data
+//     cp5.addButton("Sort by KOI")
+//      .setPosition(initialX,initialY)
+//     .setSize(100,40)
+//     ;
+//           cp5.addButton("Sort by Temp")
+//    .setPosition(initialX,initialY+componentHeight+gap)
+//     .setSize(100,40)
+//     ;
+//      cp5.addButton("Sort by Size")
+//      .setPosition(initialX,initialY+(componentHeight*2)+(gap*2))
+//     .setSize(100,40)
+//     ;
+//
+//      cp5.addButton("Sort by ESI")
+//      .setPosition(initialX,initialY+(componentHeight*3)+(gap*3))
+//     .setSize(100,40)
+//     ;
+//     
+//      compareButton = cp5.addButton("Compare")
+//      .setPosition(0,200)
+//     .setSize(80,20)
+//     ;
             filterData();
              //
                noStroke();  
