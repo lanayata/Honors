@@ -1,4 +1,16 @@
 \chapter{Introduction}\label{C:intro}
-This chapter gives an introduction to the project report.
+This project seeks to design, implement, and evaluate an interactive 3D visualisation
+software system for displaying the content in the Kepler Exoplanets dataset [28]. 
+\\\\
+The deliverable is 
+\\\\
+The resulting system will
 
-In Chapter \ref{C:us} we explain how to use this document, and the \texttt{vuwproject} style. In Chapter \ref{C:ex} we say some things about \LaTeX, and in Chapter \ref{C:con} we give our conclusions.
+\section{Problem Statement}
+\subsection{Understanding the content in the dataset}
+\subsection{Comprehending the IIIIIIIIIIIIIIIIIII}
+\subsection{Learning about complex ideas}
+
+\section{Key Issues}
+
+\section{Contributions of this project}

@@ -1,5 +1,27 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Problem Statement}{1}
+\contentsline {subsection}{\numberline {1.1.1}Understanding the content in the dataset}{1}
+\contentsline {subsection}{\numberline {1.1.2}Comprehending the IIIIIIIIIIIIIIIIIII}{1}
+\contentsline {subsection}{\numberline {1.1.3}Learning about complex ideas}{1}
+\contentsline {section}{\numberline {1.2}Key issues project addresses}{1}
+\contentsline {section}{\numberline {1.3}Contributions of this project}{1}
 \contentsline {chapter}{\numberline {2}Project Methodologies}{3}
+\contentsline {section}{\numberline {2.1}Project management approach}{3}
+\contentsline {section}{\numberline {2.2}System design approach}{4}
+\contentsline {section}{\numberline {2.3}Key difficulties encountered}{4}
 \contentsline {chapter}{\numberline {3}Requirements Analysis}{5}
-\contentsline {chapter}{\numberline {4}Solution Design}{7}
-\contentsline {chapter}{\numberline {5}Conclusions}{9}
+\contentsline {section}{\numberline {3.1}User models}{5}
+\contentsline {section}{\numberline {3.2}Scenarios}{5}
+\contentsline {section}{\numberline {3.3}Requirements summary}{5}
+\contentsline {section}{\numberline {3.4}Existing systems}{5}
+\contentsline {chapter}{\numberline {4}Solution Design: Improved Kepler Visualisation Tool}{7}
+\contentsline {section}{\numberline {4.1}Design Features}{7}
+\contentsline {chapter}{\numberline {5}Visualisation implementation}{9}
+\contentsline {section}{\numberline {5.1}Technology choice}{9}
+\contentsline {subsection}{\numberline {5.1.1}System design and structure}{9}
+\contentsline {subsection}{\numberline {5.1.2}Tools and artifacts used}{9}
+\contentsline {chapter}{\numberline {6}Visualisation implementation}{11}
+\contentsline {section}{\numberline {6.1}Technology choice}{11}
+\contentsline {subsection}{\numberline {6.1.1}System design and structure}{11}
+\contentsline {subsection}{\numberline {6.1.2}Tools and artifacts used}{11}
+\contentsline {chapter}{\numberline {7}Conclusions}{13}
