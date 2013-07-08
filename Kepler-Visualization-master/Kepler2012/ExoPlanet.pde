@@ -1,11 +1,11 @@
 /*
 
-ExoPlanet Class
-blprnt@blprnt.com
-Spring, 2011 - new data added Spring 2012
-
-There are two separate formats for the data - both are listed below.
-
+ ExoPlanet Class
+ blprnt@blprnt.com
+ Spring, 2011 - new data added Spring 2012
+ 
+ There are two separate formats for the data - both are listed below.
+ 
  //  2011 Batch
  
  KOI,
@@ -22,10 +22,10 @@ There are two separate formats for the data - both are listed below.
  Teq,           :[16]Equilibrium temperature of the planet - KELVIN
  EB prob,
  V,             :[18] Vetting flag: 
-                         1 Confirmed and published planet 
-                         2 Strong probability candidate, cleanly passes tests that were applied 
-                         3 Moderate probability candidate, not all tests cleanly passed but no definite test failures 
-                         4 Insufficient follow-up to perform full suite of vetting tests 
+ 1 Confirmed and published planet 
+ 2 Strong probability candidate, cleanly passes tests that were applied 
+ 3 Moderate probability candidate, not all tests cleanly passed but no definite test failures 
+ 4 Insufficient follow-up to perform full suite of vetting tests 
  FOP,
  N,
  
@@ -82,7 +82,8 @@ class ExoPlanet {
   boolean feature = false;
   String label = "";
   Kepler2012 kepler;
-  
+ float sun_hab_zone_min;
+ float sun_hab_zone_max;
    String zone_class;
    String mass_class;
    String composition_class;
@@ -118,7 +119,8 @@ class ExoPlanet {
       disc_tech = sa[42];
              sun_name = sa[44];
       constellation = sa[45];
-      
+          sun_hab_zone_min = float(sa[29]) *AU;
+    sun_hab_zone_max = float(sa[30]) *AU;
     return(this);
   }
 
@@ -143,6 +145,8 @@ class ExoPlanet {
       disc_tech = sa[42];
         sun_name = sa[44];
       constellation = sa[45];
+          sun_hab_zone_min = float(sa[29]) *AU;
+    sun_hab_zone_max = float(sa[30]) *AU;
     return(this);
   }
 

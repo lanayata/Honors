@@ -11,7 +11,11 @@
 import processing.opengl.*;
 import controlP5.*;
 import java.awt.Frame;
+import processing.opengl.*;
+import javax.media.opengl.GL;
 
+PGraphicsOpenGL pgl;
+GL gl;
 
 // Set up font
 PFont label = createFont("Arial", 96);
@@ -34,15 +38,15 @@ float YEAR = 50000;     // One year, in frames
 /////////////////////
 // Max/Min numbers //
 /////////////////////
-  //Scale
+//Scale
 float yMax = 10;
 float yMin = 0;
-  //Global
+//Global
 float globalMaxTemp = 3257;
 float globalMinTemp = 3257;
 float globalMaxSize = 0;
 float globalMinSize = 1000000;
-  //Planet Specific
+//Planet Specific
 float planetMinTemp = 83;
 float planetMaxTemp = 3867;
 float planetMinSize = 0.33;
@@ -72,7 +76,7 @@ float tflatness = 0;
 Controls controls; 
 int showControls;
 boolean draggingZoomSlider = false;
-
+int max = 1000;
 //Visualisation State Variables
 boolean pausedVis = true; // if visualisation paused
 boolean greyOutPlanets = true; 
@@ -96,8 +100,9 @@ Textarea compareInfo; // pop up text area informing user how to compare
 String visualisationState="";
 String visualisationLayout="Orbital View";
 void setup() {
+
   oval = loadShape("circle.svg");
-   oval.disableStyle();
+  oval.disableStyle();
   size(displayWidth-300, displayHeight, P3D);
   background(0);
   smooth();  
@@ -113,8 +118,12 @@ void setup() {
   controls = new Controls();
   showControls = 1;
 
-  cf = addControlFrame("Exoplanet Controls", 300,displayHeight);
+  cf = addControlFrame("Exoplanet Controls", 300, displayHeight);
   sunImage = loadImage("sun3.png");
+  pgl = (PGraphicsOpenGL) g; //processing graphics object
+  gl = g.beginPGL().gl;
+  gl.setSwapInterval(1); //set vertical sync on
+  g.endPGL(); //end opengl
 }
 
 void getPlanets(String url, boolean is2012) {
@@ -130,21 +139,21 @@ void getPlanets(String url, boolean is2012) {
       p = new ExoPlanet(this).fromCSV(split(pArray[i], ",")).init();
     }
     if (p.ESIi <0 || p.ESIs <0 || p.ESIg <0) 
-    System.out.println("KOI: "+p.KOI+"  ESIi: "+p.ESIi+"  ESIs: "+p.ESIs+"  ESIg: "+p.ESIg);
+      System.out.println("KOI: "+p.KOI+"  ESIi: "+p.ESIi+"  ESIs: "+p.ESIs+"  ESIg: "+p.ESIg);
     allPlanets.add(p);
     globalMaxSize = max(p.radius, globalMaxSize);
     globalMinSize = min(p.radius, globalMinSize);
 
     // These are two planets from the 2011 data set that I wanted to feature.
     if (p.KOI == 326.01 || p.KOI == 314.02) {
-     // p.feature = true;
-    //  p.label = p.KOI;
-    } 
+      // p.feature = true;
+      //  p.label = p.KOI;
+    }
   }
-    for (int i = 0; i < allPlanets.size(); i++)
+  for (int i = 0; i < allPlanets.size(); i++)
   {
-  planets.add(allPlanets.get(i));
-}
+    planets.add(allPlanets.get(i));
+  }
 }
 
 void updatePlanetColors()
@@ -233,13 +242,14 @@ void addMarkerPlanets() {
 }
 
 void draw() {
-
+  background( 255 );
   // Ease rotation vectors, zoom
   zoom += (tzoom - zoom) * 0.01;     
-  if (zoom < 0)  {
-     zoom = 0;
-  } else if (zoom > 3.0) {
-     zoom = 3.0;
+  if (zoom < 0) {
+    zoom = 0;
+  } 
+  else if (zoom > 3.0) {
+    zoom = 3.0;
   }
   controls.updateZoomSlider(zoom);  
   rot.x += (trot.x - rot.x) * 0.1;
@@ -251,30 +261,28 @@ void draw() {
 
   // MousePress - Controls Handling 
   if (mousePressed) {
-     if((showControls == 1) && controls.isZoomSliderEvent(mouseX, mouseY)) {
-        draggingZoomSlider = true;
-        zoom = controls.getZoomValue(mouseY);        
-        tzoom = zoom;
-     } 
-     
-     // MousePress - Rotation Adjustment
-     else if (!draggingZoomSlider) {
-       trot.x += (pmouseY - mouseY) * 0.01;
-       trot.z += (pmouseX - mouseX) * 0.01;
-     }
-     
+    if ((showControls == 1) && controls.isZoomSliderEvent(mouseX, mouseY)) {
+      draggingZoomSlider = true;
+      zoom = controls.getZoomValue(mouseY);        
+      tzoom = zoom;
+    } 
+
+    // MousePress - Rotation Adjustment
+    else if (!draggingZoomSlider) {
+      trot.x += (pmouseY - mouseY) * 0.01;
+      trot.z += (pmouseX - mouseX) * 0.01;
+    }
   }
 
 
 
   background(10);
-  
+
   // show controls
   if (showControls == 1) {
-     controls.render(); 
-
+    controls.render();
   }
-    
+
   // We want the center to be in the middle and slightly down when flat, and to the left and down when raised
   translate(width/2 - (width * flatness * 0.2), height/2 + (160 * rot.x));
   rotateX(rot.x);
@@ -282,114 +290,132 @@ void draw() {
   scale(zoom);
 
   // Draw the sun
-  image(sunImage, -10, -10, 20,20);
-  
-  if (layout.equals("orbital")){
-  // Draw Rings:
-  strokeWeight(2);
-  noFill();
+  image(sunImage, -10, -10, 20, 20);
 
-  // Draw a 2 AU ring
-  stroke(255, 100);
-  //ellipse(0, 0, AU * 2, AU * 2);
-arc(0, 7 ,AU * 2, AU * 2, PI, TWO_PI);
-arc(0, -7, -AU * 2, -AU * 2, PI, TWO_PI);
+    if (layout.equals("orbital") && greyOutPlanets && selectedPlanet != null) {
+      pushMatrix();
+      stroke(255, 100);
+      translate(0, 0, -100);
+      fill(255, 0, 0, 50);
+      ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_max, (int) selectedPlanet.sun_hab_zone_max);
+      fill(0, 255, 0, 100);
+      translate(0, 0, 2);
+      ellipse(0, 0, (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min));
+      translate(0, 0, 2);
+      fill(0, 0, 0);
+      ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min); 
+      translate(0, 0, 2);
+      fill(255, 0, 0, 50);
+      ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min);       
+      popMatrix();
+    }
 
-  // Draw a 1 AU ring
-  stroke(255, 100);
-  //ellipse(0, 0, AU, AU);
- arc(0, 7 ,AU, AU , PI, TWO_PI);
-arc(0, -7, -AU, -AU , PI, TWO_PI);
+ else if (layout.equals("orbital")) {   
 
-  // Draw a 10 AU ring
-   arc(0, 7 ,AU * 10, AU * 10 , PI, TWO_PI);
-arc(0, -7, -AU * 10, -AU * 10 , PI, TWO_PI);
+    // Draw Rings:
+    strokeWeight(2);
+    noFill();
+
+    // Draw a 2 AU ring
+    stroke(255, 100);
+    //ellipse(0, 0, AU * 2, AU * 2);
+    arc(0, 7, AU * 2, AU * 2, PI, TWO_PI);
+    arc(0, -7, -AU * 2, -AU * 2, PI, TWO_PI);
+
+    // Draw a 1 AU ring
+    stroke(255, 100);
+    //ellipse(0, 0, AU, AU);
+    arc(0, 7, AU, AU, PI, TWO_PI);
+    arc(0, -7, -AU, -AU, PI, TWO_PI);
+
+    // Draw a 10 AU ring
+    arc(0, 7, AU * 10, AU * 10, PI, TWO_PI);
+    arc(0, -7, -AU * 10, -AU * 10, PI, TWO_PI);
+
 
   }
   else {
-  // Draw the Y Axis
-  stroke(255, 100);
-  pushMatrix();
-  rotateY(-PI/2);
-  line(0, 0, 500 * flatness, 0);
-
-  // Draw Y Axis max/min
-  pushMatrix();
-  fill(255, 100 * flatness);
-  rotateZ(PI/2);
-  textFont(label);
-  textSize(12);
-  text(round(yMin), -textWidth(str(yMin)), 0);
-  text(round(yMax), -textWidth(str(yMax)), -500);
-  popMatrix();
-
-  // Draw Y Axis Label
-  fill(255, flatness * 255);
-  text(yLabel, 250 * flatness, -10);
-
-  popMatrix();
-
-  // Draw the X Axis if we are not flat
-  pushMatrix();
-  rotateZ(PI/2);
-  line(0, 0, 1500 * flatness, 0);
-
-  if (flatness > 0.5) {
+    // Draw the Y Axis
+    stroke(255, 100);
     pushMatrix();
-    rotateX(PI/2);
-    line(AU * 1.06, -10, AU * 1.064, 10); 
-    line(AU * 1.064, -10, AU * 1.068, 10);   
+    rotateY(-PI/2);
+    line(0, 0, 500 * flatness, 0);
+
+    // Draw Y Axis max/min
+    pushMatrix();
+    fill(255, 100 * flatness);
+    rotateZ(PI/2);
+    textFont(label);
+    textSize(12);
+    text(round(yMin), -textWidth(str(yMin)), 0);
+    text(round(yMax), -textWidth(str(yMax)), -500);
+    popMatrix();
+
+    // Draw Y Axis Label
+    fill(255, flatness * 255);
+    text(yLabel, 250 * flatness, -10);
+
+    popMatrix();
+
+    // Draw the X Axis if we are not flat
+    pushMatrix();
+    rotateZ(PI/2);
+    line(0, 0, 1500 * flatness, 0);
+
+    if (flatness > 0.5) {
+      pushMatrix();
+      rotateX(PI/2);
+      line(AU * 1.06, -10, AU * 1.064, 10); 
+      line(AU * 1.064, -10, AU * 1.068, 10);   
+      popMatrix();
+    }
+
+    // Draw X Axis Label
+    fill(255, flatness * 255);
+    rotateX(-PI/2);
+    text(xLabel, 50 * flatness, 40);
+
+    // Draw X Axis min/max
+    fill(255, 100 * flatness);
+    text(1, AU, 17);
+    text("0.5", AU/2, 17);
+
     popMatrix();
   }
 
-  // Draw X Axis Label
-  fill(255, flatness * 255);
-  rotateX(-PI/2);
-  text(xLabel, 50 * flatness, 40);
-
-  // Draw X Axis min/max
-  fill(255, 100 * flatness);
-  text(1, AU, 17);
-  text("0.5", AU/2, 17);
-
-  popMatrix();
-  }
-  
-long mem = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000;
+  long mem = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000;
 
   // Render the planets
   for (int i = 0; i < planets.size(); i++) {
-  try{
-    ExoPlanet p = planets.get(i);
-          if(p!=null){
-       if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
-       println("First Planet: "+p.KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
-       break;
-   }
-      p.update();
+    try {
+      ExoPlanet p = planets.get(i);
+      if (p!=null) {
         if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
-       println("Second Planet: "+p.KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
-       break;
-   }
-      p.render();
-   if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
-       println("third Planet: "+p.KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
-       break;
-   }
-          }
-  }
+          println("First Planet: "+p.KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
+          break;
+        }
+        p.update();
+        if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
+          println("Second Planet: "+p.KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
+          break;
+        }
+        p.render();
+        if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
+          println("third Planet: "+p.KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
+          break;
+        }
+      }
+    }
 
-  catch(IndexOutOfBoundsException e){
-e.printStackTrace();
-}
+    catch(IndexOutOfBoundsException e) {
+      e.printStackTrace();
+    }
   }    
- //println("MEM USE: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)+"mb, TOTAL: "+Runtime.getRuntime().totalMemory()/1000000+"mb, FREE: "+Runtime.getRuntime().freeMemory()/1000000);
-
-  
+  println("MEM USE: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)+"mb, TOTAL: "+Runtime.getRuntime().totalMemory()/1000000+"mb, FREE: "+Runtime.getRuntime().freeMemory()/1000000);
 }
 ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
   Frame f = new Frame(theName);
-  
+
   ControlFrame p = new ControlFrame(this, theWidth, theHeight);
   f.add(p);
   p.init();
@@ -405,71 +431,73 @@ ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
 // SORTING METHODS //
 /////////////////////
 void sortBySize() {
+
   mode = "size";
-   for (int i = 0; i < planets.size(); i++) {
-    planets.get(i).tz = map(planets.get(i).radius, planetMinSize, planetMaxSize, 0, 500);
-          planets.get(i).difference = 0;
-   }
-    yLabel = "Planet Size (Earth Radii)";
-    xLabel = "Semi-major Axis (Astronomical Units)";
-    yMax = globalMaxSize;
-    yMin = 0;
-  
-     visualisationState = "Planet Size";
+  for (int i = 0; i < planets.size(); i++) {
+    planets.get(i).tz = map(planets.get(i).radius, planetMinSize, planetMaxSize, 0, max);
+    planets.get(i).difference = 0;
+  }
+  yLabel = "Planet Size (Earth Radii)";
+  xLabel = "Semi-major Axis (Astronomical Units)";
+  yMax = globalMaxSize;
+  yMin = 0;
+
+  visualisationState = "Planet Size";
 }
 
 void sortByTemp() {
-     mode = "temp";
-    for (int i = 0; i < planets.size(); i++) {
-    planets.get(i).tz = map(planets.get(i).temp, planetMinTemp, planetMaxTemp, 0, 500);
-              planets.get(i).difference = 0;
-   }
-    yLabel = "Temperature (Kelvin)";
-    xLabel = "Semi-major Axis (Astronomical Units)";
-    yMax = globalMaxTemp;
-    yMin = globalMinTemp;
-     visualisationState = "Temperature";
+  mode = "temp";
+  for (int i = 0; i < planets.size(); i++) {
+    planets.get(i).tz = map(planets.get(i).temp, planetMinTemp, planetMaxTemp, 0, max);
+    planets.get(i).difference = 0;
+  }
+  yLabel = "Temperature (Kelvin)";
+  xLabel = "Semi-major Axis (Astronomical Units)";
+  yMax = globalMaxTemp;
+  yMin = globalMinTemp;
+  visualisationState = "Temperature";
 }
 
 void sortByESI() {
-   mode = "ESI";
-   for (int i = 0; i < planets.size(); i++) {
-    planets.get(i).tz = map(planets.get(i).ESIs, planetMinESI, planetMaxESI, 0, 500);
-              planets.get(i).difference = 0;
-   }
-    yLabel = "Surface ESI";
-    xLabel = "Interior ESI";
-    yMax = 1.0;
-    yMin = 0.0;
-    mode = "ESI";
-   visualisationState = "Earth Similarity Index";
+  mode = "ESI";
+  for (int i = 0; i < planets.size(); i++) {
+    planets.get(i).tz = map(planets.get(i).ESIs, planetMinESI, planetMaxESI, 0, max);
+    planets.get(i).difference = 0;
+  }
+  yLabel = "Surface ESI";
+  xLabel = "Interior ESI";
+  yMax = 1.0;
+  yMin = 0.0;
+  mode = "ESI";
+  visualisationState = "Earth Similarity Index";
 }
 void sortByKOI() {
-   for (int i = 0; i < planets.size(); i++) {
-    planets.get(i).tz = map(planets.get(i).KOI, planetMinKOI, planetMaxKOI, 0, 500);
-              planets.get(i).difference = 0;
-   }
-   mode = "KOI";
+  for (int i = 0; i < planets.size(); i++) {
+    planets.get(i).tz = map(planets.get(i).KOI, planetMinKOI, planetMaxKOI, 0, max);
+    planets.get(i).difference = 0;
+  }
+  mode = "KOI";
 
-   visualisationState = "Kepler Object of Interest Index";
+  visualisationState = "Kepler Object of Interest Index";
 }
 
 void unSort() {
   for (int i = 0; i < planets.size(); i++) {
     planets.get(i).tz = 0;
-              planets.get(i).difference = 0;
-   }
+    planets.get(i).difference = 0;
+  }
   mode = "none";
-  
-   visualisationState = "Unordered";
+
+  visualisationState = "Unordered";
 }
 
 void keyPressed() {
   String timeStamp = hour() + "_"  + minute() + "_" + second();
   if (key == 's') {
     save("out/Kepler" + timeStamp + ".png");
-  } else if (key == 'c'){
-     showControls = -1 * showControls;
+  } 
+  else if (key == 'c') {
+    showControls = -1 * showControls;
   }
 
   if (keyCode == UP) {
@@ -486,17 +514,14 @@ void keyPressed() {
   else if (key == '2') {
     sortByTemp(); 
     //trot.x = PI/2;
-
- 
   } 
-  
+
   else if (key == '0') { 
     sortByESI(); //Sort data by earth similarity index
-
   } 
-  
+
   else if (key == '`') {
-    unSort(); 
+    unSort();
   }
   else if (key == '3') {
     trot.x = 1.5;
@@ -513,13 +538,13 @@ void keyPressed() {
 
 void toggleFlatness(float f) {
   tflatness = f;
-  if (layout.equals("orbital")){
-  layout = "graph";
-  visualisationLayout = "Graph View" ;
+  if (layout.equals("orbital")) {
+    layout = "graph";
+    visualisationLayout = "Graph View" ;
   }
   else {
-  layout = "orbital";
-  visualisationLayout = "Orbital View" ;
+    layout = "orbital";
+    visualisationLayout = "Orbital View" ;
   }
   if (tflatness == 1) {
     trot.x = PI/2;
@@ -531,14 +556,14 @@ void toggleFlatness(float f) {
 }
 
 void mouseReleased() {
-   draggingZoomSlider = false;
+  draggingZoomSlider = false;
 }
 
-void mousePressed(){
+void mousePressed() {
   // If compare button has been pressed then allow secondary selection of planet
-  if (compare == true){
+  if (compare == true) {
     for (int i = 0; i < planets.size(); i++) {
-      if(planets.get(i).overPlanet()){
+      if (planets.get(i).overPlanet()) {
         selectedPlanetToCompare = planets.get(i); 
         selectedPlanetToCompare.feature = true; // Make it a feature planet
         selectedPlanetToCompare.label = "Compared: KOI- "+selectedPlanetToCompare.KOI; // update label
@@ -549,60 +574,60 @@ void mousePressed(){
       }
     }
   }
-  else{
-   for (int i = 0; i < planets.size(); i++) {
-    if(planets.get(i).overPlanet()){
-      selectedPlanet = planets.get(i);
-     
-      if (selectedPlanet.corePlanet){
-         setTextAreaText(textArea, selectedPlanet); // Planets in our solar system dont have the required info so specialised message requried
-         return;
-      }
-    
-      selectedPlanet.feature = true;
-      selectedPlanet.label = "Selected: KOI- "+selectedPlanet.KOI;
-      setTextAreaText(textArea, selectedPlanet);
-           
-          // Find all sister planets in the same solar system and make them a feature planet.     
-            for (int j = 0; j < planets.size(); j++) {
-              ExoPlanet p = planets.get(j);
-              if (p != selectedPlanet){
-               if (p.sun_name!=null && p.sun_name.equals(selectedPlanet.sun_name)){
-                 p.feature = true;
-                 p.label = "Same Star: KOI-"+p.KOI;
-               }
-               else { 
-                 p.feature = false;       
-               }
-             }
+  else {
+    for (int i = 0; i < planets.size(); i++) {
+      if (planets.get(i).overPlanet()) {
+        selectedPlanet = planets.get(i);
+
+        if (selectedPlanet.corePlanet) {
+          setTextAreaText(textArea, selectedPlanet); // Planets in our solar system dont have the required info so specialised message requried
+          return;
+        }
+
+        selectedPlanet.feature = true;
+        selectedPlanet.label = "Selected: KOI- "+selectedPlanet.KOI;
+        setTextAreaText(textArea, selectedPlanet);
+
+        // Find all sister planets in the same solar system and make them a feature planet.     
+        for (int j = 0; j < planets.size(); j++) {
+          ExoPlanet p = planets.get(j);
+          if (p != selectedPlanet) {
+            if (p.sun_name!=null && p.sun_name.equals(selectedPlanet.sun_name)) {
+              p.feature = true;
+              p.label = "Same Star: KOI-"+p.KOI;
             }
-      break;
+            else { 
+              p.feature = false;
+            }
+          }
+        }
+        break;
+      }
     }
   }
 }
-}
 
 /** 
-Set the appropriate text area to the correct information about the planet provided
-*/
- void setTextAreaText(Textarea area, ExoPlanet p){
-   
-     // If planet is from our solar system, ie not an Exoplanet then print appropriate fields
-     if (selectedPlanet.corePlanet){ 
-        textArea.setText(
-      "Planet Name: \t"+selectedPlanet.label 
+ Set the appropriate text area to the correct information about the planet provided
+ */
+void setTextAreaText(Textarea area, ExoPlanet p) {
+
+  // If planet is from our solar system, ie not an Exoplanet then print appropriate fields
+  if (selectedPlanet.corePlanet) { 
+    textArea.setText(
+    "Planet Name: \t"+selectedPlanet.label 
       +"\nRadius: \t"+selectedPlanet.radius
       +"\nTemperature: \t"+selectedPlanet.temp
       +"\nPeriod (days/year): \t"+selectedPlanet.period
       +"\nESIg: \t"+selectedPlanet.ESIg
       +"\nESIi: \t"+selectedPlanet.ESIi
-        +"\nESIs: \t"+selectedPlanet.ESIs
+      +"\nESIs: \t"+selectedPlanet.ESIs
       );
-    }
-     // Else planet is outside our solar system so print appropriate fields
-    else{
-   area.setText(
-      "Kepler Plantary Index (KOI): \t"+p.KOI 
+  }
+  // Else planet is outside our solar system so print appropriate fields
+  else {
+    area.setText(
+    "Kepler Plantary Index (KOI): \t"+p.KOI 
       +"\nTemperature: \t"+p.temp
       +"\nGravity: \t"+p.KOI
       +"\nZone Class: \t"+p.zone_class
@@ -614,17 +639,17 @@ Set the appropriate text area to the correct information about the planet provid
       +"\nYear Discovered: \t"+p.disc_year
       +"\nESIg: \t"+p.ESIg
       +"\nESIi: \t"+p.ESIi
-        +"\nESIs: \t"+p.ESIs
+      +"\nESIs: \t"+p.ESIs
       );
-    }
+  }
 }
 
 
 void mouseWheel(MouseEvent event) {
   float delta = event.getAmount();
   if (delta==-1 && tzoom <=3)
-  tzoom+=0.2;
+    tzoom+=0.2;
   else if (delta == 1 && tzoom >= .1)
-  tzoom-=0.2;
+    tzoom-=0.2;
 }
 
