@@ -129,7 +129,7 @@ public class ControlFrame extends PApplet {
       .setPosition(initialX+110, initialY)
         .setSize(100, 40)
           ;
-    cp5.addButton("Highlight Selected")
+    cp5.addButton("Suns Habitable Zone")
       .setValue(0)
         .setPosition(initialX+110, initialY+(componentHeight*1)+(gap*1))
           .setSize(100, 40)
@@ -410,7 +410,7 @@ public class ControlFrame extends PApplet {
         if (pausedVis) pausedVis = false;
         else pausedVis = true;
       }
-      else if (event.isFrom("Highlight Selected")) {
+      else if (event.isFrom("Suns Habitable Zone")) {
         if (greyOutPlanets) greyOutPlanets = false;
         else greyOutPlanets = true;
       } 

@@ -61,7 +61,7 @@ class ExoPlanet {
   float temp;
   float axis;
   int vFlag = 1;
-  
+
   // Real movement/render properties
   float theta = 0;
   float thetaSpeed = 0;
@@ -76,29 +76,32 @@ class ExoPlanet {
   float ESIs;
   float ESIi;
   float ESIg;
- float apixelAxis;
+  float apixelAxis;
   color col;
   boolean planetOver;
   boolean feature = false;
   String label = "";
   Kepler2012 kepler;
- float sun_hab_zone_min;
- float sun_hab_zone_max;
-   String zone_class;
-   String mass_class;
-   String composition_class;
-   String atmosphere_class;
-   String habitable_class;
-   float gravity;
-   int disc_year;
-    String disc_tech;
-    String sun_name;
-    String constellation;
+  float sun_hab_zone_min;
+  float sun_hab_zone_max;
+  String zone_class;
+  String mass_class;
+  String composition_class;
+  String atmosphere_class;
+  String habitable_class;
+  float gravity;
+  int disc_year;
+  String disc_tech;
+  String sun_name;
+  String constellation;
   boolean corePlanet = false;
   float difference = 0;
+  float sizeDifference = 1;
   // Constructor function
-  ExoPlanet(Kepler2012 kep) {kepler = kep;};
-  
+  ExoPlanet(Kepler2012 kep) {
+    kepler = kep;
+  };
+
   // Load exoplanet data from a comma-delimited string (see key at top of class)
   ExoPlanet fromCSV2012(String[] sa) {
     KOI = float(sa[0]);
@@ -106,20 +109,20 @@ class ExoPlanet {
     radius = float(sa[2]);
     axis = float(sa[3]);
     temp = float(sa[4]);
-       ESIi = float(sa[35]);
+    ESIi = float(sa[35]);
     ESIs = float(sa[36]);
     ESIg = float(sa[37]);
-          zone_class = sa[21];
-        mass_class = sa[22];
+    zone_class = sa[21];
+    mass_class = sa[22];
     composition_class = sa[23];
-     atmosphere_class = sa[24];
+    atmosphere_class = sa[24];
     habitable_class = sa[25];
-      gravity = float(sa[26]);
+    gravity = float(sa[26]);
     disc_year = int(sa[43]);
-      disc_tech = sa[42];
-             sun_name = sa[44];
-      constellation = sa[45];
-          sun_hab_zone_min = float(sa[29]) *AU;
+    disc_tech = sa[42];
+    sun_name = sa[44];
+    constellation = sa[45];
+    sun_hab_zone_min = float(sa[29]) *AU;
     sun_hab_zone_max = float(sa[30]) *AU;
     return(this);
   }
@@ -135,17 +138,17 @@ class ExoPlanet {
     ESIi = float(sa[35]);
     ESIs = float(sa[36]);
     ESIg = float(sa[37]);
-        zone_class = sa[21];
-        mass_class = sa[22];
+    zone_class = sa[21];
+    mass_class = sa[22];
     composition_class = sa[23];
-     atmosphere_class = sa[24];
+    atmosphere_class = sa[24];
     habitable_class = sa[25];
     gravity = float(sa[26]);
     disc_year = int(sa[43]);
-      disc_tech = sa[42];
-        sun_name = sa[44];
-      constellation = sa[45];
-          sun_hab_zone_min = float(sa[29]) *AU;
+    disc_tech = sa[42];
+    sun_name = sa[44];
+    constellation = sa[45];
+    sun_hab_zone_min = float(sa[29]) *AU;
     sun_hab_zone_max = float(sa[30]) *AU;
     return(this);
   }
@@ -163,43 +166,39 @@ class ExoPlanet {
 
   // Update
   void update() {
-//UPDATE THE Z AXIS WHILE PROVIDING TRANSITION MOVEMENT//
+    //UPDATE THE Z AXIS WHILE PROVIDING TRANSITION MOVEMENT//
     theta += thetaSpeed;
     z += (tz - z) * 0.1;
- //UPDATE THE X AND Y AXIS OF THE EXOPLANETS//
+    //UPDATE THE X AND Y AXIS OF THE EXOPLANETS//
 
-       //Existing code, still not sure what it does
+    //Existing code, still not sure what it does
     if (axis > 1.06 && (feature || corePlanet)) {
       apixelAxis = ((1.06 + ((axis - 1.06) * ( 1 - flatness))) * AU) + axis * 10;
     }
-  // move earth to center of orbit if in ESI mode and orbital view
-     else if (label.equals("Earth") && mode.equals("ESI") && layout.equals("orbital")){
+    // move earth to center of orbit if in ESI mode and orbital view
+    else if (label.equals("Earth") && mode.equals("ESI") && layout.equals("orbital")) {
       apixelAxis += (ESIg-apixelAxis)*difference;
     }
-  // place exoplanets by their ESI on X axis if in graph view and mode is ESI
-      else if (!label.equals("Earth") && mode.equals("ESI") && layout.equals("graph")){
-        apixelAxis += ((ESIi*AU)-apixelAxis)*difference;
+    // place exoplanets by their ESI on X axis if in graph view and mode is ESI
+    else if (!label.equals("Earth") && mode.equals("ESI") && layout.equals("graph")) {
+      apixelAxis += ((ESIi*AU)-apixelAxis)*difference;
     }
-    
-     // place exoplanets by their ESI on X axis if in orbital view and mode is ESI
-      else if (!label.equals("Earth") && mode.equals("ESI") && layout.equals("orbital")){
-        apixelAxis += ((((1-ESIg)/2)*AU) - apixelAxis)*difference;
- 
- 
+
+    // place exoplanets by their ESI on X axis if in orbital view and mode is ESI
+    else if (!label.equals("Earth") && mode.equals("ESI") && layout.equals("orbital")) {
+      apixelAxis += ((((1-ESIg)/2)*AU) - apixelAxis)*difference;
     } 
     else { 
-    apixelAxis += (pixelAxis-apixelAxis)*difference;
-  }
-  
-        if (difference < 1) 
-          difference += .04;
-          
-    if (!pausedVis || layout.equals("graph")){
-     x = sin(theta * (1 - flatness)) * apixelAxis;
-     y = cos(theta * (1 - flatness)) * apixelAxis;
-
+      apixelAxis += (pixelAxis-apixelAxis)*difference;
     }
 
+    if (difference < 1) 
+      difference += .04;
+
+    if (!pausedVis || layout.equals("graph")) {
+      x = sin(theta * (1 - flatness)) * apixelAxis;
+      y = cos(theta * (1 - flatness)) * apixelAxis;
+    }
   }
 
   // Draw
@@ -216,9 +215,11 @@ class ExoPlanet {
       stroke(255, 255);
       strokeWeight(2);
       noFill();
-       if (greyOutPlanets && (corePlanet || feature)) ellipse(0, 0, pixelRadius*4+10, pixelRadius*4+10);
-       else
-      ellipse(0, 0, (int) pixelRadius + 10, (int) pixelRadius + 10); 
+      if (greyOutPlanets && (corePlanet || feature)){
+      ellipse(0, 0, (int) pixelRadius*(4-sizeDifference)+10,(int) pixelRadius*(4-sizeDifference)+10); 
+      }
+      else
+        ellipse(0, 0, (int) pixelRadius + 10, (int) pixelRadius + 10); 
       strokeWeight(1);
       pushMatrix();
       if (label.equals("Earth")) {
@@ -239,41 +240,55 @@ class ExoPlanet {
       }
       popMatrix();
     }
-       if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
-       println("First Call "+KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
-     }
-    //if user has selected to grey out planets then grey out planets not featured or core
-    if (!greyOutPlanets || (corePlanet || feature)){
-    fill(col);
+    if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
+      println("First Call "+KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
     }
-    else if (!corePlanet || !feature){
-    fill(188,188,188);
+    //if user has selected to grey out planets then grey out planets not featured or core
+    if (!greyOutPlanets || (corePlanet || feature)) {
+      fill(col);
+    }
+    else if (!corePlanet || !feature) {
+      fill(188, 188, 188, 25);
     }
     noStroke();
-    if (greyOutPlanets && (corePlanet || feature)) ellipse(0, 0, pixelRadius*4, pixelRadius*4);
+    if (greyOutPlanets && (corePlanet || feature)){ 
+      ellipse(0, 0, (int) pixelRadius*(4-sizeDifference),(int) pixelRadius*(4-sizeDifference)); 
+      if (sizeDifference >0)
+      sizeDifference -= 0.1;
+    }
     else
-     if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
-       println("Second Call "+KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
-     }
- 
-       shape(oval, 0-(int) pixelRadius*1.25, 0-(int) pixelRadius*.625, (int) pixelRadius, (int) pixelRadius);
-     if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
-     }
-    popMatrix();
-  }
-  
-  
-  
-  boolean overPlanet() {
-  float clickX = screenX(x,y,z) - mouseX;
-  float clickY = screenY(x,y,z) - mouseY;
-  if (sqrt(sq(clickX) + sq(clickY)) < pixelRadius/2+10 ) {
-    return true;
-  } else {
-    return false;
-  }
-}
+      if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
+        println("Second Call "+KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
+      }
+    if (greyOutPlanets && selectedPlanet != null && selectedPlanet == this ) {
+      pushMatrix();
+      translate(0, 0, 0);
+      shape(oval, 0-(int) pixelRadius*1.25, 0-(int) pixelRadius*.625, (int) pixelRadius, (int) pixelRadius);
+      popMatrix();
+    }
+    else  
+      shape(oval, 0-(int) pixelRadius*1.25, 0-(int) pixelRadius*.625, (int) pixelRadius, (int) pixelRadius);
 
-  
+    if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
+      println("Third Call "+KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
+    }
+    popMatrix();
+    // Needs to occur only on reselect
+    if (selectedPlanet != this )
+      sizeDifference = 1;
+  }
+
+
+
+  boolean overPlanet() {
+    float clickX = screenX(x, y, z) - mouseX;
+    float clickY = screenY(x, y, z) - mouseY;
+    if (sqrt(sq(clickX) + sq(clickY)) < pixelRadius/2+10 ) {
+      return true;
+    } 
+    else {
+      return false;
+    }
+  }
 }
 
