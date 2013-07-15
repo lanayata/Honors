@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  7 JUL 2013 12:38
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  16 JUL 2013 11:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -303,7 +303,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--8
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 10.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 12.
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--16
+
+ []
+
 ) [1
 
 
@@ -323,17 +328,27 @@ File: images/spiral_model.png Graphic file (type png)
 Package pdftex.def Info: images/spiral_model.png used on input line 8.
 (pdftex.def)             Requested size: 352.8155pt x 351.80481pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--18
+Underfull \hbox (badness 10000) in paragraph at lines 5--22
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--18
+Underfull \hbox (badness 10000) in paragraph at lines 5--22
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--18
+Underfull \hbox (badness 10000) in paragraph at lines 5--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--22
 
  []
 
@@ -401,16 +416,16 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  3182 strings out of 494071
  45005 string characters out of 3160406
- 109597 words of memory out of 3000000
+ 109725 words of memory out of 3000000
  6304 multiletter control sequences out of 15000+200000
  26258 words of font info for 66 fonts, out of 3000000 for 9000
  648 hyphenation exceptions out of 8191
- 38i,7n,39p,264b,245s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,7n,39p,461b,245s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
 dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/up
 lri8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (21 pages, 144820 bytes).
+Output written on proj_report_outline.pdf (21 pages, 146850 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream

@@ -7,10 +7,24 @@ The deliverable is
 The resulting system will
 
 \section{Problem Statement}
+many planets that have been located outside of our own solar system, these are
+called exoplanets
 \subsection{Understanding the content in the dataset}
-\subsection{Comprehending the IIIIIIIIIIIIIIIIIII}
-\subsection{Learning about complex ideas}
+Understanding and analysing large datasets whose size defies simplistic analysis is a known issue that many areas of research are attempting to address from datamining to discover SOMTHING HERE in the data itself to visualisations to convey the information in a visual mannor. All of these research methods involve finding and displaying important aspects of the data so that users can more efficiently use it.
+\\\\
+The content in the dataset used for this project is made up of records of each exoplanet discovered, each of which contains 46 fields.
 
-\section{Key Issues}
+\subsection{Comprehension of planatery information}
+Much of the information regarding planets is criptic and uninituitive, this make its understandability difficult. Visualisations attempt to address this by displaying the information in a way that conveys the information in a simplisitic way that allows easier user comprehension.
+\\\\
+something about faster cognition times
+\subsection{Effective user interaction with visualisation}
+A visualisation that soley displays information without effective methods of interaction will not have the immersive qualities that keeps users engaged as would be the case with an interactive visualisation
+\section{Key issues project addresses}
+To summarise the above sections, this project addresses the following key issues:
+\begin{enumerate}
+ \item 
+\end{enumerate}
+
 
 \section{Contributions of this project}
