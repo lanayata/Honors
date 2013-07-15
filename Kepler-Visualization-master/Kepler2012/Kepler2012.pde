@@ -335,6 +335,24 @@ void draw() {
 
   }
   else {
+    if (greyOutPlanets && selectedPlanet != null) {
+      pushMatrix();
+       rotateY(-PI/2);
+      stroke(255, 100);
+      translate(0, 0, -100);
+      fill(255, 0, 0, 50);
+      arc(0, 0, (int) selectedPlanet.sun_hab_zone_max, (int) selectedPlanet.sun_hab_zone_max,radians(0.0),radians(90.0),PIE);
+      fill(0, 255, 0, 100);
+      translate(0, 0, 2);
+      arc(0, 0, (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min),radians(0.0),radians(90.0),PIE);
+      translate(0, 0, 2);
+      fill(0, 0, 0);
+      arc(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min,radians(0.0),radians(90.0),PIE);
+      translate(0, 0, 2);
+      fill(255, 0, 0, 50);
+      arc(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min,radians(0.0),radians(90.0),PIE);      
+      popMatrix();
+    }
     // Draw the Y Axis
     stroke(255, 100);
     pushMatrix();
@@ -411,7 +429,7 @@ void draw() {
       e.printStackTrace();
     }
   }    
-  println("MEM USE: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)+"mb, TOTAL: "+Runtime.getRuntime().totalMemory()/1000000+"mb, FREE: "+Runtime.getRuntime().freeMemory()/1000000);
+ // println("MEM USE: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)+"mb, TOTAL: "+Runtime.getRuntime().totalMemory()/1000000+"mb, FREE: "+Runtime.getRuntime().freeMemory()/1000000);
 }
 ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
   Frame f = new Frame(theName);
