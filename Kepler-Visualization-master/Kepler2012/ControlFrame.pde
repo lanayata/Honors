@@ -351,6 +351,10 @@ public class ControlFrame extends PApplet {
         changedValue = "koi";
         minKOI = event.getController().getArrayValue(0);
         maxKOI = event.getController().getArrayValue(1);
+        globalMinKOI = event.getController().getArrayValue(0);
+        globalMaxKOI = event.getController().getArrayValue(1);
+        planetMinKOI = event.getController().getArrayValue(0);
+        planetMaxKOI = event.getController().getArrayValue(1);
       }
       if (hasChanged) {
         // Set Temp ranges to rescale planets
@@ -398,8 +402,12 @@ public class ControlFrame extends PApplet {
           planetMaxKOI = 1;
           for (ExoPlanet p: planets) {
             float koi =p.KOI;
-            // if (planetMinKOI > koi) {planetMinKOI = koi;}
-            //if (planetMaxKOI < koi) {planetMaxKOI = koi;}
+            if (planetMinKOI > koi) {
+              planetMinKOI = koi;
+            }
+            if (planetMaxKOI < koi) {
+              planetMaxKOI = koi;
+            }
           }
         }
 
@@ -488,7 +496,7 @@ public class ControlFrame extends PApplet {
       if (p.temp >= globalMinTemp && p.temp <= globalMaxTemp) {
         if (p.radius >= globalMinSize && p.radius <= globalMaxSize) {
           if (p.ESIg >= globalMinESI && p.ESIg <= globalMaxESI) {
-            if (p.KOI >= minKOI && p.KOI <= maxKOI) {
+            if (p.KOI >= globalMinKOI && p.KOI <= globalMaxKOI) {
               planets.add(p);
             }
           }
@@ -499,6 +507,7 @@ public class ControlFrame extends PApplet {
     if (mode.equals("ESI")) sortByESI();
     else if (mode.equals("temp")) sortByTemp();
     else if (mode.equals("size")) sortBySize();
+        else if (mode.equals("KOI")) sortByKOI();
     else if (mode.equals("none")) unSort();
   }  
   void mouseWheel(int delta) {
@@ -509,5 +518,4 @@ public class ControlFrame extends PApplet {
       tzoom-=0.2;
   }
 }
-
 

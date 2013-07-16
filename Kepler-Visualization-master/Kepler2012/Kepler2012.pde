@@ -46,6 +46,10 @@ float globalMaxTemp = 3257;
 float globalMinTemp = 3257;
 float globalMaxSize = 0;
 float globalMinSize = 1000000;
+float globalMinKOI = 1;
+float globalMaxKOI = 2771;
+float globalMinESI = 0;
+float globalMaxESI = 1;
 //Planet Specific
 float planetMinTemp = 83;
 float planetMaxTemp = 3867;
