@@ -408,20 +408,8 @@ void draw() {
     try {
       ExoPlanet p = planets.get(i);
       if (p!=null) {
-        if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
-          println("First Planet: "+p.KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
-          break;
-        }
         p.update();
-        if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
-          println("Second Planet: "+p.KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
-          break;
-        }
         p.render();
-        if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
-          println("third Planet: "+p.KOI+" OLD: "+mem+" NEW: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000));
-          break;
-        }
       }
     }
 
@@ -464,8 +452,12 @@ void sortBySize() {
 }
 
 void sortByTemp() {
+  try{
   mode = "temp";
+
   for (int i = 0; i < planets.size(); i++) {
+      float val = map(planets.get(i).temp, planetMinTemp, planetMaxTemp, 0, max);
+  if (val < -10000 || val > 10000) continue;
     planets.get(i).tz = map(planets.get(i).temp, planetMinTemp, planetMaxTemp, 0, max);
     planets.get(i).difference = 0;
   }
@@ -474,6 +466,8 @@ void sortByTemp() {
   yMax = globalMaxTemp;
   yMin = globalMinTemp;
   visualisationState = "Temperature";
+  }
+  catch(Exception e){e.printStackTrace();}
 }
 
 void sortByESI() {
@@ -625,7 +619,7 @@ void mousePressed() {
   }
 }
 
-/** 
+/**      
  Set the appropriate text area to the correct information about the planet provided
  */
 void setTextAreaText(Textarea area, ExoPlanet p) {
@@ -648,6 +642,7 @@ void setTextAreaText(Textarea area, ExoPlanet p) {
     "Kepler Plantary Index (KOI): \t"+p.KOI 
       +"\nTemperature: \t"+p.temp
       +"\nGravity: \t"+p.KOI
+      +"\nRadius: \t"+p.radius
       +"\nZone Class: \t"+p.zone_class
       +"\nMass Class: \t"+p.mass_class
       +"\nComposition Class: \t"+p.composition_class
