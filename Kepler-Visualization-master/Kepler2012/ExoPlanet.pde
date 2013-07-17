@@ -217,9 +217,9 @@ class ExoPlanet {
       noFill();
       if (feature){
       if (radius < 4)
-              ellipse(0, 0, (int) pixelRadius*(6-sizeDifference)+10, (int) pixelRadius*(6-sizeDifference)+10); 
+              ellipse(0, 0, (int) pixelRadius*(6-(sizeDifference*6))+10, (int) pixelRadius*(6-(sizeDifference*6))+10); 
       else if (radius < 8.5)
-        ellipse(0, 0, (int) pixelRadius*(4-sizeDifference)+10, (int) pixelRadius*(4-sizeDifference)+10); 
+        ellipse(0, 0, (int) pixelRadius*(4-(sizeDifference*4))+10, (int) pixelRadius*(4-(sizeDifference*4))+10); 
       else 
         ellipse(0, 0, (int) pixelRadius*(2-sizeDifference)+10, (int) pixelRadius*(2-sizeDifference)+10); 
       }
@@ -258,13 +258,13 @@ class ExoPlanet {
     noStroke();
     if (feature){ 
      if (radius < 4)
-              ellipse(0, 0, (int) pixelRadius*(6-sizeDifference), (int) pixelRadius*(6-sizeDifference)); 
+              ellipse(0, 0, (int) pixelRadius*(6-(sizeDifference*6)), (int) pixelRadius*(6-(sizeDifference*6))); 
       else if (radius < 8.5)
-        ellipse(0, 0, (int) pixelRadius*(4-sizeDifference), (int) pixelRadius*(4-sizeDifference)); 
+        ellipse(0, 0, (int) pixelRadius*(4-(sizeDifference*4)), (int) pixelRadius*(4-(sizeDifference*4))); 
       else 
         ellipse(0, 0, (int) pixelRadius*(2-sizeDifference), (int) pixelRadius*(2-sizeDifference)); 
       if (sizeDifference >0)
-      sizeDifference -= 0.1;
+      sizeDifference -= 0.05;
     }
     else
       if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
