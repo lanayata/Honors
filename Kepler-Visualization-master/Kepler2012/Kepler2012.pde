@@ -480,8 +480,8 @@ void sortByESI() {
     planets.get(i).tz = map(planets.get(i).ESIs, planetMinESI, planetMaxESI, 0, max);
     planets.get(i).difference = 0;
   }
-  yLabel = "Surface ESI";
-  xLabel = "Interior ESI";
+  yLabel = "Surface Earth Similarity Index";
+  xLabel = "Interior Earth Similarity Index";
   yMax = 1.0;
   yMin = 0.0;
   mode = "ESI";
@@ -492,9 +492,13 @@ void sortByKOI() {
     planets.get(i).tz = map(planets.get(i).KOI, planetMinKOI, planetMaxKOI, 0, max);
     planets.get(i).difference = 0;
   }
+   yLabel = "Kepler Object of Interest Number";
+  xLabel = "Semi-major Axis (Astronomical Units)";
+  yMax = globalMaxKOI;
+  yMin = globalMinKOI;
   mode = "KOI";
 
-  visualisationState = "Kepler Object of Interest Index";
+  visualisationState = "Kepler Object of Interest Number";
 }
 
 void unSort() {
@@ -502,7 +506,10 @@ void unSort() {
     planets.get(i).tz = 0;
     planets.get(i).difference = 0;
   }
-  mode = "none";
+   yLabel = "";
+  xLabel = "Semi-major Axis (Astronomical Units)";
+  yMax = 0;
+  yMin = 0;
 
   visualisationState = "Unordered";
 }
@@ -557,10 +564,14 @@ void toggleFlatness(float f) {
   if (layout.equals("orbital")) {
     layout = "graph";
     visualisationLayout = "Graph View" ;
+    max = 500; 
+     cf.filterData();
   }
   else {
     layout = "orbital";
     visualisationLayout = "Orbital View" ;
+    max = 1000; 
+    cf.filterData();
   }
   if (tflatness == 1) {
     trot.x = PI/2;
