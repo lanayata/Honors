@@ -273,7 +273,13 @@ void draw() {
 
     // MousePress - Rotation Adjustment
     else if (!draggingZoomSlider) {
-      trot.x += (pmouseY - mouseY) * 0.01;
+      if (trot.x <= 3 && trot.x >= -1.5)
+        trot.x += (pmouseY - mouseY) * 0.01;
+      else
+        if (trot.x < 0)
+          trot.x = -1.5;
+        else 
+          trot.x = 3;
       trot.z += (pmouseX - mouseX) * 0.01;
     }
   }
@@ -296,25 +302,25 @@ void draw() {
   // Draw the sun
   image(sunImage, -10, -10, 20, 20);
 
-    if (layout.equals("orbital") && greyOutPlanets && selectedPlanet != null) {
-      pushMatrix();
-      stroke(255, 100);
-      translate(0, 0, -100);
-      fill(255, 0, 0, 50);
-      ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_max, (int) selectedPlanet.sun_hab_zone_max);
-      fill(0, 255, 0, 100);
-      translate(0, 0, 2);
-      ellipse(0, 0, (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min));
-      translate(0, 0, 2);
-      fill(0, 0, 0);
-      ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min); 
-      translate(0, 0, 2);
-      fill(255, 0, 0, 50);
-      ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min);       
-      popMatrix();
-    }
+  if (layout.equals("orbital") && greyOutPlanets && selectedPlanet != null) {
+    pushMatrix();
+    stroke(255, 100);
+    translate(0, 0, -100);
+    fill(255, 0, 0, 50);
+    ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_max, (int) selectedPlanet.sun_hab_zone_max);
+    fill(0, 255, 0, 100);
+    translate(0, 0, 2);
+    ellipse(0, 0, (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min));
+    translate(0, 0, 2);
+    fill(0, 0, 0);
+    ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min); 
+    translate(0, 0, 2);
+    fill(255, 0, 0, 50);
+    ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min);       
+    popMatrix();
+  }
 
- else if (layout.equals("orbital")) {   
+  else if (layout.equals("orbital")) {   
 
     // Draw Rings:
     strokeWeight(2);
@@ -335,26 +341,24 @@ void draw() {
     // Draw a 10 AU ring
     arc(0, 7, AU * 10, AU * 10, PI, TWO_PI);
     arc(0, -7, -AU * 10, -AU * 10, PI, TWO_PI);
-
-
   }
   else {
     if (greyOutPlanets && selectedPlanet != null) {
       pushMatrix();
-       rotateY(-PI/2);
+      rotateY(-PI/2);
       stroke(255, 100);
       translate(0, 0, -100);
       fill(255, 0, 0, 50);
-      arc(0, 0, (int) selectedPlanet.sun_hab_zone_max, (int) selectedPlanet.sun_hab_zone_max,radians(0.0),radians(90.0),PIE);
+      arc(0, 0, (int) selectedPlanet.sun_hab_zone_max, (int) selectedPlanet.sun_hab_zone_max, radians(0.0), radians(90.0), PIE);
       fill(0, 255, 0, 100);
       translate(0, 0, 2);
-      arc(0, 0, (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min),radians(0.0),radians(90.0),PIE);
+      arc(0, 0, (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), radians(0.0), radians(90.0), PIE);
       translate(0, 0, 2);
       fill(0, 0, 0);
-      arc(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min,radians(0.0),radians(90.0),PIE);
+      arc(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min, radians(0.0), radians(90.0), PIE);
       translate(0, 0, 2);
       fill(255, 0, 0, 50);
-      arc(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min,radians(0.0),radians(90.0),PIE);      
+      arc(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min, radians(0.0), radians(90.0), PIE);      
       popMatrix();
     }
     // Draw the Y Axis
@@ -421,7 +425,8 @@ void draw() {
       e.printStackTrace();
     }
   }    
- // println("MEM USE: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)+"mb, TOTAL: "+Runtime.getRuntime().totalMemory()/1000000+"mb, FREE: "+Runtime.getRuntime().freeMemory()/1000000);
+  
+  // println("MEM USE: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)+"mb, TOTAL: "+Runtime.getRuntime().totalMemory()/1000000+"mb, FREE: "+Runtime.getRuntime().freeMemory()/1000000);
 }
 ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
   Frame f = new Frame(theName);
@@ -456,22 +461,24 @@ void sortBySize() {
 }
 
 void sortByTemp() {
-  try{
-  mode = "temp";
+  try {
+    mode = "temp";
 
-  for (int i = 0; i < planets.size(); i++) {
+    for (int i = 0; i < planets.size(); i++) {
       float val = map(planets.get(i).temp, planetMinTemp, planetMaxTemp, 0, max);
-  if (val < -10000 || val > 10000) continue;
-    planets.get(i).tz = map(planets.get(i).temp, planetMinTemp, planetMaxTemp, 0, max);
-    planets.get(i).difference = 0;
+      if (val < -10000 || val > 10000) continue;
+      planets.get(i).tz = map(planets.get(i).temp, planetMinTemp, planetMaxTemp, 0, max);
+      planets.get(i).difference = 0;
+    }
+    yLabel = "Temperature (Kelvin)";
+    xLabel = "Semi-major Axis (Astronomical Units)";
+    yMax = globalMaxTemp;
+    yMin = globalMinTemp;
+    visualisationState = "Temperature";
   }
-  yLabel = "Temperature (Kelvin)";
-  xLabel = "Semi-major Axis (Astronomical Units)";
-  yMax = globalMaxTemp;
-  yMin = globalMinTemp;
-  visualisationState = "Temperature";
+  catch(Exception e) {
+    e.printStackTrace();
   }
-  catch(Exception e){e.printStackTrace();}
 }
 
 void sortByESI() {
@@ -492,7 +499,7 @@ void sortByKOI() {
     planets.get(i).tz = map(planets.get(i).KOI, planetMinKOI, planetMaxKOI, 0, max);
     planets.get(i).difference = 0;
   }
-   yLabel = "Kepler Object of Interest Number";
+  yLabel = "Kepler Object of Interest Number";
   xLabel = "Semi-major Axis (Astronomical Units)";
   yMax = globalMaxKOI;
   yMin = globalMinKOI;
@@ -506,7 +513,7 @@ void unSort() {
     planets.get(i).tz = 0;
     planets.get(i).difference = 0;
   }
-   yLabel = "";
+  yLabel = "";
   xLabel = "Semi-major Axis (Astronomical Units)";
   yMax = 0;
   yMin = 0;
@@ -565,7 +572,7 @@ void toggleFlatness(float f) {
     layout = "graph";
     visualisationLayout = "Graph View" ;
     max = 500; 
-     cf.filterData();
+    cf.filterData();
   }
   else {
     layout = "orbital";
