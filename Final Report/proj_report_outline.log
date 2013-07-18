@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  16 JUL 2013 11:21
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  18 JUL 2013 13:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -309,17 +309,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--16
 
  []
 
-) [1
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
+
+ []
+
+[1
 
 
-]
+]) [2]
 \openout2 = `2.methodology.aux'.
 
- (./2.methodology.tex [2
-
-
-
-]
+ (./2.methodology.tex
 Chapter 2.
 <images/spiral_model.png, id=32, 704.6325pt x 702.625pt>
 File: images/spiral_model.png Graphic file (type png)
@@ -352,7 +353,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--22
 
  []
 
-[3 <./images/spiral_model.png>]) [4]
+[3
+
+
+
+ <./images/spiral_model.png>]) [4]
 \openout2 = `3.requirements_analysis.aux'.
 
  (./3.requirements_analysis.tex
@@ -370,16 +375,34 @@ Chapter 3.
 
 ]
 Chapter 4.
-) [7]
+<images/layout_horizontal.jpg, id=47, 1686.3pt x 1017.8025pt>
+File: images/layout_horizontal.jpg Graphic file (type jpg)
+
+<use images/layout_horizontal.jpg>
+Package pdftex.def Info: images/layout_horizontal.jpg used on input line 10.
+(pdftex.def)             Requested size: 352.8155pt x 212.93726pt.
+
+<images/layout_vertical.jpg, id=48, 1684.2925pt x 1020.81375pt>
+File: images/layout_vertical.jpg Graphic file (type jpg)
+
+<use images/layout_vertical.jpg>
+Package pdftex.def Info: images/layout_vertical.jpg used on input line 12.
+(pdftex.def)             Requested size: 352.8155pt x 213.83205pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [7] [8 <./images/layout_horizontal.jpg> <./images/layout_vertical.jpg>]
 \openout2 = `5.implementation.aux'.
 
- (./5.implementation.tex [8
+
+(./5.implementation.tex
+Chapter 5.
+) [9
 
 
 
 ]
-Chapter 5.
-) [9]
 \openout2 = `6.evaluation.aux'.
 
  (./6.evaluation.tex [10
@@ -414,21 +437,21 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3182 strings out of 494071
- 45005 string characters out of 3160406
- 109725 words of memory out of 3000000
- 6304 multiletter control sequences out of 15000+200000
+ 3193 strings out of 494071
+ 45303 string characters out of 3160406
+ 110725 words of memory out of 3000000
+ 6312 multiletter control sequences out of 15000+200000
  26258 words of font info for 66 fonts, out of 3000000 for 9000
  648 hyphenation exceptions out of 8191
- 38i,7n,39p,461b,245s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,7n,39p,918b,247s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
 dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/up
 lri8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (21 pages, 146850 bytes).
+Output written on proj_report_outline.pdf (21 pages, 398522 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
+ 94 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
