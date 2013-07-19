@@ -1,10 +1,5 @@
 \chapter{Introduction}\label{C:intro}
-This project seeks to design, implement, and evaluate an interactive 3D visualisation
-software system for displaying the content in the Kepler Exoplanets dataset [28]. 
-\\\\
-The deliverable is 
-\\\\
-The resulting system will
+This project seeks to design, implement, and evaluate an interactive 3D visualisation software system for displaying the content in the Kepler Exoplanets dataset. The deliverable is intended as a standalone 3D visualisation system with two modes of interaction of keyboard and mouse or Microsoft Xbox Kinect sensor. The resulting visualisation will convey the information in the dataset in a way that the target users, laypeople who have an interest in astronomy, can understand and interact with.
 
 \section{Problem Statement}
 many planets that have been located outside of our own solar system, these are
@@ -18,13 +13,22 @@ The content in the dataset used for this project is made up of records of each e
 Much of the information regarding planets is criptic and uninituitive, this make its understandability difficult. Visualisations attempt to address this by displaying the information in a way that conveys the information in a simplisitic way that allows easier user comprehension.
 \\\\
 something about faster cognition times
+
+\subsection{Exisiting solutions lack functionality}
+Existing data visualisation techniques using this exoplanet dataset lack the ability to display sufficient detail on each exoplanet and do not provide answers to questions that can be answered by the Exoplanet attributes in the dataset. Existing solutions display only the size, temperature, and orbital information about the exoplanets. While this is useful information that informs users of important facts about the planets, it does leave a lot of potential information unseen and overlooked, for example, information about the type of planet, planets with similar traits, solar system information, similarity to earth and habitability. This project will therefore be focused on researching, implementing, and evaluating a new interactive visualisation system that will display additional information to users not included in previous visualisation systems.
+
 \subsection{Effective user interaction with visualisation}
 A visualisation that soley displays information without effective methods of interaction will not have the immersive qualities that keeps users engaged as would be the case with an interactive visualisation
 \section{Key issues project addresses}
 To summarise the above sections, this project addresses the following key issues:
 \begin{enumerate}
- \item 
+ \item Content in database form is difficult to view and understand.
+ \item Planetary information if complex and difficult to comprehend without a visual reference.
+ \item Exsiting visualisations for this dataset lack functionality.
+ \item User interaction is needed in a visualisation to make the most of the data displayed.
 \end{enumerate}
 
-
 \section{Contributions of this project}
+\begin{enumerate}
+ \item 
+\end{enumerate}
