@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  19 JUL 2013 15:41
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  19 JUL 2013 15:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -336,16 +336,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--14
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--26
+Underfull \hbox (badness 10000) in paragraph at lines 20--31
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--26
+Underfull \hbox (badness 10000) in paragraph at lines 20--31
 
  []
 
-[3
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--31
+
+ []
+
+
+Underfull \vbox (badness 6380) has occurred while \output is active []
+
+ [3
 
 
 
@@ -520,7 +538,7 @@ Here is how much of TeX's memory you used:
 dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/up
 lri8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (23 pages, 1124223 bytes).
+Output written on proj_report_outline.pdf (23 pages, 1124322 bytes).
 PDF statistics:
  105 PDF objects out of 1000 (max. 8388607)
  66 compressed objects within 1 object stream
