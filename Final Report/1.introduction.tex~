@@ -22,13 +22,13 @@ A visualisation that soley displays information without effective methods of int
 \section{Key issues project addresses}
 To summarise the above sections, this project addresses the following key issues:
 \begin{enumerate}
- \item Content in database form is difficult to view and understand.
- \item Planetary information if complex and difficult to comprehend without a visual reference.
- \item Exsiting visualisations for this dataset lack functionality.
- \item User interaction is needed in a visualisation to make the most of the data displayed.
+ \item[I1.] Content in database form is difficult to view and understand.
+ \item[I2.] Planetary information if complex and difficult to comprehend without a visual reference.
+ \item[I3.] Exsiting visualisations for this dataset lack functionality.
+ \item[I4.] User interaction is needed in a visualisation to make the most of the data displayed.
 \end{enumerate}
 
 \section{Contributions of this project}
-\begin{enumerate}
- \item 
-\end{enumerate}
+This project will provide an extension of the Kepler Visualisation Tool \cite{kepler_github} that conveys more information and is easier for users to interact with than the original. This extension will be evaluated by a user experiment to ensure that it is successful in conveying the information contained in the dataset.
+\\\\
+The work and research completed for this project will allow for further improvement by other developers and researchers to extend and improve the visualisation created. This will provide further exposure of the Kepler dataset which will encourage learning about Exoplanets.

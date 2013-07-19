@@ -2,18 +2,22 @@
 \chapter{Project Methodologies}\label{C:m}
 
 \section{Project management approach}
-The project methodology followed in this project was using a spiral model. This model used included requirements analysis, design, implementation, and evaluation phases. These phases  
+Following a structured project managament approach is important as it avoids the problem caused by following a code-and-fix approach as described  as 1) write some code. 2) Fix the problems in the code \cite{boehm}. By following a process model it encourages thinking about requirements, design, and testing before coding is commenced. 
+\\\\
+The project methodology chosen for this project was a customised Spiral Model made up of requirements analysis, design, implementation, and evaluation phases as shown in the below figure.   
 \begin{figure}[h!]
   \centering
-      \includegraphics[width=0.8\textwidth]{images/spiral_model.png}
+      \includegraphics[width=0.6\textwidth]{images/spiral_model.png}
   \caption{Spiral process model followed}
 \end{figure}
+The reason for limiting the model to these 4 phases was because....
+
 For each feature produced in the visualisation a full iteration of the spiral was completed.
-\\\\
-This project management technique supported the creation of a visualisation as 
-\\\\
+
 The advantages of this methodolgy over others such as stricter models such as the waterfall model or a looser agile aproach......The reason that this was effective.......
-\\\\
+
+This project management technique supported the creation of a visualisation as 
+
 The choice of this project management apprach meant ....
 \\\\
 Weekly meetings with the supervisor of the project, Dr Stuart Marshall, were used to provide guidance and 
@@ -21,9 +25,12 @@ Weekly meetings with the supervisor of the project, Dr Stuart Marshall, were use
 Using using other supporting project management techniques such as Gantt charts [APPENDIX] and work breakdown structures(WBS) [APPENDIX] allowed efficient documentation of planning and work completed in the project as well as displaying the following stages requried to complete the project.
 
 \section{System design approach}
-By choosing to expand on an already exisiting system
+To guide the creation of the visualisation a user oriented design approach was used, in particular making use of user models (personas) were created to create a sense of empathy and understanding for the forseen users of the visualisation in order to better understand the requrirements and design decistions to be made. 
 
-
-\section{Key difficulties encountered}
+\section{Key difficulties in project}
 As this project builds upon a previous system much of the exisiting code and execution flow needs to be modified. This requires understanding of how the system was originally built and designed. Because this system does not have any unit or integration tests, going ahead without a comprehenive knowledge of the core functionality would be foolish.
+
+Encountered errors in Processing framework due to number of elements needing to be displayed on screen. 
+
+Having a time constraint of 300 hours for this project over the course of a year meant that ...........
 
