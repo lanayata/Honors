@@ -107,7 +107,7 @@ void setup() {
 
   oval = loadShape("circle.svg");
   oval.disableStyle();
-  size(displayWidth-300, displayHeight, P3D);
+  size(displayWidth-300, displayHeight-20, P3D);
   background(0);
   smooth();  
   textFont(label, 96);
@@ -417,6 +417,7 @@ void draw() {
       ExoPlanet p = planets.get(i);
       if (p!=null) {
         p.update();
+        if (p.onScreen())
         p.render();
       }
     }

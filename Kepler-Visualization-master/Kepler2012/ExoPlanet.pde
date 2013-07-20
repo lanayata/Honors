@@ -215,13 +215,13 @@ class ExoPlanet {
       stroke(255, 255);
       strokeWeight(2);
       noFill();
-      if (feature){
-      if (radius < 4)
-              ellipse(0, 0, (int) pixelRadius*(6-(sizeDifference*6))+10, (int) pixelRadius*(6-(sizeDifference*6))+10); 
-      else if (radius < 8.5)
-        ellipse(0, 0, (int) pixelRadius*(4-(sizeDifference*4))+10, (int) pixelRadius*(4-(sizeDifference*4))+10); 
-      else 
-        ellipse(0, 0, (int) pixelRadius*(2-sizeDifference)+10, (int) pixelRadius*(2-sizeDifference)+10); 
+      if (feature) {
+        if (radius < 4)
+          ellipse(0, 0, (int) pixelRadius*(6-(sizeDifference*6))+10, (int) pixelRadius*(6-(sizeDifference*6))+10); 
+        else if (radius < 8.5)
+          ellipse(0, 0, (int) pixelRadius*(4-(sizeDifference*4))+10, (int) pixelRadius*(4-(sizeDifference*4))+10); 
+        else 
+          ellipse(0, 0, (int) pixelRadius*(2-sizeDifference)+10, (int) pixelRadius*(2-sizeDifference)+10);
       }
       else
         ellipse(0, 0, (int) pixelRadius + 10, (int) pixelRadius + 10); 
@@ -256,15 +256,15 @@ class ExoPlanet {
       fill(188, 188, 188, 25);
     }
     noStroke();
-    if (feature){ 
-     if (radius < 4)
-              ellipse(0, 0, (int) pixelRadius*(6-(sizeDifference*6)), (int) pixelRadius*(6-(sizeDifference*6))); 
+    if (feature) { 
+      if (radius < 4)
+        ellipse(0, 0, (int) pixelRadius*(6-(sizeDifference*6)), (int) pixelRadius*(6-(sizeDifference*6))); 
       else if (radius < 8.5)
         ellipse(0, 0, (int) pixelRadius*(4-(sizeDifference*4)), (int) pixelRadius*(4-(sizeDifference*4))); 
       else 
         ellipse(0, 0, (int) pixelRadius*(2-sizeDifference), (int) pixelRadius*(2-sizeDifference)); 
       if (sizeDifference >0)
-      sizeDifference -= 0.05;
+        sizeDifference -= 0.05;
     }
     else
       if (mem+50 < ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)) {
@@ -288,7 +288,15 @@ class ExoPlanet {
       sizeDifference = 1;
   }
 
-
+  boolean onScreen() {
+ 
+    if (screenX(x, y, z) > 0 && screenX(x, y, z) < displayWidth-300){
+      if (screenY(x, y, z) > 0 && screenY(x, y, z) < displayHeight ){
+        return true;
+      }
+    }
+    return false;
+  }
 
   boolean overPlanet() {
     float clickX = screenX(x, y, z) - mouseX;
