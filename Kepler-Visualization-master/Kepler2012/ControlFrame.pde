@@ -356,6 +356,7 @@ public class ControlFrame extends PApplet {
         planetMinKOI = event.getController().getArrayValue(0);
         planetMaxKOI = event.getController().getArrayValue(1);
       }
+      // Set the min and max off all planets after planets have been filtered - provides the zooming effect 
       if (hasChanged) {
         // Set Temp ranges to rescale planets
         if (!changedValue.equals("temp")) {
@@ -493,7 +494,7 @@ public class ControlFrame extends PApplet {
         continue;
       }
       //Apply filters
-      if (p.temp >= globalMinTemp && p.temp <= globalMaxTemp) {
+      if (p.temp >= globalMinTemp && p.temp <= globalMaxTemp+1) {
         if (p.radius >= globalMinSize && p.radius <= globalMaxSize) {
           if (p.ESIg >= globalMinESI && p.ESIg <= globalMaxESI) {
             if (p.KOI >= globalMinKOI && p.KOI <= globalMaxKOI) {

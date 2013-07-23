@@ -423,7 +423,7 @@ void draw() {
     }
 
     catch(IndexOutOfBoundsException e) {
-      e.printStackTrace();
+     // e.printStackTrace();
     }
   }    
   
