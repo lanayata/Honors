@@ -5,12 +5,12 @@ This project seeks to design, implement, and evaluate an interactive 3D visualis
 many planets that have been located outside of our own solar system, these are
 called exoplanets
 \subsection{Understanding the content in the dataset}
-Understanding and analysing large datasets whose size defies simplistic analysis is a known issue that many areas of research are attempting to address from datamining to discover SOMTHING HERE in the data itself to visualisations to convey the information in a visual mannor. All of these research methods involve finding and displaying important aspects of the data so that users can more efficiently use it.
+Understanding and analysing large datasets whose size defies simplistic or trivial analysis is a known issue that many areas of research are attempting to address, these areas of research range from data mining to visualisations to attempt to discover or highlight important aspects of the data so that people can more efficiently use it
 \\\\
 The content in the dataset used for this project is made up of records of each exoplanet discovered, each of which contains 46 fields.
 
 \subsection{Comprehension of planatery information}
-Much of the information regarding planets is criptic and uninituitive, this make its understandability difficult. Visualisations attempt to address this by displaying the information in a way that conveys the information in a simplisitic way that allows easier user comprehension.
+Much of the information regarding planets is criptic and uninituitive, this make its understandability difficult. Visualisations in general attempt to address this issue by displaying information in a way that conveys the information in simplisitic ways that allows improved user comprehension.
 \\\\
 something about faster cognition times
 

@@ -1,16 +1,16 @@
 \chapter{Introduction}\label{C:intro}
-This project seeks to design, implement, and evaluate an interactive 3D visualisation software system for displaying the content in the Kepler Exoplanets dataset. The deliverable is intended as a 3D standalone system with two modes of interaction of keyboard and mouse or a Microsoft Xbox Kinect sensor. The resulting visualisation will convey the information in the dataset in a way that the target users, laypeople who have an interest in astronomy, can understand and interact with.
+This project seeks to design, implement, and evaluate an interactive 3D visualisation software system for displaying the content in the Kepler Exoplanets dataset. The deliverable is intended as a standalone 3D visualisation system with two modes of interaction of keyboard and mouse or Microsoft Xbox Kinect sensor. The resulting visualisation will convey the information in the dataset in a way that the target users, laypeople who have an interest in astronomy, can understand and interact with.
 
 \section{Problem Statement}
 many planets that have been located outside of our own solar system, these are
 called exoplanets
 \subsection{Understanding the content in the dataset}
-Understanding and analysing large datasets whose size defies simplistic analysis is a known issue that many areas of research are attempting to address from datamining to discover SOMTHING HERE in the data itself to visualisations to convey the information in a visual mannor. All of these research methods involve finding and displaying important aspects of the data so that users can more efficiently use it.
+Understanding and analysing large datasets whose size defies simplistic or trivial analysis is a known issue that many areas of research are attempting to address from data mining to discover SOMTHING HERE in the data itself to visualisations to convey the information in a visual mannor. All of these research methods involve finding and displaying important aspects of the data so that users can more efficiently use it.
 \\\\
 The content in the dataset used for this project is made up of records of each exoplanet discovered, each of which contains 46 fields.
 
 \subsection{Comprehension of planatery information}
-Much of the information regarding planets is criptic and uninituitive, this make its understandability difficult. Visualisations attempt to address this by displaying the information in a way that conveys the information in a simplisitic way that allows easier user comprehension.
+Much of the information regarding planets is criptic and uninituitive, this make its understandability difficult. Visualisations in general attempt to address this issue by displaying information in a way that conveys the information in simplisitic ways that allows improved user comprehension.
 \\\\
 something about faster cognition times
 
@@ -22,10 +22,13 @@ A visualisation that soley displays information without effective methods of int
 \section{Key issues project addresses}
 To summarise the above sections, this project addresses the following key issues:
 \begin{enumerate}
- \item 
+ \item[I1.] Content in database form is difficult to view and understand.
+ \item[I2.] Planetary information if complex and difficult to comprehend without a visual reference.
+ \item[I3.] Exsiting visualisations for this dataset lack functionality.
+ \item[I4.] User interaction is needed in a visualisation to make the most of the data displayed.
 \end{enumerate}
 
 \section{Contributions of this project}
-\begin{enumerate}
- \item 
-\end{enumerate}
+This project will provide an extension of the Kepler Visualisation Tool \cite{kepler_github} that conveys more information and is easier for users to interact with than the original. This extension will be evaluated by a user experiment to ensure that it is successful in conveying the information contained in the dataset.
+\\\\
+The work and research completed for this project will allow for further improvement by other developers and researchers to extend and improve the visualisation created. This will provide further exposure of the Kepler dataset which will encourage learning about Exoplanets.

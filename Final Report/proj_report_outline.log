@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  19 JUL 2013 15:45
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  23 JUL 2013 12:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -265,22 +265,22 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
 No file acknowledge.tex.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 80.
-(./proj_report_outline.toc)
+(./proj_report_outline.toc [1
+
+
+
+
+])
 \tf@toc=\write3
 \openout3 = `proj_report_outline.toc'.
 
- [1
-
-
-
-
-] [2
-
-] (./proj_report_outline.lof)
+ [2] (./proj_report_outline.lof)
 \tf@lof=\write4
 \openout4 = `proj_report_outline.lof'.
 
- [3] [4
+ [3
+
+] [4
 
 ]
 \openout2 = `1.introduction.aux'.
@@ -300,7 +300,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--11
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--16
+Underfull \hbox (badness 10000) in paragraph at lines 13--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
  []
 
@@ -309,10 +314,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--16
 
 ]
 
-LaTeX Warning: Citation `kepler_github' on page 2 undefined on input line 32.
+LaTeX Warning: Citation `kepler_github' on page 2 undefined on input line 31.
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 32--92
+Underfull \hbox (badness 10000) in paragraph at lines 31--92
 
  []
 
@@ -336,27 +341,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--14
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--31
+Underfull \hbox (badness 10000) in paragraph at lines 20--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--31
+Underfull \hbox (badness 10000) in paragraph at lines 20--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--31
+Underfull \hbox (badness 10000) in paragraph at lines 20--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--31
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--31
+Underfull \hbox (badness 10000) in paragraph at lines 20--29
 
  []
 
@@ -373,61 +373,64 @@ Underfull \vbox (badness 6380) has occurred while \output is active []
  (./3.requirements_analysis.tex
 Chapter 3.
 
-LaTeX Warning: Citation `worlds' on page 5 undefined on input line 11.
+LaTeX Warning: Citation `worlds' on page 5 undefined on input line 16.
 
 <images/worlds.jpg, id=41, 238.25275pt x 134.21571pt>
 File: images/worlds.jpg Graphic file (type jpg)
  <use images/worlds.jpg>
-Package pdftex.def Info: images/worlds.jpg used on input line 14.
+Package pdftex.def Info: images/worlds.jpg used on input line 19.
 (pdftex.def)             Requested size: 352.8155pt x 198.75287pt.
 
-[5
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5
 
 
 
- <./images/worlds.jpg>]
+]
 
-LaTeX Warning: Citation `orrery' on page 6 undefined on input line 20.
+LaTeX Warning: Citation `orrery' on page 6 undefined on input line 25.
 
 <images/orrery.jpg, id=45, 238.25275pt x 135.40698pt>
 File: images/orrery.jpg Graphic file (type jpg)
  <use images/orrery.jpg>
-Package pdftex.def Info: images/orrery.jpg used on input line 23.
+Package pdftex.def Info: images/orrery.jpg used on input line 28.
 (pdftex.def)             Requested size: 352.8155pt x 200.51695pt.
-
-
-LaTeX Warning: Citation `celestia' on page 6 undefined on input line 29.
-
-<images/celestia.jpg, id=46, 803.0pt x 602.25pt>
-File: images/celestia.jpg Graphic file (type jpg)
- <use images/celestia.jpg>
-Package pdftex.def Info: images/celestia.jpg used on input line 32.
-(pdftex.def)             Requested size: 220.50885pt x 165.37573pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Citation `kepler_github' on page 6 undefined on input line 38.
+LaTeX Warning: Citation `celestia' on page 6 undefined on input line 34.
+
+<images/celestia.jpg, id=46, 803.0pt x 602.25pt>
+File: images/celestia.jpg Graphic file (type jpg)
+ <use images/celestia.jpg>
+Package pdftex.def Info: images/celestia.jpg used on input line 37.
+(pdftex.def)             Requested size: 220.50885pt x 165.37573pt.
+
+[6 <./images/worlds.jpg>]
+
+LaTeX Warning: Citation `kepler_github' on page 7 undefined on input line 43.
 
 
-LaTeX Warning: Citation `kepler_article' on page 6 undefined on input line 38.
+LaTeX Warning: Citation `kepler_article' on page 7 undefined on input line 43.
 
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
-<images/kepler_orbital.jpg, id=47, 985.6825pt x 578.16pt>
+<images/kepler_orbital.jpg, id=50, 985.6825pt x 578.16pt>
 File: images/kepler_orbital.jpg Graphic file (type jpg)
 
 <use images/kepler_orbital.jpg>
-Package pdftex.def Info: images/kepler_orbital.jpg used on input line 41.
+Package pdftex.def Info: images/kepler_orbital.jpg used on input line 46.
 (pdftex.def)             Requested size: 352.8155pt x 206.94647pt.
 
-<images/kepler_graph.jpg, id=48, 985.6825pt x 578.16pt>
+<images/kepler_graph.jpg, id=51, 985.6825pt x 578.16pt>
 File: images/kepler_graph.jpg Graphic file (type jpg)
 
 <use images/kepler_graph.jpg>
-Package pdftex.def Info: images/kepler_graph.jpg used on input line 46.
+Package pdftex.def Info: images/kepler_graph.jpg used on input line 51.
 (pdftex.def)             Requested size: 352.8155pt x 206.94647pt.
 )
 
@@ -436,25 +439,25 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./images/orrery.jpg>] [7 <./images/celestia.jpg> <./images/kepler_orbital.j
-pg>] [8 <./images/kepler_graph.jpg>]
+[7 <./images/orrery.jpg> <./images/celestia.jpg>] [8 <./images/kepler_orbital.j
+pg> <./images/kepler_graph.jpg>]
 \openout2 = `4.solution_design.aux'.
 
  (./4.solution_design.tex
 Chapter 4.
 
-LaTeX Warning: Citation `kepler_github' on page 9 undefined on input line 5.
+LaTeX Warning: Citation `kepler_github' on page 9 undefined on input line 4.
 
 
-LaTeX Warning: Citation `kepler_article' on page 9 undefined on input line 5.
+LaTeX Warning: Citation `kepler_article' on page 9 undefined on input line 4.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--12
+Underfull \hbox (badness 10000) in paragraph at lines 6--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--12
+Underfull \hbox (badness 10000) in paragraph at lines 6--11
 
  []
 
@@ -462,14 +465,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--12
 File: images/layout_horizontal.jpg Graphic file (type jpg)
 
 <use images/layout_horizontal.jpg>
-Package pdftex.def Info: images/layout_horizontal.jpg used on input line 21.
+Package pdftex.def Info: images/layout_horizontal.jpg used on input line 20.
 (pdftex.def)             Requested size: 352.8155pt x 212.93726pt.
 
 <images/layout_vertical.jpg, id=60, 1684.2925pt x 1020.81375pt>
 File: images/layout_vertical.jpg Graphic file (type jpg)
 
 <use images/layout_vertical.jpg>
-Package pdftex.def Info: images/layout_vertical.jpg used on input line 23.
+Package pdftex.def Info: images/layout_vertical.jpg used on input line 22.
 (pdftex.def)             Requested size: 352.8155pt x 213.83205pt.
 
 
@@ -533,12 +536,12 @@ Here is how much of TeX's memory you used:
  6338 multiletter control sequences out of 15000+200000
  26258 words of font info for 66 fonts, out of 3000000 for 9000
  648 hyphenation exceptions out of 8191
- 38i,7n,39p,918b,245s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,7n,39p,998b,245s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
 dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/up
 lri8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (23 pages, 1124322 bytes).
+Output written on proj_report_outline.pdf (23 pages, 1126220 bytes).
 PDF statistics:
  105 PDF objects out of 1000 (max. 8388607)
  66 compressed objects within 1 object stream
