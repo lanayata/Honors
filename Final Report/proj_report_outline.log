@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  23 JUL 2013 12:16
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  24 JUL 2013 09:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -373,64 +373,79 @@ Underfull \vbox (badness 6380) has occurred while \output is active []
  (./3.requirements_analysis.tex
 Chapter 3.
 
-LaTeX Warning: Citation `worlds' on page 5 undefined on input line 16.
+Underfull \hbox (badness 10000) in paragraph at lines 2--5
 
-<images/worlds.jpg, id=41, 238.25275pt x 134.21571pt>
-File: images/worlds.jpg Graphic file (type jpg)
- <use images/worlds.jpg>
-Package pdftex.def Info: images/worlds.jpg used on input line 19.
-(pdftex.def)             Requested size: 352.8155pt x 198.75287pt.
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5
+Underfull \hbox (badness 10000) in paragraph at lines 6--9
+
+ []
+
+[5
 
 
 
 ]
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 17.
+ (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
 
-LaTeX Warning: Citation `orrery' on page 6 undefined on input line 25.
 
-<images/orrery.jpg, id=45, 238.25275pt x 135.40698pt>
+LaTeX Warning: Citation `worlds' on page 6 undefined on input line 29.
+
+<images/worlds.jpg, id=44, 238.25275pt x 134.21571pt>
+File: images/worlds.jpg Graphic file (type jpg)
+ <use images/worlds.jpg>
+Package pdftex.def Info: images/worlds.jpg used on input line 32.
+(pdftex.def)             Requested size: 352.8155pt x 198.75287pt.
+
+[6 <./images/worlds.jpg>]
+
+LaTeX Warning: Citation `orrery' on page 7 undefined on input line 38.
+
+<images/orrery.jpg, id=49, 238.25275pt x 135.40698pt>
 File: images/orrery.jpg Graphic file (type jpg)
  <use images/orrery.jpg>
-Package pdftex.def Info: images/orrery.jpg used on input line 28.
+Package pdftex.def Info: images/orrery.jpg used on input line 41.
 (pdftex.def)             Requested size: 352.8155pt x 200.51695pt.
+
+
+LaTeX Warning: Citation `celestia' on page 7 undefined on input line 47.
+
+<images/celestia.jpg, id=50, 803.0pt x 602.25pt>
+File: images/celestia.jpg Graphic file (type jpg)
+ <use images/celestia.jpg>
+Package pdftex.def Info: images/celestia.jpg used on input line 50.
+(pdftex.def)             Requested size: 220.50885pt x 165.37573pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Citation `celestia' on page 6 undefined on input line 34.
-
-<images/celestia.jpg, id=46, 803.0pt x 602.25pt>
-File: images/celestia.jpg Graphic file (type jpg)
- <use images/celestia.jpg>
-Package pdftex.def Info: images/celestia.jpg used on input line 37.
-(pdftex.def)             Requested size: 220.50885pt x 165.37573pt.
-
-[6 <./images/worlds.jpg>]
-
-LaTeX Warning: Citation `kepler_github' on page 7 undefined on input line 43.
+LaTeX Warning: Citation `kepler_github' on page 7 undefined on input line 56.
 
 
-LaTeX Warning: Citation `kepler_article' on page 7 undefined on input line 43.
+LaTeX Warning: Citation `kepler_article' on page 7 undefined on input line 56.
 
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
-<images/kepler_orbital.jpg, id=50, 985.6825pt x 578.16pt>
+<images/kepler_orbital.jpg, id=51, 985.6825pt x 578.16pt>
 File: images/kepler_orbital.jpg Graphic file (type jpg)
 
 <use images/kepler_orbital.jpg>
-Package pdftex.def Info: images/kepler_orbital.jpg used on input line 46.
+Package pdftex.def Info: images/kepler_orbital.jpg used on input line 59.
 (pdftex.def)             Requested size: 352.8155pt x 206.94647pt.
 
-<images/kepler_graph.jpg, id=51, 985.6825pt x 578.16pt>
+<images/kepler_graph.jpg, id=52, 985.6825pt x 578.16pt>
 File: images/kepler_graph.jpg Graphic file (type jpg)
 
 <use images/kepler_graph.jpg>
-Package pdftex.def Info: images/kepler_graph.jpg used on input line 51.
+Package pdftex.def Info: images/kepler_graph.jpg used on input line 64.
 (pdftex.def)             Requested size: 352.8155pt x 206.94647pt.
 )
 
@@ -439,36 +454,40 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7 <./images/orrery.jpg> <./images/celestia.jpg>] [8 <./images/kepler_orbital.j
-pg> <./images/kepler_graph.jpg>]
+[7 <./images/orrery.jpg>] [8 <./images/celestia.jpg> <./images/kepler_orbital.j
+pg>] [9 <./images/kepler_graph.jpg>]
 \openout2 = `4.solution_design.aux'.
 
- (./4.solution_design.tex
+ (./4.solution_design.tex [10
+
+
+
+]
 Chapter 4.
 
-LaTeX Warning: Citation `kepler_github' on page 9 undefined on input line 4.
+LaTeX Warning: Citation `kepler_github' on page 11 undefined on input line 4.
 
 
-LaTeX Warning: Citation `kepler_article' on page 9 undefined on input line 4.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--11
-
- []
+LaTeX Warning: Citation `kepler_article' on page 11 undefined on input line 4.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--11
 
  []
 
-<images/layout_horizontal.jpg, id=59, 1686.3pt x 1017.8025pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--11
+
+ []
+
+<images/layout_horizontal.jpg, id=66, 1686.3pt x 1017.8025pt>
 File: images/layout_horizontal.jpg Graphic file (type jpg)
 
 <use images/layout_horizontal.jpg>
 Package pdftex.def Info: images/layout_horizontal.jpg used on input line 20.
 (pdftex.def)             Requested size: 352.8155pt x 212.93726pt.
 
-<images/layout_vertical.jpg, id=60, 1684.2925pt x 1020.81375pt>
+<images/layout_vertical.jpg, id=67, 1684.2925pt x 1020.81375pt>
 File: images/layout_vertical.jpg Graphic file (type jpg)
 
 <use images/layout_vertical.jpg>
@@ -478,46 +497,46 @@ Package pdftex.def Info: images/layout_vertical.jpg used on input line 22.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [9
+)
+Underfull \vbox (badness 2932) has occurred while \output is active []
 
-
-
-] [10 <./images/layout_horizontal.jpg> <./images/layout_vertical.jpg>]
+ [11]
+[12 <./images/layout_horizontal.jpg> <./images/layout_vertical.jpg>]
 \openout2 = `5.implementation.aux'.
 
 
 (./5.implementation.tex
 Chapter 5.
-) [11
+) [13
 
 
 
 ]
 \openout2 = `6.evaluation.aux'.
 
- (./6.evaluation.tex [12
+ (./6.evaluation.tex [14
 
 
 
 ]
 Chapter 6.
-) [13]
+) [15]
 \openout2 = `7.conclusion.aux'.
 
- (./7.conclusion.tex [14
+ (./7.conclusion.tex [16
 
 
 
 ]
 Chapter 7.
-) [15] [16
+) [17] [18
 
 
 ] (./proj_report_outline.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [17
+) [19
 
 ] (./proj_report_outline.aux (./acknowledge.aux) (./1.introduction.aux)
 (./2.methodology.aux) (./3.requirements_analysis.aux) (./4.solution_design.aux)
@@ -530,21 +549,22 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3224 strings out of 494071
- 45932 string characters out of 3160406
- 111726 words of memory out of 3000000
- 6338 multiletter control sequences out of 15000+200000
- 26258 words of font info for 66 fonts, out of 3000000 for 9000
+ 3242 strings out of 494071
+ 46237 string characters out of 3160406
+ 111727 words of memory out of 3000000
+ 6353 multiletter control sequences out of 15000+200000
+ 26515 words of font info for 67 fonts, out of 3000000 for 9000
  648 hyphenation exceptions out of 8191
- 38i,7n,39p,998b,245s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,7n,39p,918b,245s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1
-/urw/palatino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/up
-lri8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (23 pages, 1126220 bytes).
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
+/type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
+ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+</usr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
+Output written on proj_report_outline.pdf (25 pages, 1134760 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 116 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

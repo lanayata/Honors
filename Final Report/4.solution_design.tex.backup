@@ -1,9 +1,15 @@
 \chapter{Solution Design: Improved Kepler Visualisation Tool}\label{C:sd}
 
-\section{Design features}
+This section discusses the deliverable visualisation that will be created as part of this project.
 The visualisation for this project will be created using Processing, a Java framework for visualisations. As the time is short for this project, extending a previous visualisation that uses the same dataset, the Kepler Visualisation Tool \cite{kepler_github, kepler_article}, will increase the amount of progress that can be made in the time afforded.
 
-The visualisation was designed to emphasis small multiples and filtering of the Exoplanets to display the information more clearly to users. Instead of the visualisation only answering the 5 key questions as proposed in the proposal, the aim will now be displaying as much of the information in the dataset as possible without detracting from the effectiveness of the visualisation whilst still answering the questions. This is because the 5 questions did not fully utilize the information in the dataset. However I will need to ensure the effectiveness of the visualisation does not become diminished by trying to convey to much information which would lead to cluttering and overlapping in the visualisation, as well as information overload for users. There will also be larger emphasis placed on making the existing system more usable by improving the interaction methods for users. The following list outlines the new requirements for the visualisation being developed. This will be done by 
+The visualisation was designed to emphasis small multiples and filtering of the Exoplanets to display the information more clearly to users. 
+\\\\
+Instead of the visualisation only answering the 5 key questions as proposed in the proposal, the aim will now be displaying as much of the information in the dataset as possible without detracting from the effectiveness of the visualisation whilst still answering the questions. 
+\\\\
+This is because the 5 questions did not fully utilize the information in the dataset. 
+
+However I will need to ensure the effectiveness of the visualisation does not become diminished by trying to convey to much information which would lead to cluttering and overlapping in the visualisation, as well as information overload for users. There will also be larger emphasis placed on making the existing system more usable by improving the interaction methods for users. The following list outlines the new requirements for the visualisation being developed. This will be done by 
 providing GUI elements for each form of interaction with the system, as well as ensuring all interaction methods are intuitive for users. 
 \subsection{Visualisation Layout}
 \subsubsection{Component Layout}

@@ -16,23 +16,24 @@
 \contentsline {section}{\numberline {2.3}Key difficulties in project}{4}
 \contentsline {chapter}{\numberline {3}Requirements Analysis}{5}
 \contentsline {section}{\numberline {3.1}User models}{5}
-\contentsline {subsection}{\numberline {3.1.1}John Truman (Primary Persona)}{5}
-\contentsline {subsection}{\numberline {3.1.2}Cara Thompson (Secondary Persona)}{6}
+\contentsline {subsection}{\numberline {3.1.1}John Truman (Primary Persona - The interested layperson)}{5}
+\contentsline {subsection}{\numberline {3.1.2}Cara Thompson (Secondary Persona - )}{6}
 \contentsline {subsection}{\numberline {3.1.3}Rob Adams (Secondary Persona)}{6}
 \contentsline {section}{\numberline {3.2}Scenarios}{6}
 \contentsline {section}{\numberline {3.3}Requirements summary}{6}
 \contentsline {section}{\numberline {3.4}Existing systems}{6}
 \contentsline {subsection}{\numberline {3.4.1}Worlds: The Kepler Planet Candidates - Non Interactive}{6}
-\contentsline {subsection}{\numberline {3.4.2}The Kepler Orrery and The Kepler Orrery 2 - Non interactive}{6}
+\contentsline {subsection}{\numberline {3.4.2}The Kepler Orrery and The Kepler Orrery 2 - Non interactive}{7}
 \contentsline {subsection}{\numberline {3.4.3}Celestia - Interactive}{7}
 \contentsline {subsection}{\numberline {3.4.4}Kepler Visualisation Tool}{7}
-\contentsline {chapter}{\numberline {4}Solution Design: Improved Kepler Visualisation Tool}{9}
-\contentsline {subsection}{\numberline {4.0.5}Visualisation Layout}{9}
-\contentsline {subsubsection}{Component Layout}{9}
-\contentsline {chapter}{\numberline {5}Visualisation implementation}{11}
-\contentsline {section}{\numberline {5.1}Technology choice}{11}
-\contentsline {subsection}{\numberline {5.1.1}System design and structure}{11}
-\contentsline {subsection}{\numberline {5.1.2}Tools and artifacts used}{11}
-\contentsline {chapter}{\numberline {6}Visualisation Evaluation}{13}
-\contentsline {chapter}{\numberline {7}Conclusions}{15}
-\contentsline {section}{\numberline {7.1}Future Work}{15}
+\contentsline {chapter}{\numberline {4}Solution Design: Improved Kepler Visualisation Tool}{11}
+\contentsline {subsection}{\numberline {4.0.5}Visualisation Layout}{11}
+\contentsline {subsubsection}{Component Layout}{11}
+\contentsline {section}{\numberline {4.1}Extensions from project initiation document}{12}
+\contentsline {chapter}{\numberline {5}Visualisation implementation}{13}
+\contentsline {section}{\numberline {5.1}Technology choice}{13}
+\contentsline {subsection}{\numberline {5.1.1}System design and structure}{13}
+\contentsline {subsection}{\numberline {5.1.2}Tools and artifacts used}{13}
+\contentsline {chapter}{\numberline {6}Visualisation Evaluation}{15}
+\contentsline {chapter}{\numberline {7}Conclusions}{17}
+\contentsline {section}{\numberline {7.1}Future Work}{17}
