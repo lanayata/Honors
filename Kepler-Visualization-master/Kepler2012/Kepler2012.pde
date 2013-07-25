@@ -13,6 +13,9 @@ import controlP5.*;
 import java.awt.Frame;
 import processing.opengl.*;
 import javax.media.opengl.GL;
+import SimpleOpenNI.*;
+
+SimpleOpenNI  context;
 
 PGraphicsOpenGL pgl;
 GL gl;
@@ -104,10 +107,20 @@ Textarea compareInfo; // pop up text area informing user how to compare
 String visualisationState="";
 String visualisationLayout="Orbital View";
 void setup() {
+    size(displayWidth-300, displayHeight-20, P3D);
+context = new SimpleOpenNI(this);
 
+  // enable depthMap generation 
+  println(context.enableDepth());
+  
+  // enable camera image generation
+  println(context.enableRGB());
+   // update the cam
+     context.update();
+     
   oval = loadShape("circle.svg");
   oval.disableStyle();
-  size(displayWidth-300, displayHeight-20, P3D);
+
   background(0);
   smooth();  
   textFont(label, 96);
@@ -246,6 +259,7 @@ void addMarkerPlanets() {
 }
 
 void draw() {
+
   background( 255 );
   // Ease rotation vectors, zoom
   zoom += (tzoom - zoom) * 0.01;     
@@ -426,8 +440,7 @@ void draw() {
       e.printStackTrace();
     }
   }    
-  
-  // println("MEM USE: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)+"mb, TOTAL: "+Runtime.getRuntime().totalMemory()/1000000+"mb, FREE: "+Runtime.getRuntime().freeMemory()/1000000);
+
 }
 ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
   Frame f = new Frame(theName);
