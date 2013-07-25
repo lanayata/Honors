@@ -63,6 +63,16 @@ class Controls {
     // slider
     fill(105, 105, 105);
     rect(sliderX, sliderY, sliderWidth, sliderHeight);
+   // Kinect 
+ // update the cam
+  context.update();
+  
+  // draw depthImageMap
+  image(context.depthImage(),1000,0,context.depthWidth()/3,context.depthHeight()/3);
+  
+  // draw camera
+  image(context.rgbImage(),1000+(context.depthWidth()/3 + 10),0,context.depthWidth()/3,context.depthHeight()/3);
+  // println("MEM USE: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)+"mb, TOTAL: "+Runtime.getRuntime().totalMemory()/1000000+"mb, FREE: "+Runtime.getRuntime().freeMemory()/1000000);
   }
 
 
