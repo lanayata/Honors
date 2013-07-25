@@ -107,17 +107,29 @@ Textarea compareInfo; // pop up text area informing user how to compare
 String visualisationState="";
 String visualisationLayout="Orbital View";
 void setup() {
-    size(displayWidth-300, displayHeight-20, P3D);
-context = new SimpleOpenNI(this);
-
+  size(displayWidth-300, displayHeight-20, P3D);
+  context = new SimpleOpenNI(this);
+  // mirror is by default enabled
+  context.setMirror(true);
   // enable depthMap generation 
-  println(context.enableDepth());
-  
+  if (context.enableDepth() == false)
+  {
+    println("Can't open the depthMap, maybe the camera is not connected!"); 
+    exit();
+    return;
+  }
+
   // enable camera image generation
-  println(context.enableRGB());
-   // update the cam
-     context.update();
-     
+  // enable depthMap generation 
+  if (context.enableRGB() == false)
+  {
+    println("Can't open the Rgb, maybe the camera is not connected!"); 
+    exit();
+    return;
+  }
+  // update the cam
+  context.update();
+
   oval = loadShape("circle.svg");
   oval.disableStyle();
 
@@ -432,15 +444,14 @@ void draw() {
       if (p!=null) {
         p.update();
         if (p.onScreen())
-        p.render();
+          p.render();
       }
     }
 
     catch(IndexOutOfBoundsException e) {
       e.printStackTrace();
     }
-  }    
-
+  }
 }
 ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
   Frame f = new Frame(theName);
