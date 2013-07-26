@@ -47,6 +47,34 @@ class Controls {
   }
 
   void render() {
+    pushStyle();
+    fill(20, 20, 255,50);
+
+    //Columns
+    rect(0, 0, 200, displayHeight);
+    rect(displayWidth-500, 0, 200, displayHeight);
+    //Rows
+    rect(0, 0, displayWidth, 200);
+    rect(0, displayHeight-200, displayWidth, displayHeight);
+    popStyle();
+
+    //KINECT
+    context.update();
+    // update nite
+    context.update(sessionManager);
+    // draw depthImageMap
+    pushMatrix();
+    translate(0, 0, -4000);
+    pushStyle();
+    tint(50, 50);
+    //   image(context.depthImage(), 0-displayWidth-200, 0-displayWidth+200,displayWidth*2,displayHeight*2);
+    image(context.depthImage(), 0-3500, 0-2500, displayWidth+7000, displayHeight+5000);
+    popStyle();
+    popMatrix();
+    pointDrawer.draw();
+    ///
+
+
     fill(100, 100, 100);
     rect(20, 20, 600, 40);
 
@@ -63,16 +91,16 @@ class Controls {
     // slider
     fill(105, 105, 105);
     rect(sliderX, sliderY, sliderWidth, sliderHeight);
-   // Kinect 
- // update the cam
-  context.update();
-  
-  // draw depthImageMap
-  image(context.depthImage(),1000,0,context.depthWidth()/3,context.depthHeight()/3);
-  
-  // draw camera
-  image(context.rgbImage(),1000+(context.depthWidth()/3 + 10),0,context.depthWidth()/3,context.depthHeight()/3);
-  // println("MEM USE: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)+"mb, TOTAL: "+Runtime.getRuntime().totalMemory()/1000000+"mb, FREE: "+Runtime.getRuntime().freeMemory()/1000000);
+    // Kinect 
+    // update the cam
+    context.update();
+
+    // draw depthImageMap
+    image(context.depthImage(), 1000, 0, context.depthWidth()/3, context.depthHeight()/3);
+
+    // draw camera
+    image(context.rgbImage(), 1000+(context.depthWidth()/3 + 10), 0, context.depthWidth()/3, context.depthHeight()/3);
+    // println("MEM USE: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)+"mb, TOTAL: "+Runtime.getRuntime().totalMemory()/1000000+"mb, FREE: "+Runtime.getRuntime().freeMemory()/1000000);
   }
 
 
@@ -104,5 +132,4 @@ class Controls {
     return ((x >= sliderX) && (x <= (sliderX    + sliderWidth)) && (y >= sliderTop)  && (y <= sliderBottom));
   }
 }
-
 

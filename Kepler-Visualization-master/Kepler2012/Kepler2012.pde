@@ -14,12 +14,14 @@ import java.awt.Frame;
 import processing.opengl.*;
 import javax.media.opengl.GL;
 import SimpleOpenNI.*;
-
+import java.util.*;
 SimpleOpenNI  context;
-
+// NITE
+XnVSessionManager sessionManager;
+XnVFlowRouter     flowRouter;
 PGraphicsOpenGL pgl;
 GL gl;
-
+PointDrawer   pointDrawer;
 // Set up font
 PFont label = createFont("Arial", 96);
 
@@ -92,7 +94,10 @@ String layout = "orbital"; // Store what layout the visualisation is in (orbital
 ExoPlanet selectedPlanet = null;// Selected planet that was last clicked on
 ExoPlanet selectedPlanetToCompare = null; // Selected planet to compare
 boolean compare= false; // Compare button clicked boolean
-
+boolean panUp;
+boolean panDown;
+boolean panLeft;
+boolean panRight;
 // Second Control frame window 
 ControlP5 cp5; // Library for the control frame
 ControlFrame cf; 
@@ -127,6 +132,18 @@ void setup() {
     exit();
     return;
   }
+  // enable the hands + gesture
+  context.enableGesture();
+  context.enableHands();
+
+  // setup NITE 
+  sessionManager = context.createSessionManager("Click,Wave", "RaiseHand");
+
+  pointDrawer = new PointDrawer();
+  flowRouter = new XnVFlowRouter();
+  flowRouter.SetActive(pointDrawer);
+
+  sessionManager.AddListener(flowRouter);
   // update the cam
   context.update();
 
@@ -153,6 +170,7 @@ void setup() {
   gl = g.beginPGL().gl;
   gl.setSwapInterval(1); //set vertical sync on
   g.endPGL(); //end opengl
+    smooth();
 }
 
 void getPlanets(String url, boolean is2012) {
@@ -299,6 +317,7 @@ void draw() {
 
     // MousePress - Rotation Adjustment
     else if (!draggingZoomSlider) {
+     
       if (trot.x <= 3 && trot.x >= -1.5)
         trot.x += (pmouseY - mouseY) * 0.01;
       else
@@ -310,8 +329,22 @@ void draw() {
     }
   }
 
-
-
+  if (panUp == true) {
+    trot.x -= 0.05;
+  }
+  else if (panDown == true) {
+    trot.x += 0.05;
+  }
+  if (panLeft == true) {  
+    trot.z -= 0.05;
+  }
+  else if (panRight == true) {
+     trot.z += 0.05;
+  }
+  panRight = false;
+  panLeft = false;
+  panUp = false;
+  panDown = false;
   background(10);
 
   // show controls
@@ -433,6 +466,10 @@ void draw() {
     text("0.5", AU/2, 17);
 
     popMatrix();
+    context.update();
+
+    // update nite
+    context.update(sessionManager);
   }
 
   long mem = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000;
@@ -711,5 +748,178 @@ void mouseWheel(MouseEvent event) {
     tzoom+=0.2;
   else if (delta == 1 && tzoom >= .1)
     tzoom-=0.2;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// session callbacks
+
+void onStartSession(PVector pos)
+{
+  println("onStartSession: " + pos);
+}
+
+void onEndSession()
+{
+  println("onEndSession: ");
+}
+
+void onFocusSession(String strFocus, PVector pos, float progress)
+{
+  println("onFocusSession: focus=" + strFocus + ",pos=" + pos + ",progress=" + progress);
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// PointDrawer keeps track of the handpoints
+
+class PointDrawer extends XnVPointControl
+{
+  HashMap    _pointLists;
+  int        _maxPoints;
+  color[]    _colorList = { 
+    color(255, 0, 0), color(0, 255, 0), color(0, 0, 255), color(255, 255, 0)
+  };
+
+  public PointDrawer()
+  {
+    _maxPoints = 30;
+    _pointLists = new HashMap();
+  }
+
+  public void OnPointCreate(XnVHandPointContext cxt)
+  {
+    // create a new list
+    addPoint(cxt.getNID(), new PVector(cxt.getPtPosition().getX(), cxt.getPtPosition().getY(), cxt.getPtPosition().getZ()));
+
+    println("OnPointCreate, handId: " + cxt.getNID());
+  }
+
+  public void OnPointUpdate(XnVHandPointContext cxt)
+  {
+    println("OnPointUpdate " + cxt.getPtPosition());   
+    addPoint(cxt.getNID(), new PVector(cxt.getPtPosition().getX(), cxt.getPtPosition().getY(), cxt.getPtPosition().getZ()));
+  }
+
+  public void OnPointDestroy(long nID)
+  {
+    println("OnPointDestroy, handId: " + nID);
+
+    // remove list
+    if (_pointLists.containsKey(nID))
+      _pointLists.remove(nID);
+  }
+
+  public ArrayList getPointList(long handId)
+  {
+    ArrayList curList;
+    if (_pointLists.containsKey(handId))
+      curList = (ArrayList)_pointLists.get(handId);
+    else
+    {
+      curList = new ArrayList(_maxPoints);
+      _pointLists.put(handId, curList);
+    }
+    return curList;
+  }
+
+  public void addPoint(long handId, PVector handPoint)
+  {
+    ArrayList curList = getPointList(handId);
+
+    curList.add(0, handPoint);      
+    if (curList.size() > _maxPoints)
+      curList.remove(curList.size() - 1);
+  }
+
+  public void draw()
+  {
+
+    if (_pointLists.size() <= 0)
+      return;
+
+    pushStyle();
+    noFill();
+
+    PVector vec;
+    PVector firstVec;
+    PVector screenPos = new PVector();
+    println(screenPos);
+    int colorIndex=0;
+
+    // draw the hand lists
+    Iterator<Map.Entry> itrList = _pointLists.entrySet().iterator();
+    while (itrList.hasNext ()) 
+    {
+      strokeWeight(2);
+      stroke(_colorList[colorIndex % (_colorList.length - 1)]);
+
+      ArrayList curList = (ArrayList)itrList.next().getValue();     
+
+      // draw line
+      firstVec = null;
+      Iterator<PVector> itr = curList.iterator();
+      beginShape();
+      while (itr.hasNext ()) 
+      {
+        vec = itr.next();
+        if (firstVec == null)
+          firstVec = vec;
+        // calc the screen pos
+        // println(screenPos);
+        context.convertRealWorldToProjective(vec, screenPos);
+        println(screenPos.x*2.6+">>"+screenPos.y*2.0);
+//        if (screenPos.x*2.6>720 && screenPos.x*2.6 < 820)
+//          vertex(screenPos.x*2.6, screenPos.y*2.1);  
+//        else if (screenPos.x*2.6>820)
+//          vertex(screenPos.x*2.6, screenPos.y*2.2);  
+//        else if (screenPos.x*2.6<=720 && screenPos.x*2.6>500)
+//          vertex(screenPos.x*2.6, screenPos.y*1.9);
+//        else if (screenPos.x*2.6<=500 )
+//          vertex(screenPos.x*2.6, screenPos.y*1.8);
+      } 
+      endShape();   
+
+      // draw current pos of the hand
+      if (firstVec != null)
+      {
+        strokeWeight(8);
+        context.convertRealWorldToProjective(firstVec, screenPos);
+        float x = 0;
+        float y = 0;
+        if (screenPos.x*2.6>720 && screenPos.x*2.6 < 820) {
+          x = screenPos.x*2.6;
+          y = screenPos.y*2.1;
+        }
+        else if (screenPos.x*2.6>820) {
+          x = screenPos.x*2.6;
+          y = screenPos.y*2.2;
+        }
+        else if (screenPos.x*2.6<=720 && screenPos.x*2.6>500) {
+          x = screenPos.x*2.6;
+          y = screenPos.y*1.9;
+        }
+        else if (screenPos.x*2.6<=500  ) {
+          x = screenPos.x*2.6;
+          y = screenPos.y*1.8;
+        }
+        point(x, y);
+             
+         
+         
+        if (x < 200)
+       panLeft = true;
+        else if (x > displayWidth - 500)
+         panRight = true;
+         
+        if (y < 200)
+          panUp = true;
+        else if (y > displayHeight - 200)
+          panDown = true;
+      }
+      colorIndex++;
+    }
+
+    popStyle();
+  }
 }
 
