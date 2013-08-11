@@ -51,11 +51,11 @@ class Controls {
     fill(20, 20, 255,50);
 
     //Columns
-    rect(0, 0, 200, displayHeight);
-    rect(displayWidth-500, 0, 200, displayHeight);
+    rect(0, 300, 200, displayHeight-600); // left
+    rect(displayWidth-500, 300, 200, displayHeight-600); //right
     //Rows
-    rect(0, 0, displayWidth, 200);
-    rect(0, displayHeight-200, displayWidth, displayHeight);
+    rect(300, 0, displayWidth-900, 200);
+    rect(300, displayHeight-200, displayWidth-900, displayHeight);
     popStyle();
 
     //KINECT

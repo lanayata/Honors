@@ -76,7 +76,7 @@ PVector trot = new PVector();
 // Master zoom
 float zoom = 0;
 float tzoom = 0.3;
-
+float zoomVal =0;
 // This is a zero-one weight that controls whether the planets are flat on the
 // plane (0) or not (1)
 float flatness = 0;
@@ -98,6 +98,11 @@ boolean panUp;
 boolean panDown;
 boolean panLeft;
 boolean panRight;
+boolean zoomIn;
+boolean zoomOut;
+float initialZ;
+float threshold = 100;
+
 // Second Control frame window 
 ControlP5 cp5; // Library for the control frame
 ControlFrame cf; 
@@ -135,7 +140,6 @@ void setup() {
   // enable the hands + gesture
   context.enableGesture();
   context.enableHands();
-
   // setup NITE 
   sessionManager = context.createSessionManager("Click,Wave", "RaiseHand");
 
@@ -144,6 +148,7 @@ void setup() {
   flowRouter.SetActive(pointDrawer);
 
   sessionManager.AddListener(flowRouter);
+
   // update the cam
   context.update();
 
@@ -170,7 +175,7 @@ void setup() {
   gl = g.beginPGL().gl;
   gl.setSwapInterval(1); //set vertical sync on
   g.endPGL(); //end opengl
-    smooth();
+  smooth();
 }
 
 void getPlanets(String url, boolean is2012) {
@@ -317,7 +322,7 @@ void draw() {
 
     // MousePress - Rotation Adjustment
     else if (!draggingZoomSlider) {
-     
+
       if (trot.x <= 3 && trot.x >= -1.5)
         trot.x += (pmouseY - mouseY) * 0.01;
       else
@@ -329,6 +334,7 @@ void draw() {
     }
   }
 
+  // Kinect rotation and pan
   if (panUp == true) {
     trot.x -= 0.05;
   }
@@ -339,156 +345,171 @@ void draw() {
     trot.z -= 0.05;
   }
   else if (panRight == true) {
-     trot.z += 0.05;
+    trot.z += 0.05;
   }
-  panRight = false;
-  panLeft = false;
-  panUp = false;
-  panDown = false;
-  background(10);
+  // Kinect zooming
 
-  // show controls
-  if (showControls == 1) {
-    controls.render();
+  if (zoomIn && tzoom <=3){
+     // tzoom+=0.05;
+     tzoom += zoomVal/1000;
+
   }
 
-  // We want the center to be in the middle and slightly down when flat, and to the left and down when raised
-  translate(width/2 - (width * flatness * 0.2), height/2 + (160 * rot.x));
-  rotateX(rot.x);
-  rotateZ(rot.z);
-  scale(zoom);
+  else if (zoomOut && tzoom >= .1){
+    //tzoom-=0.05;
+ tzoom -= zoomVal/1000;
+  }
+       println(zoomVal+">>"+zoomVal/100+">>"+zoomVal/1000);
 
-  // Draw the sun
-  image(sunImage, -10, -10, 20, 20);
 
-  if (layout.equals("orbital") && greyOutPlanets && selectedPlanet != null) {
+panRight = false;
+panLeft = false;
+panUp = false;
+panDown = false;
+background(10);
+
+// show controls
+if (showControls == 1) {
+  controls.render();
+}
+
+// We want the center to be in the middle and slightly down when flat, and to the left and down when raised
+translate(width/2 - (width * flatness * 0.2), height/2 + (160 * rot.x));
+rotateX(rot.x);
+rotateZ(rot.z);
+scale(zoom);
+
+// Draw the sun
+image(sunImage, -10, -10, 20, 20);
+
+if (layout.equals("orbital") && greyOutPlanets && selectedPlanet != null) {
+  pushMatrix();
+  stroke(255, 100);
+  translate(0, 0, -100);
+  fill(255, 0, 0, 50);
+  ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_max, (int) selectedPlanet.sun_hab_zone_max);
+  fill(0, 255, 0, 100);
+  translate(0, 0, 2);
+  ellipse(0, 0, (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min));
+  translate(0, 0, 2);
+  fill(0, 0, 0);
+  ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min); 
+  translate(0, 0, 2);
+  fill(255, 0, 0, 50);
+  ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min);       
+  popMatrix();
+}
+
+else if (layout.equals("orbital")) {   
+
+  // Draw Rings:
+  strokeWeight(2);
+  noFill();
+
+  // Draw a 2 AU ring
+  stroke(255, 100);
+  //ellipse(0, 0, AU * 2, AU * 2);
+  arc(0, 7, AU * 2, AU * 2, PI, TWO_PI);
+  arc(0, -7, -AU * 2, -AU * 2, PI, TWO_PI);
+
+  // Draw a 1 AU ring
+  stroke(255, 100);
+  //ellipse(0, 0, AU, AU);
+  arc(0, 7, AU, AU, PI, TWO_PI);
+  arc(0, -7, -AU, -AU, PI, TWO_PI);
+
+  // Draw a 10 AU ring
+  arc(0, 7, AU * 10, AU * 10, PI, TWO_PI);
+  arc(0, -7, -AU * 10, -AU * 10, PI, TWO_PI);
+}
+else {
+  if (greyOutPlanets && selectedPlanet != null) {
     pushMatrix();
+    rotateY(-PI/2);
     stroke(255, 100);
     translate(0, 0, -100);
     fill(255, 0, 0, 50);
-    ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_max, (int) selectedPlanet.sun_hab_zone_max);
+    arc(0, 0, (int) selectedPlanet.sun_hab_zone_max, (int) selectedPlanet.sun_hab_zone_max, radians(0.0), radians(90.0), PIE);
     fill(0, 255, 0, 100);
     translate(0, 0, 2);
-    ellipse(0, 0, (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min));
+    arc(0, 0, (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), radians(0.0), radians(90.0), PIE);
     translate(0, 0, 2);
     fill(0, 0, 0);
-    ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min); 
+    arc(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min, radians(0.0), radians(90.0), PIE);
     translate(0, 0, 2);
     fill(255, 0, 0, 50);
-    ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min);       
+    arc(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min, radians(0.0), radians(90.0), PIE);      
     popMatrix();
   }
+  // Draw the Y Axis
+  stroke(255, 100);
+  pushMatrix();
+  rotateY(-PI/2);
+  line(0, 0, 500 * flatness, 0);
 
-  else if (layout.equals("orbital")) {   
+  // Draw Y Axis max/min
+  pushMatrix();
+  fill(255, 100 * flatness);
+  rotateZ(PI/2);
+  textFont(label);
+  textSize(12);
+  text(round(yMin), -textWidth(str(yMin)), 0);
+  text(round(yMax), -textWidth(str(yMax)), -500);
+  popMatrix();
 
-    // Draw Rings:
-    strokeWeight(2);
-    noFill();
+  // Draw Y Axis Label
+  fill(255, flatness * 255);
+  text(yLabel, 250 * flatness, -10);
 
-    // Draw a 2 AU ring
-    stroke(255, 100);
-    //ellipse(0, 0, AU * 2, AU * 2);
-    arc(0, 7, AU * 2, AU * 2, PI, TWO_PI);
-    arc(0, -7, -AU * 2, -AU * 2, PI, TWO_PI);
+  popMatrix();
 
-    // Draw a 1 AU ring
-    stroke(255, 100);
-    //ellipse(0, 0, AU, AU);
-    arc(0, 7, AU, AU, PI, TWO_PI);
-    arc(0, -7, -AU, -AU, PI, TWO_PI);
+  // Draw the X Axis if we are not flat
+  pushMatrix();
+  rotateZ(PI/2);
+  line(0, 0, 1500 * flatness, 0);
 
-    // Draw a 10 AU ring
-    arc(0, 7, AU * 10, AU * 10, PI, TWO_PI);
-    arc(0, -7, -AU * 10, -AU * 10, PI, TWO_PI);
-  }
-  else {
-    if (greyOutPlanets && selectedPlanet != null) {
-      pushMatrix();
-      rotateY(-PI/2);
-      stroke(255, 100);
-      translate(0, 0, -100);
-      fill(255, 0, 0, 50);
-      arc(0, 0, (int) selectedPlanet.sun_hab_zone_max, (int) selectedPlanet.sun_hab_zone_max, radians(0.0), radians(90.0), PIE);
-      fill(0, 255, 0, 100);
-      translate(0, 0, 2);
-      arc(0, 0, (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), radians(0.0), radians(90.0), PIE);
-      translate(0, 0, 2);
-      fill(0, 0, 0);
-      arc(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min, radians(0.0), radians(90.0), PIE);
-      translate(0, 0, 2);
-      fill(255, 0, 0, 50);
-      arc(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min, radians(0.0), radians(90.0), PIE);      
-      popMatrix();
-    }
-    // Draw the Y Axis
-    stroke(255, 100);
+  if (flatness > 0.5) {
     pushMatrix();
-    rotateY(-PI/2);
-    line(0, 0, 500 * flatness, 0);
-
-    // Draw Y Axis max/min
-    pushMatrix();
-    fill(255, 100 * flatness);
-    rotateZ(PI/2);
-    textFont(label);
-    textSize(12);
-    text(round(yMin), -textWidth(str(yMin)), 0);
-    text(round(yMax), -textWidth(str(yMax)), -500);
+    rotateX(PI/2);
+    line(AU * 1.06, -10, AU * 1.064, 10); 
+    line(AU * 1.064, -10, AU * 1.068, 10);   
     popMatrix();
-
-    // Draw Y Axis Label
-    fill(255, flatness * 255);
-    text(yLabel, 250 * flatness, -10);
-
-    popMatrix();
-
-    // Draw the X Axis if we are not flat
-    pushMatrix();
-    rotateZ(PI/2);
-    line(0, 0, 1500 * flatness, 0);
-
-    if (flatness > 0.5) {
-      pushMatrix();
-      rotateX(PI/2);
-      line(AU * 1.06, -10, AU * 1.064, 10); 
-      line(AU * 1.064, -10, AU * 1.068, 10);   
-      popMatrix();
-    }
-
-    // Draw X Axis Label
-    fill(255, flatness * 255);
-    rotateX(-PI/2);
-    text(xLabel, 50 * flatness, 40);
-
-    // Draw X Axis min/max
-    fill(255, 100 * flatness);
-    text(1, AU, 17);
-    text("0.5", AU/2, 17);
-
-    popMatrix();
-    context.update();
-
-    // update nite
-    context.update(sessionManager);
   }
 
-  long mem = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000;
+  // Draw X Axis Label
+  fill(255, flatness * 255);
+  rotateX(-PI/2);
+  text(xLabel, 50 * flatness, 40);
 
-  // Render the planets
-  for (int i = 0; i < planets.size(); i++) {
-    try {
-      ExoPlanet p = planets.get(i);
-      if (p!=null) {
-        p.update();
-        if (p.onScreen())
-          p.render();
-      }
-    }
+  // Draw X Axis min/max
+  fill(255, 100 * flatness);
+  text(1, AU, 17);
+  text("0.5", AU/2, 17);
 
-    catch(IndexOutOfBoundsException e) {
-      e.printStackTrace();
+  popMatrix();
+  context.update();
+
+  // update nite
+  context.update(sessionManager);
+}
+
+long mem = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000;
+
+// Render the planets
+for (int i = 0; i < planets.size(); i++) {
+  try {
+    ExoPlanet p = planets.get(i);
+    if (p!=null) {
+      p.update();
+      if (p.onScreen())
+        p.render();
     }
   }
+
+  catch(IndexOutOfBoundsException e) {
+    e.printStackTrace();
+  }
+}
 }
 ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
   Frame f = new Frame(theName);
@@ -768,7 +789,8 @@ void onFocusSession(String strFocus, PVector pos, float progress)
   println("onFocusSession: focus=" + strFocus + ",pos=" + pos + ",progress=" + progress);
 }
 
-
+class PushDetector extends XnVPushDetector {
+}
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 // PointDrawer keeps track of the handpoints
 
@@ -790,14 +812,29 @@ class PointDrawer extends XnVPointControl
   {
     // create a new list
     addPoint(cxt.getNID(), new PVector(cxt.getPtPosition().getX(), cxt.getPtPosition().getY(), cxt.getPtPosition().getZ()));
-
+    initialZ = cxt.getPtPosition().getZ();
     println("OnPointCreate, handId: " + cxt.getNID());
   }
 
   public void OnPointUpdate(XnVHandPointContext cxt)
   {
-    println("OnPointUpdate " + cxt.getPtPosition());   
     addPoint(cxt.getNID(), new PVector(cxt.getPtPosition().getX(), cxt.getPtPosition().getY(), cxt.getPtPosition().getZ()));
+    if (cxt.getPtPosition().getZ() < initialZ - threshold) {
+      zoomIn = true;
+      zoomOut = false;
+      zoomVal =  initialZ - cxt.getPtPosition().getZ();
+    }
+    else if (cxt.getPtPosition().getZ() > initialZ + threshold) {
+      zoomIn = false;
+      zoomOut = true;
+      zoomVal = cxt.getPtPosition().getZ()- initialZ;
+    }
+    else {
+      zoomIn = false;
+      zoomOut = false;
+            zoomVal = 0;
+    }
+    println("IN: "+zoomIn+" OUT: "+zoomOut);
   }
 
   public void OnPointDestroy(long nID)
@@ -843,7 +880,7 @@ class PointDrawer extends XnVPointControl
     PVector vec;
     PVector firstVec;
     PVector screenPos = new PVector();
-    println(screenPos);
+    //println(screenPos);
     int colorIndex=0;
 
     // draw the hand lists
@@ -867,15 +904,15 @@ class PointDrawer extends XnVPointControl
         // calc the screen pos
         // println(screenPos);
         context.convertRealWorldToProjective(vec, screenPos);
-        println(screenPos.x*2.6+">>"+screenPos.y*2.0);
-//        if (screenPos.x*2.6>720 && screenPos.x*2.6 < 820)
-//          vertex(screenPos.x*2.6, screenPos.y*2.1);  
-//        else if (screenPos.x*2.6>820)
-//          vertex(screenPos.x*2.6, screenPos.y*2.2);  
-//        else if (screenPos.x*2.6<=720 && screenPos.x*2.6>500)
-//          vertex(screenPos.x*2.6, screenPos.y*1.9);
-//        else if (screenPos.x*2.6<=500 )
-//          vertex(screenPos.x*2.6, screenPos.y*1.8);
+        // println(screenPos.x*2.6+">>"+screenPos.y*2.0);
+        //        if (screenPos.x*2.6>720 && screenPos.x*2.6 < 820)
+        //          vertex(screenPos.x*2.6, screenPos.y*2.1);  
+        //        else if (screenPos.x*2.6>820)
+        //          vertex(screenPos.x*2.6, screenPos.y*2.2);  
+        //        else if (screenPos.x*2.6<=720 && screenPos.x*2.6>500)
+        //          vertex(screenPos.x*2.6, screenPos.y*1.9);
+        //        else if (screenPos.x*2.6<=500 )
+        //          vertex(screenPos.x*2.6, screenPos.y*1.8);
       } 
       endShape();   
 
@@ -883,9 +920,16 @@ class PointDrawer extends XnVPointControl
       if (firstVec != null)
       {
         strokeWeight(8);
+        if (zoomIn)
+          stroke(0, 255, 0);
+        else if (zoomOut)
+          stroke(255, 0, 0);
+        else     
+          stroke(0, 0, 255);
         context.convertRealWorldToProjective(firstVec, screenPos);
         float x = 0;
         float y = 0;
+        println(firstVec.z);
         if (screenPos.x*2.6>720 && screenPos.x*2.6 < 820) {
           x = screenPos.x*2.6;
           y = screenPos.y*2.1;
@@ -903,14 +947,14 @@ class PointDrawer extends XnVPointControl
           y = screenPos.y*1.8;
         }
         point(x, y);
-             
-         
-         
+
+
+
         if (x < 200)
-       panLeft = true;
+          panLeft = true;
         else if (x > displayWidth - 500)
-         panRight = true;
-         
+          panRight = true;
+
         if (y < 200)
           panUp = true;
         else if (y > displayHeight - 200)
