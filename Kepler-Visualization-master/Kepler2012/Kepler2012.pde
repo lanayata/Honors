@@ -101,7 +101,7 @@ boolean panRight;
 boolean zoomIn;
 boolean zoomOut;
 float initialZ;
-float threshold = 100;
+float threshold = 150;
 
 // Second Control frame window 
 ControlP5 cp5; // Library for the control frame
@@ -334,32 +334,7 @@ void draw() {
     }
   }
 
-  // Kinect rotation and pan
-  if (panUp == true) {
-    trot.x -= 0.05;
-  }
-  else if (panDown == true) {
-    trot.x += 0.05;
-  }
-  if (panLeft == true) {  
-    trot.z -= 0.05;
-  }
-  else if (panRight == true) {
-    trot.z += 0.05;
-  }
-  // Kinect zooming
 
-  if (zoomIn && tzoom <=3){
-     // tzoom+=0.05;
-     tzoom += zoomVal/1000;
-
-  }
-
-  else if (zoomOut && tzoom >= .1){
-    //tzoom-=0.05;
- tzoom -= zoomVal/1000;
-  }
-       println(zoomVal+">>"+zoomVal/100+">>"+zoomVal/1000);
 
 
 panRight = false;
@@ -832,9 +807,10 @@ class PointDrawer extends XnVPointControl
     else {
       zoomIn = false;
       zoomOut = false;
+      tzoom = zoom;
             zoomVal = 0;
     }
-    println("IN: "+zoomIn+" OUT: "+zoomOut);
+
   }
 
   public void OnPointDestroy(long nID)
@@ -904,15 +880,7 @@ class PointDrawer extends XnVPointControl
         // calc the screen pos
         // println(screenPos);
         context.convertRealWorldToProjective(vec, screenPos);
-        // println(screenPos.x*2.6+">>"+screenPos.y*2.0);
-        //        if (screenPos.x*2.6>720 && screenPos.x*2.6 < 820)
-        //          vertex(screenPos.x*2.6, screenPos.y*2.1);  
-        //        else if (screenPos.x*2.6>820)
-        //          vertex(screenPos.x*2.6, screenPos.y*2.2);  
-        //        else if (screenPos.x*2.6<=720 && screenPos.x*2.6>500)
-        //          vertex(screenPos.x*2.6, screenPos.y*1.9);
-        //        else if (screenPos.x*2.6<=500 )
-        //          vertex(screenPos.x*2.6, screenPos.y*1.8);
+   
       } 
       endShape();   
 
@@ -929,36 +897,54 @@ class PointDrawer extends XnVPointControl
         context.convertRealWorldToProjective(firstVec, screenPos);
         float x = 0;
         float y = 0;
-        println(firstVec.z);
-        if (screenPos.x*2.6>720 && screenPos.x*2.6 < 820) {
-          x = screenPos.x*2.6;
-          y = screenPos.y*2.1;
-        }
-        else if (screenPos.x*2.6>820) {
-          x = screenPos.x*2.6;
-          y = screenPos.y*2.2;
-        }
-        else if (screenPos.x*2.6<=720 && screenPos.x*2.6>500) {
-          x = screenPos.x*2.6;
-          y = screenPos.y*1.9;
-        }
-        else if (screenPos.x*2.6<=500  ) {
-          x = screenPos.x*2.6;
-          y = screenPos.y*1.8;
-        }
+        
+  
+ y = map(screenPos.y, 0, 480, 0, displayHeight);
+ x = map(screenPos.x, 0, 640, 0, displayWidth-300);
+ y-=50;
+
         point(x, y);
 
 
 
-        if (x < 200)
+        if (x < 200 && y > 300 && y < displayHeight - 300)
           panLeft = true;
-        else if (x > displayWidth - 500)
+        else if (x > displayWidth - 500 && y > 300 && y < displayHeight - 300)
           panRight = true;
 
-        if (y < 200)
+        if (y < 200 && x > 300 && x < displayWidth - 600){
           panUp = true;
-        else if (y > displayHeight - 200)
+        }
+        else if (y > displayHeight - 200 && x > 300 && x < displayWidth - 600)
           panDown = true;
+            // Kinect rotation and pan
+  if (panUp == true) {
+    trot.x -= 0.05;
+  }
+  else if (panDown == true) {
+    trot.x += 0.05;
+  }
+  if (panLeft == true) {  
+    trot.z -= 0.05;
+  }
+  else if (panRight == true) {
+    trot.z += 0.05;
+  }
+  // Kinect zooming
+
+  if (zoomIn && tzoom <=3){
+     // tzoom+=0.05;
+     tzoom += zoomVal/3000;
+
+  }
+  else if (zoomOut && tzoom >= .1){
+    //tzoom-=0.05;
+ tzoom -= zoomVal/1000;
+  }
+
+
+  println(tzoom);
+      
       }
       colorIndex++;
     }
