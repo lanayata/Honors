@@ -987,7 +987,7 @@ handsPresent = false;
         if (zoomIn)
         image(in, x+20, y-10, 20, 20);
         else if (zoomOut)
-        image(out, x+, y-10, 20, 20);
+        image(out, x+20, y-10, 20, 20);
        // else
          image(curser, x-20, y-20, 40, 40);
        // point(x, y);
