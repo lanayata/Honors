@@ -298,9 +298,26 @@ class ExoPlanet {
     return false;
   }
 
-  boolean overPlanet() {
-    float clickX = screenX(x, y, z) - mouseX;
-    float clickY = screenY(x, y, z) - mouseY;
+  boolean overPlanet(int xClick, int yClick) {
+    float clickX = screenX(x, y, z) - xClick;
+    float clickY = screenY(x, y, z) - yClick;
+    println(screenX(-55, -29, 0));
+       println("KOI: "+KOI +" X:"+x+" Y: "+y + " Z: "+z +" PlanetX: "+screenX(x, y, z)+" PlanetY: "+screenY(x, y, z)+" clickX: "+xClick+" clickY : "+yClick+ "MOUSE Click: "+sqrt(sq(clickX) + sq(clickY))); 
+    println("Mouse Click: "+sqrt(sq(clickX) + sq(clickY)));
+    if (sqrt(sq(clickX) + sq(clickY)) < pixelRadius/2+10 ) {
+      return true;
+    } 
+    else {
+      return false;
+    }
+  }
+  
+    boolean kinectOverPlanet() {
+    float clickX =   screenX(x, y, z) - handX  ;
+    float clickY =  screenY(x, y, z) - handY  ;
+     println("KOI: "+KOI+" X:"+x+" Y: "+y + " Z: "+z +" PlanetX: "+screenX(x, y, z)+" PlanetY: "+screenY(x, y, z)+" KinectX: "+handX+" KinectY: "+handY + "Kinect Click: "+Math.sqrt(Math.pow(clickX,2) + Math.pow(clickY,2)));
+     println("CLickX: "+clickX +" ClickY: "+clickY);
+     println("\n");
     if (sqrt(sq(clickX) + sq(clickY)) < pixelRadius/2+10 ) {
       return true;
     } 
