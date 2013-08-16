@@ -30,6 +30,15 @@ PFont label = createFont("Arial", 96);
 // Images
 PImage sunImage;
 PShape oval;
+// Mouse images
+PImage in;
+PImage out;
+PImage curser;
+//Blue area icons
+PImage up;
+PImage down;
+PImage rLeft;
+PImage rRight;
 
 // ExoPlanets
 ArrayList<ExoPlanet> allPlanets = new ArrayList(); // Holds all planets
@@ -102,7 +111,10 @@ boolean zoomIn;
 boolean zoomOut;
 float initialZ;
 float threshold = 150;
-
+ArrayList<PVector> last5HandPos = new ArrayList<PVector>();
+int handX = 0;
+int handY = 0;
+boolean handsPresent = false;
 // Second Control frame window 
 ControlP5 cp5; // Library for the control frame
 ControlFrame cf; 
@@ -118,6 +130,7 @@ String visualisationState="";
 String visualisationLayout="Orbital View";
 void setup() {
   size(displayWidth-300, displayHeight-20, P3D);
+  //size(displayWidth-300, displayHeight-20, P3D);
   context = new SimpleOpenNI(this);
   // mirror is by default enabled
   context.setMirror(true);
@@ -171,10 +184,19 @@ void setup() {
 
   cf = addControlFrame("Exoplanet Controls", 300, displayHeight);
   sunImage = loadImage("sun3.png");
-  pgl = (PGraphicsOpenGL) g; //processing graphics object
-  gl = g.beginPGL().gl;
-  gl.setSwapInterval(1); //set vertical sync on
-  g.endPGL(); //end opengl
+  curser = loadImage("curser.png");
+   in = loadImage("zoomIn.png");
+ out = loadImage("zoomOut.png");
+ up = loadImage("up.png");
+down = loadImage("down.png");
+ rLeft = loadImage("rLeft.png");
+ rRight = loadImage("rRight.png");
+
+
+  //  pgl = (PGraphicsOpenGL) g; //processing graphics object
+  //  gl = g.beginPGL().gl;
+  //  gl.setSwapInterval(1); //set vertical sync on
+  //  g.endPGL(); //end opengl
   smooth();
 }
 
@@ -311,6 +333,8 @@ void draw() {
 
   // Ease the flatness weight
   flatness += (tflatness - flatness) * 0.1;
+   
+  
 
   // MousePress - Controls Handling 
   if (mousePressed) {
@@ -337,154 +361,184 @@ void draw() {
 
 
 
-panRight = false;
-panLeft = false;
-panUp = false;
-panDown = false;
-background(10);
+  panRight = false;
+  panLeft = false;
+  panUp = false;
+  panDown = false;
+  background(10);
 
-// show controls
-if (showControls == 1) {
-  controls.render();
-}
+  // show controls
+  if (showControls == 1) {
+    controls.render();
+  }
 
-// We want the center to be in the middle and slightly down when flat, and to the left and down when raised
-translate(width/2 - (width * flatness * 0.2), height/2 + (160 * rot.x));
-rotateX(rot.x);
-rotateZ(rot.z);
-scale(zoom);
+  // We want the center to be in the middle and slightly down when flat, and to the left and down when raised
+  translate(width/2 - (width * flatness * 0.2), height/2 + (160 * rot.x));
+  rotateX(rot.x);
+  rotateZ(rot.z);
+  scale(zoom);
 
-// Draw the sun
-image(sunImage, -10, -10, 20, 20);
+  // Draw the sun
+  image(sunImage, -10, -10, 20, 20);
 
-if (layout.equals("orbital") && greyOutPlanets && selectedPlanet != null) {
-  pushMatrix();
-  stroke(255, 100);
-  translate(0, 0, -100);
-  fill(255, 0, 0, 50);
-  ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_max, (int) selectedPlanet.sun_hab_zone_max);
-  fill(0, 255, 0, 100);
-  translate(0, 0, 2);
-  ellipse(0, 0, (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min));
-  translate(0, 0, 2);
-  fill(0, 0, 0);
-  ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min); 
-  translate(0, 0, 2);
-  fill(255, 0, 0, 50);
-  ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min);       
-  popMatrix();
-}
-
-else if (layout.equals("orbital")) {   
-
-  // Draw Rings:
-  strokeWeight(2);
-  noFill();
-
-  // Draw a 2 AU ring
-  stroke(255, 100);
-  //ellipse(0, 0, AU * 2, AU * 2);
-  arc(0, 7, AU * 2, AU * 2, PI, TWO_PI);
-  arc(0, -7, -AU * 2, -AU * 2, PI, TWO_PI);
-
-  // Draw a 1 AU ring
-  stroke(255, 100);
-  //ellipse(0, 0, AU, AU);
-  arc(0, 7, AU, AU, PI, TWO_PI);
-  arc(0, -7, -AU, -AU, PI, TWO_PI);
-
-  // Draw a 10 AU ring
-  arc(0, 7, AU * 10, AU * 10, PI, TWO_PI);
-  arc(0, -7, -AU * 10, -AU * 10, PI, TWO_PI);
-}
-else {
-  if (greyOutPlanets && selectedPlanet != null) {
+  if (layout.equals("orbital") && greyOutPlanets && selectedPlanet != null) {
     pushMatrix();
-    rotateY(-PI/2);
     stroke(255, 100);
     translate(0, 0, -100);
     fill(255, 0, 0, 50);
-    arc(0, 0, (int) selectedPlanet.sun_hab_zone_max, (int) selectedPlanet.sun_hab_zone_max, radians(0.0), radians(90.0), PIE);
+    ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_max, (int) selectedPlanet.sun_hab_zone_max);
     fill(0, 255, 0, 100);
     translate(0, 0, 2);
-    arc(0, 0, (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), radians(0.0), radians(90.0), PIE);
+    ellipse(0, 0, (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min));
     translate(0, 0, 2);
     fill(0, 0, 0);
-    arc(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min, radians(0.0), radians(90.0), PIE);
+    ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min); 
     translate(0, 0, 2);
     fill(255, 0, 0, 50);
-    arc(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min, radians(0.0), radians(90.0), PIE);      
+    ellipse(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min);       
     popMatrix();
   }
-  // Draw the Y Axis
-  stroke(255, 100);
-  pushMatrix();
-  rotateY(-PI/2);
-  line(0, 0, 500 * flatness, 0);
 
-  // Draw Y Axis max/min
-  pushMatrix();
-  fill(255, 100 * flatness);
-  rotateZ(PI/2);
-  textFont(label);
-  textSize(12);
-  text(round(yMin), -textWidth(str(yMin)), 0);
-  text(round(yMax), -textWidth(str(yMax)), -500);
-  popMatrix();
+  else if (layout.equals("orbital")) {   
 
-  // Draw Y Axis Label
-  fill(255, flatness * 255);
-  text(yLabel, 250 * flatness, -10);
+    // Draw Rings:
+    strokeWeight(2);
+    noFill();
 
-  popMatrix();
+    // Draw a 2 AU ring
+    stroke(255, 100);
+    //ellipse(0, 0, AU * 2, AU * 2);
+    arc(0, 7, AU * 2, AU * 2, PI, TWO_PI);
+    arc(0, -7, -AU * 2, -AU * 2, PI, TWO_PI);
 
-  // Draw the X Axis if we are not flat
-  pushMatrix();
-  rotateZ(PI/2);
-  line(0, 0, 1500 * flatness, 0);
+    // Draw a 1 AU ring
+    stroke(255, 100);
+    //ellipse(0, 0, AU, AU);
+    arc(0, 7, AU, AU, PI, TWO_PI);
+    arc(0, -7, -AU, -AU, PI, TWO_PI);
 
-  if (flatness > 0.5) {
+    // Draw a 10 AU ring
+    arc(0, 7, AU * 10, AU * 10, PI, TWO_PI);
+    arc(0, -7, -AU * 10, -AU * 10, PI, TWO_PI);
+  }
+  else {
+    if (greyOutPlanets && selectedPlanet != null) {
+      pushMatrix();
+      rotateY(-PI/2);
+      stroke(255, 100);
+      translate(0, 0, -100);
+      fill(255, 0, 0, 50);
+      arc(0, 0, (int) selectedPlanet.sun_hab_zone_max, (int) selectedPlanet.sun_hab_zone_max, radians(0.0), radians(90.0), PIE);
+      fill(0, 255, 0, 100);
+      translate(0, 0, 2);
+      arc(0, 0, (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), (int) (selectedPlanet.sun_hab_zone_max - selectedPlanet.sun_hab_zone_min), radians(0.0), radians(90.0), PIE);
+      translate(0, 0, 2);
+      fill(0, 0, 0);
+      arc(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min, radians(0.0), radians(90.0), PIE);
+      translate(0, 0, 2);
+      fill(255, 0, 0, 50);
+      arc(0, 0, (int) selectedPlanet.sun_hab_zone_min, (int) selectedPlanet.sun_hab_zone_min, radians(0.0), radians(90.0), PIE);      
+      popMatrix();
+    }
+    // Draw the Y Axis
+    stroke(255, 100);
     pushMatrix();
-    rotateX(PI/2);
-    line(AU * 1.06, -10, AU * 1.064, 10); 
-    line(AU * 1.064, -10, AU * 1.068, 10);   
+    rotateY(-PI/2);
+    line(0, 0, 500 * flatness, 0);
+
+    // Draw Y Axis max/min
+    pushMatrix();
+    fill(255, 100 * flatness);
+    rotateZ(PI/2);
+    textFont(label);
+    textSize(12);
+    text(round(yMin), -textWidth(str(yMin)), 0);
+    text(round(yMax), -textWidth(str(yMax)), -500);
     popMatrix();
+
+    // Draw Y Axis Label
+    fill(255, flatness * 255);
+    text(yLabel, 250 * flatness, -10);
+
+    popMatrix();
+
+    // Draw the X Axis if we are not flat
+    pushMatrix();
+    rotateZ(PI/2);
+    line(0, 0, 1500 * flatness, 0);
+
+    if (flatness > 0.5) {
+      pushMatrix();
+      rotateX(PI/2);
+      line(AU * 1.06, -10, AU * 1.064, 10); 
+      line(AU * 1.064, -10, AU * 1.068, 10);   
+      popMatrix();
+    }
+
+    // Draw X Axis Label
+    fill(255, flatness * 255);
+    rotateX(-PI/2);
+    text(xLabel, 50 * flatness, 40);
+
+    // Draw X Axis min/max
+    fill(255, 100 * flatness);
+    text(1, AU, 17);
+    text("0.5", AU/2, 17);
+
+    popMatrix();
+    context.update();
+
+    // update nite
+    context.update(sessionManager);
   }
 
-  // Draw X Axis Label
-  fill(255, flatness * 255);
-  rotateX(-PI/2);
-  text(xLabel, 50 * flatness, 40);
+  long mem = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000;
+ // Check if hands are hovering over planets
+   if (handsPresent)
+    for (int i = 0; i < planets.size(); i++) {
+      if (planets.get(i).overPlanet(handX,handY)) {
+        selectedPlanet = planets.get(i);
 
-  // Draw X Axis min/max
-  fill(255, 100 * flatness);
-  text(1, AU, 17);
-  text("0.5", AU/2, 17);
+        if (selectedPlanet.corePlanet) {
+          setTextAreaText(textArea, selectedPlanet); // Planets in our solar system dont have the required info so specialised message requried
+          return;
+        }
 
-  popMatrix();
-  context.update();
+        selectedPlanet.feature = true;
+        selectedPlanet.label = "Selected: KOI- "+selectedPlanet.KOI;
+        setTextAreaText(textArea, selectedPlanet);
 
-  // update nite
-  context.update(sessionManager);
-}
+        // Find all sister planets in the same solar system and make them a feature planet.     
+        for (int j = 0; j < planets.size(); j++) {
+          ExoPlanet p = planets.get(j);
+          if (p != selectedPlanet) {
+            if (p.sun_name!=null && p.sun_name.equals(selectedPlanet.sun_name)) {
+              p.feature = true;
+              p.label = "Same Star: KOI-"+p.KOI;
+            }
+            else { 
+              p.feature = false;
+            }
+          }
+        }
+        break;
+      }
+    }
+  // Render the planets
+  for (int i = 0; i < planets.size(); i++) {
+    try {
+      ExoPlanet p = planets.get(i);
+      if (p!=null) {
+        p.update();
+        if (p.onScreen())
+          p.render();
+      }
+    }
 
-long mem = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000;
-
-// Render the planets
-for (int i = 0; i < planets.size(); i++) {
-  try {
-    ExoPlanet p = planets.get(i);
-    if (p!=null) {
-      p.update();
-      if (p.onScreen())
-        p.render();
+    catch(IndexOutOfBoundsException e) {
+      e.printStackTrace();
     }
   }
-
-  catch(IndexOutOfBoundsException e) {
-    e.printStackTrace();
-  }
-}
 }
 ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
   Frame f = new Frame(theName);
@@ -655,7 +709,8 @@ void mousePressed() {
   // If compare button has been pressed then allow secondary selection of planet
   if (compare == true) {
     for (int i = 0; i < planets.size(); i++) {
-      if (planets.get(i).overPlanet()) {
+
+      if (planets.get(i).overPlanet(mouseX,mouseY)) {
         selectedPlanetToCompare = planets.get(i); 
         selectedPlanetToCompare.feature = true; // Make it a feature planet
         selectedPlanetToCompare.label = "Compared: KOI- "+selectedPlanetToCompare.KOI; // update label
@@ -668,7 +723,7 @@ void mousePressed() {
   }
   else {
     for (int i = 0; i < planets.size(); i++) {
-      if (planets.get(i).overPlanet()) {
+      if (planets.get(i).overPlanet(mouseX,mouseY)) {
         selectedPlanet = planets.get(i);
 
         if (selectedPlanet.corePlanet) {
@@ -789,6 +844,7 @@ class PointDrawer extends XnVPointControl
     addPoint(cxt.getNID(), new PVector(cxt.getPtPosition().getX(), cxt.getPtPosition().getY(), cxt.getPtPosition().getZ()));
     initialZ = cxt.getPtPosition().getZ();
     println("OnPointCreate, handId: " + cxt.getNID());
+    handsPresent = true;
   }
 
   public void OnPointUpdate(XnVHandPointContext cxt)
@@ -808,15 +864,14 @@ class PointDrawer extends XnVPointControl
       zoomIn = false;
       zoomOut = false;
       tzoom = zoom;
-            zoomVal = 0;
+      zoomVal = 0;
     }
-
   }
 
   public void OnPointDestroy(long nID)
   {
     println("OnPointDestroy, handId: " + nID);
-
+handsPresent = false;
     // remove list
     if (_pointLists.containsKey(nID))
       _pointLists.remove(nID);
@@ -872,6 +927,7 @@ class PointDrawer extends XnVPointControl
       firstVec = null;
       Iterator<PVector> itr = curList.iterator();
       beginShape();
+      PVector lastVec = null;
       while (itr.hasNext ()) 
       {
         vec = itr.next();
@@ -880,7 +936,7 @@ class PointDrawer extends XnVPointControl
         // calc the screen pos
         // println(screenPos);
         context.convertRealWorldToProjective(vec, screenPos);
-   
+        lastVec = vec;
       } 
       endShape();   
 
@@ -895,15 +951,46 @@ class PointDrawer extends XnVPointControl
         else     
           stroke(0, 0, 255);
         context.convertRealWorldToProjective(firstVec, screenPos);
-        float x = 0;
-        float y = 0;
-        
-  
- y = map(screenPos.y, 0, 480, 0, displayHeight);
- x = map(screenPos.x, 0, 640, 0, displayWidth-300);
- y-=50;
+        int x = 0;
+        int y = 0;
 
-        point(x, y);
+
+        y = (int)map(screenPos.y, 0, 480, 0, displayHeight);
+        x = (int) map(screenPos.x, 0, 640, 0, displayWidth-300);
+        if (last5HandPos.size()<=8)last5HandPos.add(screenPos);
+        else {
+          last5HandPos.clear();
+          last5HandPos.add(screenPos);
+        }
+        int meanX = 0;
+        int meanY = 0;
+        for (PVector pos: last5HandPos) {
+          meanX += pos.x;
+          meanY += pos.y;
+        }
+        meanX/= (int)last5HandPos.size();
+        meanY/= (int)last5HandPos.size();
+
+        int tempX = (int)map(meanX, 0, 640, 0, displayWidth-300);
+        int tempY  =(int) map(meanY, 0, 480, 0, displayHeight);
+        int offset = 20;
+        if (tempX > x - offset && tempX < x + offset)
+          x = tempX;
+        if (tempY > y - offset && tempY < y + offset)
+          y = tempY;
+        y-=50;
+
+        println("x:"+x+" y:"+y);
+    //  checkKinectOverPlanet(x,y);
+    handX = x;
+    handY = y;
+        if (zoomIn)
+        image(in, x+20, y-10, 20, 20);
+        else if (zoomOut)
+        image(out, x+, y-10, 20, 20);
+       // else
+         image(curser, x-20, y-20, 40, 40);
+       // point(x, y);
 
 
 
@@ -912,44 +999,44 @@ class PointDrawer extends XnVPointControl
         else if (x > displayWidth - 500 && y > 300 && y < displayHeight - 300)
           panRight = true;
 
-        if (y < 200 && x > 300 && x < displayWidth - 600){
+        if (y < 200 && x > 300 && x < displayWidth - 600) {
           panUp = true;
         }
         else if (y > displayHeight - 200 && x > 300 && x < displayWidth - 600)
           panDown = true;
-            // Kinect rotation and pan
-  if (panUp == true) {
-    trot.x -= 0.05;
-  }
-  else if (panDown == true) {
-    trot.x += 0.05;
-  }
-  if (panLeft == true) {  
-    trot.z -= 0.05;
-  }
-  else if (panRight == true) {
-    trot.z += 0.05;
-  }
-  // Kinect zooming
+        // Kinect rotation and pan
+        if (panUp == true) {
+          trot.x -= 0.05;
+        }
+        else if (panDown == true) {
+          trot.x += 0.05;
+        }
+        if (panLeft == true) {  
+          trot.z -= 0.05;
+        }
+        else if (panRight == true) {
+          trot.z += 0.05;
+        }
+        // Kinect zooming
 
-  if (zoomIn && tzoom <=3){
-     // tzoom+=0.05;
-     tzoom += zoomVal/3000;
+        if (zoomIn && tzoom <=3) {
+          // tzoom+=0.05;
+          tzoom += zoomVal/3000;
+        }
+        else if (zoomOut && tzoom >= .1) {
+          //tzoom-=0.05;
+          tzoom -= zoomVal/1000;
+        }
 
-  }
-  else if (zoomOut && tzoom >= .1){
-    //tzoom-=0.05;
- tzoom -= zoomVal/1000;
-  }
 
-
-  println(tzoom);
-      
+        println(tzoom);
       }
       colorIndex++;
     }
 
     popStyle();
   }
+  
 }
+
 
