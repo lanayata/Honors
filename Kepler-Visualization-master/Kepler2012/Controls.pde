@@ -53,9 +53,16 @@ class Controls {
     //Columns
     rect(0, 300, 200, displayHeight-600); // left
     rect(displayWidth-500, 300, 200, displayHeight-600); //right
+    //image(rLeft, 100, (displayHeight-600)/2);
+    
     //Rows
     rect(300, 0, displayWidth-900, 200);
     rect(300, displayHeight-200, displayWidth-900, displayHeight);
+//     up = loadImage("up.png");
+//down = loadImage("down.png");
+// rLeft = loadImage("rLeft.png");
+// rRight = loadImage("rRight.png");
+//    
     popStyle();
 
     //KINECT
