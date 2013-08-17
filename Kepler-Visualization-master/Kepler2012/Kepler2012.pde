@@ -984,13 +984,7 @@ handsPresent = false;
     //  checkKinectOverPlanet(x,y);
     handX = x;
     handY = y;
-        if (zoomIn)
-        image(in, x+20, y-10, 20, 20);
-        else if (zoomOut)
-        image(out, x+20, y-10, 20, 20);
-       // else
-         image(curser, x-20, y-20, 40, 40);
-       // point(x, y);
+    
 
 
 
@@ -1004,6 +998,23 @@ handsPresent = false;
         }
         else if (y > displayHeight - 200 && x > 300 && x < displayWidth - 600)
           panDown = true;
+              if (zoomIn)
+        image(in, x-20, y-20, 40, 40);
+        else if (zoomOut)
+        image(out,  x-20, y-20, 40, 40);
+        else if (panLeft)
+          image(rLeft,  x-20, y-20, 40, 40);
+        else if (panRight)
+          image(rRight,  x-20, y-20, 40, 40);
+        else if (panUp)
+          image(up,  x-20, y-20, 40, 40);
+        else if (panDown)
+          image(down,  x-20, y-20, 40, 40);
+        else
+         image(curser, x-20, y-20, 40, 40);
+       // point(x, y);
+          
+          
         // Kinect rotation and pan
         if (panUp == true) {
           trot.x -= 0.05;
