@@ -53,8 +53,11 @@ class Controls {
     //Columns
     rect(0, 300, 200, displayHeight-600); // left
     rect(displayWidth-500, 300, 200, displayHeight-600); //right
-    //image(rLeft, 100, (displayHeight-600)/2);
-    
+    pushMatrix();
+    translate(1,0,0);
+   // image(rLeft, 15, (displayHeight-700) );
+     // image(rRight, displayWidth-500+15, (displayHeight-700) );
+    popMatrix();
     //Rows
     rect(300, 0, displayWidth-900, 200);
     rect(300, displayHeight-200, displayWidth-900, displayHeight);
