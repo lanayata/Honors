@@ -4,37 +4,28 @@
 \section{Project management approach}
 Following a structured project managament approach is important as it avoids the problem caused by following a code-and-fix approach as described  as 1) write some code. 2) Fix the problems in the code \cite{boehm}. By following a process model it encourages thinking about requirements, design, and testing before coding is commenced. 
 \\\\
-The project methodology chosen for this project was a customised Spiral Model made up of requirements analysis, design, implementation, and evaluation phases as shown in the below figure.   
+The project methodology chosen for this project was a customised Spiral Model made up of requirements analysis, design, implementation, and evaluation phases as shown in the below figure. The reason for limiting the model to these 4 phases was because....  
 \begin{figure}[h!]
   \centering
       \includegraphics[width=0.6\textwidth]{images/spiral_model.png}
   \caption{Spiral process model followed}
 \end{figure}
-The reason for limiting the model to these 4 phases was because....
+Using a spiral model allowed me to produce a deliverable feature at the end of each iteration of the model, this ensured that I did not become delayed or stuck in my development. By using this methodology it also allowed me to prioritise the features that were the most important to the visualisation which reduced the risk that there would be missing or incomplete components at the end of the project. 
+\\\\
+The advantages of this methodolgy over other choices such as the waterfall model or an agile aproach such as Scrum was that it provided me with the benifits of a structured workflow that is a feature of the waterfall model as well as a flexible iterative process that is a feature of Agile methodologies. Following a pure waterfall methodology would not have allowed me to iteratively design, develop, and evaluate each feature which would have forced more upfront design which limits flexibility and support for changing requirements and design as was needed for this project. Following a pure agile approach would not have been optimal as most Agile methodologies are more benificial to projects that have a team working on them. As it was I was agile in my approach to the project as I produced a deliverable at the end of each of the cycles of the spiral model and responded to change in the form of feedback and ideas from the supervisor of the project.
+\\\\
+This project management technique supported the creation of a visualisation as it allowed the flexibility to add and remove components into the visualisation as they were discovered to be benificial or not. It also supported the expansion of the project brief to include using a kinect sensor in order to controll the visualisation. The choice of this project management approach meant that whilst I had the freedom to explore visualisation options I also had a structured software development lifecycle to guide me and provide the project through the necessary steps to end in completion of each component.
+\\\\
+By supporting this project methodology with other project management tools such as Gantt charts [APPENDIX] and work breakdown structures(WBS) [APPENDIX], it encouraged efficient documentation of planning and work completed in the project as well as displaying the upcoming stages requried to complete the project.
+\\\\
+Weekly meetings with the supervisor of the project, Dr Stuart Marshall, were used to provide guidance and ideas for inovation of the visualisation throughout the project. These meeting ensured that vital components and deliverables were implemented in the requried timeframe and also provided a sounding board for ideas for elements to be included in teh visualastion. Another important aspect of having an involved supervisor was that he provided me the guidance of an experienced accademic which was indispensible when nagivating the administrative side of organising delicate matters such as ethics approval for human evalusation of the visualisation.
 
-For each feature produced in the visualisation a full iteration of the spiral was completed.
-\subsection{Requirements analysis}
-During the requiremnents analysis p 
-\subsection{Design}
-\subsection{Implementation}
-\subsection{Evaluation}
-The advantages of this methodolgy over others such as stricter models such as the waterfall model or a looser agile aproach......The reason that this was effective.......
-\\\\
-This project management technique supported the creation of a visualisation as 
-\\\\
-The choice of this project management apprach meant ....
-\\\\
-Weekly meetings with the supervisor of the project, Dr Stuart Marshall, were used to provide guidance and 
-\\\\
-Using using other supporting project management techniques such as Gantt charts [APPENDIX] and work breakdown structures(WBS) [APPENDIX] allowed efficient documentation of planning and work completed in the project as well as displaying the following stages requried to complete the project.
-
-\section{System design approach}
-To guide the creation of the visualisation a user oriented design approach was used, in particular making use of user models (personas) were created to create a sense of empathy and understanding for the forseen users of the visualisation in order to better understand the requrirements and design decistions to be made. 
 
 \section{Key difficulties in project}
 As this project builds upon a previous system much of the exisiting code and execution flow needs to be modified. This requires understanding of how the system was originally built and designed. Because this system does not have any unit or integration tests, going ahead without a comprehenive knowledge of the core functionality would be foolish.
-
+\\\\
 Encountered errors in Processing framework due to number of elements needing to be displayed on screen. 
-
-Having a time constraint of 300 hours for this project over the course of a year meant that ...........
-
+\\\\
+Having a time constraint of 300 hours for this project over the course of a year meant that prioritisation of visualsation features needed to be made to ensure that 
+\\\\
+Libraries used for gesture detection in kinect are opensource in order to work with processing did not have decent detection

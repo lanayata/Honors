@@ -1,43 +1,45 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Problem statement}{1}
 \contentsline {subsection}{\numberline {1.1.1}Understanding the content in the dataset}{1}
-\contentsline {subsection}{\numberline {1.1.2}Comprehension of planatery information}{1}
-\contentsline {subsection}{\numberline {1.1.3}Exisiting solutions lack functionality}{2}
+\contentsline {subsection}{\numberline {1.1.2}Comprehension of planetary information}{2}
+\contentsline {subsection}{\numberline {1.1.3}Existing solutions lack functionality}{2}
 \contentsline {subsection}{\numberline {1.1.4}Effective user interaction with visualisation}{2}
-\contentsline {section}{\numberline {1.2}Key issues project addresses}{2}
-\contentsline {section}{\numberline {1.3}Contributions of this project}{2}
-\contentsline {chapter}{\numberline {2}Project Methodologies}{3}
-\contentsline {section}{\numberline {2.1}Project management approach}{3}
-\contentsline {section}{\numberline {2.2}System design approach}{4}
-\contentsline {section}{\numberline {2.3}Key difficulties in project}{4}
-\contentsline {chapter}{\numberline {3}Requirements Analysis}{5}
-\contentsline {section}{\numberline {3.1}User models}{5}
-\contentsline {subsection}{\numberline {3.1.1}John Truman (Primary Persona - The interested layperson)}{5}
-\contentsline {subsection}{\numberline {3.1.2}Cara Thompson (Secondary Persona - )}{6}
-\contentsline {section}{\numberline {3.2}Scenarios}{6}
-\contentsline {subsection}{\numberline {3.2.1}Scenario 1: View planets ordered by their similarity to earth and Kepler Object of Interest number}{6}
-\contentsline {subsection}{\numberline {3.2.2}Scenario 2: Select ranges for attributes of each planet displayed}{6}
-\contentsline {subsection}{\numberline {3.2.3}Scenario 3: Select planets to display more information}{6}
-\contentsline {subsection}{\numberline {3.2.4}Scenario 4: View planets in the same solar system}{6}
-\contentsline {subsection}{\numberline {3.2.5}Scenario 5: View the goldilocks zones of each planet}{6}
-\contentsline {section}{\numberline {3.3}Requirements summary}{6}
-\contentsline {section}{\numberline {3.4}Existing systems}{6}
-\contentsline {subsection}{\numberline {3.4.1}Worlds: The Kepler Planet Candidates - Non Interactive}{6}
-\contentsline {subsection}{\numberline {3.4.2}The Kepler Orrery and The Kepler Orrery 2 - Non interactive}{6}
-\contentsline {subsection}{\numberline {3.4.3}Celestia - Interactive}{7}
-\contentsline {subsection}{\numberline {3.4.4}Kepler Visualisation Tool}{8}
-\contentsline {chapter}{\numberline {4}Solution Design: Improved Kepler Visualisation Tool}{11}
-\contentsline {subsection}{\numberline {4.0.5}Visualisation Layout}{11}
-\contentsline {subsubsection}{Component Layout}{11}
-\contentsline {section}{\numberline {4.1}Extensions from project initiation document}{12}
-\contentsline {chapter}{\numberline {5}Visualisation implementation}{13}
-\contentsline {section}{\numberline {5.1}Technology choice}{13}
-\contentsline {subsubsection}{D3}{13}
-\contentsline {subsubsection}{Processing}{13}
-\contentsline {subsubsection}{Prefuse}{13}
-\contentsline {subsection}{\numberline {5.1.1}System design and structure}{14}
-\contentsline {subsection}{\numberline {5.1.2}Tools and artifacts used}{14}
-\contentsline {section}{\numberline {5.2}Extension to initial design}{14}
-\contentsline {chapter}{\numberline {6}Visualisation Evaluation}{15}
-\contentsline {chapter}{\numberline {7}Conclusions}{17}
-\contentsline {section}{\numberline {7.1}Future Work}{17}
+\contentsline {section}{\numberline {1.2}Key issues project addresses}{3}
+\contentsline {section}{\numberline {1.3}Contributions of this project}{3}
+\contentsline {chapter}{\numberline {2}Project Methodologies}{5}
+\contentsline {section}{\numberline {2.1}Project management approach}{5}
+\contentsline {section}{\numberline {2.2}Key difficulties in project}{6}
+\contentsline {chapter}{\numberline {3}Requirements Analysis}{9}
+\contentsline {section}{\numberline {3.1}User models}{9}
+\contentsline {subsection}{\numberline {3.1.1}John Truman (Primary Persona - The interested layperson)}{9}
+\contentsline {subsection}{\numberline {3.1.2}Cara Thompson (Secondary Persona - Likes gesture based systems)}{10}
+\contentsline {section}{\numberline {3.2}Scenarios}{10}
+\contentsline {subsection}{\numberline {3.2.1}Scenario 1: View planets ordered by their similarity to Earth}{10}
+\contentsline {subsection}{\numberline {3.2.2}Scenario 2: Select ranges for attributes of each planet displayed}{11}
+\contentsline {subsection}{\numberline {3.2.3}Scenario 3: Select planets to display more information}{11}
+\contentsline {subsection}{\numberline {3.2.4}Scenario 4: View planets in the same solar system}{11}
+\contentsline {subsection}{\numberline {3.2.5}Scenario 5: View the Goldilocks zones of each planet}{12}
+\contentsline {subsection}{\numberline {3.2.6}Scenario 6: Select two planets to compare against one another}{12}
+\contentsline {subsection}{\numberline {3.2.7}Scenario 7: Navigate the visualisation with gestures}{12}
+\contentsline {section}{\numberline {3.3}Requirements summary}{12}
+\contentsline {subsection}{\numberline {3.3.1}Functional Requirements}{12}
+\contentsline {subsection}{\numberline {3.3.2}Nonfunctional Requirements}{12}
+\contentsline {section}{\numberline {3.4}Existing systems}{12}
+\contentsline {subsection}{\numberline {3.4.1}Worlds: The Kepler Planet Candidates - Non Interactive}{12}
+\contentsline {subsection}{\numberline {3.4.2}The Kepler Orrery and The Kepler Orrery 2 - Non interactive}{13}
+\contentsline {subsection}{\numberline {3.4.3}Celestia - Interactive}{14}
+\contentsline {subsection}{\numberline {3.4.4}Kepler Visualisation Tool}{14}
+\contentsline {chapter}{\numberline {4}Solution Design: Improved Kepler Visualisation Tool}{17}
+\contentsline {subsection}{\numberline {4.0.5}Visualisation Layout}{17}
+\contentsline {subsubsection}{Component Layout}{17}
+\contentsline {chapter}{\numberline {5}Visualisation implementation}{19}
+\contentsline {section}{\numberline {5.1}Technology choice}{19}
+\contentsline {subsubsection}{D3 (Data Driven Documents)}{19}
+\contentsline {subsubsection}{Prefuse}{19}
+\contentsline {subsubsection}{Processing}{20}
+\contentsline {subsection}{\numberline {5.1.1}System design and structure}{21}
+\contentsline {subsection}{\numberline {5.1.2}Tools and artifacts used}{21}
+\contentsline {section}{\numberline {5.2}Extension to initial design}{21}
+\contentsline {chapter}{\numberline {6}Visualisation Evaluation}{23}
+\contentsline {chapter}{\numberline {7}Conclusions}{25}
+\contentsline {section}{\numberline {7.1}Future Work}{25}

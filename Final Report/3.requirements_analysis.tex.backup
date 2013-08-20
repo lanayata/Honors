@@ -1,14 +1,20 @@
 \chapter{Requirements Analysis}\label{C:ra}
-The design of the visualisation was based heavily on User Centered Design as it provided a method of user interface design as well as visualisation design. User Centered Design is a process in which the needs, wants, and limitatons of the end users of a system are given extensive attention. To achieve this, personas were created (also known as archetypal users), which are a personification the needs of a larger group of related users. These personas act as stand-ins for real users, describing them in terms of their goals and personal characteristics, and although they are fictitious, they are based on knowledge of real users. This design methodology supported my understanding of how users were likely to use the visualisation.
+To guide the creation of the visualisation a user oriented design approach was used, in particular making use of user models (personas) which were created to give a sense of empathy and understanding for the foreseen users of the visualisation in order to better understand the requirements and design decisions to be made. 
+
+The design of the visualisation was based heavily on User Centered Design as it provided a method of user interface design as well as visualisation design. User Centered Design is a process in which the needs, wants, and limitations of the end users of a system are given extensive attention. To achieve this, personas were created (also known as archetypal users), which are a personification the needs of a larger group of related users. These personas act as stand-ins for real users, describing them in terms of their goals and personal characteristics, and although they are fictitious, they are based on knowledge of real users. This design methodology supported my understanding of how users were likely to use the visualisation.
 \\\\
 An additional tool used during requirements analysis was User Scenarios which describe the foreseeable interactions of the user personas with the visualisation. A scenario is made up of a functional goal for the visualisation and describes how it is carried out by a persona. Both of these tools force you to think about the tasks needed for the visualisation and their context in the system as a whole. Once the personas and scenarios have been completed you can then start to design specific elements of the user interface and visualisation based on the requirements and interactions described in the scenarios.
 \section{User models}
-Below are the two personas that were used in the design of the visualisation for this project. They depict users that would use the visualisation in the context of a terminal or display in an observatory environment. 
-\\\\
- and also provided clear defined personas that could be validated during evaluation of the visualistaion with real users that match the core values of the personas.
-\subsection{John Truman (Primary Persona -  The interested layperson)}\
-24 year old John is interested in planets and space and has a basic knowledge about both. John has used is used to playing computer games and using visualisations and is not overwhelmed understanding and using new systems. He finds that he learns better when provided with visual examples than when reading or listening to information. John is comfortable using keyboard and mouse when interacting with a computer but is also happy to use other gesture based methods. 
-\subsection{Cara Thompson (Secondary Persona - )}
+Below are the two personas that were used in the design of the visualisation for this project. They depict users that would use the visualisation in the context of a terminal or display in an observatory environment. These personas  can be validated during evaluation of the visualization by finding real users that match the core values of the personas.
+
+\subsection{John Truman (Primary Persona - The interested layperson)}\
+24 year old John is interested in planets and space and has a basic knowledge about both. He frequently visits attractions catering to this interest at locations such as planetariums and observatories. Some of his favourite things to do when visiting these attractions is to go to the computer terminals that allow users to choose what information they see.
+
+John is used to playing computer games and using visualisations and is not overwhelmed understanding and using new systems. He finds that he learns better when provided with visual examples than when reading or listening to information. John is most comfortable using keyboard and mouse when interacting with a computer.
+\subsection{Cara Thompson (Secondary Persona - Wants gesture based systems)}
+23 year old Cara likes using interactive visualisations when visiting attractions, she finds that they are more entertaining and provide a better level of interaction and more of a novelty experience with a visualisation than simply a keyboard and mouse. 
+
+Both of these users are similar in their ........
 
 \section{Scenarios}
  A good use scenario does a number of things:
@@ -20,11 +26,74 @@ Below are the two personas that were used in the design of the visualisation for
      \item Helps you construct the sequence of events that are necessary to address in your user interface.
      \item Can be sketchy, as long as it provokes ideas and discussion.
 \end{itemize}
- \subsection{Scenario 1: View planets ordered by their similarity to earth and Kepler Object of Interest number}
+ \subsection{Scenario 1: View planets ordered by their similarity to Earth}
+   {\bf Primary Persona:}\\
+ When John first sees the system the first thing he notices is that their are many planets orbiting what looks like a star. He doesn't have any point of reference for these planets so their sizes, colours, and movement speeds are meaningless. By providing a way of comparing the planets to Earth it gives a point of reference which is well documented and known by most.
+ 
+ {\bf Procedure:}
+ \begin{enumerate}
+ \item John clicks a prominent button stating view planet similarity to earth.
+ \item The planets on screen move so that the earth is located at the center and top of the screen with all others orbiting it. The planets with a high internal similarity to earth are higher on the Y axis whilst the planets with a high surface similarity to earth are closer to the center of the orbiting planets on the X axis.
+ \item From here John can select any of the planets for further analysis.
+ \end{enumerate}
  \subsection{Scenario 2: Select ranges for attributes of each planet displayed}
+   {\bf Primary Persona:}
+ John has become comfortable with selecting the planets and has some idea of the scale and ....... Now he wants to select more planets to find out more information. However due to the large number of planets he finds it difficult to accurately select them due to overlapping and fast moving small planets.
+ 
+  {\bf Procedure:}
+  \begin{enumerate}
+ \item John uses a range of filters to remove planets from his view that don't match the criteria he chooses (temp ,size ,KOI , ESI).
+\item As planets disappear the graph of planets expands into the space that frees up, this causes more space to appear between planets making them more selectable.
+ \end{enumerate}
+ \subsection{Scenario 3: Select planets to display more information}
+  {\bf  Primary Persona:}\\
+ John wants to see more information about each of the planets he can see orbiting in the visualisation. To do this he wants to be able to select the planets and have textual information appear on screen.
+ 
+  {\bf  Procedure:}
+   \begin{enumerate}
+ \item John has the option to pause the rotation of planets in order to make more accurate selections. 
+ \item John clicks on a planet orbiting a planet.
+\item The planet selected becomes larger and its outline grows, making it more visible.
+\item The text window has all of the information about the planet selected added to it.
+ \end{enumerate}
+   {\bf  Secondary Persona:}\\
+ Cara wants to see more information about each of the planets she can see orbiting in the visualisation. To do this she wants to be able to hover her hand over a planet to get the information to display on screen.
+ 
+  {\bf  Procedure:}
+   \begin{enumerate}
+ \item Cara hovers her hand over a planet to make a selection
+ \item The planet selected becomes larger and its outline grows, making it more visible.
+\item The text window has all of the information about the planet selected added to it.
+ \end{enumerate}
+ \subsection{Scenario 4: View planets in the same solar system}
+   {\bf  Primary and Secondary Personas:}\\
+ When a planet it selected John and Cara want all ofter planets that are in the same Solar System as the selected planet to become highlighted.
+ 
+  {\bf  Procedure:}
+   \begin{enumerate}
+ \item When a planet is selected, all planets in the same Solar System become larger and its outline grows, making it more visible.
+ \item A label appears on these planets indicating that they are related planets.
+ \end{enumerate}
+ \subsection{Scenario 5: View the Goldilocks zones of each planet}
+   {\bf  Primary Persona:}\\
+ John wants to see which planets are in the habitable zones of their stars. 
+ 
+  {\bf  Procedure:}
+   \begin{enumerate}
+ \item John clicks a button saying ``Show habitable zones''
+ \item Coloured rings appear showing the cold (blue), habitable (green), and hot (red) zones of the selected planets star.
+ \item When a planet from a different star system is clicked the coloured rings will change to that stars zones.
+ \end{enumerate}
+ \subsection{Scenario 6: Select two planets to compare against one another}
+    {\bf  Primary Persona:}\\
 
+  {\bf  Procedure:}
+   \begin{enumerate}
+ \item 
+  \end{enumerate}
 \section{Requirements summary}
-
+\subsection{Functional Requirements}
+\subsection{Nonfunctional Requirements}
 \section{Existing systems}
 \subsection{Worlds: The Kepler Planet Candidates - Non Interactive}
  This animation \cite{worlds} shows  planet candidates found by NASA's Kepler mission. These candidates are animated in orbit around a single star. They are drawn to scale with accurate radii, orbital periods, and orbital distances. They range in size from 1/3 to 84 times the radius of Earth. Colors represent an estimate of temperature with red indicating warmest, and blue indicating coldest candidates. 
@@ -33,7 +102,7 @@ Below are the two personas that were used in the design of the visualisation for
       \includegraphics[width=0.8\textwidth]{images/worlds.jpg}
   \caption{Image of Worlds Visualisation}
 \end{figure}
-This animation is layed out very similarly to the Kepler Visualisation Tool that I am extending. This means that it provides insights into how my visualisation can be improved as Worlds is a much more visually appealing system. By researching how it displays its Exoplanets I can further improve my own visualisation.
+The layout of this animation is very similarly to the Kepler Visualisation Tool that I am extending. This means that it provides insights into how my visualisation can be improved as Worlds is a much more visually appealing system. By researching how it displays its Exoplanets I can further improve my own visualisation.
 
 \subsection{The Kepler Orrery and The Kepler Orrery 2 - Non interactive}
 The Kepler Orrery \cite{orrery} illustrates the exoplanet candidates in their own solar systems. The orbit radii are to scale with respect to each other and planet sizes are to scale with respect to each other, but orbits and planet sizes are different scales. The colors are in order of semi-major axis: two-planet systems (242 in all) have a yellow outer planet; 3-planet (85) green, 4-planet (25) light blue, 5-planet (8) dark blue, 6-planet (1, Kepler-11) purple. 

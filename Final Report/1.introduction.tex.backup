@@ -1,22 +1,32 @@
 \chapter{Introduction}\label{C:intro}
-This project seeks to design, implement, and evaluate an interactive 3D visualisation software system for displaying the content in the Kepler Exoplanets dataset. The deliverable is intended as a standalone 3D visualisation system with two modes of interaction of keyboard and mouse or Microsoft Xbox Kinect sensor. The resulting visualisation will convey the information in the dataset in a way that the target users, laypeople who have an interest in astronomy, can understand and interact with.
+This project seeks to design, implement, and evaluate an interactive 3D visualisation software system for displaying the content in the Kepler Exoplanets dataset. The deliverable is intended as a standalone 3D visualisation system with two modes of interaction, keyboard and mouse or Microsoft Xbox Kinect sensor ((REF)). The resulting visualisation will convey the information in the dataset in a way that the target users, laypeople who have an interest in astronomy, can understand and interact with.
 
 \section{Problem statement}
-The complex nature of the data involved in this project causes a range of problems to arrise which this project attempts to address. The following subsections outline these in detail.
+The complex nature of the data involved in this project causes a range of problems revolving around understandability to arise, which this project attempts to address. The following subsections outline these in detail.
 \subsection{Understanding the content in the dataset}
-Understanding and analysing large datasets whose size defies simplistic or trivial analysis is a known issue that many areas of research are attempting to address, these areas of research range from data mining to visualisations to attempt to discover or highlight important aspects of the data so that people can more efficiently use it
+Understanding and analysing large datasets whose size defies simplistic or trivial analysis is a known issue that many areas of research are attempting to address, these areas of research range from data mining to visualisations in order to discover or highlight important features in the data so that people can more efficiently use it. 
 \\\\
-The content in the dataset used for this project is made up of records of each exoplanet discovered, each of which contains 46 fields.
+Humans often rely on visualisation when we solve problems. We create an image in our mind of a situation in order to make sense of it http://nrich.maths.org/6447. This allows ..... The content in the dataset used for this project is made up of records of each exoplanet discovered, each of which contains 46 fields. This many textual fields, many of which are floating point numbers is next to impossible for a person to visualise internally, which means that an external way of visualising it is needed. 
+\clearpage
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.8\textwidth]{images/data.png}
+  \caption{Data to be visualised}
+\end{figure}
 
 \subsection{Comprehension of planatery information}
 Much of the information regarding planets is criptic and uninituitive, this make its understandability difficult. Visualisations in general attempt to address this issue by displaying information in a way that conveys the information in simplisitic ways that allows improved user comprehension.
-\\\\
 
 \subsection{Exisiting solutions lack functionality}
 Existing data visualisation techniques using this exoplanet dataset lack the ability to display sufficient detail on each exoplanet and do not provide answers to questions that can be answered by the Exoplanet attributes in the dataset. Existing solutions display only the size, temperature, and orbital information about the exoplanets. While this is useful information that informs users of important facts about the planets, it does leave a lot of potential information unseen and overlooked, for example, information about the type of planet, planets with similar traits, solar system information, similarity to earth and habitability. This project will therefore be focused on researching, implementing, and evaluating a new interactive visualisation system that will display additional information to users not included in previous visualisation systems.
 
 \subsection{Effective user interaction with visualisation}
-A visualisation that soley displays information without effective methods of interaction will not have the immersive qualities that keeps users engaged as would be the case with an interactive visualisation
+A visualisation that soley displays information without effective methods of interaction limits the immersive qualities that keeps users engaged. To address this interactive visualisations emerged, generally these visualisations allow users to modify the representation of information rather than the information itself. This means allowing user control some property of how the data is represented, be it something simple as the layout of elements or something more complex. Many mediums of interaction are possible from the mundane keyboards, mice, or touchpads to the more esoteric wired gloves, motion sensors, or omnidirectional treadmills or even a combination of .............
+\\\\
+With interactive visualisations, response time of the system to user actions is important and so changes made by the user must be incorporated into the visualization in a timely manner. Experiments have shown that a delay of more than 20 ms between when input is provided and a visualisation is updated is noticeable by most people ((REFERENCE)). Thus it is important for an interactive visualization to provide a rendering based on human input within this time frame or else risk breaking user immersion.
+\\\\
+
+When the information being presented is altered, the visualization is usually part of a feedback loop. For example, consider an aircraft avionics system where the pilot inputs roll, pitch, and yaw and the visualization system provides a rendering of the aircraft's new attitude. Another example would be a scientist who changes a simulation while it is running in response to a visualization (see Visulation) of its current progress. This is called computational steering.
 
 \section{Key issues project addresses}
 To summarise the above sections, this project addresses the following key issues:

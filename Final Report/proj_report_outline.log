@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  26 JUL 2013 11:23
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  21 AUG 2013 10:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -295,265 +295,285 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--16
+Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
 [1
 
 
-]
+] <images/data.png, id=29, 964.60374pt x 404.51125pt>
+File: images/data.png Graphic file (type png)
+ <use images/data.png>
+Package pdftex.def Info: images/data.png used on input line 13.
+(pdftex.def)             Requested size: 352.8155pt x 147.9509pt.
 
-LaTeX Warning: Citation `kepler_github' on page 2 undefined on input line 33.
-
-)
-Underfull \hbox (badness 10000) in paragraph at lines 33--92
+Underfull \hbox (badness 10000) in paragraph at lines 24--28
 
  []
 
-[2]
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--28
+
+ []
+
+[2
+
+ <./images/data.png>]
+
+LaTeX Warning: Citation `kepler_github' on page 3 undefined on input line 41.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 41--92
+
+ []
+
+[3]
 \openout2 = `2.methodology.aux'.
 
- (./2.methodology.tex
+ (./2.methodology.tex [4
+
+
+
+]
 Chapter 2.
 
-LaTeX Warning: Citation `boehm' on page 3 undefined on input line 5.
+LaTeX Warning: Citation `boehm' on page 5 undefined on input line 5.
 
-<images/spiral_model.png, id=32, 704.6325pt x 702.625pt>
+<images/spiral_model.png, id=41, 704.6325pt x 702.625pt>
 File: images/spiral_model.png Graphic file (type png)
 
 <use images/spiral_model.png>
 Package pdftex.def Info: images/spiral_model.png used on input line 10.
 (pdftex.def)             Requested size: 264.61331pt x 263.85896pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--14
-
- []
-
-[3
-
-
-
- <./images/spiral_model.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 15--24
+Underfull \hbox (badness 10000) in paragraph at lines 5--22
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--24
+Underfull \hbox (badness 10000) in paragraph at lines 5--22
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--24
+Underfull \hbox (badness 10000) in paragraph at lines 5--22
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--24
+Underfull \hbox (badness 10000) in paragraph at lines 5--22
 
  []
 
-) [4]
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--22
+
+ []
+
+[5 <./images/spiral_model.png>])
+Underfull \hbox (badness 10000) in paragraph at lines 25--93
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--93
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--93
+
+ []
+
+[6] [7]
 \openout2 = `3.requirements_analysis.aux'.
 
- (./3.requirements_analysis.tex
-Chapter 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--5
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--9
-
- []
-
-[5
+ (./3.requirements_analysis.tex [8
 
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 16.
- (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
+
+ []
+
+
+Overfull \hbox (2.21686pt too wide) in paragraph at lines 13--14
+[]\OT1/ppl/m/n/10.95 John is used to play-ing com-puter games and us-ing vi-su-
+al-i-sa-tions and is not over-whelmed
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 15--18
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 21.
+(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 21.
+ [10] [11]
 
+LaTeX Warning: Citation `worlds' on page 12 undefined on input line 108.
 
-LaTeX Warning: Citation `worlds' on page 6 undefined on input line 32.
-
-<images/worlds.jpg, id=44, 238.25275pt x 134.21571pt>
+<images/worlds.jpg, id=66, 238.25275pt x 134.21571pt>
 File: images/worlds.jpg Graphic file (type jpg)
  <use images/worlds.jpg>
-Package pdftex.def Info: images/worlds.jpg used on input line 35.
+Package pdftex.def Info: images/worlds.jpg used on input line 111.
 (pdftex.def)             Requested size: 352.8155pt x 198.75287pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[12]
 
-LaTeX Warning: Citation `orrery' on page 6 undefined on input line 41.
+LaTeX Warning: Citation `orrery' on page 13 undefined on input line 117.
 
-<images/orrery.jpg, id=45, 238.25275pt x 135.40698pt>
+<images/orrery.jpg, id=70, 238.25275pt x 135.40698pt>
 File: images/orrery.jpg Graphic file (type jpg)
  <use images/orrery.jpg>
-Package pdftex.def Info: images/orrery.jpg used on input line 44.
+Package pdftex.def Info: images/orrery.jpg used on input line 120.
 (pdftex.def)             Requested size: 352.8155pt x 200.51695pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Citation `celestia' on page 13 undefined on input line 126.
 
-[6]
-
-LaTeX Warning: Citation `celestia' on page 7 undefined on input line 50.
-
-<images/celestia.jpg, id=50, 803.0pt x 602.25pt>
+<images/celestia.jpg, id=71, 803.0pt x 602.25pt>
 File: images/celestia.jpg Graphic file (type jpg)
  <use images/celestia.jpg>
-Package pdftex.def Info: images/celestia.jpg used on input line 53.
+Package pdftex.def Info: images/celestia.jpg used on input line 129.
 (pdftex.def)             Requested size: 220.50885pt x 165.37573pt.
 
+[13 <./images/worlds.jpg> <./images/orrery.jpg>]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Citation `kepler_github' on page 7 undefined on input line 59.
+LaTeX Warning: Citation `kepler_github' on page 14 undefined on input line 135.
 
 
-LaTeX Warning: Citation `kepler_article' on page 7 undefined on input line 59.
+
+LaTeX Warning: Citation `kepler_article' on page 14 undefined on input line 135
+.
 
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
-<images/kepler_orbital.jpg, id=51, 985.6825pt x 578.16pt>
+<images/kepler_orbital.jpg, id=76, 985.6825pt x 578.16pt>
 File: images/kepler_orbital.jpg Graphic file (type jpg)
 
 <use images/kepler_orbital.jpg>
-Package pdftex.def Info: images/kepler_orbital.jpg used on input line 62.
+Package pdftex.def Info: images/kepler_orbital.jpg used on input line 138.
 (pdftex.def)             Requested size: 352.8155pt x 206.94647pt.
 
-<images/kepler_graph.jpg, id=52, 985.6825pt x 578.16pt>
+<images/kepler_graph.jpg, id=77, 985.6825pt x 578.16pt>
 File: images/kepler_graph.jpg Graphic file (type jpg)
 
 <use images/kepler_graph.jpg>
-Package pdftex.def Info: images/kepler_graph.jpg used on input line 67.
+Package pdftex.def Info: images/kepler_graph.jpg used on input line 143.
 (pdftex.def)             Requested size: 352.8155pt x 206.94647pt.
 )
-Underfull \vbox (badness 1024) has occurred while \output is active []
-
- [7 <./images/worlds.jpg> <./images/orrery.jpg>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8 <./images/celestia.jpg> <./images/kepler_orbital.jpg>] [9 <./images/kepler_g
-raph.jpg>]
+[14 <./images/celestia.jpg> <./images/kepler_orbital.jpg>] [15 <./images/kepler
+_graph.jpg>]
 \openout2 = `4.solution_design.aux'.
 
- (./4.solution_design.tex [10
+ (./4.solution_design.tex [16
 
 
 
 ]
 Chapter 4.
 
-LaTeX Warning: Citation `kepler_github' on page 11 undefined on input line 4.
+LaTeX Warning: Citation `kepler_github' on page 17 undefined on input line 4.
 
 
-LaTeX Warning: Citation `kepler_article' on page 11 undefined on input line 4.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--11
-
- []
+LaTeX Warning: Citation `kepler_article' on page 17 undefined on input line 4.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--11
 
  []
 
-<images/layout_horizontal.jpg, id=66, 1686.3pt x 1017.8025pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--11
+
+ []
+
+<images/layout_horizontal.jpg, id=87, 1686.3pt x 1017.8025pt>
 File: images/layout_horizontal.jpg Graphic file (type jpg)
 
 <use images/layout_horizontal.jpg>
-Package pdftex.def Info: images/layout_horizontal.jpg used on input line 20.
+Package pdftex.def Info: images/layout_horizontal.jpg used on input line 21.
 (pdftex.def)             Requested size: 352.8155pt x 212.93726pt.
 
-<images/layout_vertical.jpg, id=67, 1684.2925pt x 1020.81375pt>
+<images/layout_vertical.jpg, id=88, 1684.2925pt x 1020.81375pt>
 File: images/layout_vertical.jpg Graphic file (type jpg)
 
 <use images/layout_vertical.jpg>
-Package pdftex.def Info: images/layout_vertical.jpg used on input line 22.
+Package pdftex.def Info: images/layout_vertical.jpg used on input line 23.
 (pdftex.def)             Requested size: 352.8155pt x 213.83205pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-)
-Underfull \vbox (badness 2932) has occurred while \output is active []
-
- [11]
-[12 <./images/layout_horizontal.jpg> <./images/layout_vertical.jpg>]
+) [17] [18 <./images/layout_horizontal.jpg> <./images/layout_vertical.jpg>]
 \openout2 = `5.implementation.aux'.
 
 
 (./5.implementation.tex
 Chapter 5.
-[13
+Missing character: There is no â in font pplr7t!
+Missing character: There is no € in font pplr7t!
+Missing character: There is no ™ in font pplr7t!
+[19
 
 
 
-] <images/table_technologies.jpg, id=78, 1264.725pt x 760.8425pt>
+] [20] <images/table_technologies.jpg, id=102, 1264.725pt x 760.8425pt>
 File: images/table_technologies.jpg Graphic file (type jpg)
 
 <use images/table_technologies.jpg>
-Package pdftex.def Info: images/table_technologies.jpg used on input line 13.
+Package pdftex.def Info: images/table_technologies.jpg used on input line 58.
 (pdftex.def)             Requested size: 352.8155pt x 212.245pt.
-) [14
+) [21
 
  <./images/table_technologies.jpg>]
 \openout2 = `6.evaluation.aux'.
 
 
-(./6.evaluation.tex
-Chapter 6.
-) [15
+(./6.evaluation.tex [22
 
 
 
 ]
+Chapter 6.
+) [23]
 \openout2 = `7.conclusion.aux'.
 
- (./7.conclusion.tex [16
+ (./7.conclusion.tex [24
 
 
 
 ]
 Chapter 7.
-) [17] [18
+) [25] [26
 
 
 ] (./proj_report_outline.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [19
+) [27
 
 ] (./proj_report_outline.aux (./acknowledge.aux) (./1.introduction.aux)
 (./2.methodology.aux) (./3.requirements_analysis.aux) (./4.solution_design.aux)
@@ -566,22 +586,22 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3247 strings out of 494071
- 46394 string characters out of 3160406
- 111727 words of memory out of 3000000
- 6357 multiletter control sequences out of 15000+200000
+ 3252 strings out of 494071
+ 46481 string characters out of 3160406
+ 112727 words of memory out of 3000000
+ 6361 multiletter control sequences out of 15000+200000
  26515 words of font info for 67 fonts, out of 3000000 for 9000
  648 hyphenation exceptions out of 8191
- 38i,7n,39p,918b,245s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,7n,39p,1011b,245s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
 ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 </usr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (25 pages, 1333207 bytes).
+Output written on proj_report_outline.pdf (33 pages, 1369153 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
+ 144 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

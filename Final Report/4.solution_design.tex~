@@ -12,6 +12,7 @@ This is because the 5 questions did not fully utilize the information in the dat
 However I will need to ensure the effectiveness of the visualisation does not become diminished by trying to convey to much information which would lead to cluttering and overlapping in the visualisation, as well as information overload for users. There will also be larger emphasis placed on making the existing system more usable by improving the interaction methods for users. The following list outlines the new requirements for the visualisation being developed. This will be done by 
 providing GUI elements for each form of interaction with the system, as well as ensuring all interaction methods are intuitive for users. 
 \subsection{Visualisation Layout}
+
 \subsubsection{Component Layout}
 As the majority of the interaction and movement of visualisation elements occurs in the center of the window it caused a aspect ratio that SOMETHING SOMETHING. It was BETTER to use 2 vertical columns to view and control the visualisation as it had a higher aspect ratio which allowed more of the content to be seen on the screen at once thanks to the fact that the majority of computer screens have a wide ratio.
 
@@ -22,6 +23,3 @@ As the majority of the interaction and movement of visualisation elements occurs
         \includegraphics[width=0.8\textwidth]{images/layout_vertical.jpg}
   \caption{Improved Vertical Layout}
 \end{figure}
-
-Selection of planets
-Kinect for improved user interaction and immersion

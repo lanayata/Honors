@@ -1,6 +1,20 @@
 \chapter{Visualisation implementation}\label{C:sd}
 This section details the implementation of the Improved Kepler Visualisation Tool. It details decisions that were made during the project such as choosing a viable framework, the choice of extending a previous system, and  platform choice.   
 \section{Technology choice}
+Many technologies were looked into,experimented with, and the positives and negatives of each weighed up before a decision was made about which would be the choice for the visualisation. 
+
+\subsubsection{D3}
+\subsubsection{Processing}
+\subsubsection{Prefuse}
+
+\clearpage
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.8\textwidth]{images/table_technologies.jpg}
+  \caption{Table of technology choices}
+\end{figure}
+
+
 \subsection{System design and structure}
 \subsection{Tools and artifacts used}
 \section{Extension to initial design}
