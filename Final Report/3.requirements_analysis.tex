@@ -102,14 +102,41 @@ Cara wants to be able to navigate around the visualisation by using hand gesture
   \end{enumerate}
 \section{Requirements summary}
 \subsection{Functional Requirements}
+Functional requirements define the functions of a system. These functions are described as a set of inputs, the behavior, and outputs from the system.
+
+The functional requirements for this visualisation are as follows:
+\begin{enumerate}
+ \item The visualisation needs to have a range of interactive buttons for each element of interactivity in the system to make it more visible to users how to use the system.
+ \item The visualisation needs to have two text areas to allow the more detailed textual information about planets to be displayed.
+ \item The planets need to be able to be ordered by their similarity to earth (ESI) and by their Kepler Object of Interest number (KOI).
+ \item The visualisation needs to have a set of sliders that can be used to change which planets are visible by setting ranges of their core attributes.
+ \item All planets need to be selectable and react appropriately when clicked.
+ \item When a planet is selected all other planets in the same solar system need to become highlighted.
+ \item Visualisation needs to have the option to view the habitable zones of stars and show where the planets orbiting them are in relation.
+ \item There needs to be the option to select two planets at a time to compare against one another.
+ \item There needs to be two modes of interaction with the system, keyboard and mouse vs gesture based.
+\end{enumerate}
+
+
 \subsection{Nonfunctional Requirements}
+ Functional requirements are supported by non functional requirements. Non functional requriements impose constraints on the design or implementation (such as performance, security, or usability) of a system.
+ 
+ The non functional requirements for this visualisation are as follows:
+\begin{enumerate}
+ \item All interaction methods must be visible and intuitive.
+ \item The visualisation needs to display attributes of each of the Exoplanets.
+ \item The visualisation must remain uncluttered.
+ \item The visualisation must not show so much information that it caused information overload for users.
+\item more
+\end{enumerate}
+ 
 \section{Existing systems}
 \subsection{Worlds: The Kepler Planet Candidates - Non Interactive}
  This animation \cite{worlds} shows  planet candidates found by NASA's Kepler mission. These candidates are animated in orbit around a single star. They are drawn to scale with accurate radii, orbital periods, and orbital distances. They range in size from 1/3 to 84 times the radius of Earth. Colors represent an estimate of temperature with red indicating warmest, and blue indicating coldest candidates. 
 \begin{figure}[h!]
   \centering
       \includegraphics[width=0.8\textwidth]{images/worlds.jpg}
-  \caption{Image of Worlds Visualisation}
+  \caption{Image of Worlds Visualisation}git a
 \end{figure}
 The layout of this animation is very similarly to the Kepler Visualisation Tool that I am extending. This means that it provides insights into how my visualisation can be improved as Worlds is a much more visually appealing system. By researching how it displays its Exoplanets I can further improve my own visualisation.
 
