@@ -3,7 +3,13 @@
 
 
 \section{Tools and artifacts used}
-\subsection{Keyboard and mouse system}
+\subsection{Main system}
+In addition to Processing in the main system there was an additional opensource library required for effective user interface components, this library was called
+\begin{itemize}
+ \item ControlP5 REF~
+\end{itemize}
+
+
 \subsection{Kinect sensor system}
 The Microsoft Kinect sensor required 3 additional libraries to integrate with Processing, these were:
 \begin{enumerate}

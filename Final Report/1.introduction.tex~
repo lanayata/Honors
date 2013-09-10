@@ -2,7 +2,8 @@
 This project seeks to design, implement, and evaluate an interactive 3D visualisation software system for displaying the content in the Kepler Exoplanets dataset. The deliverable is intended as a standalone 3D visualisation system with two modes of interaction, keyboard and mouse or Microsoft Xbox Kinect sensor ((REF)). The resulting visualisation will convey the information in the dataset in a way that the target users, laypeople who have an interest in astronomy, can understand and interact with.
 \section{Motivation}
 There are many planets that have been located outside of our own solar system, these are
-called exoplanets. This project seeks to develop and evaluate an interactive 3D visualisation
+called exoplanets, these are referred to interchangeably as planets and exoplanets for the remainder of this report
+. This project seeks to develop and evaluate an interactive 3D visualisation
 software system for the Kepler exoplanets dataset [28]. This visualisation will convey information
 in a way that the target users, laypeople who have an interest in astronomy, can
 understand.
@@ -28,7 +29,7 @@ Existing data visualisation techniques using this exoplanet dataset lack the abi
 \subsection{Effective user interaction with visualisation}
 A visualisation that solely displays information without effective methods of interaction limits the immersive qualities that keeps users engaged. To address this interactive visualisations emerged, generally these visualisations allow users to modify the representation of information rather than the information itself. This means allowing user control some property of how the data is represented, be it something simple as the layout of elements or something more complex. Many mediums of interaction are possible from the mundane keyboards, mice, or touchpads to the more esoteric wired gloves, motion sensors, and omnidirectional treadmills or even a combination of a range of devices.
 \\\\
-With interactive visualisations, response time of the system to user actions is important and so changes made by the user must be incorporated into the visualization in a timely manner. Experiments have shown that a delay of more than 20 ms between when input is provided and a visualisation is updated is noticeable by most people ((REFERENCE)). Thus it is important for an interactive visualization to provide a rendering based on human input within this time frame or else risk breaking user immersion.
+With interactive visualisations, response time of the system to user actions is important and so changes made by the user must be incorporated into the visualization in a timely manner. Experiments have shown that a delay of more than 20 ms between when input is provided and a visualisation is updated is noticeable by most people ((REFERENCE)~). Thus it is important for an interactive visualization to provide a rendering based on human input within this time frame or else risk breaking user immersion.
 \\\\
 
 When the information being presented is altered, the visualization is usually part of a feedback loop. For example, consider an aircraft avionics system where the pilot inputs roll, pitch, and yaw and the visualization system provides a rendering of the aircraft's new attitude. Another example would be a scientist who changes a simulation while it is running in response to a visualization (see Visualization) of its current progress. This is called computational steering.

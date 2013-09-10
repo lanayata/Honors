@@ -106,15 +106,14 @@ Functional requirements define the functions of a system. These functions are de
 
 The functional requirements for this visualisation are as follows:
 \begin{enumerate}
- \item The visualisation needs to have a range of interactive buttons for each element of interactivity in the system to make it more visible to users how to use the system.
- \item The visualisation needs to have two text areas to allow the more detailed textual information about planets to be displayed.
- \item The planets need to be able to be ordered by their similarity to earth (ESI) and by their Kepler Object of Interest number (KOI).
- \item The visualisation needs to have a set of sliders that can be used to change which planets are visible by setting ranges of their core attributes.
- \item All planets need to be selectable and react appropriately when clicked.
- \item When a planet is selected all other planets in the same solar system need to become highlighted.
- \item Visualisation needs to have the option to view the habitable zones of stars and show where the planets orbiting them are in relation.
- \item There needs to be the option to select two planets at a time to compare against one another.
- \item 
+
+ \item[R1.] The visualisation needs to have two text areas to allow the more detailed textual information about planets to be displayed.
+ \item[R2.] The planets need to be able to be ordered by their similarity to earth (ESI) and by their Kepler Object of Interest number (KOI).
+ \item[R3.] The visualisation needs to have a set of sliders that can be used to change which planets are visible by setting ranges of their core attributes.
+ \item[R4.] All planets need to be selectable and react appropriately when clicked.
+ \item[R5.] When a planet is selected all other planets in the same solar system need to become highlighted.
+ \item[R6.] Visualisation needs to have the option to view the habitable zones of stars and show where the planets orbiting them are in relation.
+ \item[R7.] There needs to be the option to select two planets at a time to compare against one another.
 \end{enumerate}
 
 
@@ -123,12 +122,16 @@ The functional requirements for this visualisation are as follows:
  
  The non functional requirements for this visualisation are as follows:
 \begin{enumerate}
- \item All interaction methods must be visible and intuitive.
- \item The visualisation needs to display attributes of each of the Exoplanets.
- \item The visualisation must remain uncluttered.
- \item The visualisation must not show so much information that it caused information overload.
-for users.
+ \item[R8.] The visualisation needs to have a range of interactive buttons for each element of interactivity in the system to make it more visible to users how to use the system.
+ \item[R9.] All interaction methods must be visible and intuitive.
+ \item[R10.] The visualisation needs to display attributes of each of the Exoplanets.
+ \item[R11.] The visualisation must remain uncluttered.
+ \item[R12.] The visualisation must not show so much information that it caused information overload for users.
+  \item[R13.] There needs to be two modes of interaction with the system, keyboard and mouse vs gesture based.
 \end{enumerate}
+
+%matrix
+matrix ~
  
 \section{Existing systems}
 \subsection{Worlds: The Kepler Planet Candidates - Non Interactive}
@@ -139,6 +142,28 @@ for users.
   \caption{Image of Worlds Visualisation}git a
 \end{figure}
 The layout of this animation is very similarly to the Kepler Visualisation Tool that I am extending. This means that it provides insights into how my visualisation can be improved as Worlds is a much more visually appealing system. By researching how it displays its Exoplanets I can further improve my own visualisation.
+ \\\\
+{\bf Scenario 1.} View planets ordered by their similarity to Earth:\\
+Worlds has comprehensive functionality for comparing the different Exoplanets to one another, however it does not offer any functionality regarding comparisons to earth 
+\\\\
+{\bf Scenario 2.} Select ranges for attributes of each planet displayed:\\
+Worlds does not offer any functionality for any filtering of Exoplanets, this means that a user can only see all planets at once which can be overwhelming and causes many of the exoplanets to be excluded from the user due to overlapping and clustering. The reason that this is done is to convey how many Exoplanets there are and how their scale differs among each Exoplanet
+\\\\
+{\bf Scenario 3.} Select planets to display more information:\\
+Worlds is non interactive which means that users are not able to request further information about the visualisation elements that they are seeing. This ability to find out more is a key part of the interactive visualization that is needed for this project.
+\\\\
+{\bf Scenario 4.} View planets in the same solar system:\\
+Worlds shows all Exoplanets as if they are orbiting a single star. This allows for each of them to be compared against one another easily. However this does remove the ability for a user to see which planets are together in the same solar system.
+\\\\
+{\bf Scenario 5.} View the Goldilocks zones of each planet:\\
+Worlds does not offer this functionality.
+\\\\
+{\bf Scenario 6.} Select two planets to compare against one another:\\
+Not applicable as worlds does not allow selections.
+\\\\
+{\bf Scenario 7.} Navigate the visualisation with gestures:\\
+Not applicable
+
 
 \subsection{The Kepler Orrery and The Kepler Orrery 2 - Non interactive}
 The Kepler Orrery \cite{orrery} illustrates the exoplanet candidates in their own solar systems. The orbit radii are to scale with respect to each other and planet sizes are to scale with respect to each other, but orbits and planet sizes are different scales. The colors are in order of semi-major axis: two-planet systems (242 in all) have a yellow outer planet; 3-planet (85) green, 4-planet (25) light blue, 5-planet (8) dark blue, 6-planet (1, Kepler-11) purple. 
@@ -148,6 +173,28 @@ The Kepler Orrery \cite{orrery} illustrates the exoplanet candidates in their ow
   \caption{Image of The Kepler Orrery Visualisation}
 \end{figure}
 This system exhibits small multiples, a grid of small similar graphics or charts, allowing them to be easily compared. This provides insights into how I can use small multiples to display information about groups of planets. This will be important for displaying which planets share a solar system.
+\\\\
+{\bf Scenario 1.} View planets ordered by their similarity to Earth:\\
+Like worlds, The Kepler Orrery shows the similarities between each of the exoplanets but does not have the functionality to allow users to make a comparison to earth and our own solar system.
+\\\\
+{\bf Scenario 2.} Select ranges for attributes of each planet displayed:\\
+As The Kepler Orrery is non interactive it is not possible to change the ranges of the Exoplanets being displayed. However due to the layout of the visualisation, which uses small multiples by grouping each solar system into its own visualisation element it removes a lot of the issue of overcrowding and overlapping.
+\\\\
+{\bf Scenario 3.} Select planets to display more information:\\
+Not possible
+\\\\
+{\bf Scenario 4.} View planets in the same solar system:\\
+This visualisation uses small multiples to great effect at displaying the groupings of each panel into each solar system. By displaying each planet orbiting its own star it removes the risk of confusion about what the planet is actually orbiting which could tbe the case with Worlds.
+\\\\
+{\bf Scenario 5.} View the Goldilocks zones of each planet:\\
+Not a feature
+\\\\
+{\bf Scenario 6.} Select two planets to compare against one another:\\
+Nope
+\\\\
+{\bf Scenario 7.} Navigate the visualisation with gestures: \\
+Negative
+\\\\
 
 \subsection{Celestia - Interactive}
 Celestia \cite{celestia} is a free real-time space simulation that lets you visually experience the universe in three dimensions. It is an open source system written in C++. 
@@ -157,7 +204,26 @@ Celestia \cite{celestia} is a free real-time space simulation that lets you visu
   \caption{Image of Celestia Visualisation}
 \end{figure}
 This visualisation is much larger and more encompassing system than is needed for this project, as it is a full 3D space simulation. However is does offer insights into how to effectively portray planets and their orbits (See Figure 2.3). It also provides textures that can be used in my visualisation to depict what planets actually look like to increase user immersion.
-
+\\\\
+{\bf Scenario 1.} View planets ordered by their similarity to Earth:\\
+Maybe
+\\\\
+{\bf Scenario 2.} Select ranges for attributes of each planet displayed:\\
+Maybe
+\\\\
+{\bf Scenario 3.} Select planets to display more information:\\
+Maybe
+\\\\
+{\bf Scenario 4.} View planets in the same solar system:\\
+Maybe
+\\\\
+{\bf Scenario 5.} View the Goldilocks zones of each planet:\\
+Maybe
+\\\\
+{\bf Scenario 6.} Select two planets to compare against one another:\\
+Maybe\\\\
+{\bf Scenario 7.} Navigate the visualisation with gestures: \\
+Maybe\\\\
 \subsection{Kepler Visualisation Tool}
 An existing system built with Processing is the Kepler Visualisation Tool\cite{kepler_github, kepler_article}. It is a simple visualisation focusing on displaying the candidate Exoplanets temperatures and their locations in relation to their distance from their nearest star, so that a sense of scale can be perceived. Each candidate’s estimated size, orbital speed, and orbital separation is accurately depicted, and each planet is color-coded according to its estimated effective temperature.
 \begin{figure}[h!]
@@ -171,3 +237,28 @@ An existing system built with Processing is the Kepler Visualisation Tool\cite{k
   \caption{Kepler Visualisation Tool Graph View}
 \end{figure}
 The existing work in this system would serve as foundation for this project. Because much of the visual aspects, and initial data manipulation of the existing system are already complete. It means that implementing the features needed for this projects completion could be focused on more heavily and larger improvements to the existing system can be undertaken, such as better labeling and information displays and user interaction methods.
+\\\\
+{\bf Scenario 1.} View planets ordered by their similarity to Earth:\\
+Like Worlds and the Kepler Orrery, The Kepler Visualisation Tool has functionality to display the similarity of each Exoplanet to each other. However, it also has some limmited functionality of comparing these to earth which the others lack. It does this by displaying Earthm, Mars, and Jupiter with the same colours, size, and orbit speed as the Exoplanets. This gives a user a chance to comprehend the scale and difference of some of the Exoplanets.
+\\\\
+{\bf Scenario 2.} Select ranges for attributes of each planet displayed:\\
+The Kepler Visualisation Tool allows users to change which attributes the planets are ordered by on the vertical plane (Y axis) ie, by size or temperature, but does not allow users to select ranges of these attributes to filter the Exoplanets
+\\\\
+{\bf Scenario 3.} Select planets to display more information:\\
+There is no selection functionality in the Kepler Visualisation Tool which means that a lot of the potential information about each Exoplanet goes undisplayed.
+\\\\
+{\bf Scenario 4.} View planets in the same solar system:\\
+Nope
+\\\\
+{\bf Scenario 5.} View the Goldilocks zones of each planet:\\
+Nope
+\\\\
+{\bf Scenario 6.} Select two planets to compare against one another:\\
+Nope
+\\\\
+{\bf Scenario 7.} Navigate the visualisation with gestures: \\
+Nope
+
+\subsection{Summary of Existing Applications}
+
+Matrix compared to requirements
