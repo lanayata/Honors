@@ -2,7 +2,13 @@
 
 This section discusses the design of the deliverable visualisation, The Improved Kepler Visualisation Tool(IKVT) that was created for this project. It details the key design decisions revolving around structure, asthetics, and functionality that were made about the visualisation. 
 % Description of tool
-To help users to understand more about the planets outside of our solarsystem, this project aims to improve an existing visualisation, The Kepler Visualisation Tool that was discussed in the previous chapter, which whist displaying exoplanets and some of thier features, it lacks interactivity for users trying to use it to help comprehend the ...~. The IKVT expands on the Kepler Visualisation Tool which is a 3D visualisation that displays each of the numberOFPLANETS~ exoplanets contained in the Exoplanet~ dataset as if they are orbiting a single sun. The key improvements of the visualisation involve adding improved 
+To help users to understand more about the planets outside of our solarsystem, this project aims to improve an existing visualisation, The Kepler Visualisation Tool that was discussed in the previous chapter, which whist displaying exoplanets and some of thier features, it lacks interactivity for users trying to use it to help comprehend the ...~. The IKVT expands on the preexisting Kepler Visualisation Tool by adding key elements of interativity that are missing with the existing visualisation.
+
+To aid in the comprehesion of they exoplanets IKVT displays all .... exoplanets in the ....~ datase. Each of these exoplanets are represented as coloured ellipses, of which the colour and size are representative of the exoplanets temperature and size respectively. IKVT displays all of these exoplanets as if they are orbiting a single star which in reality would result in planetary collisions but in the visualisation provides users with a way to effectively make observations and comparisions about each of the exoplanets in a single view. The Kepler Orrery visualisation as discussed in the Existing Systems section of Chapter 3 details a contrasting system that displays each exoplanet and its sister planets orbiting its own star. By incorporating this idea into IKVT, when a planet is selected it should be highlighted and all of its sister planets should also become hightlighted. This will provide the same effect as in the Kepler Orrery.  
+
+To make this selection, a user can click on any of the orbiting exoplanets.  A further effect of this selection is that a text box will have further textual information about the selected exoplanet appended to it.
+
+
 % Aim of the visualisation ~
 
 % Basic functionality of the visualisation - massive

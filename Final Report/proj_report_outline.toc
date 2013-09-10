@@ -34,8 +34,8 @@
 \contentsline {subsection}{\numberline {3.4.5}Summary of Existing Applications}{18}
 \contentsline {chapter}{\numberline {4}Solution Design: Improved Kepler Visualisation Tool}{19}
 \contentsline {section}{\numberline {4.1}System design and structure}{19}
-\contentsline {section}{\numberline {4.2}Design Features}{19}
-\contentsline {subsection}{\numberline {4.2.1}Main interface components}{19}
+\contentsline {section}{\numberline {4.2}Design Features}{20}
+\contentsline {subsection}{\numberline {4.2.1}Main interface components}{20}
 \contentsline {subsubsection}{Spacial arrangement of components}{20}
 \contentsline {subsubsection}{Navigation Window(BETTER TITLE\nobreakspace {})}{20}
 \contentsline {subsubsection}{Visualisation Layout for Kinect sensor}{21}
