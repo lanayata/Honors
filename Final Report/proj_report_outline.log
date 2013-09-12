@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  11 SEP 2013 10:29
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  12 SEP 2013 18:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -664,97 +664,103 @@ Underfull \hbox (badness 10000) in paragraph at lines 228--261
  []
 
 [16 <./images/celestia.jpg>] [17 <./images/kepler_orbital.jpg> <./images/kepler
-_graph.jpg>]) [18]
+_graph.jpg>] [18]
+Missing character: There is no â in font pplr7t!
+Missing character: There is no € in font pplr7t!
+Missing character: There is no ™ in font pplr7t!
+ [19]
+<images/table_technologies.jpg, id=97, 1264.725pt x 760.8425pt>
+File: images/table_technologies.jpg Graphic file (type jpg)
+
+<use images/table_technologies.jpg>
+Package pdftex.def Info: images/table_technologies.jpg used on input line 318.
+(pdftex.def)             Requested size: 352.8155pt x 212.245pt.
+
+
+LaTeX Warning: Citation `kepler_github' on page 20 undefined on input line 322.
+
+
+
+LaTeX Warning: Citation `kepler_article' on page 20 undefined on input line 322
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 322--325
+
+ []
+
+) [20
+
+ <./images/table_technologies.jpg>]
 \openout2 = `4.solution_design.aux'.
 
  (./4.solution_design.tex
 Chapter 4.
-[19
+[21
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 36--43
+Underfull \hbox (badness 10000) in paragraph at lines 40--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--43
+Underfull \hbox (badness 10000) in paragraph at lines 40--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--43
+Underfull \hbox (badness 10000) in paragraph at lines 40--47
 
  []
 
-<images/layout_horizontal.jpg, id=97, 1686.3pt x 1017.8025pt>
+<images/layout_horizontal.jpg, id=104, 1686.3pt x 1017.8025pt>
 File: images/layout_horizontal.jpg Graphic file (type jpg)
 
 <use images/layout_horizontal.jpg>
-Package pdftex.def Info: images/layout_horizontal.jpg used on input line 48.
+Package pdftex.def Info: images/layout_horizontal.jpg used on input line 52.
 (pdftex.def)             Requested size: 352.8155pt x 212.93726pt.
 
-<images/layout_vertical.jpg, id=98, 1684.2925pt x 1020.81375pt>
+<images/layout_vertical.jpg, id=105, 1684.2925pt x 1020.81375pt>
 File: images/layout_vertical.jpg Graphic file (type jpg)
 
 <use images/layout_vertical.jpg>
-Package pdftex.def Info: images/layout_vertical.jpg used on input line 50.
+Package pdftex.def Info: images/layout_vertical.jpg used on input line 54.
 (pdftex.def)             Requested size: 352.8155pt x 213.83205pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[20] [21 <./images/layout_horizontal.jpg> <./images/layout_vertical.jpg>])
 [22]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23 <./images/layout_horizontal.jpg> <./images/layout_vertical.jpg>]) [24]
 \openout2 = `5.implementation.aux'.
 
- (./5.implementation.tex
+
+(./5.implementation.tex
 Chapter 5.
-Missing character: There is no â in font pplr7t!
-Missing character: There is no € in font pplr7t!
-Missing character: There is no ™ in font pplr7t!
-[23
+)
+Underfull \hbox (badness 10000) in paragraph at lines 39--96
+
+ []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 39--96
 
-] [24] <images/table_technologies.jpg, id=114, 1264.725pt x 760.8425pt>
-File: images/table_technologies.jpg Graphic file (type jpg)
-
-<use images/table_technologies.jpg>
-Package pdftex.def Info: images/table_technologies.jpg used on input line 58.
-(pdftex.def)             Requested size: 352.8155pt x 212.245pt.
+ []
 
 
-LaTeX Warning: Citation `kepler_github' on page 25 undefined on input line 62.
-
-
-LaTeX Warning: Citation `kepler_article' on page 25 undefined on input line 62.
-
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--65
+Underfull \hbox (badness 10000) in paragraph at lines 39--96
 
  []
 
 [25
 
- <./images/table_technologies.jpg>])
-Underfull \hbox (badness 10000) in paragraph at lines 99--96
-
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--96
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--96
-
- []
-
-[26]
+] [26]
 \openout2 = `6.evaluation.aux'.
 
  (./6.evaluation.tex
@@ -804,7 +810,7 @@ dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
 ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 </usr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (37 pages, 1383002 bytes).
+Output written on proj_report_outline.pdf (37 pages, 1383918 bytes).
 PDF statistics:
  160 PDF objects out of 1000 (max. 8388607)
  102 compressed objects within 2 object streams

@@ -32,24 +32,24 @@
 \contentsline {subsection}{\numberline {3.4.3}Celestia - Interactive}{16}
 \contentsline {subsection}{\numberline {3.4.4}Kepler Visualisation Tool}{17}
 \contentsline {subsection}{\numberline {3.4.5}Summary of Existing Applications}{18}
-\contentsline {chapter}{\numberline {4}Solution Design: Improved Kepler Visualisation Tool}{19}
-\contentsline {section}{\numberline {4.1}System design and structure}{19}
-\contentsline {section}{\numberline {4.2}Design Features}{20}
-\contentsline {subsection}{\numberline {4.2.1}Main interface components}{20}
-\contentsline {subsubsection}{Spacial arrangement of components}{20}
-\contentsline {subsubsection}{Navigation Window(BETTER TITLE\nobreakspace {})}{20}
-\contentsline {subsubsection}{Visualisation Layout for Kinect sensor}{21}
-\contentsline {chapter}{\numberline {5}Visualisation implementation}{23}
-\contentsline {section}{\numberline {5.1}Tools and artifacts used}{23}
-\contentsline {section}{\numberline {5.2}Technology choice}{23}
-\contentsline {subsubsection}{D3 (Data Driven Documents)}{23}
-\contentsline {subsubsection}{Prefuse}{23}
-\contentsline {subsubsection}{Processing}{24}
-\contentsline {subsubsection}{Decision of technology}{24}
-\contentsline {subsection}{\numberline {5.2.1}Main system}{25}
-\contentsline {subsection}{\numberline {5.2.2}Kinect sensor system}{25}
-\contentsline {section}{\numberline {5.3}Implementation of planned features}{26}
-\contentsline {section}{\numberline {5.4}Problems encountered}{26}
+\contentsline {section}{\numberline {3.5}Analysis of technology options}{18}
+\contentsline {subsection}{\numberline {3.5.1}D3 (Data Driven Documents)}{18}
+\contentsline {subsection}{\numberline {3.5.2}Prefuse}{19}
+\contentsline {subsection}{\numberline {3.5.3}Processing}{19}
+\contentsline {subsection}{\numberline {3.5.4}Decision of technology}{19}
+\contentsline {chapter}{\numberline {4}Solution Design: Improved Kepler Visualisation Tool (IKVT)}{21}
+\contentsline {section}{\numberline {4.1}System design and structure}{22}
+\contentsline {section}{\numberline {4.2}Design Features}{22}
+\contentsline {subsection}{\numberline {4.2.1}Main interface components}{22}
+\contentsline {subsubsection}{Spacial arrangement of components}{22}
+\contentsline {subsubsection}{Navigation Window(BETTER TITLE\nobreakspace {})}{22}
+\contentsline {subsubsection}{Visualisation Layout for Kinect sensor}{24}
+\contentsline {chapter}{\numberline {5}Visualisation implementation}{25}
+\contentsline {section}{\numberline {5.1}Tools and artifacts used}{25}
+\contentsline {subsection}{\numberline {5.1.1}Main system}{25}
+\contentsline {subsection}{\numberline {5.1.2}Kinect sensor system}{25}
+\contentsline {section}{\numberline {5.2}Implementation of planned features}{25}
+\contentsline {section}{\numberline {5.3}Problems encountered}{26}
 \contentsline {chapter}{\numberline {6}Visualisation Evaluation}{27}
 \contentsline {chapter}{\numberline {7}Conclusions}{29}
 \contentsline {section}{\numberline {7.1}Future Work}{29}

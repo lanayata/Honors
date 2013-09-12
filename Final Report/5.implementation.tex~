@@ -1,6 +1,6 @@
 \chapter{Visualisation implementation}\label{C:sd}
-This chapter discusses the implementation of the visulisation uisng the designs discussed previously. It covers the tools used, the deliverables produced, and the problems encountered
-
+This chapter discusses the implementation of the visulisation uisng the designs discussed previously. It details the tools used, the deliverables produced, and the problems encountered
+%It details decisions made during the project such as choosing a viable framework, the choice of extending a previous system, platform choice, and designs of the actual system.   
 \section{Tools and artifacts used}
 
 \section{Technology choice}

@@ -126,7 +126,7 @@ The functional requirements for this visualisation are as follows:
  \item[R9.] All interaction methods must be visible and intuitive.
  \item[R10.] The visualisation needs to display attributes of each of the Exoplanets.
  \item[R11.] The visualisation must remain uncluttered.
- \item[R12.] The visualisation must not show so much information that it caused information overload for users.
+ \item[R12.] The visualisation must not show so much information that it causes information overload for users.
   \item[R13.] There needs to be two modes of interaction with the system, keyboard and mouse vs gesture based.
 \end{enumerate}
 

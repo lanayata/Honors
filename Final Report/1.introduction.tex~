@@ -1,19 +1,16 @@
 \chapter{Introduction}\label{C:intro}
-This project seeks to design, implement, and evaluate an interactive 3D visualisation software system for displaying the content in the Kepler Exoplanets dataset. The deliverable is intended as a standalone 3D visualisation system with two modes of interaction, keyboard and mouse or Microsoft Xbox Kinect sensor ((REF)). The resulting visualisation will convey the information in the dataset in a way that the target users, laypeople who have an interest in astronomy, can understand and interact with.
+This project seeks to design, implement, and evaluate an interactive 3D visualisation software system for displaying the content in the Kepler Exoplanets dataset ((REF~)). This deliverable is intended as a standalone 3D visualisation with two modes of interaction, keyboard and mouse or Microsoft Xbox Kinect sensor ((REF)). The resulting visualisation will convey the information in the dataset in a way that the target users, laypeople who have an interest in astronomy, can understand and interact with.
 \section{Motivation}
 There are many planets that have been located outside of our own solar system, these are
 called exoplanets, these are referred to interchangeably as planets and exoplanets for the remainder of this report
-. This project seeks to develop and evaluate an interactive 3D visualisation
-software system for the Kepler exoplanets dataset [28]. This visualisation will convey information
-in a way that the target users, laypeople who have an interest in astronomy, can
-understand.
+. Information about these exoplanets are stored in the Kepler Exoplanet dataset ((REF~)). This project seeks to develop and evaluate an interactive 3D visualisation
+software system for the Kepler exoplanets dataset [28]~. By leveraging how humans respond to visualisations with more
 \section{Problem statement}
 The complex nature of the data involved in this project causes a range of problems revolving around understandability to arise, which this project attempts to address. The following subsections outline these in detail.
 \subsection{Understanding the content in the dataset}
 Understanding and analysing large datasets whose size defies simplistic or trivial analysis is a known issue that many areas of research are attempting to address, these areas of research range from data mining to visualisations in order to discover or highlight important features in the data so that people can more efficiently use it. 
 \\\\
-Humans often rely on visualisation when we solve problems. We create an image in our mind of a situation in order to make sense of it http://nrich.maths.org/6447.~ This allows for a much more comprehensive understanding of the content being visualised. The content in the dataset used for this project is made up of records of every exoplanet discovered by the Kepler Mission. Each of which contains 46 fields. It is next to impossible for someone to internally visualise so much information, most of which is floating point numbers.This means that an external way of visualising it is needed, which is the problem that this project attempts to address. 
-\clearpage
+Humans often rely on visualisation when we solve problems. We create an image in our mind of a situation in order to make sense of it http://nrich.maths.org/6447.~ This allows for a much more comprehensive understanding of the content being visualised. The content in the dataset used for this project is made up of records of every one of the 2234 exoplanets discovered by the Kepler Mission. Each of which contains 46 fields. It is next to impossible for someone to internally visualise so much information, most of which is floating point numbers.This means that an external way of visualising it is needed, which is the problem that this project attempts to address. 
 \begin{figure}[h!]
   \centering
       \includegraphics[width=0.8\textwidth]{images/data.png}
@@ -38,7 +35,7 @@ When the information being presented is altered, the visualization is usually pa
 To summarize the above sections, this project addresses the following key issues:
 \begin{enumerate}
  \item[I1.] Content in database form is difficult to view and understand.
- \item[I2.] Planetary information if complex and difficult to comprehend without a visual reference.
+ \item[I2.] Planetary information is complex and difficult to comprehend without a visual reference.
  \item[I3.] Existing visualisations for this dataset have minimal functionality and have lacking usability.
  \item[I4.] User interaction is needed in a visualisation to make the most of data displayed.
 \end{enumerate}
