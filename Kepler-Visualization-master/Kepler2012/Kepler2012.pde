@@ -450,12 +450,14 @@ void sortBySize() {
 
   mode = "size";
   for (int i = 0; i < planets.size(); i++) {
+     float val = map(planets.get(i).radius, planetMinSize, planetMaxSize, 0, max);
+      if (val < -10000 || val > 10000) continue;
     planets.get(i).tz = map(planets.get(i).radius, planetMinSize, planetMaxSize, 0, max);
     planets.get(i).difference = 0;
   }
   yLabel = "Planet Size (Earth Radii)";
   xLabel = "Semi-major Axis (Astronomical Units)";
-  yMax = globalMaxSize;
+  yMax = globalMaxSize-1;
   yMin = 0;
 
   visualisationState = "Planet Size";
@@ -485,6 +487,8 @@ void sortByTemp() {
 void sortByESI() {
   mode = "ESI";
   for (int i = 0; i < planets.size(); i++) {
+         float val = map(planets.get(i).ESIs, planetMinESI, planetMaxESI, 0, max);
+      if (val < -10000 || val > 10000) continue;
     planets.get(i).tz = map(planets.get(i).ESIs, planetMinESI, planetMaxESI, 0, max);
     planets.get(i).difference = 0;
   }
@@ -497,6 +501,8 @@ void sortByESI() {
 }
 void sortByKOI() {
   for (int i = 0; i < planets.size(); i++) {
+          float val = map(planets.get(i).KOI, planetMinKOI, planetMaxKOI, 0, max);
+      if (val < -10000 || val > 10000) continue;
     planets.get(i).tz = map(planets.get(i).KOI, planetMinKOI, planetMaxKOI, 0, max);
     planets.get(i).difference = 0;
   }

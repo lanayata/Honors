@@ -4,21 +4,23 @@ This project seeks to design, implement, and evaluate an interactive 3D visualis
 There are many planets that have been located outside of our own solar system, these are
 called exoplanets, these are referred to interchangeably as planets and exoplanets for the remainder of this report
 . Information about these exoplanets are stored in the Kepler Exoplanet dataset ((REF~)). This project seeks to develop and evaluate an interactive 3D visualisation
-software system for the Kepler exoplanets dataset [28]~. By leveraging how humans respond to visualisations with more
+software system for the Kepler exoplanets dataset [28]~. We can leverage how humans respond to visualisations by experiencing more enjoyment and more immersion, both of which result in improved learning and recall. This means that creating a effective and engaging visualisation will help convey the information in the dataset effectively to the users.
 \section{Problem statement}
 The complex nature of the data involved in this project causes a range of problems revolving around understandability to arise, which this project attempts to address. The following subsections outline these in detail.
+
 \subsection{Understanding the content in the dataset}
-Understanding and analysing large datasets whose size defies simplistic or trivial analysis is a known issue that many areas of research are attempting to address, these areas of research range from data mining to visualisations in order to discover or highlight important features in the data so that people can more efficiently use it. 
-\\\\
-Humans often rely on visualisation when we solve problems. We create an image in our mind of a situation in order to make sense of it http://nrich.maths.org/6447.~ This allows for a much more comprehensive understanding of the content being visualised. The content in the dataset used for this project is made up of records of every one of the 2234 exoplanets discovered by the Kepler Mission. Each of which contains 46 fields. It is next to impossible for someone to internally visualise so much information, most of which is floating point numbers.This means that an external way of visualising it is needed, which is the problem that this project attempts to address. 
+Understanding and analysing large datasets whose size defies simplistic or trivial analysis by humans is a known issue that many areas of research are attempting to address. These areas of research range from data mining to visualisations in order to discover or highlight important features in the data so that people can more efficiently use or understand it. 
+
+% Internal and External Visualisation
+Humans often rely on internal visualisation when we solve problems. We create an image in our mind of a situation in order to make sense of it http://nrich.maths.org/6447.~ This allows for a much more comprehensive understanding of the content being visualised. The content in the dataset used for this project is made up of records of every one of the 2234 exoplanets discovered by the Kepler Mission. Each of which contains 46 fields. It is next to impossible for someone to internally visualise so much information, especially as most of it is floating point numbers. This means that an external way of visualising it is needed, which is one of the problems that this project attempts to address. 
 \begin{figure}[h!]
   \centering
       \includegraphics[width=0.8\textwidth]{images/data.png}
-  \caption{Dataset to be visualised}
+  \caption{Fields of the dataset to be visualised}
 \end{figure}
 
 \subsection{Comprehension of planetary information}
-Much of the information regarding planets is cryptic and unintuitive, this make its understandability difficult. Visualisations in general attempt to address this issue by displaying information in a way that conveys the information in simplistic ways which allows improved user comprehension.
+Much of the information regarding planets is cryptic and unintuitive, this make its understandability difficult. Visualisations in general attempt to address this by displaying data in simplistic ways that allows improved user comprehension.
 
 \subsection{Existing solutions lack functionality}
 Existing data visualisation techniques using this exoplanet dataset lack the ability to display sufficient detail on each exoplanet and do not provide answers to questions that can be answered by the Exoplanet attributes in the dataset. Existing solutions display only the size, temperature, and orbital information about the exoplanets. While this is useful information that informs users of important facts about the planets, it does leave a lot of potential information unseen and overlooked, for example, information about the type of planet, planets with similar traits, solar system information, similarity to earth and habitability. This project will therefore be focused on researching, implementing, and evaluating a new interactive visualisation system that will display additional information to users not included in previous visualisation systems.
