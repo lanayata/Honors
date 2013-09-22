@@ -44,9 +44,9 @@
 \contentsline {subsubsection}{Navigation Window(BETTER TITLE\nobreakspace {})}{24}
 \contentsline {subsubsection}{Visualisation Layout for Kinect sensor}{26}
 \contentsline {chapter}{\numberline {5}Visualisation implementation}{27}
-\contentsline {section}{\numberline {5.1}Tools and artifacts used}{27}
-\contentsline {subsection}{\numberline {5.1.1}Main system}{27}
-\contentsline {subsection}{\numberline {5.1.2}Kinect sensor system}{27}
+\contentsline {section}{\numberline {5.1}Additional Tools and artifacts used}{27}
+\contentsline {subsection}{\numberline {5.1.1}Keyboard and Mouse System}{27}
+\contentsline {subsection}{\numberline {5.1.2}Microft Kinect sensor system}{27}
 \contentsline {section}{\numberline {5.2}Implementation of planned features}{27}
 \contentsline {section}{\numberline {5.3}Problems encountered}{28}
 \contentsline {chapter}{\numberline {6}Visualisation Evaluation}{31}

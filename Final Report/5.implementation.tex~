@@ -1,24 +1,18 @@
 \chapter{Visualisation implementation}\label{C:sd}
-This chapter discusses the implementation of the visulisation uisng the designs discussed previously. It details the tools used, the deliverables produced, and the problems encountered
-%It details decisions made during the project such as choosing a viable framework, the choice of extending a previous system, platform choice, and designs of the actual system.   
-\section{Tools and artifacts used}
+This chapter discusses the implementation of the visulisation using the designs discussed previously. It details the tools used, the deliverable features produced, and the problems encountered
 
+\section{Additional Tools and artifacts used}
+\subsection{Keyboard and Mouse System}
+In addition to Processing in the main system there was an additional opensource library required for effective user interface components, this library was called ControlP5 REF~. This library is a customisable and intuitive interactive user interface. It allows for easy creation of visually appealing and precisely layed out interactive GUI components.
 
-
-\subsection{Main system}
-In addition to Processing in the main system there was an additional opensource library required for effective user interface components, this library was called
-\begin{itemize}
- \item ControlP5 REF~
-\end{itemize}
-
-
-\subsection{Kinect sensor system}
-The Microsoft Kinect sensor required 3 additional libraries to integrate with Processing, these were:
+\subsection{Microft Kinect sensor system}
+For the version of the IKVT system that uses the Kinect sensor for user interaction two additional libraries were required to integrate the hardware with Processing, these were:
 \begin{enumerate}
  \item NITE ref~
  \item SimpleOpenNi ref~
 \end{enumerate}
-These libraries provided drivers to run the Kinect sensor in Processing as well as basic gesture recognition and body tracking. However as the libraries were opensource due to the official Kinect SDK not being compatible with Processing, the gesture recognition was not as user friendy or effective as the official libraries. The effect of this was that the gesture tracking used in the system had to be .... ~
+These libraries provided drivers to run the Kinect sensor in Processing as well as basic gesture recognition and body tracking. However as the libraries were opensource due to the official Microsoft Kinect SDK not being compatible with Processing, the gesture recognition was not as user friendy or effective as the official libraries. The effect of this was that the gesture tracking used in the system had to be created supoptimally from the opensource libraries. 
+
 \section{Implementation of planned features}
 All of the features that were planned were completed for the visualisation, this is including the additional work that was planned around the Kinect sensor.
 
@@ -28,7 +22,7 @@ Image of navigation window
 \begin{figure}[h!]
   \centering
       \includegraphics[width=0.3\textwidth]{images/nav.png}
-  \caption{Navigation Panel}
+  \caption{Navigation Panel Overview}
   \label{fig:nav}
 \end{figure}
 
@@ -48,7 +42,12 @@ Image of each slider
   \label{fig:sliders}
 \end{figure}
 Image of text boxes
-
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.9\textwidth]{images/textBoxes.jpg}
+  \caption{Text boxes in each possible state}
+  \label{fig:sliders}
+\end{figure}
 Image of using kinect system
 
 Image of using non kinect system

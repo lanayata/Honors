@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  21 SEP 2013 17:27
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  22 SEP 2013 17:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -139,11 +139,14 @@ File: pppdftex.def 2011/03/10 v0.4n Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count94
 \AM@templatesizebox=\box30
 )
-(./proj_report_outline.aux (./acknowledge.aux) (./1.introduction.aux)
+(./proj_report_outline.aux (./0.acknowledge.aux) (./1.introduction.aux)
 (./2.methodology.aux) (./3.requirements_analysis.aux) (./4.solution_design.aux)
 (./5.implementation.aux
 
 LaTeX Warning: Label `C:sd' multiply defined.
+
+
+LaTeX Warning: Label `fig:sliders' multiply defined.
 
 ) (./6.evaluation.aux
 
@@ -259,28 +262,30 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
  [-1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [0]
-\openout2 = `acknowledge.aux'.
+\openout2 = `0.acknowledge.aux'.
 
-
-No file acknowledge.tex.
+ (./0.acknowledge.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 80.
-(./proj_report_outline.toc [1
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
+) [1
 
 
 
+] [2
 
-])
+
+]
+(./proj_report_outline.toc [3])
 \tf@toc=\write3
 \openout3 = `proj_report_outline.toc'.
 
- [2] (./proj_report_outline.lof)
+ [4] (./proj_report_outline.lof)
 \tf@lof=\write4
 \openout4 = `proj_report_outline.lof'.
 
- [3
+ [5
 
-] [4
+] [6
 
 ]
 \openout2 = `1.introduction.aux'.
@@ -294,7 +299,7 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 11.
-<images/data.png, id=25, 964.60374pt x 404.51125pt>
+<images/data.png, id=32, 964.60374pt x 404.51125pt>
 File: images/data.png Graphic file (type png)
  <use images/data.png>
 Package pdftex.def Info: images/data.png used on input line 18.
@@ -320,7 +325,7 @@ Chapter 2.
 
 LaTeX Warning: Citation `boehm' on page 5 undefined on input line 6.
 
-<images/spiral_model.png, id=41, 704.6325pt x 702.625pt>
+<images/spiral_model.png, id=47, 704.6325pt x 702.625pt>
 File: images/spiral_model.png Graphic file (type png)
 
 <use images/spiral_model.png>
@@ -365,7 +370,7 @@ File: omsppl.fd
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 21.
  [10] [11] [12]
-<images/issues_to_req_matrix.jpg, id=69, 459.7175pt x 583.17876pt>
+<images/issues_to_req_matrix.jpg, id=76, 459.7175pt x 583.17876pt>
 File: images/issues_to_req_matrix.jpg Graphic file (type jpg)
 
 <use images/issues_to_req_matrix.jpg>
@@ -379,7 +384,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: Citation `worlds' on page 13 undefined on input line 142.
 
-<images/worlds.jpg, id=70, 238.25275pt x 134.21571pt>
+<images/worlds.jpg, id=77, 238.25275pt x 134.21571pt>
 File: images/worlds.jpg Graphic file (type jpg)
  <use images/worlds.jpg>
 Package pdftex.def Info: images/worlds.jpg used on input line 145.
@@ -426,7 +431,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: Citation `orrery' on page 15 undefined on input line 173.
 
-<images/orrery.jpg, id=78, 238.25275pt x 135.40698pt>
+<images/orrery.jpg, id=84, 238.25275pt x 135.40698pt>
 File: images/orrery.jpg Graphic file (type jpg)
  <use images/orrery.jpg>
 Package pdftex.def Info: images/orrery.jpg used on input line 176.
@@ -483,7 +488,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: Citation `celestia' on page 16 undefined on input line 204.
 
-<images/celestia.jpg, id=82, 803.0pt x 602.25pt>
+<images/celestia.jpg, id=88, 803.0pt x 602.25pt>
 File: images/celestia.jpg Graphic file (type jpg)
  <use images/celestia.jpg>
 Package pdftex.def Info: images/celestia.jpg used on input line 207.
@@ -548,14 +553,14 @@ LaTeX Warning: Citation `kepler_article' on page 17 undefined on input line 232
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
-<images/kepler_orbital.jpg, id=86, 985.6825pt x 578.16pt>
+<images/kepler_orbital.jpg, id=92, 985.6825pt x 578.16pt>
 File: images/kepler_orbital.jpg Graphic file (type jpg)
 
 <use images/kepler_orbital.jpg>
 Package pdftex.def Info: images/kepler_orbital.jpg used on input line 235.
 (pdftex.def)             Requested size: 352.8155pt x 206.94647pt.
 
-<images/kepler_graph.jpg, id=87, 985.6825pt x 578.16pt>
+<images/kepler_graph.jpg, id=93, 985.6825pt x 578.16pt>
 File: images/kepler_graph.jpg Graphic file (type jpg)
 
 <use images/kepler_graph.jpg>
@@ -610,7 +615,7 @@ Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
  [19] [20]
-<images/table_technologies.jpg, id=101, 1264.725pt x 760.8425pt>
+<images/table_technologies.jpg, id=107, 1264.725pt x 760.8425pt>
 File: images/table_technologies.jpg Graphic file (type jpg)
 
 <use images/table_technologies.jpg>
@@ -651,14 +656,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--47
 
  []
 
-<images/layout_horizontal.jpg, id=111, 1686.3pt x 1017.8025pt>
+<images/layout_horizontal.jpg, id=118, 1686.3pt x 1017.8025pt>
 File: images/layout_horizontal.jpg Graphic file (type jpg)
 
 <use images/layout_horizontal.jpg>
 Package pdftex.def Info: images/layout_horizontal.jpg used on input line 52.
 (pdftex.def)             Requested size: 352.8155pt x 212.93726pt.
 
-<images/layout_vertical.jpg, id=112, 1684.2925pt x 1020.81375pt>
+<images/layout_vertical.jpg, id=119, 1684.2925pt x 1020.81375pt>
 File: images/layout_vertical.jpg Graphic file (type jpg)
 
 <use images/layout_vertical.jpg>
@@ -677,46 +682,56 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 (./5.implementation.tex
 Chapter 5.
-<images/nav.png, id=123, 244.112pt x 861.49126pt>
+<images/nav.png, id=129, 244.112pt x 861.49126pt>
 File: images/nav.png Graphic file (type png)
  <use images/nav.png>
-Package pdftex.def Info: images/nav.png used on input line 30.
+Package pdftex.def Info: images/nav.png used on input line 24.
 (pdftex.def)             Requested size: 132.30666pt x 466.92038pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/buttons.jpg, id=124, 230.8625pt x 206.7725pt>
+<images/buttons.jpg, id=130, 230.8625pt x 206.7725pt>
 File: images/buttons.jpg Graphic file (type jpg)
  <use images/buttons.jpg>
-Package pdftex.def Info: images/buttons.jpg used on input line 38.
+Package pdftex.def Info: images/buttons.jpg used on input line 32.
 (pdftex.def)             Requested size: 264.61331pt x 237.01984pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/sliders.jpg, id=125, 290.08376pt x 202.7575pt>
+<images/sliders.jpg, id=131, 290.08376pt x 202.7575pt>
 File: images/sliders.jpg Graphic file (type jpg)
 
 <use images/sliders.jpg>
-Package pdftex.def Info: images/sliders.jpg used on input line 46.
+Package pdftex.def Info: images/sliders.jpg used on input line 40.
 (pdftex.def)             Requested size: 264.61331pt x 184.9675pt.
+
+<images/textBoxes.jpg, id=132, 616.3025pt x 1006.76125pt>
+File: images/textBoxes.jpg Graphic file (type jpg)
+
+<use images/textBoxes.jpg>
+Package pdftex.def Info: images/textBoxes.jpg used on input line 47.
+(pdftex.def)             Requested size: 396.91324pt x 648.3959pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 57--96
+Underfull \hbox (badness 10000) in paragraph at lines 56--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--96
+Underfull \hbox (badness 10000) in paragraph at lines 56--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--96
+Underfull \hbox (badness 10000) in paragraph at lines 56--96
 
  []
 
@@ -727,17 +742,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--96
 ]
 Underfull \vbox (badness 1742) has occurred while \output is active []
 
- [28 <./images/nav.png>] [29 <./images/buttons.jpg> <./images/sliders.jpg>]
+ [28 <./images/nav.png>] [29 <./images/buttons.jpg> <./images/sliders.jpg>] [30
+ <./images/textBoxes.jpg>]
 \openout2 = `6.evaluation.aux'.
 
-
-(./6.evaluation.tex [30
+ (./6.evaluation.tex
+Chapter 6.
+) [31
 
 
 
 ]
-Chapter 6.
-) [31]
 \openout2 = `7.conclusion.aux'.
 
  (./7.conclusion.tex [32
@@ -755,7 +770,7 @@ LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 ) [35
 
-] (./proj_report_outline.aux (./acknowledge.aux) (./1.introduction.aux)
+] (./proj_report_outline.aux (./0.acknowledge.aux) (./1.introduction.aux)
 (./2.methodology.aux) (./3.requirements_analysis.aux) (./4.solution_design.aux)
 (./5.implementation.aux) (./6.evaluation.aux) (./7.conclusion.aux))
 
@@ -766,10 +781,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3276 strings out of 494071
- 46986 string characters out of 3160406
+ 3283 strings out of 494071
+ 47146 string characters out of 3160406
  112770 words of memory out of 3000000
- 6381 multiletter control sequences out of 15000+200000
+ 6385 multiletter control sequences out of 15000+200000
  26515 words of font info for 67 fonts, out of 3000000 for 9000
  648 hyphenation exceptions out of 8191
  38i,7n,39p,1055b,247s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -778,10 +793,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
 ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 </usr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (41 pages, 1471247 bytes).
+Output written on proj_report_outline.pdf (43 pages, 1613844 bytes).
 PDF statistics:
- 176 PDF objects out of 1000 (max. 8388607)
- 110 compressed objects within 2 object streams
+ 184 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
