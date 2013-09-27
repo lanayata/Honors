@@ -107,13 +107,13 @@ Functional requirements define the functions of a system. These functions are de
 The functional requirements for this visualisation are as follows:
 \begin{enumerate}
 
- \item[R1.] The visualisation needs to have two text areas to allow the more detailed textual information about planets to be displayed.
+ \item[R1.] The visualisation needs to display planetary information to convey knowledge to users.
  \item[R2.] The planets need to be able to be ordered by their similarity to earth (ESI) and by their Kepler Object of Interest number (KOI).
- \item[R3.] The visualisation needs to have a set of sliders that can be used to change which planets are visible by setting ranges of their core attributes.
+ \item[R3.] The visualisation needs to allow users to define ranges of planetary attributes to filter what planets are displayed.
  \item[R4.] All planets need to be selectable and react appropriately when clicked.
- \item[R5.] When a planet is selected all other planets in the same solar system need to become highlighted.
- \item[R6.] Visualisation needs to have the option to view the habitable zones of stars and show where the planets orbiting them are in relation.
- \item[R7.] There needs to be the option to select two planets at a time to compare against one another.
+ \item[R5.] When a planet is selected all other planets in the same solar system need to become more visible.
+ \item[R6.] There needs to be the option to view the habitable zones of stars and show where the planets orbiting them are in relation.
+ \item[R7.] The visualisation needs to allow exoplanets to be compared against one another.
 \end{enumerate}
 
 
@@ -122,7 +122,7 @@ The functional requirements for this visualisation are as follows:
  
  The non functional requirements for this visualisation are as follows:
 \begin{enumerate}
- \item[R8.] The visualisation needs to have a range of interactive buttons for each element of interactivity in the system to make it more visible to users how to use the system.
+ \item[R8.] The visualisation needs to have a range of interactive buttons for each element of interactivity in the system to help inform users how to use the system.
  \item[R9.] All interaction methods must be visible and intuitive.
  \item[R10.] The visualisation needs to display attributes of each of the Exoplanets.
  \item[R11.] The visualisation must remain uncluttered.
@@ -324,7 +324,7 @@ The final decsion of techology was to use Processing, this is because it had man
 \end{figure}
 
 As this project was created using Processing, it allowed me to extend the previous visualisation using the same data set, The Kepler Visualisation Tool \cite{kepler_github, kepler_article}. As the time was short for this project builing upon a previous solution increased the amount of progress that could be made in the time afforded.
-\\\\
+
 Taking this approach meant that the languages being used would be Java using processing libraries. 
 
 As this is such a large project involving many different iterations, version control was important for maintaining records and backups of important changes which was stored on remote servers to ensure against file loss in system failures.

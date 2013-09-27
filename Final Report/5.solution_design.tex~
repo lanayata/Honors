@@ -1,0 +1,33 @@
+\chapter{Solution Design: Improved Kepler Visualisation Tool (IKVT)}\label{C:sd}
+This section discusses the design of the deliverable visualisation, The Improved
+Kepler Visualisation Tool(IKVT). It details
+the key design decisions revolving around structure, asthetics, and
+functionality that were made about the visualisation. 
+% Description of tool
+
+This project aims to improve an existing visualisation, The Kepler Visualisation
+Tool which was discussed in the previous chapter. Whist this existing
+visualisation displays exoplanets and some of their features, it lacks
+interactivity for use s trying to use it to gain information contained in the
+Kepler Exoplanet Databa e effectively. The IKVT expands on this pre-existing
+visualisation by adding key elements of interativity missing in the existing
+ isualisation as well as further enchancing the rang  and amount of data that is
+available to users about each exoplanet. The IKVT also incor orates a novel
+gesture based interactive mechanisim to the visualisation.
+
+
+\section{System design and structure}
+Because this project builds upon an existing system complete comprehension of how it is designed and how it functions is important. Going ahead in the creation of the visualisation without this knowledge would create opportunities for mistakes and incorrect assumptions about how the visualisation needs to be created. To assist with this issue the following two tools were used.
+
+\begin{enumerate}
+ \item UML Class Diagram
+ 
+ 
+ \item UML Sequence Diagram
+\end{enumerate}
+
+\section{Visualisation Design}
+The requirments produced in the Requirements Analysis chapter provide a
+description of the functionality that needs to be designed for this
+visualisation. By adding additional details to these requirements we can design
+how the visualisation should look, behave, and function.

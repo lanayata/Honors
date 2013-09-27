@@ -2,6 +2,9 @@
 This chapter discusses the implementation of the visulisation using the designs discussed previously. It details the tools used, the deliverable features produced, and the problems encountered
 
 \section{Additional Tools and artifacts used}
+\subsection{Dataset used}
+\subsection{Integrated Development Environment}
+
 \subsection{Keyboard and Mouse System}
 In addition to Processing in the main system there was an additional opensource library required for effective user interface components, this library was called ControlP5 REF~. This library is a customisable and intuitive interactive user interface. It allows for easy creation of visually appealing and precisely layed out interactive GUI components.
 
@@ -15,42 +18,6 @@ These libraries provided drivers to run the Kinect sensor in Processing as well 
 
 \section{Implementation of planned features}
 All of the features that were planned were completed for the visualisation, this is including the additional work that was planned around the Kinect sensor.
-
-Below is a description of each of the main visualisation features that were completed.
-Image of navigation window
-
-\begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.3\textwidth]{images/nav.png}
-  \caption{Navigation Panel Overview}
-  \label{fig:nav}
-\end{figure}
-
-
-\begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.6\textwidth]{images/buttons.jpg}
-  \caption{Panel of interactive buttons}
-  \label{fig:buttons}
-\end{figure}
-
-Image of each slider
-\begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.6\textwidth]{images/sliders.jpg}
-  \caption{Panel of interactive range sliders}
-  \label{fig:sliders}
-\end{figure}
-Image of text boxes
-\begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.9\textwidth]{images/textBoxes.jpg}
-  \caption{Text boxes in each possible state}
-  \label{fig:sliders}
-\end{figure}
-Image of using kinect system
-
-Image of using non kinect system
 
 \section{Problems encountered}
 Due to the number of elements that needed to be displayed on screen at any one time (ie 2234 exoplanets), the load placed on a system is very high due to the need to render 2234 eclipses to represent the planets. This uncovered a bug in the processing library in which the memory use of the visualisation would periodically increase until it crashed due to an out of memory exception. After much experimentation of how to overcome this issue, I discovered that rather than trying to render a native elipse shape in processing, if I instead rendered a Scalable Vector Graphic this bug would not manifest. 

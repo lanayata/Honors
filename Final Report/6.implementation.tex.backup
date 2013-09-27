@@ -3,16 +3,19 @@ This chapter discusses the implementation of the visulisation using the designs 
 
 \section{Additional Tools and artifacts used}
 \subsection{Dataset used}
-\subsection{Integrated Development Environment}
+The dataset for this project is a comma seperated values file (CSV) that contains all of the data pertaining to the Exoplanets. At runtime this dataset is read into the system and an Exoplanet object is created for each element and contains all of the information from the dataset record.
 
+%possibly discuss how a real database could be used instead
+\subsection{Integrated Development Environment (IDE)}
+The IDE used for this project is one that is provided with Processing. This IDE provided all of the tools and functionality that were required to effectively implement the solution for this project. Another option that could have been taken was to use Eclipse with the processing package and external libraries imported. However I found that the processing IDE was entirely suitable for the majority of my needs creating the visualisation. The key things that I did not have access to with this choice was the Eclipse Debugger and JUnit tests. ~   
 \subsection{Keyboard and Mouse System}
 In addition to Processing in the main system there was an additional opensource library required for effective user interface components, this library was called ControlP5 REF~. This library is a customisable and intuitive interactive user interface. It allows for easy creation of visually appealing and precisely layed out interactive GUI components.
 
 \subsection{Microft Kinect sensor system}
 For the version of the IKVT system that uses the Kinect sensor for user interaction two additional libraries were required to integrate the hardware with Processing, these were:
 \begin{enumerate}
- \item NITE ref~
- \item SimpleOpenNi ref~
+ \item NITE http://www.primesense.com/news/our-blog/the-dld-experience/attachment/photo4/~
+ \item SimpleOpenNi http://code.google.com/p/simple-openni/~
 \end{enumerate}
 These libraries provided drivers to run the Kinect sensor in Processing as well as basic gesture recognition and body tracking. However as the libraries were opensource due to the official Microsoft Kinect SDK not being compatible with Processing, the gesture recognition was not as user friendy or effective as the official libraries. The effect of this was that the gesture tracking used in the system had to be created supoptimally from the opensource libraries. 
 

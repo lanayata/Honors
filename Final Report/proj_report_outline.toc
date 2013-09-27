@@ -7,48 +7,57 @@
 \contentsline {subsection}{\numberline {1.2.4}Effective user interaction with visualisation}{2}
 \contentsline {section}{\numberline {1.3}Key issues project addresses}{3}
 \contentsline {section}{\numberline {1.4}Contributions of this project}{3}
-\contentsline {chapter}{\numberline {2}Project Methodologies}{5}
-\contentsline {section}{\numberline {2.1}Project management approach}{5}
-\contentsline {section}{\numberline {2.2}Difficulties in project}{7}
-\contentsline {chapter}{\numberline {3}Requirements Analysis}{9}
-\contentsline {section}{\numberline {3.1}User models}{9}
-\contentsline {subsection}{\numberline {3.1.1}John Truman (Primary Persona - The interested layperson)}{9}
-\contentsline {subsection}{\numberline {3.1.2}Cara Thompson (Secondary Persona - Likes gesture based systems)}{10}
-\contentsline {section}{\numberline {3.2}Scenarios}{10}
-\contentsline {subsection}{\numberline {3.2.1}Scenario 1: View planets ordered by their similarity to Earth}{10}
-\contentsline {subsection}{\numberline {3.2.2}Scenario 2: Select ranges for attributes of each planet displayed}{11}
-\contentsline {subsection}{\numberline {3.2.3}Scenario 3: Select planets to display more information}{11}
-\contentsline {subsection}{\numberline {3.2.4}Scenario 4: View planets in the same solar system}{11}
-\contentsline {subsection}{\numberline {3.2.5}Scenario 5: View the Goldilocks zones of each planet}{12}
-\contentsline {subsection}{\numberline {3.2.6}Scenario 6: Select two planets to compare against one another}{12}
-\contentsline {subsection}{\numberline {3.2.7}Scenario 7: Navigate the visualisation with gestures}{12}
-\contentsline {section}{\numberline {3.3}Requirements summary}{12}
-\contentsline {subsection}{\numberline {3.3.1}Functional Requirements}{12}
-\contentsline {subsection}{\numberline {3.3.2}Nonfunctional Requirements}{13}
-\contentsline {section}{\numberline {3.4}Existing systems}{13}
-\contentsline {subsection}{\numberline {3.4.1}Worlds: The Kepler Planet Candidates - Non Interactive}{13}
-\contentsline {subsection}{\numberline {3.4.2}The Kepler Orrery and The Kepler Orrery 2 - Non interactive}{15}
-\contentsline {subsection}{\numberline {3.4.3}Celestia - Interactive}{16}
-\contentsline {subsection}{\numberline {3.4.4}Kepler Visualisation Tool}{17}
-\contentsline {subsection}{\numberline {3.4.5}Summary of Existing Applications}{19}
-\contentsline {section}{\numberline {3.5}Analysis of technology options}{19}
-\contentsline {subsection}{\numberline {3.5.1}D3 (Data Driven Documents)}{19}
-\contentsline {subsection}{\numberline {3.5.2}Prefuse}{19}
-\contentsline {subsection}{\numberline {3.5.3}Processing}{20}
-\contentsline {subsection}{\numberline {3.5.4}Decision of technology}{20}
-\contentsline {chapter}{\numberline {4}Solution Design: Improved Kepler Visualisation Tool (IKVT)}{23}
-\contentsline {section}{\numberline {4.1}System design and structure}{24}
-\contentsline {section}{\numberline {4.2}Design Features}{24}
-\contentsline {subsection}{\numberline {4.2.1}Main interface components}{24}
-\contentsline {subsubsection}{Spacial arrangement of components}{24}
-\contentsline {subsubsection}{Navigation Window(BETTER TITLE\nobreakspace {})}{24}
-\contentsline {subsubsection}{Visualisation Layout for Kinect sensor}{26}
-\contentsline {chapter}{\numberline {5}Visualisation implementation}{27}
-\contentsline {section}{\numberline {5.1}Additional Tools and artifacts used}{27}
-\contentsline {subsection}{\numberline {5.1.1}Keyboard and Mouse System}{27}
-\contentsline {subsection}{\numberline {5.1.2}Microft Kinect sensor system}{27}
-\contentsline {section}{\numberline {5.2}Implementation of planned features}{27}
-\contentsline {section}{\numberline {5.3}Problems encountered}{28}
-\contentsline {chapter}{\numberline {6}Visualisation Evaluation}{31}
-\contentsline {chapter}{\numberline {7}Conclusions}{33}
-\contentsline {section}{\numberline {7.1}Future Work}{33}
+\contentsline {chapter}{\numberline {2}Requirements Analysis}{5}
+\contentsline {section}{\numberline {2.1}User models}{5}
+\contentsline {subsection}{\numberline {2.1.1}John Truman (Primary Persona - The interested layperson)}{5}
+\contentsline {subsection}{\numberline {2.1.2}Cara Thompson (Secondary Persona - Likes gesture based systems)}{6}
+\contentsline {section}{\numberline {2.2}Scenarios}{6}
+\contentsline {subsection}{\numberline {2.2.1}Scenario 1: View planets ordered by their similarity to Earth}{6}
+\contentsline {subsection}{\numberline {2.2.2}Scenario 2: Select ranges for attributes of each planet displayed}{7}
+\contentsline {subsection}{\numberline {2.2.3}Scenario 3: Select planets to display more information}{7}
+\contentsline {subsection}{\numberline {2.2.4}Scenario 4: View planets in the same solar system}{7}
+\contentsline {subsection}{\numberline {2.2.5}Scenario 5: View the Goldilocks zones of each planet}{8}
+\contentsline {subsection}{\numberline {2.2.6}Scenario 6: Select two planets to compare against one another}{8}
+\contentsline {subsection}{\numberline {2.2.7}Scenario 7: Navigate the visualisation with gestures}{8}
+\contentsline {section}{\numberline {2.3}Requirements summary}{8}
+\contentsline {subsection}{\numberline {2.3.1}Functional Requirements}{8}
+\contentsline {subsection}{\numberline {2.3.2}Nonfunctional Requirements}{9}
+\contentsline {chapter}{\numberline {3}Project Methodologies}{11}
+\contentsline {section}{\numberline {3.1}Project management approach}{11}
+\contentsline {chapter}{\numberline {4}Existing systems and technologies}{13}
+\contentsline {section}{\numberline {4.1}Existing systems}{13}
+\contentsline {subsection}{\numberline {4.1.1}Worlds: The Kepler Planet Candidates - Non Interactive}{13}
+\contentsline {subsection}{\numberline {4.1.2}The Kepler Orrery and The Kepler Orrery 2 - Non interactive}{14}
+\contentsline {subsection}{\numberline {4.1.3}Celestia - Interactive}{15}
+\contentsline {subsection}{\numberline {4.1.4}Kepler Visualisation Tool}{16}
+\contentsline {subsection}{\numberline {4.1.5}Summary of Existing Applications}{18}
+\contentsline {section}{\numberline {4.2}Analysis of technology options}{18}
+\contentsline {subsection}{\numberline {4.2.1}D3 (Data Driven Documents)}{18}
+\contentsline {subsection}{\numberline {4.2.2}Prefuse}{19}
+\contentsline {subsection}{\numberline {4.2.3}Processing}{19}
+\contentsline {subsection}{\numberline {4.2.4}Decision of technology}{19}
+\contentsline {chapter}{\numberline {5}Solution Design: Improved Kepler Visualisation Tool (IKVT)}{21}
+\contentsline {section}{\numberline {5.1}System design and structure}{21}
+\contentsline {section}{\numberline {5.2}Visualisation Design}{21}
+\contentsline {chapter}{\numberline {6}Visualisation implementation of the Improved Kepler Visualisation Tool (IKVT)}{23}
+\contentsline {section}{\numberline {6.1}Additional Tools and artifacts used}{24}
+\contentsline {subsection}{\numberline {6.1.1}Dataset used}{24}
+\contentsline {subsection}{\numberline {6.1.2}Integrated Development Environment (IDE)}{24}
+\contentsline {subsection}{\numberline {6.1.3}Keyboard and Mouse System}{24}
+\contentsline {subsection}{\numberline {6.1.4}Microft Kinect sensor system}{24}
+\contentsline {section}{\numberline {6.2}Main interface components}{25}
+\contentsline {subsubsection}{Spacial arrangement of components}{25}
+\contentsline {subsubsection}{Navigation Window(BETTER TITLE\nobreakspace {})}{25}
+\contentsline {subsubsection}{Visualisation Layout for Kinect sensor}{25}
+\contentsline {section}{\numberline {6.3}Problems encountered}{26}
+\contentsline {chapter}{\numberline {7}Visualisation Evaluation}{31}
+\contentsline {subsection}{\numberline {7.0.1}Participants}{31}
+\contentsline {section}{\numberline {7.1}User Study Method}{31}
+\contentsline {section}{\numberline {7.2}Pilot Study}{31}
+\contentsline {section}{\numberline {7.3}Experiment on Keyboard and mouse visualisation}{32}
+\contentsline {section}{\numberline {7.4}Experiment on Microsoft Kinect visualisation}{32}
+\contentsline {section}{\numberline {7.5}Results}{32}
+\contentsline {subsection}{\numberline {7.5.1}Analysis of requirements}{32}
+\contentsline {section}{\numberline {7.6}Threats to validity}{33}
+\contentsline {chapter}{\numberline {8}Conclusions}{37}
+\contentsline {section}{\numberline {8.1}Future Work}{37}

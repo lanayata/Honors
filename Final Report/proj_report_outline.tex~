@@ -75,7 +75,7 @@ We have large amounts of information about planets outside of our solar system. 
 
 \maketitle
 
-\include{acknowledge}
+\include{0.acknowledge}
 
 \tableofcontents
 
@@ -90,12 +90,13 @@ We have large amounts of information about planets outside of our solar system. 
 
 % individual chapters included here
 \include{1.introduction}
-\include{2.methodology}
-\include{3.requirements_analysis}
-\include{4.solution_design}
-\include{5.implementation}
-\include{6.evaluation}
-\include{7.conclusion}
+\include{2.requirements_analysis}
+\include{3.methodology}
+\include{4.technology}
+\include{5.solution_design}
+\include{6.implementation}
+\include{7.evaluation}
+\include{8.conclusion}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -103,7 +104,7 @@ We have large amounts of information about planets outside of our solar system. 
 \backmatter
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+ 
 
 %\bibliographystyle{ieeetr}
 \nocite{*}

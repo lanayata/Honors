@@ -1,4 +1,71 @@
 \chapter{Visualisation Evaluation}\label{C:sd}
 Following the completion of the implementation stage of this project a final user evaluation was carried out on the visualisation to discover whether the visualisation designed and implemented 
 
+\subsection{Participants}
+The number and demographics of participants in a user study is a key issue that can affect the results. ~
+
+\section{User Study Method}
+\begin{itemize}
+\item The user enters the room and sits down at the computer.
+\item They are handed the consent form and information sheet.
+\item After these are completed they are handed the user questionnaire and the set of questions to answer while using the system. On this questionnaire there are two sets of questions, the first is for the keyboard and mouse system, and the second if for the Microsoft Kinect system.
+\item Following this they are advised that they have 5 minutes to get familiarised with the system but they do not need to use all of this time (the amount of time taken will be recorded for analysis of how user friendly and intuitive the system is).
+\item Following this the user is asked to complete the question sheet by first using the mouse and keyboard system. When they feel they have answered all of the questions they will notify the examiner who will move the user to the Kinect system to continue the questions.
+\item Once the user has completed both sets of questions they are asked to fill in the user questionnaire about their experiences. 
+\item Following this if the examiner has no follow up questions the user is free to leave.
+\end{itemize}
+\section{Pilot Study}
+One participant was asked to take part in a pilot study before any results were collected. This participant was asked to complete all of the activites that make up the main experiment. This pilot study took approximately 15 minutes as intended, this included the time needed for the explanation and completion of paperwork, as well as the experiment itself.
+
+The results that this pilot study produced were used to ensure that the experiment was producing the data required to evalutate the the visulaisation produced as well as taking the correct amount of time to complete. A positive result of perfoming this pilot study was that it revealed that the wording of some of the tasks users were asked to complete were ambiguous 
+
+\section{Experiment on Keyboard and mouse visualisation}
+Image of using kinect system
+
+\section{Experiment on Microsoft Kinect visualisation}
+
+\section{Results}
+The user study was undertaken by 9 participants, all were either students or young professionals from a mix of specialities aged between 21 to 26 with a mix of genders with 5 females and 4 males. Each study took between 10 to 15 minutes.
+
+
+Image of using non kinect system
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.8\textwidth]{images/charts/chart_1.png}
+  \caption{Original Horizontal Layout}  
+    \label{fig:chart1}
+      \includegraphics[width=0.8\textwidth]{images/charts/chart_2.png}
+  \caption{Original Horizontal Layout}  
+    \label{fig:chart2}
+      \includegraphics[width=0.8\textwidth]{images/charts/chart_3.png}
+  \caption{Original Horizontal Layout}  
+    \label{fig:chart3}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.8\textwidth]{images/charts/chart_4.png}
+  \caption{Original Horizontal Layout}  
+    \label{fig:chart4}
+      \includegraphics[width=0.8\textwidth]{images/charts/chart_5.png}
+  \caption{Original Horizontal Layout}  
+    \label{fig:chart5}
+      \includegraphics[width=0.8\textwidth]{images/charts/chart_6.png}
+  \caption{Original Horizontal Layout}  
+    \label{fig:chart6}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.8\textwidth]{images/charts/chart_7.png}
+  \caption{Original Horizontal Layout}  
+    \label{fig:chart7}
+
+      \includegraphics[width=0.8\textwidth]{images/charts/chart_8.png}
+  \caption{Original Horizontal Layout}  
+    \label{fig:chart8}
+      \includegraphics[width=0.8\textwidth]{images/charts/chart_9.png}
+  \caption{Original Horizontal Layout}  
+    \label{fig:chart9}
+\end{figure}
 

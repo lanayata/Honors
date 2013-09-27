@@ -2,6 +2,12 @@
 This chapter discusses the implementation of the visulisation using the designs discussed previously. It details the tools used, the deliverable features produced, and the problems encountered
 
 \section{Additional Tools and artifacts used}
+\subsection{Dataset used}
+The dataset for this project is a comma seperated values file (CSV) that contains all of the data pertaining to the Exoplanets. At runtime this dataset is read into the system and an Exoplanet object is created for each element and contains all of the information from the dataset record.
+
+%possibly discuss how a real database could be used instead
+\subsection{Integrated Development Environment (IDE)}
+The IDE used for this project is one that is provided with Processing. This IDE provided all of the tools and functionality that were required to effectively implement the solution for this project. Another option that could have been taken was to use Eclipse with the processing package and external libraries imported. However I found that the processing IDE was entirely suitable for the majority of my needs creating the visualisation. The key things that I did not have access to with this choice was the Eclipse Debugger and JUnit tests. ~   
 \subsection{Keyboard and Mouse System}
 In addition to Processing in the main system there was an additional opensource library required for effective user interface components, this library was called ControlP5 REF~. This library is a customisable and intuitive interactive user interface. It allows for easy creation of visually appealing and precisely layed out interactive GUI components.
 
@@ -9,48 +15,12 @@ In addition to Processing in the main system there was an additional opensource 
 For the version of the IKVT system that uses the Kinect sensor for user interaction two additional libraries were required to integrate the hardware with Processing, these were:
 \begin{enumerate}
  \item NITE ref~
- \item SimpleOpenNi ref~
+ \item SimpleOpenNi http://code.google.com/p/simple-openni/~
 \end{enumerate}
 These libraries provided drivers to run the Kinect sensor in Processing as well as basic gesture recognition and body tracking. However as the libraries were opensource due to the official Microsoft Kinect SDK not being compatible with Processing, the gesture recognition was not as user friendy or effective as the official libraries. The effect of this was that the gesture tracking used in the system had to be created supoptimally from the opensource libraries. 
 
 \section{Implementation of planned features}
 All of the features that were planned were completed for the visualisation, this is including the additional work that was planned around the Kinect sensor.
-
-Below is a description of each of the main visualisation features that were completed.
-Image of navigation window
-
-\begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.3\textwidth]{images/nav.png}
-  \caption{Navigation Panel Overview}
-  \label{fig:nav}
-\end{figure}
-
-
-\begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.6\textwidth]{images/buttons.jpg}
-  \caption{Panel of interactive buttons}
-  \label{fig:buttons}
-\end{figure}
-
-Image of each slider
-\begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.6\textwidth]{images/sliders.jpg}
-  \caption{Panel of interactive range sliders}
-  \label{fig:sliders}
-\end{figure}
-Image of text boxes
-\begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.9\textwidth]{images/textBoxes.jpg}
-  \caption{Text boxes in each possible state}
-  \label{fig:sliders}
-\end{figure}
-Image of using kinect system
-
-Image of using non kinect system
 
 \section{Problems encountered}
 Due to the number of elements that needed to be displayed on screen at any one time (ie 2234 exoplanets), the load placed on a system is very high due to the need to render 2234 eclipses to represent the planets. This uncovered a bug in the processing library in which the memory use of the visualisation would periodically increase until it crashed due to an out of memory exception. After much experimentation of how to overcome this issue, I discovered that rather than trying to render a native elipse shape in processing, if I instead rendered a Scalable Vector Graphic this bug would not manifest. 
