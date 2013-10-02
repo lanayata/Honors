@@ -194,7 +194,7 @@ Nope
 \begin{figure}[h!]
   \centering
       \includegraphics[width=1\textwidth]{images/existing.png}
-  \caption{Matrix of scenarios mapped to exising solutions}  
+  \caption{Matrix of exising solutions mapped to scenarios}  
     \label{fig:existing}
 \end{figure}
 

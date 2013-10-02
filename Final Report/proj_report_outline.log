@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  27 SEP 2013 17:48
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  2 OCT 2013 14:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -279,15 +279,13 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
 \tf@toc=\write3
 \openout3 = `proj_report_outline.toc'.
 
- [4] (./proj_report_outline.lof)
+ [4] (./proj_report_outline.lof [5
+
+])
 \tf@lof=\write4
 \openout4 = `proj_report_outline.lof'.
 
- [5
-
-] [6
-
-]
+ [6]
 \openout2 = `1.introduction.aux'.
 
 
@@ -306,6 +304,7 @@ Package pdftex.def Info: images/data.png used on input line 47.
 (pdftex.def)             Requested size: 352.8155pt x 147.9509pt.
 
 [1
+
 
 
 ] [2 <./images/data.png>]) [3]
@@ -335,26 +334,27 @@ File: omsppl.fd
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
  [6] [7] [8]
-<images/issues_to_req_matrix.jpg, id=61, 459.7175pt x 583.17876pt>
-File: images/issues_to_req_matrix.jpg Graphic file (type jpg)
+<images/issues_to_req_matrix.png, id=61, 782.925pt x 488.82625pt>
+File: images/issues_to_req_matrix.png Graphic file (type png)
 
-<use images/issues_to_req_matrix.jpg>
-Package pdftex.def Info: images/issues_to_req_matrix.jpg used on input line 233
+<use images/issues_to_req_matrix.png>
+Package pdftex.def Info: images/issues_to_req_matrix.png used on input line 224
 .
-(pdftex.def)             Requested size: 352.8155pt x 447.58966pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [9] [10 <./images/issues_to_req_matrix.jpg>]
+(pdftex.def)             Requested size: 441.01772pt x 275.35194pt.
+) [9 <./images/issues_to_req_matrix.png>]
 \openout2 = `3.methodology.aux'.
 
- (./3.methodology.tex
+
+(./3.methodology.tex [10
+
+
+
+]
 Chapter 3.
 
 LaTeX Warning: Citation `boehm' on page 11 undefined on input line 12.
 
-<images/spiral_model.png, id=68, 704.6325pt x 702.625pt>
+<images/spiral_model.png, id=69, 704.6325pt x 702.625pt>
 File: images/spiral_model.png Graphic file (type png)
 
 <use images/spiral_model.png>
@@ -364,55 +364,36 @@ Package pdftex.def Info: images/spiral_model.png used on input line 33.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[11
-
-
-
-]) [12 <./images/spiral_model.png>]
+[11]) [12 <./images/spiral_model.png>]
 \openout2 = `4.technology.aux'.
 
  (./4.technology.tex
 Chapter 4.
 
-LaTeX Warning: Citation `worlds' on page 13 undefined on input line 4.
+LaTeX Warning: Citation `worlds' on page 13 undefined on input line 5.
 
-<images/worlds.jpg, id=77, 238.25275pt x 134.21571pt>
+<images/worlds.jpg, id=78, 238.25275pt x 134.21571pt>
 File: images/worlds.jpg Graphic file (type jpg)
  <use images/worlds.jpg>
-Package pdftex.def Info: images/worlds.jpg used on input line 12.
+Package pdftex.def Info: images/worlds.jpg used on input line 13.
 (pdftex.def)             Requested size: 352.8155pt x 198.75287pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--53
+Underfull \hbox (badness 10000) in paragraph at lines 5--45
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--53
+Underfull \hbox (badness 10000) in paragraph at lines 5--45
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--53
+Underfull \hbox (badness 10000) in paragraph at lines 5--45
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--53
+Underfull \hbox (badness 10000) in paragraph at lines 5--45
 
  []
 
@@ -422,244 +403,314 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--53
 
  <./images/worlds.jpg>]
 
-LaTeX Warning: Citation `orrery' on page 14 undefined on input line 56.
+LaTeX Warning: Citation `orrery' on page 14 undefined on input line 48.
 
-<images/orrery.jpg, id=81, 238.25275pt x 135.40698pt>
+<images/orrery.jpg, id=82, 238.25275pt x 135.40698pt>
 File: images/orrery.jpg Graphic file (type jpg)
  <use images/orrery.jpg>
-Package pdftex.def Info: images/orrery.jpg used on input line 65.
+Package pdftex.def Info: images/orrery.jpg used on input line 57.
 (pdftex.def)             Requested size: 352.8155pt x 200.51695pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--103
+Underfull \hbox (badness 10000) in paragraph at lines 48--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--103
+Underfull \hbox (badness 10000) in paragraph at lines 48--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--103
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--103
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--103
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--103
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--103
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--103
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--103
+Underfull \hbox (badness 10000) in paragraph at lines 48--82
 
  []
 
 [14 <./images/orrery.jpg>]
 
-LaTeX Warning: Citation `celestia' on page 15 undefined on input line 105.
+LaTeX Warning: Citation `celestia' on page 15 undefined on input line 84.
 
-<images/celestia.jpg, id=85, 803.0pt x 602.25pt>
+<images/celestia.jpg, id=86, 803.0pt x 602.25pt>
 File: images/celestia.jpg Graphic file (type jpg)
  <use images/celestia.jpg>
-Package pdftex.def Info: images/celestia.jpg used on input line 110.
+Package pdftex.def Info: images/celestia.jpg used on input line 89.
 (pdftex.def)             Requested size: 220.50885pt x 165.37573pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--138
+Underfull \hbox (badness 10000) in paragraph at lines 84--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--138
+Underfull \hbox (badness 10000) in paragraph at lines 84--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--138
+Underfull \hbox (badness 10000) in paragraph at lines 84--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--138
+Underfull \hbox (badness 10000) in paragraph at lines 84--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--138
+Underfull \hbox (badness 10000) in paragraph at lines 84--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--138
+Underfull \hbox (badness 10000) in paragraph at lines 84--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--138
+Underfull \hbox (badness 10000) in paragraph at lines 84--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--138
+Underfull \hbox (badness 10000) in paragraph at lines 84--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--138
+Underfull \hbox (badness 10000) in paragraph at lines 84--117
 
  []
 
+[15 <./images/celestia.jpg>]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[15]
-
-LaTeX Warning: Citation `kepler_github' on page 16 undefined on input line 140.
+LaTeX Warning: Citation `kepler_github' on page 16 undefined on input line 119.
 
 
 
-LaTeX Warning: Citation `kepler_article' on page 16 undefined on input line 140
+LaTeX Warning: Citation `kepler_article' on page 16 undefined on input line 119
 .
 
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
-<images/kepler_orbital.jpg, id=89, 985.6825pt x 578.16pt>
+<images/kepler_orbital.jpg, id=90, 985.6825pt x 578.16pt>
 File: images/kepler_orbital.jpg Graphic file (type jpg)
 
 <use images/kepler_orbital.jpg>
-Package pdftex.def Info: images/kepler_orbital.jpg used on input line 148.
+Package pdftex.def Info: images/kepler_orbital.jpg used on input line 127.
 (pdftex.def)             Requested size: 352.8155pt x 206.94647pt.
 
-<images/kepler_graph.jpg, id=90, 985.6825pt x 578.16pt>
+<images/kepler_graph.jpg, id=91, 985.6825pt x 578.16pt>
 File: images/kepler_graph.jpg Graphic file (type jpg)
 
 <use images/kepler_graph.jpg>
-Package pdftex.def Info: images/kepler_graph.jpg used on input line 153.
+Package pdftex.def Info: images/kepler_graph.jpg used on input line 132.
 (pdftex.def)             Requested size: 352.8155pt x 206.94647pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--192
+Underfull \hbox (badness 10000) in paragraph at lines 118--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--192
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--192
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--192
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--192
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--192
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--192
+Underfull \hbox (badness 10000) in paragraph at lines 118--155
 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[16 <./images/celestia.jpg>]
-Underfull \vbox (badness 1292) has occurred while \output is active []
-
- [17 <./images/kepler_orbital.jpg> <./images/kepler_graph.jpg>]
-<images/existing.png, id=98, 647.218pt x 207.77625pt>
+[16 <./images/kepler_orbital.jpg>]
+<images/existing.png, id=95, 647.218pt x 207.77625pt>
 File: images/existing.png Graphic file (type png)
 
 <use images/existing.png>
-Package pdftex.def Info: images/existing.png used on input line 196.
+Package pdftex.def Info: images/existing.png used on input line 159.
 (pdftex.def)             Requested size: 441.01772pt x 141.58398pt.
+ [17 <./images/kepler_graph.jpg> <./images/existing.png>]
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
- [18 <./images/existing.png>] [19]
-<images/table_technologies.jpg, id=105, 1264.725pt x 760.8425pt>
+ [18] <images/table_technologies.jpg, id=103, 1264.725pt x 760.8425pt>
 File: images/table_technologies.jpg Graphic file (type jpg)
 
 <use images/table_technologies.jpg>
-Package pdftex.def Info: images/table_technologies.jpg used on input line 290.
+Package pdftex.def Info: images/table_technologies.jpg used on input line 253.
 (pdftex.def)             Requested size: 352.8155pt x 212.245pt.
 
 
-LaTeX Warning: Citation `kepler_github' on page 20 undefined on input line 296.
+LaTeX Warning: Citation `kepler_github' on page 19 undefined on input line 259.
 
 
 
-LaTeX Warning: Citation `kepler_article' on page 20 undefined on input line 296
+LaTeX Warning: Citation `kepler_article' on page 19 undefined on input line 259
 .
 
-) [20
+) [19
 
  <./images/table_technologies.jpg>]
 \openout2 = `5.solution_design.aux'.
 
- (./5.solution_design.tex
-Chapter 5.
-) [21
+ (./5.solution_design.tex [20
 
 
 
 ]
+Chapter 5.
+<images/sequence.png, id=110, 699.61375pt x 593.21625pt>
+File: images/sequence.png Graphic file (type png)
+
+<use images/sequence.png>
+Package pdftex.def Info: images/sequence.png used on input line 31.
+(pdftex.def)             Requested size: 352.8155pt x 299.15999pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/classDiagram.png, id=111, 719.68875pt x 687.56876pt>
+File: images/classDiagram.png Graphic file (type png)
+
+<use images/classDiagram.png>
+Package pdftex.def Info: images/classDiagram.png used on input line 39.
+(pdftex.def)             Requested size: 352.8155pt x 337.0795pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[21] <images/textAreaMockup.png, id=115, 529.98pt x 393.47pt>
+File: images/textAreaMockup.png Graphic file (type png)
+
+<use images/textAreaMockup.png>
+Package pdftex.def Info: images/textAreaMockup.png used on input line 74.
+(pdftex.def)             Requested size: 352.8155pt x 261.94244pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/mockSelected.png, id=116, 747.79375pt x 214.8025pt>
+File: images/mockSelected.png Graphic file (type png)
+
+<use images/mockSelected.png>
+Package pdftex.def Info: images/mockSelected.png used on input line 94.
+(pdftex.def)             Requested size: 352.8155pt x 101.34393pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/selectedSisterPlanets.png, id=117, 803.0pt x 303.1325pt>
+File: images/selectedSisterPlanets.png Graphic file (type png)
+
+<use images/selectedSisterPlanets.png>
+Package pdftex.def Info: images/selectedSisterPlanets.png used on input line 10
+7.
+(pdftex.def)             Requested size: 352.8155pt x 133.18907pt.
+ [22 <./images/sequence.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/mockComparePlanets.png, id=122, 960.58875pt x 356.33125pt>
+File: images/mockComparePlanets.png Graphic file (type png)
+
+<use images/mockComparePlanets.png>
+Package pdftex.def Info: images/mockComparePlanets.png used on input line 117.
+(pdftex.def)             Requested size: 308.71104pt x 114.51767pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/mockupESI.png, id=123, 1000.73875pt x 390.45876pt>
+File: images/mockupESI.png Graphic file (type png)
+
+<use images/mockupESI.png>
+Package pdftex.def Info: images/mockupESI.png used on input line 137.
+(pdftex.def)             Requested size: 441.01772pt x 172.07048pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[23 <./images/classDiagram.png>]
+<images/mockSlider.png, id=129, 882.29625pt x 586.19pt>
+File: images/mockSlider.png Graphic file (type png)
+
+<use images/mockSlider.png>
+Package pdftex.def Info: images/mockSlider.png used on input line 154.
+(pdftex.def)             Requested size: 352.8155pt x 234.40923pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/mockStarHabitability.png, id=130, 696.6025pt x 622.325pt>
+File: images/mockStarHabitability.png Graphic file (type png)
+
+<use images/mockStarHabitability.png>
+Package pdftex.def Info: images/mockStarHabitability.png used on input line 165
+.
+(pdftex.def)             Requested size: 220.50885pt x 196.9925pt.
+ [24 <./images/textAreaMockup.png> <./images/mockSelected.png> <./images/select
+edSisterPlanets.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/allTogether.png, id=137, 1344.02126pt x 278.03876pt>
+File: images/allTogether.png Graphic file (type png)
+
+<use images/allTogether.png>
+Package pdftex.def Info: images/allTogether.png used on input line 182.
+(pdftex.def)             Requested size: 441.01772pt x 91.23123pt.
+
+Underfull \vbox (badness 6300) has occurred while \output is active []
+
+ [25 <./images/mockComparePlanets.png> <./images/mockupESI.png> <./images/mockS
+lider.png>]
+<images/mockButtons.png, id=144, 478.78876pt x 170.6375pt>
+File: images/mockButtons.png Graphic file (type png)
+
+<use images/mockButtons.png>
+Package pdftex.def Info: images/mockButtons.png used on input line 192.
+(pdftex.def)             Requested size: 220.50885pt x 78.58792pt.
+ [26 <./images/mockStarHabitability.png> <./images/allTogether.png> <./images/m
+ockButtons.png>]
+<images/mockKinect.png, id=151, 550.055pt x 345.29pt>
+File: images/mockKinect.png Graphic file (type png)
+
+<use images/mockKinect.png>
+Package pdftex.def Info: images/mockKinect.png used on input line 220.
+(pdftex.def)             Requested size: 308.71104pt x 193.7931pt.
+
+<images/curserImages.png, id=152, 1359.0775pt x 312.16624pt>
+File: images/curserImages.png Graphic file (type png)
+
+<use images/curserImages.png>
+Package pdftex.def Info: images/curserImages.png used on input line 240.
+(pdftex.def)             Requested size: 396.91324pt x 91.16417pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [27 <./images/mockKinect.png>] [28 <./images/curserImages.png>]
 \openout2 = `6.implementation.aux'.
 
- (./6.implementation.tex [22
+
+(./6.implementation.tex
+Chapter 6.
+[29
 
 
 
 ]
-Chapter 6.
-[23]
 Overfull \hbox (44.26888pt too wide) in paragraph at lines 79--81
 []\OT1/ppl/m/n/10.95 NITE http://www.primesense.com/news/our-blog/the-dld-exper
 ience/attachment/photo4/ 
  []
 
-[24] <images/layout_horizontal.jpg, id=122, 1686.3pt x 1017.8025pt>
+[30] <images/layout_horizontal.jpg, id=168, 1686.3pt x 1017.8025pt>
 File: images/layout_horizontal.jpg Graphic file (type jpg)
 
 <use images/layout_horizontal.jpg>
 Package pdftex.def Info: images/layout_horizontal.jpg used on input line 113.
 (pdftex.def)             Requested size: 352.8155pt x 212.93726pt.
 
-<images/layout_vertical.jpg, id=123, 1684.2925pt x 1020.81375pt>
+<images/layout_vertical.jpg, id=169, 1684.2925pt x 1020.81375pt>
 File: images/layout_vertical.jpg Graphic file (type jpg)
 
 <use images/layout_vertical.jpg>
@@ -669,26 +720,26 @@ Package pdftex.def Info: images/layout_vertical.jpg used on input line 115.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/nav.png, id=124, 244.112pt x 861.49126pt>
+<images/nav.png, id=170, 244.112pt x 861.49126pt>
 File: images/nav.png Graphic file (type png)
  <use images/nav.png>
 Package pdftex.def Info: images/nav.png used on input line 123.
 (pdftex.def)             Requested size: 132.30666pt x 466.92038pt.
 
-<images/buttons.jpg, id=125, 230.8625pt x 206.7725pt>
+<images/buttons.jpg, id=171, 230.8625pt x 206.7725pt>
 File: images/buttons.jpg Graphic file (type jpg)
  <use images/buttons.jpg>
 Package pdftex.def Info: images/buttons.jpg used on input line 130.
 (pdftex.def)             Requested size: 264.61331pt x 237.01984pt.
 
-<images/sliders.jpg, id=126, 290.08376pt x 202.7575pt>
+<images/sliders.jpg, id=172, 290.08376pt x 202.7575pt>
 File: images/sliders.jpg Graphic file (type jpg)
 
 <use images/sliders.jpg>
 Package pdftex.def Info: images/sliders.jpg used on input line 137.
 (pdftex.def)             Requested size: 264.61331pt x 184.9675pt.
 
-<images/textBoxes.jpg, id=127, 616.3025pt x 1006.76125pt>
+<images/textBoxes.jpg, id=173, 616.3025pt x 1006.76125pt>
 File: images/textBoxes.jpg Graphic file (type jpg)
 
 <use images/textBoxes.jpg>
@@ -707,123 +758,117 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 190--213
+Underfull \hbox (badness 10000) in paragraph at lines 163--186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--213
+Underfull \hbox (badness 10000) in paragraph at lines 163--186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--213
+Underfull \hbox (badness 10000) in paragraph at lines 163--186
 
  []
 
-[26 <./images/layout_horizontal.jpg> <./images/layout_vertical.jpg>]
-Underfull \vbox (badness 8094) has occurred while \output is active []
-
- [27 <./images/nav.png>]) [28 <./images/buttons.jpg> <./images/sliders.jpg>] [2
-9 <./images/textBoxes.jpg>] [30]
+[31]) [32 <./images/layout_horizontal.jpg> <./images/layout_vertical.jpg>]
+[33 <./images/nav.png>] [34 <./images/buttons.jpg> <./images/sliders.jpg>]
+[35 <./images/textBoxes.jpg>]
 \openout2 = `7.evaluation.aux'.
 
- (./7.evaluation.tex
+ (./7.evaluation.tex [36
+
+
+
+]
 Chapter 7.
-[31
-
-
-
-] [32] <images/charts/chart_1.png, id=153, 602.25pt x 372.39125pt>
+[37] [38] <images/charts/chart_1.png, id=199, 602.25pt x 372.39125pt>
 File: images/charts/chart_1.png Graphic file (type png)
 
 <use images/charts/chart_1.png>
-Package pdftex.def Info: images/charts/chart_1.png used on input line 101.
+Package pdftex.def Info: images/charts/chart_1.png used on input line 102.
 (pdftex.def)             Requested size: 352.8155pt x 218.16336pt.
 
-<images/charts/chart_2.png, id=154, 602.25pt x 372.39125pt>
+<images/charts/chart_2.png, id=200, 602.25pt x 372.39125pt>
 File: images/charts/chart_2.png Graphic file (type png)
 
 <use images/charts/chart_2.png>
-Package pdftex.def Info: images/charts/chart_2.png used on input line 104.
+Package pdftex.def Info: images/charts/chart_2.png used on input line 105.
 (pdftex.def)             Requested size: 352.8155pt x 218.16336pt.
 
-<images/charts/chart_3.png, id=155, 602.25pt x 372.39125pt>
+<images/charts/chart_3.png, id=201, 602.25pt x 372.39125pt>
 File: images/charts/chart_3.png Graphic file (type png)
 
 <use images/charts/chart_3.png>
-Package pdftex.def Info: images/charts/chart_3.png used on input line 107.
+Package pdftex.def Info: images/charts/chart_3.png used on input line 108.
 (pdftex.def)             Requested size: 352.8155pt x 218.16336pt.
 
 
-LaTeX Warning: Float too large for page by 53.68745pt on input line 110.
+LaTeX Warning: Float too large for page by 53.68745pt on input line 111.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/charts/chart_4.png, id=156, 602.25pt x 372.39125pt>
+<images/charts/chart_4.png, id=202, 602.25pt x 372.39125pt>
 File: images/charts/chart_4.png Graphic file (type png)
 
 <use images/charts/chart_4.png>
-Package pdftex.def Info: images/charts/chart_4.png used on input line 114.
+Package pdftex.def Info: images/charts/chart_4.png used on input line 115.
 (pdftex.def)             Requested size: 352.8155pt x 218.16336pt.
 
-<images/charts/chart_5.png, id=157, 696.6025pt x 314.17375pt>
+<images/charts/chart_5.png, id=203, 696.6025pt x 314.17375pt>
 File: images/charts/chart_5.png Graphic file (type png)
 
 <use images/charts/chart_5.png>
-Package pdftex.def Info: images/charts/chart_5.png used on input line 117.
+Package pdftex.def Info: images/charts/chart_5.png used on input line 118.
 (pdftex.def)             Requested size: 352.8155pt x 159.12389pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/charts/chart_7.png, id=158, 602.25pt x 372.39125pt>
+<images/charts/chart_7.png, id=204, 602.25pt x 372.39125pt>
 File: images/charts/chart_7.png Graphic file (type png)
 
 <use images/charts/chart_7.png>
-Package pdftex.def Info: images/charts/chart_7.png used on input line 124.
+Package pdftex.def Info: images/charts/chart_7.png used on input line 125.
 (pdftex.def)             Requested size: 352.8155pt x 218.16336pt.
 
-<images/charts/chart_8.png, id=159, 602.25pt x 372.39125pt>
+<images/charts/chart_8.png, id=205, 602.25pt x 372.39125pt>
 File: images/charts/chart_8.png Graphic file (type png)
 
 <use images/charts/chart_8.png>
-Package pdftex.def Info: images/charts/chart_8.png used on input line 128.
+Package pdftex.def Info: images/charts/chart_8.png used on input line 129.
 (pdftex.def)             Requested size: 352.8155pt x 218.16336pt.
 
-<images/charts/chart_9.png, id=160, 602.25pt x 372.39125pt>
+<images/charts/chart_9.png, id=206, 602.25pt x 372.39125pt>
 File: images/charts/chart_9.png Graphic file (type png)
 
 <use images/charts/chart_9.png>
-Package pdftex.def Info: images/charts/chart_9.png used on input line 131.
+Package pdftex.def Info: images/charts/chart_9.png used on input line 132.
 (pdftex.def)             Requested size: 352.8155pt x 218.16336pt.
 
 
-LaTeX Warning: Float too large for page by 53.68745pt on input line 135.
+LaTeX Warning: Float too large for page by 53.68745pt on input line 136.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [33] [34 <./images/charts/chart_1.png (PNG copy)> <./images/charts/chart_2.pn
-g (PNG copy)> <./images/charts/chart_3.png (PNG copy)>] [35 <./images/charts/ch
-art_4.png (PNG copy)> <./images/charts/chart_5.png (PNG copy)>] [36 <./images/c
+) [39] [40 <./images/charts/chart_1.png (PNG copy)> <./images/charts/chart_2.pn
+g (PNG copy)> <./images/charts/chart_3.png (PNG copy)>] [41 <./images/charts/ch
+art_4.png (PNG copy)> <./images/charts/chart_5.png (PNG copy)>] [42 <./images/c
 harts/chart_7.png (PNG copy)> <./images/charts/chart_8.png (PNG copy)> <./image
 s/charts/chart_9.png (PNG copy)>]
 \openout2 = `8.conclusion.aux'.
 
  (./8.conclusion.tex
 Chapter 8.
-) [37
+) [43
 
 
 
-] [38
+] [44
 
 
 ] (./proj_report_outline.aux (./0.acknowledge.aux)
@@ -838,22 +883,22 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3343 strings out of 494071
- 48494 string characters out of 3160406
- 113165 words of memory out of 3000000
- 6431 multiletter control sequences out of 15000+200000
+ 3408 strings out of 494071
+ 50205 string characters out of 3160406
+ 113166 words of memory out of 3000000
+ 6483 multiletter control sequences out of 15000+200000
  26515 words of font info for 67 fonts, out of 3000000 for 9000
  648 hyphenation exceptions out of 8191
- 38i,7n,39p,887b,251s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,7n,39p,887b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
 ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 </usr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (46 pages, 1715773 bytes).
+Output written on proj_report_outline.pdf (52 pages, 2310609 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
+ 248 PDF objects out of 1000 (max. 8388607)
+ 134 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

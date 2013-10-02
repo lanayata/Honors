@@ -4,34 +4,260 @@ Kepler Visualisation Tool(IKVT). It details
 the key design decisions revolving around structure, asthetics, and
 functionality that were made about the visualisation. 
 % Description of tool
-To help users to understand more about the planets outside of our solarsystem,
-this project aims to improve an existing visualisation, The Kepler Visualisation
-Tool that was discussed in the previous chapter, which whist displaying
-exoplanets and some of thier features, it lacks interactivity for users trying
-to use it to help comprehend the ...~. The IKVT expands on the preexisting
-Kepler Visualisation Tool by adding key elements of interativity that are
-missing with the existing visualisation as well as further enchancing the range
-of data that is available to users about each exoplanet as well as adding a novel interactive approach by incorporating gesture based interaction with the visualisation.
-
-To aid in the comprehesion of exoplanets 
-% Aim of the visualisation ~
-
-% Basic functionality of the visualisation - massive
-
-% How visualisation represents each component
-
-% Does it satisfy each requirements
-
-% Discuss the features of other viusalisations incorporated
+This project aims to improve an existing visualisation, The Kepler Visualisation
+Tool which was discussed in the previous chapter. Whist this existing
+visualisation displays exoplanets and some of their features, it lacks
+interactivity for users trying to use it to gain information contained in the
+Kepler Exoplanet Database effectively. The IKVT expands on this pre-existing
+visualisation by adding key elements of interativity missing in the existing
+ visualisation as well as further enchancing the range and amount of data that
+is available to users about exoplanets. The IKVT also incorporates a novel
+gesture based interactive mechanisim to the visualisation.
 
 \section{System design and structure}
-BASIC Class structure
+Because this project builds upon an existing system complete comprehension of
+how it is designed and how it functions is important. Going ahead in the
+creation of the visualisation without this knowledge would create opportunities
+for mistakes and incorrect assumptions about how the visualisation needs to be
+created. To assist with this issue the following two tools were used.
 
-Data structure
+\begin{enumerate}
 
-UML CLass Diagram
 
-Sequence Diagram
+ \item UML Sequence Diagram
+  \\image\\description of\\what it shows about visualisation
+   \begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.8\textwidth]{images/sequence.png}
+  \caption{Sequence Diagram of IKVT render cycle}  
+\end{figure}
 
-\section{Design Features}
+ \item UML Class Diagram
+ \\image\\description of\\what it shows about visualisation
+ \begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.8\textwidth]{images/classDiagram.png}
+  \caption{Class Diagram of IKVT}  
+\end{figure}
  
+
+\end{enumerate}
+
+\section{Visualisation Design}
+The requirments produced in the Requirements Analysis chapter provide a
+description of the functionality that needs to be designed for this
+visualisation. By adding additional details to these requirements we can design
+how the visualisation should look, behave, and function.
+
+By using abstract user interface design the layout and configuration of each
+element can be
+planned and coordinated without the need for excessive details which are likely
+to change
+throughout the course of the project (e.g. colours and content) ((REF))[18]~.
+
+\subsection{Functional Requriement}
+\begin{enumerate}
+{\bf
+ \item[R1.] The visualisation needs to display planetary information to convey
+knowledge to users.
+}
+
+  This requirement needs some form of textual display in order to convey enough
+of the information about exoplanets to the user. The most obvious choice for
+this would be to use a Java TextArea object to display each of the key
+attributes of each Exoplanet. The following figure is a mockup of the text area
+showing the information about each planet that will be displayed and the method
+calls that will be used.
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.8\textwidth]{images/textAreaMockup.png}
+  \caption{Mockup of the text area}  
+\end{figure}
+
+
+{\bf
+ \item[R2.] The planets need to be able to be ordered by their similarity to
+earth (ESI) and by their Kepler Object of Interest number (KOI).}
+
+To fulfill this requirement the visualisation needs to allow users to view the
+exoplanets in a way that uses the Earth as a point of reference and their Earth
+Similarity Index (ESI) to order them and control their position. The following
+figures display an abstract mockup of how this would be done.
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=1\textwidth]{images/mockupESI.png}
+  \caption{Mockup of ESI views}  
+\end{figure}
+
+
+{\bf
+ \item[R3.] The visualisation needs to allow users to define ranges of planetary
+attributes to filter which planets are displayed.}
+
+To fulfill this requirement a method of filtering exoplanets by their attributes
+in order to control the number and types of planets displayed to the user. A
+common method of achiveing this is to use a set of sliders that allow a user to
+filter something by a set of values. For example in this system a slider could
+be used to control the size of planets that are displayed.
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=.8\textwidth]{images/mockSlider.png}
+  \caption{Mockup of range sliders}  
+\end{figure}
+{\bf
+ \item[R4.] All planets need to be selectable and react appropriately when
+clicked.}
+
+To fulfull this requriement every planet needs to be able to be selected. This
+involves detecting when a user clicks and then finding whether any planets are
+located in that space. This is more complex in this system as it requries
+detecting where each planet is in a 3D space and checking whether the 2D
+location of the mouse click coincide. 
+
+When a planet is successfully selected it needs to provide feedback and
+information to the user to inform them that it has been selected and also to
+provide relevant information.
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=.8\textwidth]{images/mockSelected.png}
+  \caption{Mockup selection process}  
+\end{figure}
+
+{\bf
+ \item[R5.] When a planet is selected all other planets in the same solar system
+need to become more visible.}
+
+When a planet has been successfully selected all of the other planets in the
+same solar system (sister planets) need to become highlighted. This can be done
+by treating them as if they were selected and providing an additional indication
+that they are not actually selected.  
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=.8\textwidth]{images/selectedSisterPlanets.png}
+  \caption{Mockup highlight sister planets process}  
+\end{figure}
+
+{\bf
+ \item[R6.] There needs to be the option to view the habitable zones of stars
+and show where the planets orbiting them are in relation.}
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=.5\textwidth]{images/mockStarHabitability.png}
+  \caption{Mockup star habitibility zone}  
+\end{figure}
+
+
+{\bf
+ \item[R7.] The visualisation needs to allow exoplanets to be compared against
+one another.}
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=.7\textwidth]{images/mockComparePlanets.png}
+  \caption{Mockup compare planets text areas}  
+\end{figure}
+
+\end{enumerate}
+
+\subsection{Nonfunctional Requriement}
+
+\begin{enumerate}
+
+{\bf
+ \item[R8.] The visualisation needs to have a range of interactive buttons for
+each element of interactivity in the system to help inform users how to use the
+system.}
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.5\textwidth]{images/mockButtons.png}
+  \caption{Mockup of interactive buttons}  
+\end{figure}
+
+
+{\bf \item[R9.] All interaction methods must be visible and intuitive.}
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=1\textwidth]{images/allTogether.png}
+  \caption{Mockup of the interaction panel}  
+\end{figure}
+
+{\bf \item[R10.] The visualisation needs to display attributes of each of the
+Exoplanets.}
+
+Using each of the previously discussed elements of interacting with the
+visualisation this requirement is fullfilled. The text areas coupled with the
+main visualisation window mean that all of the important and valuable
+information about each exoplanet can be conveyed to a user.
+
+
+{\bf \item[R11.] The visualisation must remain uncluttered.}
+
+By seperating each of the interactive components into a seperate window inside
+the visualisation it provides 
+
+
+{\bf \item[R12.] The visualisation must not show so much information that it
+causes information overload for users.}
+
+The ability to filter and sort the exoplanets gives a user the tools needed to
+reduce the quantity of planets displayed in the visualisation and thus the
+information load imposed on users. 
+In addition to this, by having the text area that displays the information about
+selected planets seperate from the main visualisation it reduces the congnitive
+load on users as they dont have to use this component untill they want to. ~
+
+
+{\bf  \item[R13.] There needs to be two modes of interaction with the system,
+keyboard and mouse vs gesture based.}
+
+The above requirements mostly relate to the keyboard an mouse system although some of the requirements do carry through to the Microsoft Kinect system as well. 
+
+For the Kinect system the key difference is that the user will be able to control the main visualisation window with gestures.
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.7\textwidth]{images/mockKinect.png}
+  \caption{Mockup of the Kinect system}  
+\end{figure}
+
+As the Kinect sensor no longer requires the use of a mouse the visualisation
+design needs to be modified to accomodate the use of gestures. This meant incorporating new cursers to indicate the state of the visualisation.
+There are 7 states that the curser needs to be able to be in to inform the user
+of what action they are performing. These states are
+
+\begin{enumerate}
+ \item default curser, hand is at rest
+ \item panning up, hand is raised
+ \item panning down, hand is lowered
+ \item rotating left, hand is to the left
+ \item rotating right, hand is to the right
+ \item zooming in, hand is pressed forward
+ \item zooming out, hand is pulled backwards
+\end{enumerate}
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.9\textwidth]{images/curserImages.png}
+  \caption{Mockup of curser images for Kinect system}  
+\end{figure}
+
+Having a range of icons that clearly display these states is vital for keeping
+the user informed of what they are doing. The icons designed for this purpose
+are in the following figure
+
+\begin{figure}[h!]
+  \centering
+  ~
+      %\includegraphics[width=0.8\textwidth]{images/layout_horizontal.jpg}
+  \caption{Cursers for Kinect sensor}  
+\end{figure}
+
+
+\end{enumerate}
+
+

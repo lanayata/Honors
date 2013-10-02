@@ -1,9 +1,7 @@
 \chapter{Visualisation implementation of the Improved Kepler Visualisation Tool (IKVT)}\label{C:sd}
 This chapter discusses the implementation of the visulisation using the designs
-discussed previously. It details the tools used, the deliverable features
-produced, and the problems encountered
-
-IKVT displays all 2234 exoplanets
+discussed in the previous chapter to fullfil the requirements for this project. It details the tools used, the deliverable features
+produced, and the problems encountered. IKVT displays all 2234 exoplanets
 in the Kepler exoplanets dataset ((REF[28]))~ datase. Each of these exoplanets are represented as coloured
 ellipses, of which the colour and size are representative of the exoplanets
 temperature and size respectively. IKVT displays all of these exoplanets as if
@@ -15,9 +13,7 @@ view.
 To make this selection, a user can click on any of the orbiting exoplanets.  A
 further effect of this selection is that a text box will have further textual
 information about the selected exoplanet appended to it to provide the user with
-more detailed information.
-
-When a user is unable to accurately select an exoplanet due to clustering or
+more detailed information. When a user is unable to accurately select an exoplanet due to clustering or
 overlapping of exoplanets they can move the camera around in space to gain a
 better viewing position with which to make their selection. If this is not
 enough, the user can use a set of range filters to filter the exoplanets
@@ -112,7 +108,7 @@ it had a higher aspect ratio which allowed more of the content to be seen on the
 screen at once thanks to the fact that the majority of computer screens have a
 wide ratio.
 
-\begin{figure}[h!]
+\begin{figure}[H!]
   \centering
       \includegraphics[width=0.8\textwidth]{images/layout_horizontal.jpg}
   \caption{Original Horizontal Layout}  
@@ -122,28 +118,28 @@ wide ratio.
 
 \subsubsection{Navigation Window(BETTER TITLE~)}
 Description of navigation window
-\begin{figure}[h!]
+\begin{figure}[H!]
   \centering
       \includegraphics[width=0.3\textwidth]{images/nav.png}
   \caption{Navigation Panel Overview}
   \label{fig:nav}
 \end{figure}
 Description of each button
-\begin{figure}[h!]
+\begin{figure}[H!]
   \centering
       \includegraphics[width=0.6\textwidth]{images/buttons.jpg}
   \caption{Panel of interactive buttons}
   \label{fig:buttons}
 \end{figure}
 Description of each slider
-\begin{figure}[h!]
+\begin{figure}[H!]
   \centering
       \includegraphics[width=0.6\textwidth]{images/sliders.jpg}
   \caption{Panel of interactive range sliders}
   \label{fig:sliders}
 \end{figure}
 Description of text boxes
-\begin{figure}[h!]
+\begin{figure}[H!]
   \centering
       \includegraphics[width=0.9\textwidth]{images/textBoxes.jpg}
   \caption{Text boxes in each possible state}
@@ -159,33 +155,6 @@ do.((REFERENCE))~. These tooltips are widely used as a method of informing a
 user about the purpose of an item by hovering over it. This removes the need to
 click on a button to discover its effect.
 
-\subsubsection{Visualisation Layout for Kinect sensor}
-As the Kinect sensor no longer requires the use of a mouse the visualisation
-design needs to be modified to accomodate the use of gestures. For this project
-this meant incorporating new cursers to indicate the state of the visualisation.
-There are 7 states that the curser needs to be able to be in to inform the user
-of what action they are performing. These states are
-
-\begin{enumerate}
- \item default curser, hand is at rest
- \item panning up, hand is raised
- \item panning down, hand is lowered
- \item panning left, hand is to the left
- \item panning right, hand is to the right
- \item zooming in, hand is pressed forward
- \item zooming out, hand is pulled backwards
-\end{enumerate}
-
-Having a range of icons that clearly display these states is vital for keeping
-the user informed of what they are doing. The icons designed for this purpose
-are in the following figure
-
-\begin{figure}[h!]
-  \centering
-  ~
-      %\includegraphics[width=0.8\textwidth]{images/layout_horizontal.jpg}
-  \caption{Cursers for Kinect sensor}  
-\end{figure}
 
 In addition to this, the screen needs to display the user in relation to the
 screen, an effective way to do this is to display a washed out representation of

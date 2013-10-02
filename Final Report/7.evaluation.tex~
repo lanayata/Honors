@@ -1,7 +1,9 @@
 \chapter{Visualisation Evaluation}\label{C:sd}
 Following the completion of the implementation stage of this project a final
-user evaluation was carried out on the visualisation to discover whether the
-visualisation designed and implemented 
+user evaluation was carried out on the visualisation. This evaluation was
+primarily designed to discover whether or not the visualisation created was
+successfull in fulfilling the requriemnts of the project as well as conveying
+the information stored within the Kepler Exoplanet Database.
 
 \subsection{Participants}
 The number and demographics of participants in a user study is a key issue that
