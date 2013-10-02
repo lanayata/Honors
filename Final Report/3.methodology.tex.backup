@@ -41,7 +41,8 @@ as they were discovered to be beneficial or not. It also supported the expansion
 of the project brief to include using a Microsoft Kinect sensor in order to
 interact with the visualisation. The choice of this project management approach
 meant that whilst I had the freedom to explore visualisation options I also had
-a structured software development life cycle to guide me and the project through the necessary steps to end in the successfull completion of each
+a structured software development life cycle to guide me and the project through
+the necessary steps to end in the successfull completion of each
 component.
 %
 Using a spiral model also allowed me to produce a deliverable feature at the end
@@ -51,6 +52,29 @@ in my development with nothing to show. By using this methodology it also
 allowed me to prioritize the features that were the most important to the
 visualisation which reduced the risk that there would be missing or incomplete
 components at the end of the project. 
+
+%Did I acheive all my goals
+Following this project managment approach allowed me to achieve all of the goals
+that I set, although it did not always happen within the timeframes that I had
+planned and some deadlines had to be revised. The delays were caused by
+increasing the scope of the project to include the Microsoft Kinext sensor which
+required further planning, implementation and testing. Although there were these
+delays, due to the planning and project managment approach that was used, all
+project elements were completed.
+
+%Meetings with supervisor
+Weekly meetings with the supervisor of the project, Dr Stuart Marshall, were
+used to provide guidance and ideas for innovation of the visualisation
+throughout the project. These meeting ensured that vital components and
+deliverables were implemented in the required timeframe and also provided a
+sounding board for ideas for elements to be included in the visualization.
+Another important aspect of having an involved supervisor was that he provided
+me the guidance of an experienced academic which was indispensable when
+navigating the administrative side of organizing delicate matters such as ethics
+approval for human evaluation of the visualisation.
+
+
+\section{Other project methodologies explored}
 
 %Advantages of Spiral
 The advantages of this methodology over other choices such as the waterfall
@@ -67,43 +91,30 @@ I was agile in my approach to the project as embraced changing requirements,
 collaborated with my supervisor (the customer) regularily, emphasized working
 software over large amounts of documentation (REFERENCE AGILE MANIFESTO). 
 
-%Did I acheive all my goals
-Following this project managment approach allowed me to achieve all of the goals
-that I set, although it did not always happen within the timeframes that I had
-planned and some deadlines had to be revised. The delays were caused by
-increasing the scope of the project to include the Microsoft Kinext sensor which
-required further planning, implementation and testing. Although there were these
-delays, due to the planning and project managment approach that was used, all
-project elements were completed.
 
+\section{Supporting Tools for project}
 %Other tools used to support me
 By supporting this project methodology with other project management tools such
 as Gantt charts [APPENDIX~] and work breakdown structures(WBS) [APPENDIX~], it
 encouraged efficient documentation of planning and work completed in the project
 as well as displaying the upcoming stages required to complete the project.
+\\
 
-%Meetings with supervisor
-Weekly meetings with the supervisor of the project, Dr Stuart Marshall, were
-used to provide guidance and ideas for innovation of the visualisation
-throughout the project. These meeting ensured that vital components and
-deliverables were implemented in the required timeframe and also provided a
-sounding board for ideas for elements to be included in the visualization.
-Another important aspect of having an involved supervisor was that he provided
-me the guidance of an experienced academic which was indispensable when
-navigating the administrative side of organizing delicate matters such as ethics
-approval for human evaluation of the visualisation.
-% Gantt Chart
+%Version Control
+Version control was important for this project as it mitigated against the risks
+of file system crashes and corruption, it also maintained effective revision
+history that could be used to backtrack to or view changes that were made
+earlier in the project. Version control was also valuable as it allowed me to
+maintain multiple branches (versions) of my project that I could swap between.
+This was important for the creation of the Keyboard and mouse system and the
+Microsoft Kinect system as they were on seperate branches in a repository. 
 
-\section{Difficulties in project}
-As this project builds upon a previous system much of the existing code and
-execution flow needs to be modified. This requires understanding of how the
-system was originally built and designed. Because this system does not have any
-unit or integration tests, going ahead without a comprehensive knowledge of the
-core functionality would be have led to ineffective planning and errors being
-introduced into the system.
-%Making use of tall of the data
-This project had a time constraint of approximately 300 hours over the course of
-a year, this meant that I needed effective time management techniques to ensure
-that I spent the right amount of time on each project element, that I
-prioritised important tasks, set appropriate deadlines, and planned each stage
-of the project effectively.
+The version control tool that was used for this project was Git which allowed
+for the repository to be hosted on the repository hosting web service Github.
+This version control option was chosen due to the ease of use of as well as my
+prior experience with Git which has all been positive. There was a minor
+limitation of this choice as I used a free Github license which meant that the
+repository would be open to the public.
+
+
+

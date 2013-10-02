@@ -5,10 +5,6 @@ primarily designed to discover whether or not the visualisation created was
 successfull in fulfilling the requriemnts of the project as well as conveying
 the information stored within the Kepler Exoplanet Database.
 
-\subsection{Participants}
-The number and demographics of participants in a user study is a key issue that
-can affect the results. ~
-
 \section{User Study Method}
 \begin{itemize}
 \item The user enters the room and sits down at the computer.
@@ -31,6 +27,11 @@ visualisation.
 \item Following this if the examiner has no follow up questions the user is free
 to leave.
 \end{itemize}
+
+\subsection{Participants}
+The number and demographics of participants in a user study is a key issue that
+can affect the results. ~
+
 \section{Pilot Study}
 One participant was asked to take part in a pilot study before any results were
 collected. This participant was asked to complete all of the activites that make
@@ -64,34 +65,35 @@ of genders with 5 females and 4 males. Each study took between 10 to 15 minutes.
 
 \subsection{Analysis of requirements}
 \begin{enumerate}
- \item[R1.] The visualisation needs to have two text areas to allow the more
-detailed textual information about planets to be displayed.
+
+ \item[R1.] The visualisation needs to display planetary information to convey
+knowledge to users.
  \item[R2.] The planets need to be able to be ordered by their similarity to
 earth (ESI) and by their Kepler Object of Interest number (KOI).
- \item[R3.] The visualisation needs to have a set of sliders that can be used to
-change which planets are visible by setting ranges of their core attributes.
+ \item[R3.] The visualisation needs to allow users to define ranges of planetary
+attributes to filter which planets are displayed.
  \item[R4.] All planets need to be selectable and react appropriately when
 clicked.
  \item[R5.] When a planet is selected all other planets in the same solar system
-need to become highlighted.
- \item[R6.] Visualisation needs to have the option to view the habitable zones
-of stars and show where the planets orbiting them are in relation.
- \item[R7.] There needs to be the option to select two planets at a time to
-compare against one another.
+need to become more visible.
+ \item[R6.] There needs to be the option to view the habitable zones of stars
+and show where the planets orbiting them are in relation.
+ \item[R7.] The visualisation needs to allow exoplanets to be compared against
+one another.
 \end{enumerate}
 
-The non functional requirements for this visualisation are as follows:
+ The non functional requirements for this visualisation are as follows:
 \begin{enumerate}
  \item[R8.] The visualisation needs to have a range of interactive buttons for
-each element of interactivity in the system to make it more visible to users how
-to use the system.
+each element of interactivity in the system to help inform users how to use the
+system.
  \item[R9.] All interaction methods must be visible and intuitive.
  \item[R10.] The visualisation needs to display attributes of each of the
 Exoplanets.
  \item[R11.] The visualisation must remain uncluttered.
  \item[R12.] The visualisation must not show so much information that it causes
 information overload for users.
- \item[R13.] There needs to be two modes of interaction with the system,
+  \item[R13.] There needs to be two modes of interaction with the system,
 keyboard and mouse vs gesture based.
 \end{enumerate}
 

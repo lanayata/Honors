@@ -199,7 +199,7 @@ users.
  
  \item[R4.] R3. The visualisation needs to allow users to define ranges of planetary attributes to filter which planets are displayed.
 
- \item[R5.] There needs to be the option to view the habitable zones of stars and show where the planets orbiting them are in relation.
+ \item[R5.] Users need to be able to view the habitable zones of stars in relation to the planets orbiting them.
 
 \end{enumerate}
 

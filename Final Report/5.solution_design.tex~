@@ -96,7 +96,7 @@ provide relevant information.
 \end{figure}
 
 When a planet is selected all other planets in the same solar system
-need to become more visible.}
+need to become more visible.
 
 When a planet has been successfully selected all of the other planets in the
 same solar system (sister planets) need to become highlighted. This can be done

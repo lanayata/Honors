@@ -190,20 +190,17 @@ Functional requirements define the functions of a system. These functions are
 described as a set of inputs, the behavior, and outputs from the system. The functional requirements for this visualisation are as follows:
 \begin{enumerate}
 
- \item[R1.] The visualisation needs to display planetary information to convey
-knowledge to users.
- \item[R2.] The planets need to be able to be ordered by their similarity to
-earth (ESI) and by their Kepler Object of Interest number (KOI).
- \item[R3.] The visualisation needs to allow users to define ranges of planetary
-attributes to filter which planets are displayed.
- \item[R4.] All planets need to be selectable and react appropriately when
-clicked.
- \item[R5.] When a planet is selected all other planets in the same solar system
-need to become more visible.
- \item[R6.] There needs to be the option to view the habitable zones of stars
-and show where the planets orbiting them are in relation.
- \item[R7.] The visualisation needs to allow exoplanets to be compared against
-one another.
+ \item[R1.] The visualisation needs to display planetary information to convey knowledge to
+users.
+
+ \item[R2.] The visualisation needs to allow exoplanets to be compared against one another.
+
+ \item[R3.] The planets need to be able to be ordered by their similarity to earth (ESI) and by their Kepler Object of Interest number (KOI).
+ 
+ \item[R4.] R3. The visualisation needs to allow users to define ranges of planetary attributes to filter which planets are displayed.
+
+ \item[R5.] Users need to be able to view the habitable zones of stars in relation to the planets orbiting them.
+
 \end{enumerate}
 
 
@@ -214,23 +211,17 @@ as performance, security, or usability) of a system.
  
  The non functional requirements for this visualisation are as follows:
 \begin{enumerate}
- \item[R8.] The visualisation needs to have a range of interactive buttons for
-each element of interactivity in the system to help inform users how to use the
-system.
- \item[R9.] All interaction methods must be visible and intuitive.
- \item[R10.] The visualisation needs to display attributes of each of the
-Exoplanets.
- \item[R11.] The visualisation must remain uncluttered.
- \item[R12.] The visualisation must not show so much information that it causes
-information overload for users.
-  \item[R13.] There needs to be two modes of interaction with the system,
-keyboard and mouse vs gesture based.
+ \item[R6.] All interaction methods must be visible and intuitive.
+
+ \item[R7.] The visualisation must remain uncluttered to reduce information overload.
+
+ \item[R8.]  There needs to be two modes of interaction with the system, keyboard and mouse vs gesture based.
 \end{enumerate}
 
 %matrix
 \begin{figure}[h!]
   \centering
-      \includegraphics[width=0.8\textwidth]{images/issues_to_req_matrix.jpg}
+      \includegraphics[width=1\textwidth]{images/issues_to_req_matrix.png}
   \caption{Matrix of project requirements to issues project is attempting to
 address}
 \end{figure}

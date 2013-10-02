@@ -75,41 +75,9 @@ calls that will be used.
   \caption{Mockup of the text area}  
 \end{figure}
 
-
-{\bf
- \item[R2.] The planets need to be able to be ordered by their similarity to
-earth (ESI) and by their Kepler Object of Interest number (KOI).}
-
-To fulfill this requirement the visualisation needs to allow users to view the
-exoplanets in a way that uses the Earth as a point of reference and their Earth
-Similarity Index (ESI) to order them and control their position. The following
-figures display an abstract mockup of how this would be done.
-
-\begin{figure}[h!]
-  \centering
-      \includegraphics[width=1\textwidth]{images/mockupESI.png}
-  \caption{Mockup of ESI views}  
-\end{figure}
-
-
-{\bf
- \item[R3.] The visualisation needs to allow users to define ranges of planetary
-attributes to filter which planets are displayed.}
-
-To fulfill this requirement a method of filtering exoplanets by their attributes
-in order to control the number and types of planets displayed to the user. A
-common method of achiveing this is to use a set of sliders that allow a user to
-filter something by a set of values. For example in this system a slider could
-be used to control the size of planets that are displayed.
-
-\begin{figure}[h!]
-  \centering
-      \includegraphics[width=.8\textwidth]{images/mockSlider.png}
-  \caption{Mockup of range sliders}  
-\end{figure}
-{\bf
- \item[R4.] All planets need to be selectable and react appropriately when
-clicked.}
+SELECTIONG ~
+All planets need to be selectable and react appropriately when
+clicked.
 
 To fulfull this requriement every planet needs to be able to be selected. This
 involves detecting when a user clicks and then finding whether any planets are
@@ -127,15 +95,13 @@ provide relevant information.
   \caption{Mockup selection process}  
 \end{figure}
 
-{\bf
- \item[R5.] When a planet is selected all other planets in the same solar system
-need to become more visible.}
+When a planet is selected all other planets in the same solar system
+need to become more visible.
 
 When a planet has been successfully selected all of the other planets in the
 same solar system (sister planets) need to become highlighted. This can be done
 by treating them as if they were selected and providing an additional indication
 that they are not actually selected.  
-
 \begin{figure}[h!]
   \centering
       \includegraphics[width=.8\textwidth]{images/selectedSisterPlanets.png}
@@ -143,18 +109,7 @@ that they are not actually selected.
 \end{figure}
 
 {\bf
- \item[R6.] There needs to be the option to view the habitable zones of stars
-and show where the planets orbiting them are in relation.}
-
-\begin{figure}[h!]
-  \centering
-      \includegraphics[width=.5\textwidth]{images/mockStarHabitability.png}
-  \caption{Mockup star habitibility zone}  
-\end{figure}
-
-
-{\bf
- \item[R7.] The visualisation needs to allow exoplanets to be compared against
+ \item[R2.] The visualisation needs to allow exoplanets to be compared against
 one another.}
 
 \begin{figure}[h!]
@@ -163,16 +118,74 @@ one another.}
   \caption{Mockup compare planets text areas}  
 \end{figure}
 
+Using each of the previously discussed elements of interacting with the
+visualisation this requirement is fullfilled. The text areas coupled with the
+main visualisation window mean that all of the important and valuable
+information about each exoplanet can be conveyed to a user.
+
+{\bf
+ \item[R3.] The planets need to be able to be ordered by their similarity to
+earth (ESI) and by their Kepler Object of Interest number (KOI).}
+
+To fulfill this requirement the visualisation needs to allow users to view the
+exoplanets in a way that uses the Earth as a point of reference and their Earth
+Similarity Index (ESI) to order them and control their position. The following
+figures display an abstract mockup of how this would be done.
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=1\textwidth]{images/mockupESI.png}
+  \caption{Mockup of ESI views}  
+\end{figure}
+
+
+{\bf
+ \item[R4.] The visualisation needs to allow users to define ranges of planetary
+attributes to filter which planets are displayed.}
+
+To fulfill this requirement a method of filtering exoplanets by their attributes
+in order to control the number and types of planets displayed to the user. A
+common method of achiveing this is to use a set of sliders that allow a user to
+filter something by a set of values. For example in this system a slider could
+be used to control the size of planets that are displayed.
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=.8\textwidth]{images/mockSlider.png}
+  \caption{Mockup of range sliders}  
+\end{figure}
+
+
+
+{\bf
+ \item[R5.] Users need to be able to view the habitable zones of stars in relation to the planets orbiting them.}
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=.5\textwidth]{images/mockStarHabitability.png}
+  \caption{Mockup star habitibility zone}  
+\end{figure}
+
+
+
+
 \end{enumerate}
 
 \subsection{Nonfunctional Requriement}
 
 \begin{enumerate}
 
-{\bf
- \item[R8.] The visualisation needs to have a range of interactive buttons for
+
+{\bf \item[R6.] All interaction methods must be visible and intuitive.}
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=1\textwidth]{images/allTogether.png}
+  \caption{Mockup of the interaction panel}  
+\end{figure}
+
+ The visualisation needs to have a range of interactive buttons for
 each element of interactivity in the system to help inform users how to use the
-system.}
+system.
 
 \begin{figure}[h!]
   \centering
@@ -180,31 +193,13 @@ system.}
   \caption{Mockup of interactive buttons}  
 \end{figure}
 
-
-{\bf \item[R9.] All interaction methods must be visible and intuitive.}
-\begin{figure}[h!]
-  \centering
-      \includegraphics[width=1\textwidth]{images/allTogether.png}
-  \caption{Mockup of the interaction panel}  
-\end{figure}
-
-{\bf \item[R10.] The visualisation needs to display attributes of each of the
-Exoplanets.}
-
-Using each of the previously discussed elements of interacting with the
-visualisation this requirement is fullfilled. The text areas coupled with the
-main visualisation window mean that all of the important and valuable
-information about each exoplanet can be conveyed to a user.
-
-
-{\bf \item[R11.] The visualisation must remain uncluttered.}
+{\bf \item[R7.] The visualisation must remain uncluttered.}
 
 By seperating each of the interactive components into a seperate window inside
 the visualisation it provides 
 
-
-{\bf \item[R12.] The visualisation must not show so much information that it
-causes information overload for users.}
+The visualisation must not show so much information that it
+causes information overload for users.
 
 The ability to filter and sort the exoplanets gives a user the tools needed to
 reduce the quantity of planets displayed in the visualisation and thus the
@@ -214,12 +209,12 @@ selected planets seperate from the main visualisation it reduces the congnitive
 load on users as they dont have to use this component untill they want to. ~
 
 
-{\bf  \item[R13.] There needs to be two modes of interaction with the system,
+{\bf  \item[R8.] There needs to be two modes of interaction with the system,
 keyboard and mouse vs gesture based.}
 
 The above requirements mostly relate to the keyboard an mouse system although some of the requirements do carry through to the Microsoft Kinect system as well. 
 
-For the Kinect system the key difference is that the user will be able to control the main visualisation window with gestures.
+For the Kinect system the key difference is that the user will be able to control the main visualisation window with gestures. This means incorporating a means of detecting the gestures. 
 \begin{figure}[h!]
   \centering
       \includegraphics[width=0.7\textwidth]{images/mockKinect.png}

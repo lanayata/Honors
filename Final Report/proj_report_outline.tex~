@@ -107,9 +107,9 @@ We have large amounts of information about planets outside of our solar system. 
  
 
 %\bibliographystyle{ieeetr}
-\nocite{*}
-\bibliographystyle{acm}
-\bibliography{refs}
+%\nocite{*}
+%\bibliographystyle{acm}
+%\bibliography{refs}
 
 
 \end{document}
