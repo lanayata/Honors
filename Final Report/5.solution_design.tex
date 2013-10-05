@@ -26,7 +26,7 @@ created. To assist with this issue the following two tools were used.
 
  \item UML Sequence Diagram
   \\image\\description of\\what it shows about visualisation
-   \begin{figure}[h!]
+   \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/sequence.png}
   \caption{Sequence Diagram of IKVT render cycle}  
@@ -34,7 +34,7 @@ created. To assist with this issue the following two tools were used.
 
  \item UML Class Diagram
  \\image\\description of\\what it shows about visualisation
- \begin{figure}[h!]
+ \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/classDiagram.png}
   \caption{Class Diagram of IKVT}  
@@ -53,7 +53,7 @@ By using abstract user interface design the layout and configuration of each
 element can be
 planned and coordinated without the need for excessive details which are likely
 to change
-throughout the course of the project (e.g. colours and content) ((REF))[18]~.
+throughout the course of the project (e.g. colours and content) \cite{martin}.
 
 \subsection{Functional Requirement}
 \begin{enumerate}
@@ -69,7 +69,7 @@ attributes of each Exoplanet. The following figure is a mockup of the text area
 showing the information about each planet that will be displayed and the method
 calls that will be used.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/textAreaMockup.png}
   \caption{Mockup of the text area}  
@@ -89,7 +89,7 @@ When a planet is successfully selected it needs to provide feedback and
 information to the user to inform them that it has been selected and also to
 provide relevant information.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=.8\textwidth]{images/mockSelected.png}
   \caption{Mockup selection process}  
@@ -102,7 +102,7 @@ When a planet has been successfully selected all of the other planets in the
 same solar system (sister planets) need to become highlighted. This can be done
 by treating them as if they were selected and providing an additional indication
 that they are not actually selected.  
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=.8\textwidth]{images/selectedSisterPlanets.png}
   \caption{Mockup highlight sister planets process}  
@@ -112,7 +112,7 @@ that they are not actually selected.
  \item[R2.] The visualisation needs to allow exoplanets to be compared against
 one another.}
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=.7\textwidth]{images/mockComparePlanets.png}
   \caption{Mockup compare planets text areas}  
@@ -132,7 +132,7 @@ exoplanets in a way that uses the Earth as a point of reference and their Earth
 Similarity Index (ESI) to order them and control their position. The following
 figures display an abstract mockup of how this would be done.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=1\textwidth]{images/mockupESI.png}
   \caption{Mockup of ESI views}  
@@ -149,7 +149,7 @@ common method of achieving this is to use a set of sliders that allow a user to
 filter something by a set of values. For example in this system a slider could
 be used to control the size of planets that are displayed.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=.8\textwidth]{images/mockSlider.png}
   \caption{Mockup of range sliders}  
@@ -160,7 +160,7 @@ be used to control the size of planets that are displayed.
 {\bf
  \item[R5.] Users need to be able to view the habitable zones of stars in relation to the planets orbiting them.}
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=.5\textwidth]{images/mockStarHabitability.png}
   \caption{Mockup star habitability zone}  
@@ -177,7 +177,7 @@ be used to control the size of planets that are displayed.
 
 
 {\bf \item[R6.] All interaction methods must be visible and intuitive.}
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=1\textwidth]{images/allTogether.png}
   \caption{Mockup of the interaction panel}  
@@ -187,7 +187,7 @@ be used to control the size of planets that are displayed.
 each element of interactivity in the system to help inform users how to use the
 system.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=0.5\textwidth]{images/mockButtons.png}
   \caption{Mockup of interactive buttons}  
@@ -206,7 +206,7 @@ reduce the quantity of planets displayed in the visualisation and thus the
 information load imposed on users. 
 In addition to this, by having the text area that displays the information about
 selected planets separate from the main visualisation it reduces the cognitive
-load on users as they dont have to use this component untill they want to. ~
+load on users as they don't have to use this component until they want to. ~
 
 
 {\bf  \item[R8.] There needs to be two modes of interaction with the system,
@@ -215,19 +215,19 @@ keyboard and mouse vs gesture based.}
 The above requirements mostly relate to the keyboard an mouse system although some of the requirements do carry through to the Microsoft Kinect system as well. 
 
 For the Kinect system the key difference is that the user will be able to control the main visualisation window with gestures. This means incorporating a means of detecting the gestures. 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=0.7\textwidth]{images/mockKinect.png}
   \caption{Mockup of the Kinect system}  
 \end{figure}
 
 As the Kinect sensor no longer requires the use of a mouse the visualisation
-design needs to be modified to accomodate the use of gestures. This meant incorporating new cursers to indicate the state of the visualisation.
-There are 7 states that the curser needs to be able to be in to inform the user
+design needs to be modified to accommodate the use of gestures. This meant incorporating new cursors to indicate the state of the visualisation.
+There are 7 states that the cursor needs to be able to be in to inform the user
 of what action they are performing. These states are
 
 \begin{enumerate}
- \item default curser, hand is at rest
+ \item default cursor, hand is at rest
  \item panning up, hand is raised
  \item panning down, hand is lowered
  \item rotating left, hand is to the left
@@ -235,21 +235,21 @@ of what action they are performing. These states are
  \item zooming in, hand is pressed forward
  \item zooming out, hand is pulled backwards
 \end{enumerate}
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{images/curserImages.png}
-  \caption{Mockup of curser images for Kinect system}  
+  \caption{Mockup of cursor images for Kinect system}  
 \end{figure}
 
 Having a range of icons that clearly display these states is vital for keeping
 the user informed of what they are doing. The icons designed for this purpose
 are in the following figure
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   ~
       %\includegraphics[width=0.8\textwidth]{images/layout_horizontal.jpg}
-  \caption{Cursers for Kinect sensor}  
+  \caption{Cursors for Kinect sensor}  
 \end{figure}
 
 

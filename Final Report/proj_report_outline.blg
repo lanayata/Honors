@@ -11,57 +11,52 @@ A level-1 auxiliary file: 6.implementation.aux
 A level-1 auxiliary file: 7.evaluation.aux
 A level-1 auxiliary file: 8.conclusion.aux
 The style file: acm.bst
-I couldn't open database file refs.bib
----line 13 of file proj_report_outline.aux
- : \bibdata{refs
- :              }
-I'm skipping whatever remains of this command
-I found no database files---while reading file proj_report_outline.aux
-Warning--I didn't find a database entry for "boehm"
-Warning--I didn't find a database entry for "worlds"
-Warning--I didn't find a database entry for "orrery"
-Warning--I didn't find a database entry for "celestia"
-Warning--I didn't find a database entry for "kepler_github"
-Warning--I didn't find a database entry for "kepler_article"
-You've used 0 entries,
+Database file #1: refs.bib
+Warning--to sort, need author or key in kinect
+Warning--to sort, need author or key in celestia
+Warning--to sort, need author or key in github
+Warning--can't use both author and editor fields in few
+Warning--empty chapter and pages in few
+Warning--empty journal in dataset
+You've used 16 entries,
             2253 wiz_defined-function locations,
-            542 strings with 4121 characters,
-and the built_in function-call counts, 18 in all, are:
-= -- 0
-> -- 0
+            616 strings with 6199 characters,
+and the built_in function-call counts, 4401 in all, are:
+= -- 380
+> -- 249
 < -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
++ -- 107
+- -- 88
+* -- 300
+:= -- 722
+add.period$ -- 41
+call.type$ -- 16
+change.case$ -- 90
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 22
+duplicate$ -- 139
+empty$ -- 370
+format.name$ -- 88
+if$ -- 897
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 16
+missing$ -- 8
+newline$ -- 76
+num.names$ -- 26
+pop$ -- 155
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 76
 quote$ -- 0
-skip$ -- 1
+skip$ -- 99
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 146
+swap$ -- 29
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There were 2 error messages)
+type$ -- 60
+warning$ -- 6
+while$ -- 32
+width$ -- 18
+write$ -- 144
+(There were 6 warnings)

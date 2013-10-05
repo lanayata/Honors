@@ -24,7 +24,7 @@
 \contentsline {subsection}{\numberline {2.3.2}Nonfunctional Requirements}{9}
 \contentsline {chapter}{\numberline {3}Project Methodologies}{11}
 \contentsline {section}{\numberline {3.1}Project management approach}{11}
-\contentsline {subsection}{\numberline {3.1.1}Software Development LifeCycle (SDLC)}{11}
+\contentsline {subsection}{\numberline {3.1.1}Software Development Life Cycle (SDLC)}{11}
 \contentsline {section}{\numberline {3.2}Other project methodologies explored}{12}
 \contentsline {section}{\numberline {3.3}Supporting Tools for project}{13}
 \contentsline {chapter}{\numberline {4}Existing systems and technologies}{15}
@@ -33,38 +33,41 @@
 \contentsline {subsection}{\numberline {4.1.2}The Kepler Orrery and The Kepler Orrery 2 - Non interactive}{16}
 \contentsline {subsection}{\numberline {4.1.3}Celestia - Interactive}{17}
 \contentsline {subsection}{\numberline {4.1.4}Kepler Visualisation Tool}{18}
-\contentsline {subsection}{\numberline {4.1.5}Summary of Existing Applications}{19}
-\contentsline {section}{\numberline {4.2}Analysis of technology options}{19}
+\contentsline {subsection}{\numberline {4.1.5}Summary of Existing Applications}{20}
+\contentsline {section}{\numberline {4.2}Analysis of technology options}{20}
 \contentsline {subsection}{\numberline {4.2.1}D3 (Data Driven Documents)}{20}
 \contentsline {subsection}{\numberline {4.2.2}Prefuse}{20}
-\contentsline {subsection}{\numberline {4.2.3}Processing}{20}
-\contentsline {subsection}{\numberline {4.2.4}Decision of technology}{20}
+\contentsline {subsection}{\numberline {4.2.3}Processing}{21}
+\contentsline {subsection}{\numberline {4.2.4}Decision of technology}{21}
 \contentsline {chapter}{\numberline {5}Solution Design: Improved Kepler Visualisation Tool (IKVT)}{23}
 \contentsline {section}{\numberline {5.1}System design and structure}{23}
-\contentsline {section}{\numberline {5.2}Visualisation Design}{23}
-\contentsline {subsection}{\numberline {5.2.1}Functional Requriement}{24}
-\contentsline {subsection}{\numberline {5.2.2}Nonfunctional Requriement}{28}
-\contentsline {chapter}{\numberline {6}Visualisation implementation of the Improved Kepler Visualisation Tool (IKVT)}{31}
-\contentsline {section}{\numberline {6.1}Additional Tools and artifacts used}{32}
-\contentsline {subsection}{\numberline {6.1.1}Dataset used}{32}
-\contentsline {subsection}{\numberline {6.1.2}Integrated Development Environment (IDE)}{32}
-\contentsline {subsection}{\numberline {6.1.3}Keyboard and Mouse System}{32}
-\contentsline {subsection}{\numberline {6.1.4}Microft Kinect sensor system}{32}
-\contentsline {section}{\numberline {6.2}Main interface components}{33}
-\contentsline {subsubsection}{Spacial arrangement of components}{33}
-\contentsline {subsubsection}{Navigation Window(BETTER TITLE\nobreakspace {})}{33}
-\contentsline {section}{\numberline {6.3}Problems encountered}{33}
-\contentsline {chapter}{\numberline {7}Visualisation Evaluation}{39}
-\contentsline {section}{\numberline {7.1}Why was evaluation conducted}{39}
-\contentsline {section}{\numberline {7.2}Expectations of evaluation}{39}
-\contentsline {section}{\numberline {7.3}Evaluation Environment}{39}
-\contentsline {section}{\numberline {7.4}User Study Method}{39}
-\contentsline {subsection}{\numberline {7.4.1}Participants}{40}
-\contentsline {section}{\numberline {7.5}Pilot Study}{40}
-\contentsline {section}{\numberline {7.6}Experiment on Keyboard and mouse visualisation}{40}
-\contentsline {section}{\numberline {7.7}Experiment on Microsoft Kinect visualisation}{40}
-\contentsline {section}{\numberline {7.8}Results}{40}
-\contentsline {subsection}{\numberline {7.8.1}Analysis of requirements}{40}
-\contentsline {section}{\numberline {7.9}Threats to validity}{41}
-\contentsline {chapter}{\numberline {8}Conclusions}{45}
-\contentsline {section}{\numberline {8.1}Future Work}{45}
+\contentsline {section}{\numberline {5.2}Visualisation Design}{25}
+\contentsline {subsection}{\numberline {5.2.1}Functional Requirement}{25}
+\contentsline {subsection}{\numberline {5.2.2}Nonfunctional Requirement}{29}
+\contentsline {chapter}{\numberline {6}Visualisation implementation of the Improved Kepler Visualisation Tool (IKVT)}{33}
+\contentsline {section}{\numberline {6.1}Additional Tools and artifacts used}{34}
+\contentsline {subsection}{\numberline {6.1.1}Dataset used}{34}
+\contentsline {subsection}{\numberline {6.1.2}Integrated Development Environment (IDE)}{34}
+\contentsline {subsection}{\numberline {6.1.3}Keyboard and Mouse System}{34}
+\contentsline {subsection}{\numberline {6.1.4}Microsoft Kinect sensor system}{34}
+\contentsline {section}{\numberline {6.2}Main interface components}{35}
+\contentsline {subsubsection}{Spacial arrangement of components}{35}
+\contentsline {subsubsection}{Navigation Window(BETTER TITLE\nobreakspace {})}{36}
+\contentsline {section}{\numberline {6.3}Problems encountered}{40}
+\contentsline {chapter}{\numberline {7}Visualisation Evaluation}{41}
+\contentsline {section}{\numberline {7.1}Why was evaluation conducted}{41}
+\contentsline {section}{\numberline {7.2}User Study Method}{41}
+\contentsline {section}{\numberline {7.3}Evaluation Environment}{42}
+\contentsline {section}{\numberline {7.4}Expectations of evaluation}{43}
+\contentsline {subsection}{\numberline {7.4.1}Participants}{43}
+\contentsline {section}{\numberline {7.5}Pilot Study}{43}
+\contentsline {section}{\numberline {7.6}Evaluation of Keyboard and mouse visualisation}{44}
+\contentsline {section}{\numberline {7.7}Evaluation of Microsoft Kinect visualisation}{45}
+\contentsline {section}{\numberline {7.8}Performance evaluation}{45}
+\contentsline {section}{\numberline {7.9}Results}{45}
+\contentsline {subsection}{\numberline {7.9.1}Evaluation of Requirements}{45}
+\contentsline {subsubsection}{Evaluation of Functional Requirements}{45}
+\contentsline {subsubsection}{Evaluation of Nonfunctional Requirements}{45}
+\contentsline {section}{\numberline {7.10}Threats to validity}{49}
+\contentsline {chapter}{\numberline {8}Conclusions}{51}
+\contentsline {section}{\numberline {8.1}Future Work}{51}

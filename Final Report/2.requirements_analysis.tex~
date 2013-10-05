@@ -146,7 +146,7 @@ planets.
  \end{enumerate}
  \subsection{Scenario 5: View the Goldilocks zones of each planet}
    {\bf  Primary Persona:}\\
-   Looking at the planets orbiting the sun in the viusalisaiton John wonders
+   Looking at the planets orbiting the sun in the visualisation John wonders
 whether any of them could support life. To see this John wants to see which
 planets are in the habitable zones of their stars. 
  
@@ -164,7 +164,7 @@ When John is selecting planets to view more information he often finds that he w
   
   {\bf  Procedure:}
    \begin{enumerate}
- \item When John selects a planet a button becomes ungreyed called "Compare"
+ \item When John selects a planet a button becomes coloured called "Compare"
 with a note next to it saying "Please select another planet to compare to".
  \item When the second planet is selected a second text box fills up with the
 information about the second planet. This information can be compared with that
@@ -179,7 +179,7 @@ gestures as it's more immersive.
   {\bf  Procedure:}
    \begin{enumerate}
  \item By moving her hand to the edges of the screen the visualisation with pan
-in the correstponding direction, ie if the hand goes to the top of the screen
+in the corresponding direction, ie if the hand goes to the top of the screen
 the visualisation pans up.
  \item By moving her hand backwards and forwards the visualisation will zoom in
 and out.
@@ -197,16 +197,15 @@ users.
 
  \item[R3.] The planets need to be able to be ordered by their similarity to earth (ESI) and by their Kepler Object of Interest number (KOI).
  
- \item[R4.] R3. The visualisation needs to allow users to define ranges of planetary attributes to filter which planets are displayed.
+ \item[R4.] The visualisation needs to allow users to define ranges of planetary attributes to filter which planets are displayed.
 
  \item[R5.] Users need to be able to view the habitable zones of stars in relation to the planets orbiting them.
 
 \end{enumerate}
 
-
 \subsection{Nonfunctional Requirements}
  Functional requirements are supported by non functional requirements. Non
-functional requriements impose constraints on the design or implementation (such
+functional requirements impose constraints on the design or implementation (such
 as performance, security, or usability) of a system.
  
  The non functional requirements for this visualisation are as follows:

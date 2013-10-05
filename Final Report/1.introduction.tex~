@@ -1,48 +1,56 @@
 \chapter{Introduction}\label{C:intro}
 This project seeks to design, implement, and evaluate an interactive 3D
 visualisation software system for displaying the content in the Kepler
-Exoplanets dataset ((REF~)). This deliverable is intended as a standalone 3D
-visualisation with two modes of interaction, keyboard and mouse or Microsoft
-Xbox Kinect sensor ((REF)). The resulting visualisation will convey the
-information in the dataset in a way that the target users, laypeople who have an
+Exoplanet dataset \cite{dataset}.
+
+% Introduction to the Kepler Mission ~
+
+This deliverable is intended as a standalone
+3Dvisualisation with two modes of interaction, keyboard and mouse or Microsoft
+Xbox Kinect sensor \cite{kinect}. The resulting visualisation will present the
+information from the dataset in a way that the target users, laypeople who have
+an
 interest in astronomy, can understand and interact with.
 \section{Motivation}
-There are many planets that have been located outside of our own solar system,
-these are
-called exoplanets, these are referred to interchangeably as planets and
-exoplanets for the remainder of this report
-. Information about these exoplanets are stored in the Kepler Exoplanet dataset
-((REF~)). This project seeks to develop and evaluate an interactive 3D
-visualisation
-software system for the Kepler exoplanets dataset ((REF[28]))~. We can leverage
-how humans respond to visualisations by experiencing more enjoyment and more
-immersion, both of which result in improved learning and recall. This means that
-creating a effective and engaging visualisation will help convey the information
+There have been many planets located outside of our own solar system,
+these are called exoplanets, and are referred to interchangeably as planets and
+exoplanets for the remainder of this report. Information about these exoplanets
+is stored in the Kepler Exoplanet Dataset
+\cite{dataset}. This project seeks to develop and evaluate an interactive 3D
+visualisation software system for the Kepler Exoplanets Dataset. Visualisations
+are valuable as they foster immersion and enjoyment, both of which result in
+improved learning and recall. This means that
+creating an effective and engaging visualisation will help convey the
+information
 in the dataset effectively to the users.
 \section{Problem statement}
-The complex nature of the data involved in this project causes a range of
-problems revolving around understandability to arise, which this project
-attempts to address. The following subsections outline these in detail.
+The complex nature of the data involved in this project caused a range of
+problems revolving around understandability. This project
+attempts to address these issues in a way that results in increased
+accessability of the information contained in the dataset for laypeople. The
+following subsections outline these in detail.
 
 \subsection{Understanding the content in the dataset}
 Understanding and analysing large datasets whose size defies simplistic or
-trivial analysis by humans is a known issue that many areas of research are
-attempting to address. These areas of research range from data mining to
-visualisations in order to discover or highlight important features in the data
-so that people can more efficiently use or understand it. 
+trivial analysis by humans is a known issue, and one that many areas of research
+are
+attempting to address. These areas of research include from data mining, data
+analytics, and visualisations in order to discover and highlight important
+features in the data so that people can more efficiently understand and use it. 
 
 % Internal and External Visualisation
 Humans often rely on internal visualisation when we solve problems. We create an
 image in our mind of a situation in order to make sense of it
-http://nrich.maths.org/6447.~ This allows for a much more comprehensive
-understanding of the content being visualised. The content in the dataset used
+\cite{visualisingpiggott} which allows for faster and more comprehensive
+understanding. The content in the dataset used
 for this project is made up of records of every one of the 2234 exoplanets
-discovered by the Kepler Mission. Each of which contains 46 fields. It is next
-to impossible for someone to internally visualise so much information,
+discovered by the Kepler Mission. Each of these records contains 46 fields which
+makes it next to impossible for someone to internally visualise as there is so
+much information,
 especially as most of it is floating point numbers. This means that an external
 way of visualising it is needed, which is one of the problems that this project
 attempts to address. 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/data.png}
   \caption{Fields of the dataset to be visualised}
@@ -50,9 +58,14 @@ attempts to address.
 
 \subsection{Comprehension of planetary information}
 Much of the information regarding planets is cryptic and unintuitive, this make
-its understandability difficult. Visualisations in general attempt to address
-this by displaying data in simplistic ways that allows improved user
-comprehension.
+its understandability difficult. Data visualisation can therefore be effective
+because it
+shifts the balance between perception and cognition to take advantage of
+the brain's abilities. Seeing (i.e visual perception) which is handled by the
+visual cortex located in the rear of the brain, is extremely fast and efficient.
+We see immediately, with little effort. Thinking (i.e. cognition), which is
+handled primarily by the cerebral cortex in the front of the brain, is much
+slower and less efficient \cite{few}.
 
 \subsection{Existing solutions lack functionality}
 Existing data visualisation techniques using this exoplanet dataset lack the
@@ -76,24 +89,18 @@ itself. This means allowing users to control properties of how the data is
 represented, be it something as simple as the layout of elements or something
 more complex. Many mediums of interaction are possible from the mundane
 keyboards, mice, or touchpads to the more esoteric wired gloves, motion sensors,
-and omnidirectional treadmills or even a combination of devices.
-
-With interactive visualisations, response time of the system to user actions is
-important and so changes made by the user must be incorporated into the
-visualization in a timely manner. Experiments have shown that a delay of more
-than 20 ms between when input is provided and a visualisation is updated is
-noticeable by most people ((REFERENCE)~). Thus it is important for an
-interactive visualization to provide a rendering based on human input within
-this time frame or else risk breaking user immersion.
+and gesture recognition or even a combination of devices. Existing
+viusalisations surrounding planetary data lack effective and comprehensive
+interaction techniques. This causes users to lack efficient ways of exploring this data.
 
 \section{Key issues project addresses}
-To summarize the above sections, this project addresses the following key
+To summarise the above sections, this project addresses the following key
 issues:
 \begin{enumerate}
- \item[I1.] Content in database form is difficult to view and understand.
+ \item[I1.] Content in the Kepler Exoplanet Database is difficult to view and understand.
  \item[I2.] Planetary information is complex and difficult to comprehend without
 a visual reference.
- \item[I3.] Existing visualisations for this dataset have minimal functionality
+ \item[I3.] Existing visualisations Kepler Exoplanet Database have minimal functionality
 and have lacking usability.
  \item[I4.] User interaction is needed in a visualisation to make the most of
 data displayed.

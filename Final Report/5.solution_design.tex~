@@ -1,7 +1,7 @@
 \chapter{Solution Design: Improved Kepler Visualisation Tool (IKVT)}\label{C:sd}
 This section discusses the design of the deliverable visualisation, The Improved
 Kepler Visualisation Tool(IKVT). It details
-the key design decisions revolving around structure, asthetics, and
+the key design decisions revolving around structure, aesthetics, and
 functionality that were made about the visualisation. 
 % Description of tool
 This project aims to improve an existing visualisation, The Kepler Visualisation
@@ -9,10 +9,10 @@ Tool which was discussed in the previous chapter. Whist this existing
 visualisation displays exoplanets and some of their features, it lacks
 interactivity for users trying to use it to gain information contained in the
 Kepler Exoplanet Database effectively. The IKVT expands on this pre-existing
-visualisation by adding key elements of interativity missing in the existing
- visualisation as well as further enchancing the range and amount of data that
+visualisation by adding key elements of interactivity missing in the existing
+ visualisation as well as further enhancing the range and amount of data that
 is available to users about exoplanets. The IKVT also incorporates a novel
-gesture based interactive mechanisim to the visualisation.
+gesture based interactive mechanism to the visualisation.
 
 \section{System design and structure}
 Because this project builds upon an existing system complete comprehension of
@@ -44,7 +44,7 @@ created. To assist with this issue the following two tools were used.
 \end{enumerate}
 
 \section{Visualisation Design}
-The requirments produced in the Requirements Analysis chapter provide a
+The requirements produced in the Requirements Analysis chapter provide a
 description of the functionality that needs to be designed for this
 visualisation. By adding additional details to these requirements we can design
 how the visualisation should look, behave, and function.
@@ -53,9 +53,9 @@ By using abstract user interface design the layout and configuration of each
 element can be
 planned and coordinated without the need for excessive details which are likely
 to change
-throughout the course of the project (e.g. colours and content) ((REF))[18]~.
+throughout the course of the project (e.g. colours and content) \cite{martin}.
 
-\subsection{Functional Requriement}
+\subsection{Functional Requirement}
 \begin{enumerate}
 {\bf
  \item[R1.] The visualisation needs to display planetary information to convey
@@ -79,9 +79,9 @@ SELECTIONG ~
 All planets need to be selectable and react appropriately when
 clicked.
 
-To fulfull this requriement every planet needs to be able to be selected. This
+To fulfill this requirement every planet needs to be able to be selected. This
 involves detecting when a user clicks and then finding whether any planets are
-located in that space. This is more complex in this system as it requries
+located in that space. This is more complex in this system as it requires
 detecting where each planet is in a 3D space and checking whether the 2D
 location of the mouse click coincide. 
 
@@ -119,7 +119,7 @@ one another.}
 \end{figure}
 
 Using each of the previously discussed elements of interacting with the
-visualisation this requirement is fullfilled. The text areas coupled with the
+visualisation this requirement is fulfilled. The text areas coupled with the
 main visualisation window mean that all of the important and valuable
 information about each exoplanet can be conveyed to a user.
 
@@ -145,7 +145,7 @@ attributes to filter which planets are displayed.}
 
 To fulfill this requirement a method of filtering exoplanets by their attributes
 in order to control the number and types of planets displayed to the user. A
-common method of achiveing this is to use a set of sliders that allow a user to
+common method of achieving this is to use a set of sliders that allow a user to
 filter something by a set of values. For example in this system a slider could
 be used to control the size of planets that are displayed.
 
@@ -163,7 +163,7 @@ be used to control the size of planets that are displayed.
 \begin{figure}[h!]
   \centering
       \includegraphics[width=.5\textwidth]{images/mockStarHabitability.png}
-  \caption{Mockup star habitibility zone}  
+  \caption{Mockup star habitability zone}  
 \end{figure}
 
 
@@ -171,7 +171,7 @@ be used to control the size of planets that are displayed.
 
 \end{enumerate}
 
-\subsection{Nonfunctional Requriement}
+\subsection{Nonfunctional Requirement}
 
 \begin{enumerate}
 
@@ -195,7 +195,7 @@ system.
 
 {\bf \item[R7.] The visualisation must remain uncluttered.}
 
-By seperating each of the interactive components into a seperate window inside
+By separating each of the interactive components into a separate window inside
 the visualisation it provides 
 
 The visualisation must not show so much information that it
@@ -205,8 +205,8 @@ The ability to filter and sort the exoplanets gives a user the tools needed to
 reduce the quantity of planets displayed in the visualisation and thus the
 information load imposed on users. 
 In addition to this, by having the text area that displays the information about
-selected planets seperate from the main visualisation it reduces the congnitive
-load on users as they dont have to use this component untill they want to. ~
+selected planets separate from the main visualisation it reduces the cognitive
+load on users as they don't have to use this component until they want to. ~
 
 
 {\bf  \item[R8.] There needs to be two modes of interaction with the system,
@@ -222,12 +222,12 @@ For the Kinect system the key difference is that the user will be able to contro
 \end{figure}
 
 As the Kinect sensor no longer requires the use of a mouse the visualisation
-design needs to be modified to accomodate the use of gestures. This meant incorporating new cursers to indicate the state of the visualisation.
-There are 7 states that the curser needs to be able to be in to inform the user
+design needs to be modified to accommodate the use of gestures. This meant incorporating new cursors to indicate the state of the visualisation.
+There are 7 states that the cursor needs to be able to be in to inform the user
 of what action they are performing. These states are
 
 \begin{enumerate}
- \item default curser, hand is at rest
+ \item default cursor, hand is at rest
  \item panning up, hand is raised
  \item panning down, hand is lowered
  \item rotating left, hand is to the left
@@ -238,7 +238,7 @@ of what action they are performing. These states are
 \begin{figure}[h!]
   \centering
       \includegraphics[width=0.9\textwidth]{images/curserImages.png}
-  \caption{Mockup of curser images for Kinect system}  
+  \caption{Mockup of cursor images for Kinect system}  
 \end{figure}
 
 Having a range of icons that clearly display these states is vital for keeping
@@ -249,7 +249,7 @@ are in the following figure
   \centering
   ~
       %\includegraphics[width=0.8\textwidth]{images/layout_horizontal.jpg}
-  \caption{Cursers for Kinect sensor}  
+  \caption{Cursors for Kinect sensor}  
 \end{figure}
 
 

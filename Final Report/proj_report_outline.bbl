@@ -1,3 +1,81 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{celestia}
+Celestia.
+\newblock http://www.shatters.net/celestia/.
+
+\bibitem{github}
+Github.
+\newblock https://github.com/.
+
+\bibitem{kinect}
+Kinect.
+\newblock http://www.xbox.com/en-GB/kinect.
+
+\bibitem{beck2001agile}
+{\sc Beck, K., Beedle, M., van Bennekum, A., Cockburn, A., Cunningham, W.,
+  Fowler, M., Grenning, J., Highsmith, J., Hunt, A., Jeffries, R., Kern, J.,
+  Marick, B., Martin, R.~C., Mellor, S., Schwaber, K., Sutherland, J., and
+  Thomas, D.}
+\newblock Manifesto for agile software development, 2001.
+
+\bibitem{kepler_github}
+{\sc blprnt}.
+\newblock Github:kepler visualisation tool.
+\newblock https://github.com/blprnt/Kepler-Visualization.
+
+\bibitem{boehm1988spiral}
+{\sc Boehm, B.~W.}
+\newblock A spiral model of software development and enhancement.
+\newblock {\em Computer 21}, 5 (1988), 61--72.
+
+\bibitem{orrery}
+{\sc Fabrycky, D.}
+\newblock The kepler orrery, 2012.
+\newblock http://kepler.nasa.gov/multimedia/animations/?ImageID=219.
+
+\bibitem{few}
+{\sc Few, S.}
+\newblock {\em Data Visualization for Human Perception}.
+\newblock The Interaction Design Foundation, Aarhus, Denmark, 2013.
+
+\bibitem{foote1997big}
+{\sc Foote, B., and Yoder, J.}
+\newblock Big ball of mud.
+\newblock {\em Pattern languages of program design 4\/} (1997), 654--692.
+
+\bibitem{kosara2003thoughts}
+{\sc Kosara, R., Healey, C.~G., Interrante, V., Laidlaw, D.~H., and Ware, C.}
+\newblock Thoughts on user studies: Why, how, and when.
+\newblock {\em IEEE Computer Graphics and Applications 23}, 4 (2003), 20--25.
+
+\bibitem{martin}
+{\sc Martin, S.}
+\newblock Effective visual communication for graphical user interfaces, 1993.
+
+\bibitem{worlds}
+{\sc Parker, A.}
+\newblock Worlds: The kepler planet candidates, 2012.
+\newblock
+  http://kepler.nasa.gov/multimedia/animations/scienceconcepts/?ImageID=229.
+
+\bibitem{visualisingpiggott}
+{\sc Piggott, J., and Woodham, L.}
+\newblock Thinking through, and by, visualising, 2008.
+
+\bibitem{schwaber2004agile}
+{\sc Schwaber, K.}
+\newblock {\em Agile project management with Scrum}.
+\newblock O'Reilly Media, Inc., 2004.
+
+\bibitem{kepler_article}
+{\sc Thorp, J.}
+\newblock A new view of the galaxy: Exclusive kepler data visualization, 2011.
+\newblock http://boingboing.net/2011/02/08/a-new-view-of-the-ga.html.
+
+\bibitem{dataset}
+{\sc Wright, J.~T., Fakhouri, O., Marcy, G.~W., Han, E., Feng, Y., Johnson,
+  J.~A., Howard, A.~W., Valenti, J.~A., Anderson, J., and Piskunov, N.}
+\newblock {The Exoplanet Orbit Database}.
 
 \end{thebibliography}

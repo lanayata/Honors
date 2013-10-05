@@ -1,13 +1,13 @@
 \chapter{Visualisation implementation of the Improved Kepler Visualisation Tool (IKVT)}\label{C:sd}
 This chapter discusses the implementation of the visulisation using the designs
-discussed in the previous chapter to fullfil the requirements for this project. It details the tools used, the deliverable features
+discussed in the previous chapter to fulfill the requirements for this project. It details the tools used, the deliverable features
 produced, and the problems encountered. IKVT displays all 2234 exoplanets
-in the Kepler exoplanets dataset ((REF[28]))~ datase. Each of these exoplanets are represented as coloured
+in the Kepler exoplanets dataset \cite{dataset}. Each of these exoplanets are represented as coloured
 ellipses, of which the colour and size are representative of the exoplanets
 temperature and size respectively. IKVT displays all of these exoplanets as if
 they are orbiting a single star which in reality would result in planetary
 collisions but in the visualisation provides users with a way to effectively
-make observations and comparisions about each of the exoplanets in a single
+make observations and comparisons about each of the exoplanets in a single
 view. 
 
 To make this selection, a user can click on any of the orbiting exoplanets.  A
@@ -22,7 +22,7 @@ temperature, size, and Earth Similarity Index (ESI). These filters allow for
 users to fine tune the exoplanets they wish to see which allows them to work
 with small multiples rather than the entire dataset.
 
-In addition to the orbital view already discussed, there is a graph view taht
+In addition to the orbital view already discussed, there is a graph view that
 displays the exoplanets on a graph with the exoplanet attributes mapping to the
 x,y coordinates. This allows the user to modify what they want on each axis of
 the graph. Having these two views allows the user the option of how they wish to
@@ -34,23 +34,23 @@ and the control panel. The visualisation panel is where all of the exoplanets
 are displayed as well as text boxes describing the state of the visualisation to
 keep the user informed. The control panel contains all of the interactive
 components that the user can use to change the state of the visualisation. The
-components it contains are; two text areas that cane be used interchangably to
+components it contains are; two text areas that cane be used interchangeably to
 display information about selected planets, four range sliders that are used to
-filter the exoplanets as discused previously, and eight buttons to toggle the
+filter the exoplanets as discussed previously, and eight buttons to toggle the
 state of the visualisations. These buttons are "Sort by KOI", "Sort by Temp",
 "Sort by Size", "Sort by ESI", "Change View", "Suns Habitable Zone", "Pause",
-and "Unsort". ~
+and "Unsorted". ~
 
 The Kepler Orrery visualisation as discussed in the Existing Systems section of
 Chapter 3 details a contrasting system that displays each exoplanet and its
 sister planets orbiting its own star. By incorporating this idea into IKVT, when
 a planet is selected it should be highlighted and all of its sister planets
-should also become hightlighted. This will provide the same effect as in the
+should also become highlighted. This will provide the same effect as in the
 Kepler Orrery.  
 
 \section{Additional Tools and artifacts used}
 \subsection{Dataset used}
-The dataset for this project is a comma seperated values file (CSV) that
+The dataset for this project is a comma separated values file (CSV) that
 contains all of the data pertaining to the Exoplanets. At runtime this dataset
 is read into the system and an Exoplanet object is created for each element and
 contains all of the information from the dataset record.
@@ -71,7 +71,7 @@ called ControlP5 REF~. This library is a customisable and intuitive interactive
 user interface. It allows for easy creation of visually appealing and precisely
 layed out interactive GUI components.
 
-\subsection{Microft Kinect sensor system}
+\subsection{Microsoft Kinect sensor system}
 For the version of the IKVT system that uses the Kinect sensor for user
 interaction two additional libraries were required to integrate the hardware
 with Processing, these were:
@@ -83,9 +83,9 @@ http://www.primesense.com/news/our-blog/the-dld-experience/attachment/photo4/~
 These libraries provided drivers to run the Kinect sensor in Processing as well
 as basic gesture recognition and body tracking. However as the libraries were
 opensource due to the official Microsoft Kinect SDK not being compatible with
-Processing, the gesture recognition was not as user friendy or effective as the
+Processing, the gesture recognition was not as user friendly or effective as the
 official libraries. The effect of this was that the gesture tracking used in the
-system had to be created supoptimally from the opensource libraries. 
+system had to be created sup-optimally from the opensource libraries. 
 
 \section{Main interface components}
 The visualisation was designed to emphasis small multiples and filtering of the
@@ -108,7 +108,7 @@ it had a higher aspect ratio which allowed more of the content to be seen on the
 screen at once thanks to the fact that the majority of computer screens have a
 wide ratio.
 
-\begin{figure}[H!]
+\begin{figure}[h!]
   \centering
       \includegraphics[width=0.8\textwidth]{images/layout_horizontal.jpg}
   \caption{Original Horizontal Layout}  
@@ -118,28 +118,28 @@ wide ratio.
 
 \subsubsection{Navigation Window(BETTER TITLE~)}
 Description of navigation window
-\begin{figure}[H!]
+\begin{figure}[h!]
   \centering
       \includegraphics[width=0.3\textwidth]{images/nav.png}
   \caption{Navigation Panel Overview}
   \label{fig:nav}
 \end{figure}
 Description of each button
-\begin{figure}[H!]
+\begin{figure}[h!]
   \centering
       \includegraphics[width=0.6\textwidth]{images/buttons.jpg}
   \caption{Panel of interactive buttons}
   \label{fig:buttons}
 \end{figure}
 Description of each slider
-\begin{figure}[H!]
+\begin{figure}[h!]
   \centering
       \includegraphics[width=0.6\textwidth]{images/sliders.jpg}
   \caption{Panel of interactive range sliders}
   \label{fig:sliders}
 \end{figure}
 Description of text boxes
-\begin{figure}[H!]
+\begin{figure}[h!]
   \centering
       \includegraphics[width=0.9\textwidth]{images/textBoxes.jpg}
   \caption{Text boxes in each possible state}
@@ -148,10 +148,10 @@ Description of text boxes
 Due to the need for increased user interaction with the visualisation a window
 is required to house the buttons, range selectors, and text areas. These
 elements are needed as the different methods that users can use to interact with
-the visualistaion need to be visually apparent to ensure that the system can be
+the visualisation need to be visually apparent to ensure that the system can be
 easily used without prior experience. A way to do this is to provide clearly
-labelled interactive elements and tooltips explaining what they
-do.((REFERENCE))~. These tooltips are widely used as a method of informing a
+labeled interactive elements and tooltips explaining what they
+do. These tooltips are widely used as a method of informing a
 user about the purpose of an item by hovering over it. This removes the need to
 click on a button to discover its effect.
 
@@ -166,7 +166,7 @@ need to render 2234 eclipses to represent the planets. This uncovered a bug in
 the processing library in which the memory use of the visualisation would
 periodically increase until it crashed due to an out of memory exception. After
 much experimentation of how to overcome this issue, I discovered that rather
-than trying to render a native elipse shape in processing, if I instead rendered
+than trying to render a native ellipse shape in processing, if I instead rendered
 a Scalable Vector Graphic this bug would not manifest. 
 \\\\
 Libraries used for gesture detection in kinect are opensource in order to work
@@ -176,8 +176,8 @@ Using the Processing framework meant using a non industrial???~ IDE that had
 many bugs, for example when undoing multiple times in a row the file being
 modified would periodically become corrupted by lines of code being taken away
 or inserted into the wrong locations. The solution to this issue was to ensure
-that I regularily commited any changes to my version controlled system on Github
-((REFERBTECE ~)). Doing this meant that if at any time a file became corrupted I
+that I regularly committed any changes to my version controlled system on Github
+\cite{github}. Doing this meant that if at any time a file became corrupted I
 could easily see the changes in the file when compared against the precious
 commit and manually fix the file. 
 \\\\
