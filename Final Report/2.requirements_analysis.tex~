@@ -60,7 +60,7 @@ information. John is most comfortable using keyboard and mouse when interacting
 with a computer.
 
 \subsubsection{Scenario 1: View planets ordered by their similarity to Earth}
- When John first sees the system the first thing he notices is that their are
+ When John first sees the system the first thing he notices is that there are
 many planets orbiting what looks like a star. He doesn't have any point of
 reference for these planets so their sizes, colours, and movement speeds are
 meaningless. By providing a way of comparing the planets to Earth it gives a
@@ -68,12 +68,8 @@ point of reference which is well documented and known by most.
  
  {\bf Procedure:}
  \begin{enumerate}
- \item John clicks a prominent button stating view planet similarity to earth.
- \item The planets on screen move so that the earth is located at the center and
-top of the screen with all others orbiting it. The planets with a high internal
-similarity to earth are higher on the Y axis whilst the planets with a high
-surface similarity to earth are closer to the center of the orbiting planets on
-the X axis.
+ \item John selects that he wants to view the exoplanets compared by their similarity to earth.
+ \item The planets on screen move so that they are placed in a way that John can compare them to Earth.
  \item From here John can select any of the planets for further analysis.
  \end{enumerate}
 
@@ -93,7 +89,7 @@ frees up, this causes more space to appear between planets making them more
 selectable.
  \end{enumerate}
  
-  \subsection{Scenario 3: Select planets to display more information}
+  \subsubsection{Scenario 3: Select planets to display more information}
  John wants to see more information about each of the planets he can see
 orbiting in the visualisation. To do this he wants to be able to select the
 planets and have textual information appear on screen.
@@ -109,7 +105,7 @@ visible.
 to it.
  \end{enumerate}
  
- \subsection{Scenario 4: View planets in the same solar system}
+ \subsubsection{Scenario 4: View planets in the same solar system}
 John is curious about which of the planets he can see in the
 visualisation are in the same Solar System. To discover this he wants that when
 a planet is selected all other planets in the same Solar System as the selected
@@ -117,37 +113,31 @@ planet to become highlighted.
  
   {\bf  Procedure:}
    \begin{enumerate}
- \item When a planet is selected, all planets in the same Solar System become
-larger and its outline grows, making it more visible.
+ \item When John selects a planet, all planets in the same Solar System become more visible.
  \item A label appears on these planets indicating that they are related
 planets.
  \end{enumerate}
  
   
- \subsection{Scenario 5: View the Goldilocks zones of each planet}
+ \subsubsection{Scenario 5: View the Goldilocks zones of each planet}
    Looking at the planets orbiting the sun in the visualisation John wonders
 whether any of them could support life. To see this John wants to see which
 planets are in the habitable zones of their stars. 
  
   {\bf  Procedure:}
    \begin{enumerate}
- \item John clicks a button saying "Show habitable zones"
- \item Coloured rings appear showing the cold (blue), habitable (green), and hot
-(red) zones of the selected planets star.
- \item When a planet from a different star system is clicked the coloured rings
-will change to that stars zones.
+ \item John selects that he wants to view the exoplanets compared to their stars habitable zones.
+ \item The habitble zones of the selected planets star become visible.
+ \item When a planet from a different star system is clicked then the habitable zones will change to match the new selected planets stars habitable zones.
  \end{enumerate}
  
-  \subsection{Scenario 6: Select two planets to compare against one another}
+  \subsubsection{Scenario 6: Select two planets to compare against one another}
 When John is selecting planets to view more information he often finds that he wants to compare his selections against another planet. To do this John wants to be able to make multiple selections to compare two planets against one another.
   
   {\bf  Procedure:}
    \begin{enumerate}
- \item When John selects a planet a button becomes coloured called "Compare"
-with a note next to it saying "Please select another planet to compare to".
- \item When the second planet is selected a second text box fills up with the
-information about the second planet. This information can be compared with that
-in the first text box.
+ \item John selects a planet and chooses to compare it against another planet.
+ \item Information about this second planet appears so that John can make comparisons.
   \end{enumerate}
 
 \subsection{Cara Thompson (Secondary Persona - Likes gesture based systems)}
@@ -176,7 +166,7 @@ visible.
 to it.
  \end{enumerate}
  
-  \subsection{Scenario 4: View planets in the same solar system}
+ \subsubsection{Scenario 4: View planets in the same solar system}
 Cara is curious about which of the planets she can see in the
 visualisation are in the same Solar System. To discover this she wants that when
 a planet is selected all other planets in the same Solar System as the selected
@@ -184,19 +174,18 @@ planet to become highlighted.
  
   {\bf  Procedure:}
    \begin{enumerate}
- \item When a planet is selected, all planets in the same Solar System become
-larger and its outline grows, making it more visible.
+ \item When John selects a planet, all planets in the same Solar System become more visible.
  \item A label appears on these planets indicating that they are related
 planets.
  \end{enumerate}
 
- \subsection{Scenario 7: Navigate the visualisation with gestures}
+ \subsubsection{Scenario 7: Navigate the visualisation with gestures}
 Cara doesn't find using keyboard and mouse interesting enough for interacting with the visualisation. She would rather navigate around the visualisation by using hand
 gestures as it's more immersive.
 
   {\bf  Procedure:}
    \begin{enumerate}
- \item By moving her hand to the edges of the screen the visualisation with pan
+ \item By moving her hand the visualisation pans
 in the corresponding direction, ie if the hand goes to the top of the screen
 the visualisation pans up.
  \item By moving her hand backwards and forwards the visualisation will zoom in
@@ -206,7 +195,7 @@ and out.
   
 \section{Requirements summary}
 \subsection{Functional Requirements}
-Functional requirements define the functions of a system. These functions are
+Functional requirements define the functions of a system and are derived from the scenarios described above. These functions are
 described as a set of inputs, the behavior, and outputs from the system. The functional requirements for this visualisation are as follows:
 \begin{enumerate}
 

@@ -1,49 +1,50 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Fields of the dataset to be visualised}}{2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Matrix of project requirements to issues project is attempting to address}}{10}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Spiral process model followed}}{6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Spiral process model followed}}{12}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Matrix of project requirements to issues project is attempting to address}}{13}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Image of Worlds Visualisation}}{15}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Image of The Kepler Orrery Visualisation}}{16}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Image of Celestia Visualisation}}{17}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Kepler Visualisation Tool Orbital View}}{18}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Matrix of existing solutions mapped to scenarios}}{19}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Table of technology choices}}{21}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Sequence Diagram of IKVT render cycle}}{24}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Class Diagram of IKVT}}{25}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Mockup of the TextArea}}{26}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Mockup selection process}}{26}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Mockup highlight sister planets process}}{27}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Mockup compare planets text areas}}{27}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Mockup of ESI views}}{28}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Mockup of range sliders}}{28}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Mockup of interactive buttons}}{29}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Mockup star habitability zone}}{29}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Mockup of the interaction panel}}{30}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Mockup of the Kinect system}}{30}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Mockup of cursor images for Kinect system}}{31}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Table of technology choices}}{23}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces TODO\nobreakspace {}}}{34}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces TODO\nobreakspace {}}}{35}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Navigation Panel Overview}}{36}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Panel of interactive buttons}}{37}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Panel of interactive range sliders}}{37}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Text boxes in each possible state}}{38}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Original Horizontal Layout}}{40}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Improved Vertical Layout}}{40}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Sequence Diagram of IKVT render cycle}}{26}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Class Diagram of IKVT}}{27}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Mockup of the TextArea}}{28}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Mockup selection process}}{29}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Mockup highlight sister planets process}}{29}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Mockup compare planets text areas}}{30}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Mockup of ESI views}}{31}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Mockup of range sliders}}{32}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Mockup of interactive buttons}}{32}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Mockup star habitability zone}}{33}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Mockup of the interaction panel}}{34}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Mockup of the Kinect system}}{36}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Mockup of cursor images for Kinect system}}{37}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Evaluation environment}}{44}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Pilot study results of P1}}{46}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Amount of time taken for users to feel comfortable with visualisation}}{47}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Intuitivity of keyboard and mouse}}{52}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Intuitivity Microsoft Kinect sensor}}{52}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Perceived value of visualisation}}{52}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces User comprehension of visualisation}}{53}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces GUI layout intuitivity}}{53}
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Knowledge gained from the visualisation}}{54}
-\contentsline {figure}{\numberline {7.10}{\ignorespaces Correct amount of information displayed}}{54}
-\contentsline {figure}{\numberline {7.11}{\ignorespaces Summary of results}}{54}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Panel of interactive range sliders}}{40}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Panel of interactive buttons}}{41}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Text boxes in each possible state}}{42}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces TODO\nobreakspace {}}}{43}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces TODO\nobreakspace {}}}{43}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Navigation Panel Overview}}{44}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Original Horizontal Layout}}{45}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Improved Vertical Layout}}{45}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Evaluation environment}}{48}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Pilot study results of P1}}{50}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Amount of time taken for users to feel comfortable with visualisation}}{51}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Intuitivity of keyboard and mouse}}{56}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Intuitivity Microsoft Kinect sensor}}{56}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Perceived value of visualisation}}{56}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces User comprehension of visualisation}}{57}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces GUI layout intuitivity}}{57}
+\contentsline {figure}{\numberline {8.9}{\ignorespaces Knowledge gained from the visualisation}}{58}
+\contentsline {figure}{\numberline {8.10}{\ignorespaces Correct amount of information displayed}}{58}
+\contentsline {figure}{\numberline {8.11}{\ignorespaces Summary of results}}{58}
 \addvspace {10\p@ }

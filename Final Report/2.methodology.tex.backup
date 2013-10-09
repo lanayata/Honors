@@ -1,39 +1,127 @@
 
-\chapter{Project Methodologies}\label{C:m}
+\chapter{Project Methodology}\label{C:m}
 
 \section{Project management approach}
-% Why Project Managment is important
-Project management is the discipline of planning, executing, monitoring, and evaluating a project. It is a vital role as it is the glue between all of the different components that go into a successfull project. It is benificial as it encourages thinking about requirements, design, and testing before coding is commenced. For this project it helped to avoid the problem of following a code-and-fix approach described  as 1) write some code. 2) Fix the problems in the code \cite{boehm}. The code-and-fix approach may be suitable in some very small scale applications, but as soon as a system becomes complex it increases the chance of a system turning into a nightmare of high coupling, low cohesion, no modularity, minimal structure, and little consistancy. (REF BIG BALL MUD ~)
+% Why Project Management is important
+Project management is the discipline of planning, executing, monitoring, and
+evaluating a project. It is a vital role as it is the glue between all of the
+different components that go into a successful project. It is beneficial as it
+encourages thinking about requirements, design, and testing before coding is
+commenced. For this project it helped to avoid the problem of following a
+code-and-fix approach described  as 1) write some code. 2) Fix the problems in
+the code \cite{boehm1988spiral}. The code-and-fix approach may be suitable in some very
+small scale applications, but as soon as a system becomes complex it increases
+the chance of a system turning into a nightmare of high coupling, low cohesion,
+no modularity, minimal structure, and little consistency \cite{foote1997big}.
+A widely used method of managing IT projects is to use a Software Development
+LifeCycle (SDLC) which details the stages that a project must pass through  when
+being created.
 
+\subsection{Software Development Life Cycle (SDLC)}
   %Why a SDLC is needed
-The project management methodology/software development lifecycle chosen for this project was a customized Spiral Model (REF BARRY BOEHM ~) made up of requirements analysis, design, implementation, and evaluation phases as shown in Figure \ref{fig:spiralModel}. 
-A software project repeatedly passes through these phases in iterations (called Spirals in this model). For each iteration of the spiral a piece of functionality is completed. The first stage of the spiral involves analysing the requirements of the functionality being created. Second the designs are created, including the element structure and visual elements. Third the functionality is implemented. Finaly in the fourth stage the functionality is user tested by one or more people. This evaluation is in addition to the final user evaluation with multiple users. 
+The project methodology/SDLC chosen for
+this project was a customized Spiral Model \cite{boehm1988spiral} made up of
+requirements analysis, design, implementation, and evaluation phases as shown in
+Figure \ref{fig:spiralModel}. 
 
-\begin{figure}[h!]
+A software project repeatedly passes through these phases in iterations (called
+Spirals in this model). For each iteration of the spiral a piece of
+functionality is completed. The first stage of the spiral involves analysing the
+requirements of the functionality being created. Second the designs are created,
+including the element structure and visual elements. Third the functionality is
+implemented. Finally in the fourth stage the functionality is user tested by one
+or more people. This evaluation is in addition to the final user evaluation with
+multiple users. 
+
+\begin{figure}[H]
   \centering
       \includegraphics[width=0.6\textwidth]{images/spiral_model.png}
   \caption{Spiral process model followed}
   \label{fig:spiralModel}
 \end{figure}
 
-This project management technique supported the creation of a visualisation as it allowed the flexibility to add and remove components into the visualisation as they were discovered to be beneficial or not. It also supported the expansion of the project brief to include using a Microsoft Kinect sensor in order to control the visualisation. The choice of this project management approach meant that whilst I had the freedom to explore visualisation options I also had a structured software development life cycle to guide me and provide SOMETHING HERE~ the project through the necessary steps to end in completion of each component.
+This SDLC technique supported the creation of a visualisation as
+it allowed the flexibility to add and remove components into the visualisation
+as they were discovered to be beneficial or not. It also supported the expansion
+of the project brief to include using a Microsoft Kinect sensor in order to
+interact with the visualisation. The choice of this project management approach
+meant that whilst I had the freedom to explore visualisation options I also had
+a structured software development life cycle to guide me and the project through
+the necessary steps to end in the successful completion of each
+component.
 %
-Using a spiral model also allowed me to produce a deliverable feature at the end of each iteration of the model which occured each week to coincide with a meeting with my supervisor, thus ensured that I did not become delayed or stuck in my development with nothing to show. By using this methodology it also allowed me to prioritize the features that were the most important to the visualisation which reduced the risk that there would be missing or incomplete components at the end of the project. 
-
-%Advantages of Spiral
-The advantages of this methodology over other choices such as the waterfall model or an agile approach such as Scrum was that it provided me with the benefits of a structured work flow that is a feature of the waterfall model as well as a flexible iterative process that is a feature of Agile methodologies. Following a pure waterfall methodology would not have allowed me to iteratively design, develop, and evaluate each feature as it would have forced more upfront design which limits flexibility and support for changing requirements as was needed for this project. Following a pure agile approach would not have been optimal as most Agile methodologies(ie SCRUM [REFERENCE]~) are more beneficial to projects that have a team working on them. As it was I was agile in my approach to the project as I produced a deliverable at the end of each interation of the spiral model and responded to change in the form of feedback and ideas from the supervisor of the project.
+Using a spiral model also allowed me to produce a deliverable feature at the end
+of each iteration of the model which occurred each week to coincide with a
+meeting with my supervisor, thus ensured that I did not become delayed or stuck
+in my development with nothing to show. By using this methodology it also
+allowed me to prioritize the features that were the most important to the
+visualisation which reduced the risk that there would be missing or incomplete
+components at the end of the project. 
 
 %Did I acheive all my goals
-Following this project managment approach allowed me to achieve all of the goals that I set, although it did not always happen within the timeframes that I had planned and some deadlines had to be revised. The delays were caused by increasing the scope of the project to include the Microsoft Kinext sensor which required further planning, implementation and testing. Although there were these delays, due to the planning and project managment approach that was used, all project elements were completed.
+Following this SDLC allowed me to achieve all of the goals
+that I set, although it did not always happen within the time frames that I had
+planned and some deadlines had to be revised. The delays were caused by
+increasing the scope of the project to include the Microsoft Kinect sensor which
+required further planning, implementation and testing. Although there were these
+delays, due to the planning and project management approach that was used, all
+project elements were completed.
 
+
+\section{Other project methodologies explored}
+Two other project methodologies were explored before the choice to use the
+Spiral Model was chosen. These alternatives were a loose agile method SCRUM, and
+a strict Structured method Waterfall. 
+%Advantages of Spiral
+The advantages of the Spiral model over these alternatives was that it provided
+me with the benefits of a structured work flow that is a feature of the
+waterfall model as
+well as a flexible iterative process that is a feature of Agile methodologies
+without needing to adhere only to the strict guidelines of either. Following a
+pure waterfall methodology would not have allowed me to iteratively
+design, develop, and evaluate each feature and would have forced more upfront
+design which limits flexibility and support for changing requirements as was
+needed for this project. Following a pure agile approach would not have been
+optimal either as most Agile methodologies(ie SCRUM \cite{schwaber2004agile}) are more
+beneficial to projects with more than a single person working on them. As it was
+I was agile in my approach to the project as embraced changing requirements,
+collaborated with my supervisor (the customer) regularly, emphasized working
+software over large amounts of documentation \cite{beck2001agile}. 
+
+
+\section{Supporting Tools for project}
 %Other tools used to support me
-By supporting this project methodology with other project management tools such as Gantt charts [APPENDIX~] and work breakdown structures(WBS) [APPENDIX~], it encouraged efficient documentation of planning and work completed in the project as well as displaying the upcoming stages required to complete the project.
+By supporting this project methodology with other project management tools such
+as Gantt charts [APPENDIX~] and work breakdown structures(WBS) [APPENDIX~], it
+encouraged efficient documentation of planning and work completed in the project
+as well as displaying the upcoming stages required to complete the project.
+\\
+
+%Version Control
+Version control was important for this project as it mitigated against the risks
+of file system crashes and corruption, it also maintained effective revision
+history that could be used to backtrack to or view changes that were made
+earlier in the project. Version control was also valuable as it allowed me to
+maintain multiple branches (versions) of my project that I could swap between.
+This was important for the creation of the Keyboard and mouse system and the
+Microsoft Kinect system as they were on separate branches in a repository. 
+
+The version control tool that was used for this project was Git which allowed
+for the repository to be hosted on the repository hosting web service Github.
+This version control option was chosen due to the ease of use of as well as my
+prior experience with Git which has all been positive. There was a minor
+limitation of this choice as I used a free Github license which meant that the
+repository would be open to the public.
+\\
 
 %Meetings with supervisor
-Weekly meetings with the supervisor of the project, Dr Stuart Marshall, were used to provide guidance and ideas for innovation of the visualisation throughout the project. These meeting ensured that vital components and deliverables were implemented in the required timeframe and also provided a sounding board for ideas for elements to be included in the visualization. Another important aspect of having an involved supervisor was that he provided me the guidance of an experienced academic which was indispensable when navigating the administrative side of organizing delicate matters such as ethics approval for human evaluation of the visualisation.
-% Gantt Chart
+Weekly meetings with the supervisor of the project, Dr Stuart Marshall, were
+used to provide guidance and ideas for innovation of the visualisation
+throughout the project. These meeting ensured that vital components and
+deliverables were implemented in the required timeframe and also provided a
+sounding board for ideas for elements to be included in the visualization.
+Another important aspect of having an involved supervisor was that he provided
+me the guidance of an experienced academic which was indispensable when
+navigating the administrative side of organizing delicate matters such as ethics
+approval for human evaluation of the visualisation.
 
-\section{Difficulties in project}
-As this project builds upon a previous system much of the existing code and execution flow needs to be modified. This requires understanding of how the system was originally built and designed. Because this system does not have any unit or integration tests, going ahead without a comprehensive knowledge of the core functionality would be have led to ineffective planning and errors being introduced into the system.
-%Making use of tall of the data
-This project had a time constraint of approximately 300 hours over the course of a year, this meant that I needed effective time management techniques to ensure that I spent the right amount of time on each project element, that I prioritised important tasks, set appropriate deadlines, and planned each stage of the project effectively.

@@ -4,6 +4,10 @@
 Celestia.
 \newblock http://www.shatters.net/celestia/.
 
+\bibitem{controlp5}
+Controlp5.
+\newblock www.sojamo.de/libraries/controlP5.
+
 \bibitem{github}
 Github.
 \newblock https://github.com/.
@@ -11,6 +15,14 @@ Github.
 \bibitem{kinect}
 Kinect.
 \newblock http://www.xbox.com/en-GB/kinect.
+
+\bibitem{nite}
+Nite.
+\newblock www.primesense.com.
+
+\bibitem{simpleopenni}
+Simpleopenni.
+\newblock code.google.com/p/simple-openni.
 
 \bibitem{beck2001agile}
 {\sc Beck, K., Beedle, M., van Bennekum, A., Cockburn, A., Cunningham, W.,

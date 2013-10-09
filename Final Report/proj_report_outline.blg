@@ -3,60 +3,65 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: proj_report_outline.aux
 A level-1 auxiliary file: 0.acknowledge.aux
 A level-1 auxiliary file: 1.introduction.aux
-A level-1 auxiliary file: 2.requirements_analysis.aux
-A level-1 auxiliary file: 3.methodology.aux
-A level-1 auxiliary file: 4.technology.aux
+A level-1 auxiliary file: 2.methodology.aux
+A level-1 auxiliary file: 3.requirements_analysis.aux
+A level-1 auxiliary file: 4aexisting.aux
+A level-1 auxiliary file: 4btechnology.aux
 A level-1 auxiliary file: 5.solution_design.aux
 A level-1 auxiliary file: 6.implementation.aux
 A level-1 auxiliary file: 7.evaluation.aux
 A level-1 auxiliary file: 8.conclusion.aux
 The style file: acm.bst
 Database file #1: refs.bib
+Warning--I didn't find a database entry for "exo"
 Warning--to sort, need author or key in kinect
 Warning--to sort, need author or key in celestia
+Warning--to sort, need author or key in controlp5
+Warning--to sort, need author or key in nite
+Warning--to sort, need author or key in simpleopenni
 Warning--to sort, need author or key in github
 Warning--can't use both author and editor fields in few
 Warning--empty chapter and pages in few
 Warning--empty journal in dataset
-You've used 15 entries,
+You've used 18 entries,
             2253 wiz_defined-function locations,
-            611 strings with 6083 characters,
-and the built_in function-call counts, 4198 in all, are:
-= -- 363
-> -- 242
+            622 strings with 6232 characters,
+and the built_in function-call counts, 4669 in all, are:
+= -- 405
+> -- 245
 < -- 0
-+ -- 104
++ -- 107
 - -- 86
-* -- 292
-:= -- 690
-add.period$ -- 39
-call.type$ -- 15
-change.case$ -- 86
+* -- 307
+:= -- 738
+add.period$ -- 45
+call.type$ -- 18
+change.case$ -- 95
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 131
-empty$ -- 347
+cite$ -- 27
+duplicate$ -- 152
+empty$ -- 416
 format.name$ -- 86
-if$ -- 853
+if$ -- 970
 int.to.chr$ -- 0
-int.to.str$ -- 15
+int.to.str$ -- 18
 missing$ -- 8
-newline$ -- 72
+newline$ -- 84
 num.names$ -- 24
-pop$ -- 146
+pop$ -- 179
 preamble$ -- 1
-purify$ -- 73
+purify$ -- 79
 quote$ -- 0
-skip$ -- 91
+skip$ -- 109
 stack$ -- 0
-substring$ -- 141
-swap$ -- 27
+substring$ -- 156
+swap$ -- 30
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 56
-warning$ -- 6
+type$ -- 68
+warning$ -- 9
 while$ -- 30
-width$ -- 17
-write$ -- 136
-(There were 6 warnings)
+width$ -- 20
+write$ -- 157
+(There were 10 warnings)

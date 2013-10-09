@@ -1,10 +1,10 @@
-\chapter{Existing systems and technologies} 
-\section{Existing systems}
-This section discusses 4 existing visualisations that have a theme depicting
+\chapter{Related Work} 
+This chapter discusses 4 existing visualisations that have a theme depicting
 space or planets. Following the description, each visualisation is analysed to
 discover which of the User Scenarios detailed previously existed within the
 system.
-\subsection{Worlds: The Kepler Planet Candidates - Non Interactive}
+
+\section{Worlds: The Kepler Planet Candidates - Non Interactive}
  This animation \cite{worlds} shows  planet candidates found by NASA's Kepler
 mission. These candidates are animated in orbit around a single star. They are
 drawn to scale with accurate radii, orbital periods, and orbital distances. They
@@ -47,7 +47,7 @@ remove the ability for a user to see which planets are together in the same
 solar system.
 
 
-\subsection{The Kepler Orrery and The Kepler Orrery 2 - Non interactive}
+\section{The Kepler Orrery and The Kepler Orrery 2 - Non interactive}
 The Kepler Orrery \cite{orrery} illustrates the exoplanet candidates in their
 own solar systems. The orbit radii are to scale with respect to each other and
 planet sizes are to scale with respect to each other, but orbits and planet
@@ -83,7 +83,7 @@ groupings of each panel into each solar system. By displaying each planet
 orbiting its own star it removes the risk of confusion about what the planet is
 actually orbiting which could be the case with Worlds.
 
-\subsection{Celestia - Interactive}
+\section{Celestia - Interactive}
 Celestia \cite{celestia} is a free real-time space simulation that lets you
 visually experience the universe in three dimensions. It is an open source
 system written in C++. 
@@ -117,7 +117,7 @@ Maybe
 Maybe\\\\
 {\bf Scenario 7.} Navigate the visualisation with gestures: \\
 Maybe\\\\
-\subsection{Kepler Visualisation Tool}
+\section{Kepler Visualisation Tool}
 An existing system built with Processing is the Kepler Visualisation
 Tool\cite{kepler_github, kepler_article}. It is a simple visualisation focusing
 on displaying the candidate Exoplanets temperatures and their locations in
@@ -130,11 +130,7 @@ its estimated effective temperature.
       \includegraphics[width=1\textwidth]{images/kepler.jpg}
   \caption{Kepler Visualisation Tool Orbital View}
 \end{figure}
-% \begin{figure}[H]
-%   \centering
-%       \includegraphics[width=0.8\textwidth]{images/kepler_graph.jpg}
-%   \caption{Kepler Visualisation Tool Graph View}
-% \end{figure}
+
 The existing work in this system would serve as foundation for this project.
 Because much of the visual aspects, and initial data manipulation of the
 existing system are already complete. It means that implementing the features
@@ -156,14 +152,6 @@ planets are ordered by on the vertical plane (Y axis) ie, by size or
 temperature, but does not allow users to select ranges of these attributes to
 filter the Exoplanets
 
-\subsection{Summary of Existing Applications}
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=1\textwidth]{images/existing.png}
-  \caption{Matrix of existing solutions mapped to scenarios}  
-    \label{fig:existing}
-\end{figure}
-
 
 \section{Analysis of technology options}
 Many technologies were looked into and experimented with. Then the positives and
@@ -171,6 +159,24 @@ negatives of each option was weighed up before a decision was made about which w
 suitable choice for the visualisation. It came down to 3 potential technologies that
 would be suitable for the project, the next 3 subsections outline these in
 detail.
+
+\subsection{Processing}
+Processing is an open source programming language and development environment
+that was initially created to serve as a software
+sketchbook and to teach the fundamentals of computer programming with a visual
+context.
+Using processing would mean that the visualization could be built with Java
+while still using
+a successful visualisation framework. The most complete existing visualization
+using
+the same exoplanet dataset (Kepler Visualization Tool) is built using
+Processing.
+Using this solution would involve learning the Processing language, however
+Processing
+is a library built in Java so the syntax is the same. This means the learning
+curve should be shallow.
+Using processing means that 3D elements could be included, this wouldn't be
+possible with D3.
 
 \subsection{D3 (Data Driven Documents)}
 D3 is a JavaScript library that allows the displaying of data in dynamic
@@ -221,23 +227,6 @@ However the complexity of Prefuse means that the learning curve will be out of
 scope for
 this project.
 
-\subsection{Processing}
-Processing is an open source programming language and development environment
-that was initially created to serve as a software
-sketchbook and to teach the fundamentals of computer programming with a visual
-context.
-Using processing would mean that the visualization could be built with Java
-while still using
-a successful visualisation framework. The most complete existing visualization
-using
-the same exoplanet dataset (Kepler Visualization Tool) is built using
-Processing.
-Using this solution would involve learning the Processing language, however
-Processing
-is a library built in Java so the syntax is the same. This means the learning
-curve should be shallow.
-Using processing means that 3D elements could be included, this wouldn't be
-possible with D3.
 
 \subsection{Decision of technology}
 The final decision of technology was to use Processing, this is because it had
@@ -263,3 +252,4 @@ As this is such a large project involving many different iterations, version
 control was important for maintaining records and backups of important changes
 which was stored on remote servers to ensure against file loss in system
 failures.
+

@@ -33,7 +33,7 @@ implemented. Finally in the fourth stage the functionality is user tested by one
 or more people. This evaluation is in addition to the final user evaluation with
 multiple users. 
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=0.6\textwidth]{images/spiral_model.png}
   \caption{Spiral process model followed}

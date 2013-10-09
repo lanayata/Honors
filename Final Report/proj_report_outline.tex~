@@ -102,8 +102,8 @@ creation.
 
 % individual chapters included here
 \include{1.introduction}
-\include{2.requirements_analysis}
-\include{3.methodology}
+\include{2.methodology}
+\include{3.requirements_analysis}
 \include{4.technology}
 \include{5.solution_design}
 \include{6.implementation}
