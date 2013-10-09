@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  5 OCT 2013 19:30
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  9 OCT 2013 17:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -148,11 +148,7 @@ LaTeX Warning: Label `C:sd' multiply defined.
 
 LaTeX Warning: Label `fig:sliders' multiply defined.
 
-) (./7.evaluation.aux
-
-LaTeX Warning: Label `C:sd' multiply defined.
-
-) (./8.conclusion.aux))
+) (./7.evaluation.aux) (./8.conclusion.aux))
 \openout1 = `proj_report_outline.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
@@ -168,7 +164,8 @@ LaTeX Font Info:    ... okay on input line 58.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
 LaTeX Font Info:    ... okay on input line 58.
 LaTeX Font Info:    Try loading font information for OT1+ppl on input line 58.
- (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+
+(/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 \big@size=\dimen107
@@ -294,20 +291,28 @@ Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 14.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 33.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 34.
 <images/data.png, id=32, 964.60374pt x 404.51125pt>
 File: images/data.png Graphic file (type png)
  <use images/data.png>
-Package pdftex.def Info: images/data.png used on input line 55.
+Package pdftex.def Info: images/data.png used on input line 57.
 (pdftex.def)             Requested size: 352.8155pt x 147.9509pt.
 
 [1
 
 
 
-] [2 <./images/data.png>]) [3]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 62--73
+
+ []
+
+
+LaTeX Warning: Citation `exo' on page 2 undefined on input line 102.
+
+[2 <./images/data.png>]) [3]
 \openout2 = `2.requirements_analysis.aux'.
 
  (./2.requirements_analysis.tex [4
@@ -317,39 +322,42 @@ Package pdftex.def Info: images/data.png used on input line 55.
 ]
 Chapter 2.
 
-Overfull \hbox (2.21686pt too wide) in paragraph at lines 41--46
-[]\OT1/ppl/m/n/10.95 John is used to play-ing com-puter games and us-ing vi-su-
-al-i-sa-tions and is not over-whelmed
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 47--57
+Underfull \hbox (badness 10000) in paragraph at lines 19--29
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 60.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 30.
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
- [6] [7] [8]
-<images/issues_to_req_matrix.png, id=61, 782.925pt x 488.82625pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
+ [5]
+Overfull \hbox (2.21686pt too wide) in paragraph at lines 56--61
+[]\OT1/ppl/m/n/10.95 John is used to play-ing com-puter games and us-ing vi-su-
+al-i-sa-tions and is not over-whelmed
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 154--164
+
+ []
+
+[7] [8] <images/issues_to_req_matrix.png, id=61, 782.925pt x 488.82625pt>
 File: images/issues_to_req_matrix.png Graphic file (type png)
 
 <use images/issues_to_req_matrix.png>
-Package pdftex.def Info: images/issues_to_req_matrix.png used on input line 223
+Package pdftex.def Info: images/issues_to_req_matrix.png used on input line 243
 .
 (pdftex.def)             Requested size: 441.01772pt x 275.35194pt.
-) [9 <./images/issues_to_req_matrix.png>]
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+[10 <./images/issues_to_req_matrix.png>]
 \openout2 = `3.methodology.aux'.
 
-
-(./3.methodology.tex [10
-
-
-
-]
+ (./3.methodology.tex
 Chapter 3.
 <images/spiral_model.png, id=69, 704.6325pt x 702.625pt>
 File: images/spiral_model.png Graphic file (type png)
@@ -360,7 +368,11 @@ Package pdftex.def Info: images/spiral_model.png used on input line 38.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
+ [11
+
+
+
+]
 [12 <./images/spiral_model.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 94--99
 
@@ -481,24 +493,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--120
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
+ <images/kepler.jpg, id=97, 1204.5pt x 339.2675pt>
+File: images/kepler.jpg Graphic file (type jpg)
 
-<images/kepler_orbital.jpg, id=97, 985.6825pt x 578.16pt>
-File: images/kepler_orbital.jpg Graphic file (type jpg)
+<use images/kepler.jpg>
+Package pdftex.def Info: images/kepler.jpg used on input line 130.
+(pdftex.def)             Requested size: 441.01772pt x 124.22244pt.
 
-<use images/kepler_orbital.jpg>
-Package pdftex.def Info: images/kepler_orbital.jpg used on input line 130.
-(pdftex.def)             Requested size: 352.8155pt x 206.94647pt.
-
-<images/kepler_graph.jpg, id=98, 985.6825pt x 578.16pt>
-File: images/kepler_graph.jpg Graphic file (type jpg)
-
-<use images/kepler_graph.jpg>
-Package pdftex.def Info: images/kepler_graph.jpg used on input line 135.
-(pdftex.def)             Requested size: 352.8155pt x 206.94647pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18 <./images/kepler_orbital.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 138--158
 
  []
@@ -508,333 +509,357 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--158
 
  []
 
-<images/existing.png, id=102, 647.218pt x 207.77625pt>
+[18 <./images/kepler.jpg>]
+<images/existing.png, id=101, 647.218pt x 207.77625pt>
 File: images/existing.png Graphic file (type png)
 
 <use images/existing.png>
 Package pdftex.def Info: images/existing.png used on input line 162.
 (pdftex.def)             Requested size: 441.01772pt x 141.58398pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19 <./images/kepler_graph.jpg>] [20 <./images/existing.png>] [21]
-<images/table_technologies.jpg, id=112, 1264.725pt x 760.8425pt>
+ [19 <./images/existing.png>] [20]
+<images/table_technologies.jpg, id=108, 1264.725pt x 760.8425pt>
 File: images/table_technologies.jpg Graphic file (type jpg)
 
 <use images/table_technologies.jpg>
-Package pdftex.def Info: images/table_technologies.jpg used on input line 256.
+Package pdftex.def Info: images/table_technologies.jpg used on input line 249.
 (pdftex.def)             Requested size: 352.8155pt x 212.245pt.
-) [22
+) [21
 
  <./images/table_technologies.jpg>]
 \openout2 = `5.solution_design.aux'.
 
 
-(./5.solution_design.tex
-Chapter 5.
-<images/sequence.png, id=116, 699.61375pt x 593.21625pt>
-File: images/sequence.png Graphic file (type png)
-
-<use images/sequence.png>
-Package pdftex.def Info: images/sequence.png used on input line 31.
-(pdftex.def)             Requested size: 352.8155pt x 299.15999pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23
+(./5.solution_design.tex [22
 
 
 
 ]
-<images/classDiagram.png, id=121, 719.68875pt x 687.56876pt>
+Chapter 5.
+
+Overfull \hbox (1.83826pt too wide) in paragraph at lines 19--35
+\OT1/ppl/m/n/10.95 http://www.ibm.com/developerworks/rational/library/content/R
+ationalEdge/sep04/be
+ []
+
+<images/sequence.png, id=115, 699.61375pt x 593.21625pt>
+File: images/sequence.png Graphic file (type png)
+
+<use images/sequence.png>
+Package pdftex.def Info: images/sequence.png used on input line 47.
+(pdftex.def)             Requested size: 352.8155pt x 299.15999pt.
+ [23]
+<images/classDiagram.png, id=120, 719.68875pt x 687.56876pt>
 File: images/classDiagram.png Graphic file (type png)
 
 <use images/classDiagram.png>
-Package pdftex.def Info: images/classDiagram.png used on input line 39.
+Package pdftex.def Info: images/classDiagram.png used on input line 62.
 (pdftex.def)             Requested size: 352.8155pt x 337.0795pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24 <./images/sequence.png>] <images/textAreaMockup.png, id=126, 529.98pt x 39
+ [24 <./images/sequence.png>] <images/textAreaMockup.png, id=125, 529.98pt x 39
 3.47pt>
 File: images/textAreaMockup.png Graphic file (type png)
 
 <use images/textAreaMockup.png>
-Package pdftex.def Info: images/textAreaMockup.png used on input line 74.
+Package pdftex.def Info: images/textAreaMockup.png used on input line 104.
 (pdftex.def)             Requested size: 352.8155pt x 261.94244pt.
  [25 <./images/classDiagram.png>]
-<images/mockSelected.png, id=131, 747.79375pt x 214.8025pt>
+<images/mockSelected.png, id=130, 747.79375pt x 214.8025pt>
 File: images/mockSelected.png Graphic file (type png)
 
 <use images/mockSelected.png>
-Package pdftex.def Info: images/mockSelected.png used on input line 94.
+Package pdftex.def Info: images/mockSelected.png used on input line 130.
 (pdftex.def)             Requested size: 352.8155pt x 101.34393pt.
 
-<images/selectedSisterPlanets.png, id=132, 803.0pt x 303.1325pt>
+<images/selectedSisterPlanets.png, id=131, 803.0pt x 303.1325pt>
 File: images/selectedSisterPlanets.png Graphic file (type png)
 
 <use images/selectedSisterPlanets.png>
-Package pdftex.def Info: images/selectedSisterPlanets.png used on input line 10
-7.
+Package pdftex.def Info: images/selectedSisterPlanets.png used on input line 14
+1.
 (pdftex.def)             Requested size: 352.8155pt x 133.18907pt.
  [26 <./images/textAreaMockup.png> <./images/mockSelected.png>]
-<images/mockComparePlanets.png, id=138, 960.58875pt x 356.33125pt>
+<images/mockComparePlanets.png, id=137, 960.58875pt x 356.33125pt>
 File: images/mockComparePlanets.png Graphic file (type png)
 
 <use images/mockComparePlanets.png>
-Package pdftex.def Info: images/mockComparePlanets.png used on input line 117.
+Package pdftex.def Info: images/mockComparePlanets.png used on input line 151.
 (pdftex.def)             Requested size: 308.71104pt x 114.51767pt.
 
-<images/mockupESI.png, id=139, 1000.73875pt x 390.45876pt>
+<images/mockupESI.png, id=138, 1000.73875pt x 390.45876pt>
 File: images/mockupESI.png Graphic file (type png)
 
 <use images/mockupESI.png>
-Package pdftex.def Info: images/mockupESI.png used on input line 137.
+Package pdftex.def Info: images/mockupESI.png used on input line 167.
 (pdftex.def)             Requested size: 441.01772pt x 172.07048pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27 <./images/selectedSisterPlanets.png> <./images/mockComparePlanets.png>]
-<images/mockSlider.png, id=145, 882.29625pt x 586.19pt>
+<images/mockSlider.png, id=144, 882.29625pt x 586.19pt>
 File: images/mockSlider.png Graphic file (type png)
 
 <use images/mockSlider.png>
-Package pdftex.def Info: images/mockSlider.png used on input line 154.
+Package pdftex.def Info: images/mockSlider.png used on input line 184.
 (pdftex.def)             Requested size: 352.8155pt x 234.40923pt.
 
-<images/mockStarHabitability.png, id=146, 696.6025pt x 622.325pt>
+<images/mockButtons.png, id=145, 478.78876pt x 170.6375pt>
+File: images/mockButtons.png Graphic file (type png)
+
+<use images/mockButtons.png>
+Package pdftex.def Info: images/mockButtons.png used on input line 195.
+(pdftex.def)             Requested size: 220.50885pt x 78.58792pt.
+ [28 <./images/mockupESI.png> <./images/mockSlider.png>] <images/mockStarHabita
+bility.png, id=151, 696.6025pt x 622.325pt>
 File: images/mockStarHabitability.png Graphic file (type png)
 
 <use images/mockStarHabitability.png>
-Package pdftex.def Info: images/mockStarHabitability.png used on input line 165
+Package pdftex.def Info: images/mockStarHabitability.png used on input line 213
 .
 (pdftex.def)             Requested size: 220.50885pt x 196.9925pt.
 
-Underfull \vbox (badness 6001) has occurred while \output is active []
-
- [28 <./images/mockupESI.png> <./images/mockSlider.png>]
 <images/allTogether.png, id=152, 1344.02126pt x 278.03876pt>
 File: images/allTogether.png Graphic file (type png)
 
 <use images/allTogether.png>
-Package pdftex.def Info: images/allTogether.png used on input line 182.
+Package pdftex.def Info: images/allTogether.png used on input line 245.
 (pdftex.def)             Requested size: 441.01772pt x 91.23123pt.
-
-<images/mockButtons.png, id=153, 478.78876pt x 170.6375pt>
-File: images/mockButtons.png Graphic file (type png)
-
-<use images/mockButtons.png>
-Package pdftex.def Info: images/mockButtons.png used on input line 192.
-(pdftex.def)             Requested size: 220.50885pt x 78.58792pt.
- [29 <./images/mockStarHabitability.png> <./images/allTogether.png> <./images/m
-ockButtons.png>]
-<images/mockKinect.png, id=161, 550.055pt x 345.29pt>
+ [29 <./images/mockButtons.png> <./images/mockStarHabitability.png>] <images/mo
+ckKinect.png, id=159, 550.055pt x 345.29pt>
 File: images/mockKinect.png Graphic file (type png)
 
 <use images/mockKinect.png>
-Package pdftex.def Info: images/mockKinect.png used on input line 220.
+Package pdftex.def Info: images/mockKinect.png used on input line 277.
 (pdftex.def)             Requested size: 308.71104pt x 193.7931pt.
-
-<images/curserImages.png, id=162, 1359.0775pt x 312.16624pt>
+ [30 <./images/allTogether.png> <./images/mockKinect.png>] <images/curserImages
+.png, id=165, 1359.0775pt x 312.16624pt>
 File: images/curserImages.png Graphic file (type png)
 
 <use images/curserImages.png>
-Package pdftex.def Info: images/curserImages.png used on input line 240.
+Package pdftex.def Info: images/curserImages.png used on input line 307.
 (pdftex.def)             Requested size: 396.91324pt x 91.16417pt.
- [30 <./images/mockKinect.png>]) [31 <./images/curserImages.png>]
+) [31 <./images/curserImages.png>]
 \openout2 = `6.implementation.aux'.
 
- (./6.implementation.tex [32
+
+(./6.implementation.tex [32
 
 
 
 ]
 Chapter 6.
 [33]
-Overfull \hbox (44.26888pt too wide) in paragraph at lines 79--81
+Overfull \hbox (44.26888pt too wide) in paragraph at lines 36--38
 []\OT1/ppl/m/n/10.95 NITE http://www.primesense.com/news/our-blog/the-dld-exper
 ience/attachment/photo4/ 
  []
 
-[34] <images/layout_horizontal.jpg, id=180, 1686.3pt x 1017.8025pt>
-File: images/layout_horizontal.jpg Graphic file (type jpg)
+<images/habitable.png, id=176, 960.58875pt x 402.50375pt>
+File: images/habitable.png Graphic file (type png)
 
-<use images/layout_horizontal.jpg>
-Package pdftex.def Info: images/layout_horizontal.jpg used on input line 113.
-(pdftex.def)             Requested size: 352.8155pt x 212.93726pt.
+<use images/habitable.png>
+Package pdftex.def Info: images/habitable.png used on input line 74.
+(pdftex.def)             Requested size: 441.01772pt x 184.79774pt.
+ [34 <./images/habitable.png>]
+<images/zoomFilter.png, id=181, 647.41875pt x 336.25626pt>
+File: images/zoomFilter.png Graphic file (type png)
 
-<images/layout_vertical.jpg, id=181, 1684.2925pt x 1020.81375pt>
-File: images/layout_vertical.jpg Graphic file (type jpg)
-
-<use images/layout_vertical.jpg>
-Package pdftex.def Info: images/layout_vertical.jpg used on input line 115.
-(pdftex.def)             Requested size: 352.8155pt x 213.83205pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [35]
-<images/nav.png, id=186, 244.112pt x 861.49126pt>
+<use images/zoomFilter.png>
+Package pdftex.def Info: images/zoomFilter.png used on input line 95.
+(pdftex.def)             Requested size: 352.8155pt x 183.24832pt.
+ <images/nav.png, id=182, 244.112pt x 861.49126pt>
 File: images/nav.png Graphic file (type png)
- <use images/nav.png>
-Package pdftex.def Info: images/nav.png used on input line 123.
+
+<use images/nav.png>
+Package pdftex.def Info: images/nav.png used on input line 118.
 (pdftex.def)             Requested size: 132.30666pt x 466.92038pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36 <./images/layout_horizontal.jpg> <./images/layout_vertical.jpg>]
-<images/buttons.jpg, id=190, 230.8625pt x 206.7725pt>
+ [35 <./images/zoomFilter.png>] <images/buttons.jpg, id=188, 230.8625pt x 206.7
+725pt>
 File: images/buttons.jpg Graphic file (type jpg)
- <use images/buttons.jpg>
-Package pdftex.def Info: images/buttons.jpg used on input line 130.
+
+<use images/buttons.jpg>
+Package pdftex.def Info: images/buttons.jpg used on input line 125.
 (pdftex.def)             Requested size: 264.61331pt x 237.01984pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37 <./images/nav.png>] <images/sliders.jpg, id=194, 290.08376pt x 202.7575pt>
+ [36 <./images/nav.png>] <images/sliders.jpg, id=192, 290.08376pt x 202.7575pt>
 File: images/sliders.jpg Graphic file (type jpg)
 
 <use images/sliders.jpg>
-Package pdftex.def Info: images/sliders.jpg used on input line 137.
+Package pdftex.def Info: images/sliders.jpg used on input line 132.
 (pdftex.def)             Requested size: 264.61331pt x 184.9675pt.
 
-<images/textBoxes.jpg, id=195, 616.3025pt x 1006.76125pt>
+<images/textBoxes.jpg, id=193, 616.3025pt x 1006.76125pt>
 File: images/textBoxes.jpg Graphic file (type jpg)
 
 <use images/textBoxes.jpg>
-Package pdftex.def Info: images/textBoxes.jpg used on input line 144.
+Package pdftex.def Info: images/textBoxes.jpg used on input line 139.
 (pdftex.def)             Requested size: 396.91324pt x 648.3959pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38 <./images/buttons.jpg> <./images/sliders.jpg>]
+ [37 <./images/buttons.jpg> <./images/sliders.jpg>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39 <./images/textBoxes.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 163--186
+ [38 <./images/textBoxes.jpg>]
+<images/layout_horizontal.jpg, id=200, 1686.3pt x 1017.8025pt>
+File: images/layout_horizontal.jpg Graphic file (type jpg)
+
+<use images/layout_horizontal.jpg>
+Package pdftex.def Info: images/layout_horizontal.jpg used on input line 169.
+(pdftex.def)             Requested size: 352.8155pt x 212.93726pt.
+
+<images/layout_vertical.jpg, id=201, 1684.2925pt x 1020.81375pt>
+File: images/layout_vertical.jpg Graphic file (type jpg)
+
+<use images/layout_vertical.jpg>
+Package pdftex.def Info: images/layout_vertical.jpg used on input line 171.
+(pdftex.def)             Requested size: 352.8155pt x 213.83205pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39])
+Underfull \hbox (badness 10000) in paragraph at lines 177--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--186
+Underfull \hbox (badness 10000) in paragraph at lines 177--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--186
+Underfull \hbox (badness 10000) in paragraph at lines 177--109
 
  []
 
-) [40]
+[40 <./images/layout_horizontal.jpg> <./images/layout_vertical.jpg>] [41]
 \openout2 = `7.evaluation.aux'.
 
- (./7.evaluation.tex
+
+(./7.evaluation.tex [42
+
+
+
+]
 Chapter 7.
-Missing character: There is no â in font pplr7t!
-Missing character: There is no € in font pplr7t!
-Missing character: There is no ™ in font pplr7t!
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--47
-
- []
-
-[41
-
-
-
-] <images/environment.png, id=209, 615.29875pt x 478.78876pt>
+[43] <images/environment.png, id=219, 615.29875pt x 478.78876pt>
 File: images/environment.png Graphic file (type png)
 
 <use images/environment.png>
-Package pdftex.def Info: images/environment.png used on input line 72.
+Package pdftex.def Info: images/environment.png used on input line 62.
 (pdftex.def)             Requested size: 352.8155pt x 274.5416pt.
- [42 <./images/environment.png>] [43]
-<images/pilot.jpg, id=218, 1258.7025pt x 568.1225pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--83
+
+ []
+
+[44 <./images/environment.png>] [45]
+<images/pilot.jpg, id=227, 1258.7025pt x 568.1225pt>
 File: images/pilot.jpg Graphic file (type jpg)
  <use images/pilot.jpg>
-Package pdftex.def Info: images/pilot.jpg used on input line 133.
+Package pdftex.def Info: images/pilot.jpg used on input line 152.
 (pdftex.def)             Requested size: 441.01772pt x 199.0539pt.
 
-[44 <./images/pilot.jpg>]
-<images/charts/chart_1.png, id=222, 602.25pt x 372.39125pt>
+<images/timeTaken.png, id=228, 451.6875pt x 321.2pt>
+File: images/timeTaken.png Graphic file (type png)
+
+<use images/timeTaken.png>
+Package pdftex.def Info: images/timeTaken.png used on input line 177.
+(pdftex.def)             Requested size: 352.8155pt x 250.90747pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46 <./images/pilot.jpg>] [47 <./images/timeTaken.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 263--270
+
+ []
+
+[48] [49] [50] <images/charts/chart_1.png, id=245, 602.25pt x 372.39125pt>
 File: images/charts/chart_1.png Graphic file (type png)
 
 <use images/charts/chart_1.png>
-Package pdftex.def Info: images/charts/chart_1.png used on input line 216.
+Package pdftex.def Info: images/charts/chart_1.png used on input line 505.
 (pdftex.def)             Requested size: 352.8155pt x 218.16336pt.
 
-<images/charts/chart_2.png, id=223, 602.25pt x 372.39125pt>
+<images/charts/chart_2.png, id=246, 602.25pt x 372.39125pt>
 File: images/charts/chart_2.png Graphic file (type png)
 
 <use images/charts/chart_2.png>
-Package pdftex.def Info: images/charts/chart_2.png used on input line 219.
+Package pdftex.def Info: images/charts/chart_2.png used on input line 508.
 (pdftex.def)             Requested size: 352.8155pt x 218.16336pt.
 
-<images/charts/chart_3.png, id=224, 602.25pt x 372.39125pt>
+<images/charts/chart_3.png, id=247, 602.25pt x 372.39125pt>
 File: images/charts/chart_3.png Graphic file (type png)
 
 <use images/charts/chart_3.png>
-Package pdftex.def Info: images/charts/chart_3.png used on input line 222.
+Package pdftex.def Info: images/charts/chart_3.png used on input line 511.
 (pdftex.def)             Requested size: 352.8155pt x 218.16336pt.
- [45]
+ [51]
 Overfull \vbox (53.68745pt too high) has occurred while \output is active []
 
 
-[46 <./images/charts/chart_1.png (PNG copy)> <./images/charts/chart_2.png (PNG 
+[52 <./images/charts/chart_1.png (PNG copy)> <./images/charts/chart_2.png (PNG 
 copy)> <./images/charts/chart_3.png (PNG copy)>]
-<images/charts/chart_4.png, id=231, 602.25pt x 372.39125pt>
+<images/charts/chart_4.png, id=254, 602.25pt x 372.39125pt>
 File: images/charts/chart_4.png Graphic file (type png)
 
 <use images/charts/chart_4.png>
-Package pdftex.def Info: images/charts/chart_4.png used on input line 229.
+Package pdftex.def Info: images/charts/chart_4.png used on input line 518.
 (pdftex.def)             Requested size: 352.8155pt x 218.16336pt.
 
-<images/charts/chart_5.png, id=232, 696.6025pt x 314.17375pt>
+<images/charts/chart_5.png, id=255, 696.6025pt x 314.17375pt>
 File: images/charts/chart_5.png Graphic file (type png)
 
 <use images/charts/chart_5.png>
-Package pdftex.def Info: images/charts/chart_5.png used on input line 232.
+Package pdftex.def Info: images/charts/chart_5.png used on input line 521.
 (pdftex.def)             Requested size: 352.8155pt x 159.12389pt.
 
-<images/charts/chart_7.png, id=233, 602.25pt x 372.39125pt>
+<images/charts/chart_7.png, id=256, 602.25pt x 372.39125pt>
 File: images/charts/chart_7.png Graphic file (type png)
 
 <use images/charts/chart_7.png>
-Package pdftex.def Info: images/charts/chart_7.png used on input line 239.
+Package pdftex.def Info: images/charts/chart_7.png used on input line 528.
 (pdftex.def)             Requested size: 352.8155pt x 218.16336pt.
 
-<images/charts/chart_8.png, id=234, 602.25pt x 372.39125pt>
+<images/charts/chart_8.png, id=257, 602.25pt x 372.39125pt>
 File: images/charts/chart_8.png Graphic file (type png)
 
 <use images/charts/chart_8.png>
-Package pdftex.def Info: images/charts/chart_8.png used on input line 243.
+Package pdftex.def Info: images/charts/chart_8.png used on input line 532.
 (pdftex.def)             Requested size: 352.8155pt x 218.16336pt.
 
-<images/charts/chart_9.png, id=235, 602.25pt x 372.39125pt>
+<images/charts/chart_9.png, id=258, 602.25pt x 372.39125pt>
 File: images/charts/chart_9.png Graphic file (type png)
 
 <use images/charts/chart_9.png>
-Package pdftex.def Info: images/charts/chart_9.png used on input line 246.
+Package pdftex.def Info: images/charts/chart_9.png used on input line 535.
 (pdftex.def)             Requested size: 352.8155pt x 218.16336pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47 <./images/charts/chart_4.png (PNG copy)> <./images/charts/chart_5.png (PNG
+ [53 <./images/charts/chart_4.png (PNG copy)> <./images/charts/chart_5.png (PNG
  copy)>]
 Overfull \vbox (53.68745pt too high) has occurred while \output is active []
 
 
-[48 <./images/charts/chart_7.png (PNG copy)> <./images/charts/chart_8.png (PNG 
-copy)> <./images/charts/chart_9.png (PNG copy)>]) [49]
+[54 <./images/charts/chart_7.png (PNG copy)> <./images/charts/chart_8.png (PNG 
+copy)> <./images/charts/chart_9.png (PNG copy)>]) [55]
 \openout2 = `8.conclusion.aux'.
 
  (./8.conclusion.tex
-[50
+[56
 
 
 
 ]
 Chapter 8.
-) [51] [52
+) [57] [58
 
 
 ] (./proj_report_outline.bbl
@@ -850,38 +875,41 @@ Overfull \hbox (82.70418pt too wide) in paragraph at lines 33--36
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--61
+Underfull \hbox (badness 10000) in paragraph at lines 53--57
 []\OT1/ppl/m/sc/10.95 Parker, A.  \OT1/ppl/m/n/10.95 Worlds: The ke-pler planet
  can-di-dates, 2012.
  []
 
-) [53
+) [59
 
 ] (./proj_report_outline.aux (./0.acknowledge.aux) (./1.introduction.aux)
 (./2.requirements_analysis.aux) (./3.methodology.aux) (./4.technology.aux)
 (./5.solution_design.aux) (./6.implementation.aux) (./7.evaluation.aux)
 (./8.conclusion.aux))
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3440 strings out of 494071
- 50708 string characters out of 3160406
- 113246 words of memory out of 3000000
- 6506 multiletter control sequences out of 15000+200000
+ 3459 strings out of 494071
+ 51024 string characters out of 3160406
+ 113343 words of memory out of 3000000
+ 6523 multiletter control sequences out of 15000+200000
  28712 words of font info for 71 fonts, out of 3000000 for 9000
  648 hyphenation exceptions out of 8191
- 38i,7n,39p,421b,314s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,7n,39p,536b,300s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
 ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 </usr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (61 pages, 2449140 bytes).
+Output written on proj_report_outline.pdf (67 pages, 2159246 bytes).
 PDF statistics:
- 280 PDF objects out of 1000 (max. 8388607)
- 154 compressed objects within 2 object streams
+ 303 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 196 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 words of extra memory for PDF output out of 10000 (max. 10000000)
 

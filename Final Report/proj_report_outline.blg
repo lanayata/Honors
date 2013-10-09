@@ -18,45 +18,45 @@ Warning--to sort, need author or key in github
 Warning--can't use both author and editor fields in few
 Warning--empty chapter and pages in few
 Warning--empty journal in dataset
-You've used 16 entries,
+You've used 15 entries,
             2253 wiz_defined-function locations,
-            616 strings with 6199 characters,
-and the built_in function-call counts, 4401 in all, are:
-= -- 380
-> -- 249
+            611 strings with 6083 characters,
+and the built_in function-call counts, 4198 in all, are:
+= -- 363
+> -- 242
 < -- 0
-+ -- 107
-- -- 88
-* -- 300
-:= -- 722
-add.period$ -- 41
-call.type$ -- 16
-change.case$ -- 90
++ -- 104
+- -- 86
+* -- 292
+:= -- 690
+add.period$ -- 39
+call.type$ -- 15
+change.case$ -- 86
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 139
-empty$ -- 370
-format.name$ -- 88
-if$ -- 897
+cite$ -- 21
+duplicate$ -- 131
+empty$ -- 347
+format.name$ -- 86
+if$ -- 853
 int.to.chr$ -- 0
-int.to.str$ -- 16
+int.to.str$ -- 15
 missing$ -- 8
-newline$ -- 76
-num.names$ -- 26
-pop$ -- 155
+newline$ -- 72
+num.names$ -- 24
+pop$ -- 146
 preamble$ -- 1
-purify$ -- 76
+purify$ -- 73
 quote$ -- 0
-skip$ -- 99
+skip$ -- 91
 stack$ -- 0
-substring$ -- 146
-swap$ -- 29
+substring$ -- 141
+swap$ -- 27
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
+type$ -- 56
 warning$ -- 6
-while$ -- 32
-width$ -- 18
-write$ -- 144
+while$ -- 30
+width$ -- 17
+write$ -- 136
 (There were 6 warnings)

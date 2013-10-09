@@ -34,7 +34,7 @@ ArrayList<ExoPlanet> planets = new ArrayList(); // List of planets for displayin
 float ER = 1;           // Earth Radius, in pixels
 float AU = 1500;        // Astronomical Unit, in pixels
 float YEAR = 50000;     // One year, in frames
-
+  float time = 0;
 /////////////////////
 // Max/Min numbers //
 /////////////////////
@@ -246,6 +246,11 @@ void addMarkerPlanets() {
 }
 
 void draw() {
+  
+  time = (System.currentTimeMillis()/1000);
+  println("Time taken: "+ time); 
+  
+time = System.currentTimeMillis();
   background( 255 );
   // Ease rotation vectors, zoom
   zoom += (tzoom - zoom) * 0.01;     
@@ -409,7 +414,6 @@ void draw() {
     popMatrix();
   }
 
-  long mem = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000;
 
   // Render the planets
   for (int i = 0; i < planets.size(); i++) {
@@ -426,7 +430,7 @@ void draw() {
      // e.printStackTrace();
     }
   }    
-  
+ 
   // println("MEM USE: "+((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/1000000)+"mb, TOTAL: "+Runtime.getRuntime().totalMemory()/1000000+"mb, FREE: "+Runtime.getRuntime().freeMemory()/1000000);
 }
 ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {

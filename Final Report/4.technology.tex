@@ -127,14 +127,14 @@ separation is accurately depicted, and each planet is color-coded according to
 its estimated effective temperature.
 \begin{figure}[H]
   \centering
-      \includegraphics[width=0.8\textwidth]{images/kepler_orbital.jpg}
+      \includegraphics[width=1\textwidth]{images/kepler.jpg}
   \caption{Kepler Visualisation Tool Orbital View}
 \end{figure}
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.8\textwidth]{images/kepler_graph.jpg}
-  \caption{Kepler Visualisation Tool Graph View}
-\end{figure}
+% \begin{figure}[H]
+%   \centering
+%       \includegraphics[width=0.8\textwidth]{images/kepler_graph.jpg}
+%   \caption{Kepler Visualisation Tool Graph View}
+% \end{figure}
 The existing work in this system would serve as foundation for this project.
 Because much of the visual aspects, and initial data manipulation of the
 existing system are already complete. It means that implementing the features
@@ -166,9 +166,9 @@ filter the Exoplanets
 
 
 \section{Analysis of technology options}
-Many technologies were looked into,experimented with, and the positives and
-negatives of each weighed up before a decision was made about which would be the
-choice for the visualisation. It came down to 3 potential technologies that
+Many technologies were looked into and experimented with. Then the positives and
+negatives of each option was weighed up before a decision was made about which would be the
+suitable choice for the visualisation. It came down to 3 potential technologies that
 would be suitable for the project, the next 3 subsections outline these in
 detail.
 
@@ -188,18 +188,11 @@ previous visualization
 toolkits did not allow [4].
 
 D3 allows the binding of input data to arbitrary input elements. This means that
-the exoplanet
-dataset can easily be bound to SVG elements for creating visualizations. D3
-adopts
-the W3C Selectors API to identify document elements queried. This results in a
-rich but
-concise selection method of elements in a visualisation.
-
-D3 allows debugging thanks to Google chrome and other modern browsers
-development
-tools. A downside to D3 is that it does not allow 3D diagrams, although it does
-allow
-pseudo 3D by using the painters algorithm and 3D textures.
+the exoplanet dataset can easily be bound to SVG elements for creating visualizations. D3
+adopts the W3C Selectors API to identify document elements queried. This results in a
+rich but concise selection method of elements in a visualisation. It allows debugging thanks to Google chrome and other modern browsers
+development tools. A downside to D3 is that it does not allow 3D diagrams, although it does
+allow pseudo 3D by using the painters algorithm and 3D textures.
 
 \subsection{Prefuse}
 Prefuse is a set of software tools for creating rich interactive data
