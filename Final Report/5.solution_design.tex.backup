@@ -34,7 +34,8 @@ understand the exisiting system and plan out the extensions, these are discussed
 next.
 
 \begin{enumerate}
- {\bf \item UML Sequence Diagram}
+\clearpage
+{\bf \item UML Sequence Diagram}
   A sequence diagram is a diagram that primarily shows the interactions between
 objects in the sequential order that those interactions occur.
 For this project it was used to understand how each of the objects in the system
@@ -48,7 +49,7 @@ of the objects in the system are updated, and when they are rendered.
   \caption{Sequence Diagram of IKVT render cycle}  
     \label{fig:sequenceDiagram}
 \end{figure}
-
+\clearpage
  {\bf \item UML Class Diagram}
  Class diagrams describe the structure of a system by showing the system's
 classes, their attributes, methods, and the relationships among objects.
@@ -84,9 +85,10 @@ how the visualisation should look, behave, and function.
 likely
 % to change
 % throughout the course of the project (e.g. colours and content) \cite{martin}.
-
-\subsection{Functional Requirement}
+\clearpage
+\subsection{Functional Requirements}
 \begin{enumerate}
+
 {\bf
  \item[R1.] The visualisation needs to display planetary information to convey
 knowledge to users.
@@ -107,7 +109,7 @@ calls that would be used.
 
 To populate this text area it needs to be possible to select exoplanets, which
 is discussed in the next requirement.
-
+\clearpage
 {\bf
  \item[R2.] The visualisation needs to allow exoplanets to be compared against
 one another.}
@@ -151,7 +153,7 @@ box and allowing users to select multiple planets this can be accomplished.
       \includegraphics[width=.7\textwidth]{images/mockComparePlanets.png}
   \caption{Mockup compare planets text areas}  
 \end{figure}
-
+\clearpage
 
 {\bf
  \item[R3.] The planets need to be able to be ordered by their similarity to
@@ -168,7 +170,7 @@ figures display an abstract mockup of how this would be done.
   \caption{Mockup of ESI views}  
 \end{figure}
 
-
+\clearpage
 {\bf
  \item[R4.] The visualisation needs to allow users to define ranges of planetary
 attributes to filter which planets are displayed.}
@@ -190,13 +192,7 @@ the most of the filtering. By allowing users to display the exoplanets sorted
 vertically by the same attribute as the filters, they can easily see how
 changing the filters affects the exoplanets displayed
 
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.5\textwidth]{images/mockButtons.png}
-  \caption{Mockup of interactive buttons}  
-\end{figure}
-
-
+\clearpage
 {\bf
  \item[R5.] Users need to be able to view the habitable zones of stars in
 relation to the planets orbiting them.}
@@ -219,7 +215,7 @@ depicting where the exoplanet sits inside the zones, as displayed in Figure
 
 
 \end{enumerate}
-
+\clearpage
 \subsection{Nonfunctional Requirement}
 
 \begin{enumerate}
@@ -247,7 +243,7 @@ the previous requirements as displayed below in Figure
   \label{fig:interactionPanelMock}
 \end{figure}
 
-
+\clearpage
 {\bf \item[R7.] The visualisation must remain uncluttered.}
 
 The visualisation must not show so much information that it
@@ -259,7 +255,7 @@ that displays the information about
 selected planets separate from the main visualisation it reduces the cognitive
 load on users as they don't have to use this component until they want to. ...~
 
-
+\clearpage
 {\bf  \item[R8.] There needs to be two modes of interaction with the system,
 keyboard and mouse vs gesture based.}
 
@@ -301,7 +297,8 @@ of what action they are performing. These states are
  \item zooming out, hand is pulled backwards
 \end{enumerate}
 Having a range of icons that clearly display these states is vital for keeping
-the user informed of what they are doing. The proposed icons for this are displayed below in Figure \ref{fig:cursors}
+the user informed of what they are doing. The proposed icons for this are
+displayed below in Figure \ref{fig:cursors}
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{images/curserImages.png}
@@ -309,7 +306,12 @@ the user informed of what they are doing. The proposed icons for this are displa
   \label{fig:cursors}
 \end{figure}
 
-No gesture design has been included for interacting wiht the interaction panel. This is because the Microsoft Kinect sensor implementation in this visualisation is intended as a proof of concept that interaction via gestures can allow users to access the information within the system. If the user study discussed in Chapter \ref{C:eval}: Visualisation Evaluation shows that gesture interaction is successfull then incorporating it further can be undertaken.
+No gesture design has been included for interacting wiht the interaction panel.
+This is because the Microsoft Kinect sensor implementation in this visualisation
+is intended as a proof of concept that interaction via gestures can allow users
+to access the information within the system. If the user study discussed in
+Chapter \ref{C:eval}: Visualisation Evaluation shows that gesture interaction is
+successfull in this regard then incorporating it further can be undertaken.
 \end{enumerate}
 
-
+These solution designs were used for the implementation of IKVT which is discussed in the next chapter, Chapter \ref{C:sd}.

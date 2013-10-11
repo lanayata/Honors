@@ -86,10 +86,13 @@ actually orbiting which could be the case with Worlds.
 \section{Celestia - Interactive}
 Celestia \cite{celestia} is a free real-time space simulation that lets you
 visually experience the universe in three dimensions. It is an open source
-system written in C++. 
+system written in C++. Celestia does not include any stars that are more than a
+few thousand light-years from the Sun because the parallaxes of more distant
+stars are too small to be accurately measured, meaning that it does not contain
+the distant exoplanets discovered by the Kepler missoion. 
 \begin{figure}[H]
   \centering
-      \includegraphics[width=0.5\textwidth]{images/celestia.jpg}
+      \includegraphics[width=0.8\textwidth]{images/celestia.jpg}
   \caption{Image of Celestia Visualisation}
 \end{figure}
 This visualisation is much larger and more encompassing system than is needed
@@ -97,26 +100,22 @@ for this project, as it is a full 3D space simulation. However is does offer
 insights into how to effectively portray planets and their orbits (See Figure
 2.3). It also provides textures that can be used in my visualisation to depict
 what planets actually look like to increase user immersion.
-\\\\
-{\bf Scenario 1.} View planets ordered by their similarity to Earth:\\
-Maybe
-\\\\
-{\bf Scenario 2.} Select ranges for attributes of each planet displayed:\\
-Maybe
-\\\\
+
 {\bf Scenario 3.} Select planets to display more information:\\
-Maybe
+Celestia allows users to view a large set of information about each of the
+planets that it displays. The information it has avaible to users in toolbars that users can access, examples of this information are radius, phase angle, rotation speed, and temperature.  
 \\\\
 {\bf Scenario 4.} View planets in the same solar system:\\
-Maybe
-\\\\
-{\bf Scenario 5.} View the Goldilocks zones of each planet:\\
-Maybe
+Celestia allows users to explore a range of solar systems and view the planets
+that are in them. This is because it is is a key feature of the experience that
+Celesia tries to give users, ie letting them explore the vastness of space. 
 \\\\
 {\bf Scenario 6.} Select two planets to compare against one another:\\
-Maybe\\\\
-{\bf Scenario 7.} Navigate the visualisation with gestures: \\
-Maybe\\\\
+Celestia allows this on a superficial and does not allow detailed information to
+be compared. Celestia focusses on allowing users to experience the scale of
+space and planets by exploring in a 3D space. This means that less importance is
+placed on accessing detailed information.
+
 \section{Kepler Visualisation Tool}
 An existing system built with Processing is the Kepler Visualisation
 Tool\cite{kepler_github, kepler_article}. It is a simple visualisation focusing
@@ -152,7 +151,7 @@ planets are ordered by on the vertical plane (Y axis) ie, by size or
 temperature, but does not allow users to select ranges of these attributes to
 filter the Exoplanets
 
-\subsection{Summary of Existing Applications}
+\section{Summary of Existing Applications}
 \begin{figure}[H]
   \centering
       \includegraphics[width=1\textwidth]{images/existing.png}

@@ -10,6 +10,7 @@
 \contentsline {section}{\numberline {2.1}Project management approach}{5}
 \contentsline {subsection}{\numberline {2.1.1}Software Development Life Cycle (SDLC)}{5}
 \contentsline {section}{\numberline {2.2}Other project methodologies explored}{6}
+\contentsline {section}{\numberline {2.3}Supporting Tools for project}{7}
 \contentsline {chapter}{\numberline {3}Requirements Analysis}{9}
 \contentsline {section}{\numberline {3.1}User models}{9}
 \contentsline {subsection}{\numberline {3.1.1}John Truman (Primary Persona - The interested layperson)}{10}
@@ -17,7 +18,7 @@
 \contentsline {subsubsection}{Scenario 2: Select ranges for attributes of each planet displayed}{10}
 \contentsline {subsubsection}{Scenario 3: Select planets to display more information}{10}
 \contentsline {subsubsection}{Scenario 4: View planets in the same solar system}{11}
-\contentsline {subsubsection}{Scenario 5: View the Goldilocks zones of each planet}{11}
+\contentsline {subsubsection}{Scenario 5: View the Goldilocks zones of each exoplanets star}{11}
 \contentsline {subsubsection}{Scenario 6: Select two planets to compare against one another}{11}
 \contentsline {subsection}{\numberline {3.1.2}Cara Thompson (Secondary Persona - Likes gesture based systems)}{11}
 \contentsline {subsubsection}{Scenario 3: Select planets to display more information}{11}
@@ -33,25 +34,25 @@
 \contentsline {section}{\numberline {4.4}Kepler Visualisation Tool}{18}
 \contentsline {section}{\numberline {4.5}Summary of Existing Applications}{19}
 \contentsline {chapter}{\numberline {5}Technology}{21}
-\contentsline {subsection}{\numberline {5.0.1}Processing}{21}
-\contentsline {subsection}{\numberline {5.0.2}D3 (Data Driven Documents)}{21}
-\contentsline {subsection}{\numberline {5.0.3}Prefuse}{22}
+\contentsline {subsection}{\numberline {5.0.1}Processing - Chosen Technology}{21}
+\contentsline {subsection}{\numberline {5.0.2}D3 (Data Driven Documents) - Alternate Technology}{21}
+\contentsline {subsection}{\numberline {5.0.3}Prefuse - Alternate Technology}{22}
 \contentsline {subsection}{\numberline {5.0.4}Decision of technology}{22}
-\contentsline {chapter}{\numberline {6}Solution Design: Improved Kepler Visualisation Tool (IKVT)}{25}
-\contentsline {section}{\numberline {6.1}System design and structure}{25}
-\contentsline {section}{\numberline {6.2}Visualisation Design}{27}
-\contentsline {subsection}{\numberline {6.2.1}Functional Requirements}{28}
-\contentsline {subsection}{\numberline {6.2.2}Nonfunctional Requirement}{34}
-\contentsline {chapter}{\numberline {7}Visualisation implementation of the Improved Kepler Visualisation Tool (IKVT)}{39}
-\contentsline {section}{\numberline {7.1}Tools and artifacts used}{39}
-\contentsline {subsection}{\numberline {7.1.1}Dataset used}{39}
-\contentsline {subsection}{\numberline {7.1.2}Integrated Development Environment (IDE)}{39}
-\contentsline {subsection}{\numberline {7.1.3}Keyboard and Mouse System}{39}
-\contentsline {subsection}{\numberline {7.1.4}Microsoft Kinect sensor system}{40}
-\contentsline {section}{\numberline {7.2}Implementation of IKVT}{40}
-\contentsline {subsubsection}{Interaction Panel}{43}
-\contentsline {subsubsection}{Spacial arrangement of components}{45}
-\contentsline {section}{\numberline {7.3}Problems encountered}{45}
+\contentsline {chapter}{\numberline {6}Solution Design: Improved Kepler Visualisation Tool (IKVT)}{23}
+\contentsline {section}{\numberline {6.1}System design and structure}{23}
+\contentsline {section}{\numberline {6.2}Visualisation Design}{25}
+\contentsline {subsection}{\numberline {6.2.1}Functional Requirements}{26}
+\contentsline {subsection}{\numberline {6.2.2}Nonfunctional Requirement}{32}
+\contentsline {chapter}{\numberline {7}Visualisation implementation of the Improved Kepler Visualisation Tool (IKVT)}{37}
+\contentsline {section}{\numberline {7.1}Tools and artifacts used}{37}
+\contentsline {subsection}{\numberline {7.1.1}Dataset used}{37}
+\contentsline {subsection}{\numberline {7.1.2}Integrated Development Environment (IDE)}{37}
+\contentsline {subsection}{\numberline {7.1.3}Keyboard and Mouse System}{37}
+\contentsline {subsection}{\numberline {7.1.4}Microsoft Kinect sensor system}{38}
+\contentsline {section}{\numberline {7.2}Implementation of IKVT}{38}
+\contentsline {subsubsection}{Interaction Panel}{42}
+\contentsline {subsubsection}{Spacial arrangement of components}{44}
+\contentsline {section}{\numberline {7.3}Problems encountered}{44}
 \contentsline {chapter}{\numberline {8}Visualisation Evaluation}{47}
 \contentsline {section}{\numberline {8.1}What did we do}{47}
 \contentsline {section}{\numberline {8.2}Why did we do it}{47}
@@ -62,11 +63,16 @@
 \contentsline {subsection}{\numberline {8.3.4}Evaluation Method}{48}
 \contentsline {subsection}{\numberline {8.3.5}Pilot Study}{49}
 \contentsline {section}{\numberline {8.4}Results}{50}
-\contentsline {section}{\numberline {8.5}Performance evaluation}{55}
-\contentsline {subsection}{\numberline {8.5.1}Evaluation of Requirements}{55}
-\contentsline {subsubsection}{Evaluation of Functional Requirements}{55}
-\contentsline {subsubsection}{Evaluation of Nonfunctional Requirements}{55}
-\contentsline {section}{\numberline {8.6}Discussion}{59}
-\contentsline {section}{\numberline {8.7}Supporting Tools for project}{59}
-\contentsline {chapter}{\numberline {9}Conclusions}{61}
-\contentsline {section}{\numberline {9.1}Future Work}{61}
+\contentsline {subsection}{\numberline {8.4.1}Qualitative Results}{50}
+\contentsline {subsubsection}{Evaluation of Functional Requirements}{50}
+\contentsline {subsubsection}{Evaluation of Nonfunctional Requirements}{52}
+\contentsline {subsection}{\numberline {8.4.2}Quantitative Results}{53}
+\contentsline {subsubsection}{Evaluation of Functional Requirements}{53}
+\contentsline {section}{\numberline {8.5}Summary of qualitative results}{55}
+\contentsline {section}{\numberline {8.6}Summary of quantitative results}{55}
+\contentsline {section}{\numberline {8.7}Discussion}{55}
+\contentsline {subsection}{\numberline {8.7.1}Threats to Validity}{55}
+\contentsline {subsection}{\numberline {8.7.2}Potential Improvments}{56}
+\contentsline {section}{\numberline {8.8}Summary of Evaluation}{56}
+\contentsline {chapter}{\numberline {9}Conclusions}{57}
+\contentsline {section}{\numberline {9.1}Future Work}{57}

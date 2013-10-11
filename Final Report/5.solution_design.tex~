@@ -27,9 +27,8 @@ categories. The purpose of structure diagrams is to show the static structure of
 the system being modeled ie class diagrams, and or object diagrams. Behavioral
 diagrams, on the other hand, show the dynamic behavior between the objects in
 the system, including things like their methods, collaborations, and activities
-ie, use case, and sequence diagrams
-http://www.ibm.com/developerworks/rational/library/content/RationalEdge/sep04/be
-ll/. For this project sequence diagrams and and class diagrams were used to help
+ie, use case, and sequence diagrams \ref{ibm}
+. For this project sequence diagrams and and class diagrams were used to help
 understand the exisiting system and plan out the extensions, these are discussed
 next.
 
@@ -45,7 +44,7 @@ to extend the visualisation. Through the sequence diagram we can see when each
 of the objects in the system are updated, and when they are rendered. 
    \begin{figure}[H]
   \centering
-      \includegraphics[width=0.8\textwidth]{images/sequence.png}
+      \includegraphics[width=1\textwidth]{images/sequence.png}
   \caption{Sequence Diagram of IKVT render cycle}  
     \label{fig:sequenceDiagram}
 \end{figure}
@@ -79,12 +78,6 @@ description of the functionality that needs to be designed for this
 visualisation. By adding additional details to these requirements we can specify
 how the visualisation should look, behave, and function.
 
-% By using abstract user interface design the layout and configuration of each
-% element can be
-% planned and coordinated without the need for excessive details which are
-likely
-% to change
-% throughout the course of the project (e.g. colours and content) \cite{martin}.
 \clearpage
 \subsection{Functional Requirements}
 \begin{enumerate}
@@ -161,13 +154,13 @@ earth (ESI) and by their Kepler Object of Interest number (KOI).}
 
 To fulfill this requirement the visualisation needs to allow users to view the
 exoplanets in a way that uses the Earth as a point of reference and their Earth
-Similarity Index (ESI) to order them and control their position. The following
-figures display an abstract mockup of how this would be done.
+Similarity Index (ESI) to order them and control their position. Figure \ref{fig:esiMock} displays a mockup of how this would be done.
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=1\textwidth]{images/mockupESI.png}
-  \caption{Mockup of ESI views}  
+  \caption{Mockup of ESI views}
+  \label{fig:esiMock}
 \end{figure}
 
 \clearpage
@@ -190,12 +183,13 @@ be used to control the size of planets that are displayed.
 In addition to this users should be able to easily sort the exoplanets to make
 the most of the filtering. By allowing users to display the exoplanets sorted
 vertically by the same attribute as the filters, they can easily see how
-changing the filters affects the exoplanets displayed
+changing the filters affects the exoplanets displayed. This would be achieved by a set of interactive buttons as in Figure \ref{mockButtons}.
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.5\textwidth]{images/mockButtons.png}
   \caption{Mockup of interactive buttons}  
+  \label{fig:mockButtons}
 \end{figure}
 
 \clearpage
@@ -320,4 +314,4 @@ Chapter \ref{C:eval}: Visualisation Evaluation shows that gesture interaction is
 successfull in this regard then incorporating it further can be undertaken.
 \end{enumerate}
 
-These solution designs were used for the implementation of IKVT which is discussed in the next chapter, Chapter \ref{C:sd}
+These solution designs were used for the implementation of IKVT which is discussed in the next chapter, Chapter \ref{C:sd}.

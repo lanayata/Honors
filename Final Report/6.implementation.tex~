@@ -81,7 +81,7 @@ and "Unsort" as shown in Figure: \ref{fig:buttons}.
   \label{fig:buttons}
 \end{figure}
 
-Detailed information can be accessed about each exoplanet by clicking on them to
+Detailed information can be accessed about each exoplanet by clicking on them in the main visualisation window to
 make a selection. To do this a user can click on any of the orbiting exoplanets.
 The effect of this selection is that a text box will have further textual
 information about the selected exoplanet appended to it to provide the user with
@@ -116,20 +116,19 @@ with small multiples rather than the entire dataset. A further effect of using t
     \label{fig:habitable}
 \end{figure}
 
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=1\textwidth]{images/sameStar.png}
+  \caption{TODO~}  
+    \label{fig:sameStar}
+\end{figure}
 
-In addition to the orbital view already discussed, there is a graph view that
-displays the exoplanets on a graph with the exoplanet attributes mapping to the
-x,y coordinates. This allows the user to modify what they want on each axis of
-the graph. Having these two views allows the user the option of how they wish to
-visualise the exoplanets, the less exact and more visually appealing orbital
-view, or the more exact and less exiting graph view.
-
-The Kepler Orrery visualisation as discussed in the Existing Systems section of
-Chapter 3 details a contrasting system that displays each exoplanet and its
-sister planets orbiting its own star. By incorporating this idea into IKVT, when
-a planet is selected it should be highlighted and all of its sister planets
-should also become highlighted. This will provide the same effect as in the
-Kepler Orrery.  
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=1\textwidth]{images/selectedPlanet.jpg}
+  \caption{TODO~}  
+    \label{fig:selectedPlanet}
+\end{figure}
 
 \subsubsection{Interaction Panel}
 Description of navigation window

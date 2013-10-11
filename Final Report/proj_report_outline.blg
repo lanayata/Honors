@@ -13,6 +13,11 @@ A level-1 auxiliary file: 7.evaluation.aux
 A level-1 auxiliary file: 8.conclusion.aux
 The style file: acm.bst
 Database file #1: refs.bib
+I was expecting a `,' or a `}'---line 333 of file refs.bib
+ : 
+ : year = {2004},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "exo"
 Warning--to sort, need author or key in kinect
 Warning--to sort, need author or key in celestia
@@ -64,4 +69,4 @@ warning$ -- 9
 while$ -- 30
 width$ -- 20
 write$ -- 157
-(There were 10 warnings)
+(There was 1 error message)
