@@ -41,6 +41,17 @@ Simpleopenni.
 \newblock A spiral model of software development and enhancement.
 \newblock {\em Computer 21}, 5 (1988), 61--72.
 
+\bibitem{keplerTele}
+{\sc Borucki, W.~J., Koch, D., Basri, G., Batalha, N., Brown, T., Caldwell, D.,
+  Caldwell, J., Christensen-Dalsgaard, J., Cochran, W.~D., DeVore, E., et~al.}
+\newblock Kepler planet-detection mission: introduction and first results.
+\newblock {\em Science 327}, 5968 (2010), 977--980.
+
+\bibitem{AboutFace3}
+{\sc Cooper, A., Reimann, R., and Cronin, D.}
+\newblock {\em {About Face 3 The Essentials of Interaction Design}}.
+\newblock Whiley Publishing Inc. Indianapolis Indiana, 2007.
+
 \bibitem{orrery}
 {\sc Fabrycky, D.}
 \newblock The kepler orrery, 2012.

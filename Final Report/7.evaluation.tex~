@@ -5,6 +5,12 @@ primarily designed to discover whether or not the visualisation created was
 successful in fulfilling the requirements of the project.
 
 \section{What did we do}
+For the evaluation of IKVT a within subjects experiment was conducted with 10
+participants. This experiment tested the IKVT against the system requirements
+and analysed the participants experiences to discover how successfully the
+visualisation solve the key issues that the project set out to address. 
+
+
 \section{Why did we do it}
 Visualisation methods are often designed and evaluated by presenting 
 results informally to potential users. No matter how 
@@ -362,10 +368,6 @@ reflect this.
     \label{fig:breakdown}
 \end{figure}
 
-\section{Summary of qualitative results}
-
-\section{Summary of quantitative results}
-
 \section{Discussion}
 \subsection{Threats to Validity}
 A key factor in this user evaluation is the small number of users which was
@@ -383,7 +385,8 @@ stage off at this point it may have caused some participants to be unprepared
 for carry out the completion of the worksheet and thus skewing the results.
 
 \subsection{Potential Improvments}
-Due to the negative results surrounding viewing of the habitable zones of stars
+Due to the negative results surrounding the viewing of the habitable zones of
+stars,
 this area of the evaluation should be analysed further to determine whether the
 tasks in the evaluation relating to it were flawed, or whether the functionality
 and its design were flawed. To discover this it would be important to revaluate
@@ -393,7 +396,34 @@ redesigned.
 
 
 \section{Summary of Evaluation}
+This evaluation of IKVT provided several key results and insights into the
+success of this project. The general consensus by the participants of the study
+was that the system had a low learning curve, was enjoyable to use, and allowed
+access to interesting information. There was also a common consensus among the
+participants that the Kinect system was more fun to use than the keyboard \&
+mouse because of its novelty, but lacked the control that the
+keyboard \& mouse allowed which made it less effective at accessing the
+information in the visualisation. The keyboard \& mouse was found to the be the
+most effective method for nagivating the visualisation because of the amount of
+control that it offered users as well as being the interactive medium that
+participants had the most experience with.
 
+The evaluation revealed one problem area in the visualisation that was related
+to Requirement 5 (Users need to be able to view the habitable zones of stars in
+relation to the planets orbiting them), and Requirement 6 (All interaction
+methods must be visible and intuitive). This problem was that users found that
+viewing where each exoplanet was located in relation to their stars habitable
+zones was unintuitive and difficult to use. This result could have occured for a
+range of reasons, the most likely being that the evaluation questions were
+counterproductive to using this funtionality, or that the functionality itself
+is flawed.
+
+This user study served to evaluate how effectively IKVT could convey the
+information in the Kepler Exoplanet dataset. The findings all pointed to it
+being successfull in this regard. However, there are areas that this evaluation
+could be improved to strengthen this result. The main improvement for this
+evaluation is to include a larger number of participants more representative of
+the wider population.
 
 
 

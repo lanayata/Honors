@@ -103,7 +103,9 @@ what planets actually look like to increase user immersion.
 
 {\bf Scenario 3.} Select planets to display more information:\\
 Celestia allows users to view a large set of information about each of the
-planets that it displays. The information it has avaible to users in toolbars that users can access, examples of this information are radius, phase angle, rotation speed, and temperature.  
+planets that it displays. The information it has avaible to users in toolbars
+that users can access, examples of this information are radius, phase angle,
+rotation speed, and temperature.  
 \\\\
 {\bf Scenario 4.} View planets in the same solar system:\\
 Celestia allows users to explore a range of solar systems and view the planets

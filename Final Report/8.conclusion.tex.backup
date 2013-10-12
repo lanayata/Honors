@@ -1,6 +1,58 @@
 \chapter{Conclusions}\label{C:con}
+\section{Summary}
+This project contributes an the design, implementaion, and evalutation of an
+interactive 3D visualisation called the Improved Kepler Visualisation Tool
+(IKVT). IKVT has two modes of interaction; the traditional keyboard \& mouse and
+the more novel Microsoft Kinect sensor. 
+
+\subsection{System Design}
+The requiremnets for IKVT were designed using Cooper et al.'s user oriented
+design approach which emphasised using user models and user scenarios.  Two user
+models and seven scenarios were important for creating the requirements that
+were used in the design, implementation and evaluation of IKVT to ensure that it
+solved the 4 key issues that this project hoped to address.
+\begin{enumerate}
+ \item[Issue 1.] Content in the Kepler Exoplanet Database is difficult to view
+and
+understand due to its amount and labeling.
+ \item[Issue 2.] Planetary information is complex and difficult to comprehend
+without
+a visual reference due to its scale.
+ \item[Issue 3.] Existing visualisations for exploring planetary data have
+minimal
+functionality for exploring the information in effective ways.
+ \item[Issue 4.] Visualisations need to allow user interaction to make the most
+of
+the data they display.
+\end{enumerate}
+
+\subsection{System Implementation}
+IKVT was implemented in Processing, an opensource Java programming language and
+integrated development environment (IDE). IKVT was build upon an existing
+visualisation, the Kepler Visualisaion Tool \cite{kepler_github,
+kepler_article}. During the implementation stage of the project each of the
+designs created in the system design stage were implemented in a way that
+fulfilled the requirements of the system. 
+
+\subsection{System Evaluation}
+IKVT was evaluated in a userstudy that gather both qualitative and quantitative
+results. The evaluation was designed to gather users experiences with the IKVT
+to examine whether or not it fulfilled the system requirements designed to solve
+the issues mentioned above.
+
+The evaluation found that all of these requirements were fulfilled by the
+visualisation. In additon to this the participants in general found that the
+IKVT had a low learning curve, was enjoyable to use, and allowed
+access to interesting information. There was also a common consensus among the
+participants that the Kinect system was more fun to use than the keyboard \&
+mouse because of its novelty, but lacked the control that the
+keyboard \& mouse allowed which made it less effective at accessing the
+information in the visualisation. The evaluation also revealed that one area,
+viewing the habitable zones of stars, lacked
+usability because it was unintuitive for the users participating.
 \section{Future Work}
-The work from this project can be taken further in many different ways depending
+\subsection{System Improvements}
+The IKVT taken further in many different ways depending
 on how it is intended to be used. There is the option of using the system as a
 terminal that users would use at an observatory or attraction where prior
 knowledge of the system is limited and amount of time users would spend on the
@@ -9,46 +61,18 @@ improved Kinect interaction would be beneficial as immersion would be the
 decider on its success. Another option for the system would be for a standalone
 desktop system that users would use multiple times and so prior knowledge of how
 to use the system could be expected. This would mean that more complex
-functionality could be introduced with he expectation that it could be used by
+functionality could be introduced with the expectation that it could be used by
 users. The systems current state could me modified to fit into either of these
 two options.
 
-Occulus rift, look at paper boy~
+A weakness in the system that needs to be addressed is the star habibility view
+which the evaluation discovered was not intutive enough to make it effective. To
+address this the functionality needs to be evaluated to discover which aspects
+of it cause it to be unintuitive.
 
-
-\section{Supporting Tools for project}
-%Other tools used to support me
-By supporting this project methodology with other project management tools such
-as Gantt charts [APPENDIX~] and work breakdown structures(WBS) [APPENDIX~], it
-encouraged efficient documentation of planning and work completed in the project
-as well as displaying the upcoming stages required to complete the project.
-\\
-
-%Version Control
-Version control was important for this project as it mitigated against the risks
-of file system crashes and corruption, it also maintained effective revision
-history that could be used to backtrack to or view changes that were made
-earlier in the project. Version control was also valuable as it allowed me to
-maintain multiple branches (versions) of my project that I could swap between.
-This was important for the creation of the Keyboard and mouse system and the
-Microsoft Kinect system as they were on separate branches in a repository. 
-
-The version control tool that was used for this project was Git which allowed
-for the repository to be hosted on the repository hosting web service Github.
-This version control option was chosen due to the ease of use of as well as my
-prior experience with Git which has all been positive. There was a minor
-limitation of this choice as I used a free Github license which meant that the
-repository would be open to the public.
-\\
-
-%Meetings with supervisor
-Weekly meetings with the supervisor of the project, Dr Stuart Marshall, were
-used to provide guidance and ideas for innovation of the visualisation
-throughout the project. These meeting ensured that vital components and
-deliverables were implemented in the required timeframe and also provided a
-sounding board for ideas for elements to be included in the visualization.
-Another important aspect of having an involved supervisor was that he provided
-me the guidance of an experienced academic which was indispensable when
-navigating the administrative side of organizing delicate matters such as ethics
-approval for human evaluation of the visualisation.
+The user evaluation found that gesture based control of IKVT was the most
+enjoyable way for users to interact with IKVT even though it was less effective
+at accessing information. This opens up the opportunity for further work to
+improve the level of gesture based control and accuracy so that it rivals the
+keyboard \& mouse.
 

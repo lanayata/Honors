@@ -13,11 +13,6 @@ A level-1 auxiliary file: 7.evaluation.aux
 A level-1 auxiliary file: 8.conclusion.aux
 The style file: acm.bst
 Database file #1: refs.bib
-I was expecting a `,' or a `}'---line 333 of file refs.bib
- : 
- : year = {2004},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "exo"
 Warning--to sort, need author or key in kinect
 Warning--to sort, need author or key in celestia
@@ -28,45 +23,45 @@ Warning--to sort, need author or key in github
 Warning--can't use both author and editor fields in few
 Warning--empty chapter and pages in few
 Warning--empty journal in dataset
-You've used 18 entries,
+You've used 20 entries,
             2253 wiz_defined-function locations,
-            622 strings with 6232 characters,
-and the built_in function-call counts, 4669 in all, are:
-= -- 405
-> -- 245
+            637 strings with 6776 characters,
+and the built_in function-call counts, 5554 in all, are:
+= -- 481
+> -- 319
 < -- 0
-+ -- 107
-- -- 86
-* -- 307
-:= -- 738
-add.period$ -- 45
-call.type$ -- 18
-change.case$ -- 95
++ -- 137
+- -- 114
+* -- 389
+:= -- 894
+add.period$ -- 51
+call.type$ -- 20
+change.case$ -- 113
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 152
-empty$ -- 416
-format.name$ -- 86
-if$ -- 970
+cite$ -- 29
+duplicate$ -- 174
+empty$ -- 466
+format.name$ -- 114
+if$ -- 1139
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 8
-newline$ -- 84
-num.names$ -- 24
-pop$ -- 179
+int.to.str$ -- 20
+missing$ -- 11
+newline$ -- 94
+num.names$ -- 28
+pop$ -- 200
 preamble$ -- 1
-purify$ -- 79
+purify$ -- 96
 quote$ -- 0
-skip$ -- 109
+skip$ -- 121
 stack$ -- 0
-substring$ -- 156
-swap$ -- 30
+substring$ -- 191
+swap$ -- 34
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 68
+type$ -- 74
 warning$ -- 9
-while$ -- 30
-width$ -- 20
-write$ -- 157
-(There was 1 error message)
+while$ -- 36
+width$ -- 22
+write$ -- 177
+(There were 10 warnings)

@@ -4,7 +4,14 @@ visualisation software system for displaying the content in the Kepler
 Exoplanet dataset using both gesures and traditional interactive methods
 \cite{dataset}.
 
-The Kepler Exoplanet dataset contains information  
+The Kepler Exoplanet dataset contains information about planets from outside of our solarsystem discovered by the Kepler space observatory, Figure \ref{keplerTele}. The Kepler space observatory was launched in 2009 by NASA to discover Earth like planets orbiting other stars \cite{keplerTele}. In January 2013, astronomers at the Harvard-Smithsonian Center for Astrophysics used Kepler's data to estimate that "at least 17 billion" Earth-sized exoplanets reside in the Milky Way Galaxy.[15]
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.5\textwidth]{images/keplerTele.jpg}
+  \caption{TODO~}  
+    \label{fig:keplerTele}
+\end{figure}
 
 % Introduction to the Kepler Mission ~
 
@@ -109,15 +116,17 @@ with a Microsoft Kinect sensor.
 To summarise the above sections, this project addresses the following key
 issues:
 \begin{enumerate}
- \item[I1.] Content in the Kepler Exoplanet Database is difficult to view and
+ \item[Issue 1.] Content in the Kepler Exoplanet Database is difficult to view and
 understand due to its amount and labeling.
- \item[I2.] Planetary information is complex and difficult to comprehend without
+ \item[Issue 2.] Planetary information is complex and difficult to comprehend without
 a visual reference due to its scale.
- \item[I3.] Existing visualisations for exploring planetary data have minimal
+ \item[Issue 3.] Existing visualisations for exploring planetary data have minimal
 functionality for exploring the information in effective ways.
- \item[I4.] Visualisations need to allow user interaction to make the most of
+ \item[Issue 4.] Visualisations need to allow user interaction to make the most of
 the data they display.
 \end{enumerate}
+
+These issues are used in Chapter \ref{Chap:ra}: Requirements Analysis to create the project requirements.
 
 \section{Contributions of this project}
 This project provides a visualisation that conveys more information and
