@@ -288,7 +288,7 @@ There are 7 states that the cursor needs to be able to be in to inform the user
 of what action they are performing. These states are
 
 \begin{enumerate}
- \item default cursor, hand is at rest
+ \item default cursor, hand is at rest or hovering over a planet
  \item panning up, hand is raised
  \item panning down, hand is lowered
  \item rotating left, hand is to the left

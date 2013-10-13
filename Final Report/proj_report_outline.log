@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  12 OCT 2013 20:36
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  13 OCT 2013 22:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -139,46 +139,87 @@ File: pppdftex.def 2011/03/10 v0.4n Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count94
 \AM@templatesizebox=\box30
 )
+(/usr/pkg/share/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2008/08/31 v1.0b Adding subcaptions (AR)
+
+
+! Package subcaption Error: `caption' package not loaded
+(subcaption)                (which is needed by this package)
+
+See the subcaption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38   \endinput}{}
+                   
+If you do not understand this error, please take a closer look
+at the documentation of the `subcaption' package.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) (/usr/pkg/share/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip46
+\subfigcapskip=\skip47
+\subfigcaptopadj=\dimen107
+\subfigbottomskip=\skip48
+\subfigcapmargin=\dimen108
+\subfiglabelskip=\skip49
+\c@subfigure=\count95
+\c@lofdepth=\count96
+\c@subtable=\count97
+\c@lotdepth=\count98
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/pkg/share/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip50
+\subfig@bottom=\skip51
+)
 (./proj_report_outline.aux (./0.acknowledge.aux) (./1.introduction.aux)
 (./2.methodology.aux) (./3.requirements_analysis.aux) (./4aexisting.aux)
 (./4btechnology.aux) (./5.solution_design.aux) (./6.implementation.aux
 
 LaTeX Warning: Label `C:sd' multiply defined.
 
+
+LaTeX Warning: Label `fig:left' multiply defined.
+
 ) (./7.evaluation.aux) (./8.conclusion.aux))
 \openout1 = `proj_report_outline.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 58.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 60.
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-\big@size=\dimen107
+\big@size=\dimen109
 
 (/usr/pkg/share/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count95
-\scratchdimen=\dimen108
+\scratchcounter=\count99
+\scratchdimen=\dimen110
 \scratchbox=\box31
-\nofMPsegments=\count96
-\nofMParguments=\count97
+\nofMPsegments=\count100
+\nofMParguments=\count101
 \everyMPshowfont=\toks19
-\MPscratchCnt=\count98
-\MPscratchDim=\dimen109
-\MPnumerator=\count99
-\makeMPintoPDFobject=\count100
+\MPscratchCnt=\count102
+\MPscratchDim=\dimen111
+\MPnumerator=\count103
+\makeMPintoPDFobject=\count104
 \everyMPtoPDFconversion=\toks20
 ) (/usr/pkg/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -225,34 +266,34 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box32
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 89.
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 90.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 89.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 90.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 89.
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 90.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 89.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 90.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 89.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 90.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 89.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 90.
  [-1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [0]
@@ -287,37 +328,39 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
-<images/keplerTele.jpg, id=32, 96.36pt x 82.1469pt>
+<images/keplerTele.jpg, id=32, 1143.27126pt x 974.64125pt>
 File: images/keplerTele.jpg Graphic file (type jpg)
 
 <use images/keplerTele.jpg>
-Package pdftex.def Info: images/keplerTele.jpg used on input line 6.
-(pdftex.def)             Requested size: 352.8155pt x 300.82512pt.
+Package pdftex.def Info: images/keplerTele.jpg used on input line 9.
+(pdftex.def)             Requested size: 352.8155pt x 300.76746pt.
 
-Overfull \hbox (4.46611pt too wide) in paragraph at lines 12--21
+Overfull \hbox (4.46611pt too wide) in paragraph at lines 15--24
 \OT1/ppl/m/n/10.95 soft-ware sys-tem for dis-play-ing the con-tent in the Ke-pl
 er Ex-o-planet dataset us-ing both gesures
  []
 
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 24.
 [1
 
 
 
  <./images/keplerTele.jpg>]
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 40.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 43.
 
 <images/data.png, id=36, 964.60374pt x 404.51125pt>
 File: images/data.png Graphic file (type png)
  <use images/data.png>
-Package pdftex.def Info: images/data.png used on input line 61.
+Package pdftex.def Info: images/data.png used on input line 65.
 (pdftex.def)             Requested size: 352.8155pt x 147.9509pt.
 
-[2 <./images/data.png>]
+Underfull \vbox (badness 3209) has occurred while \output is active []
 
-LaTeX Warning: Citation `exo' on page 3 undefined on input line 106.
+ [2 <./images/data.png>]
+
+LaTeX Warning: Citation `exo' on page 3 undefined on input line 112.
 
 [3]) [4]
 \openout2 = `2.methodology.aux'.
@@ -328,7 +371,7 @@ Chapter 2.
 File: images/spiral_model.png Graphic file (type png)
 
 <use images/spiral_model.png>
-Package pdftex.def Info: images/spiral_model.png used on input line 38.
+Package pdftex.def Info: images/spiral_model.png used on input line 30.
 (pdftex.def)             Requested size: 264.61331pt x 263.85896pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -339,12 +382,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 [6 <./images/spiral_model.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 93--98
+Underfull \hbox (badness 10000) in paragraph at lines 85--90
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--115
+Underfull \hbox (badness 10000) in paragraph at lines 100--107
 
  []
 
@@ -639,21 +682,21 @@ Chapter 7.
 File: images/sliders.jpg Graphic file (type jpg)
 
 <use images/sliders.jpg>
-Package pdftex.def Info: images/sliders.jpg used on input line 72.
+Package pdftex.def Info: images/sliders.jpg used on input line 74.
 (pdftex.def)             Requested size: 264.61331pt x 184.9675pt.
  <images/buttons.jpg, id=190, 230.8625pt x 206.7725pt>
 File: images/buttons.jpg Graphic file (type jpg)
 
 <use images/buttons.jpg>
-Package pdftex.def Info: images/buttons.jpg used on input line 79.
+Package pdftex.def Info: images/buttons.jpg used on input line 81.
 (pdftex.def)             Requested size: 264.61331pt x 237.01984pt.
  [38 <./images/sliders.jpg>]
 <images/textBoxes.jpg, id=194, 616.3025pt x 1006.76125pt>
 File: images/textBoxes.jpg Graphic file (type jpg)
 
 <use images/textBoxes.jpg>
-Package pdftex.def Info: images/textBoxes.jpg used on input line 100.
-(pdftex.def)             Requested size: 396.91324pt x 648.3959pt.
+Package pdftex.def Info: images/textBoxes.jpg used on input line 94.
+(pdftex.def)             Requested size: 308.71104pt x 504.3011pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -662,157 +705,218 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/zoomFilter.png Graphic file (type png)
 
 <use images/zoomFilter.png>
-Package pdftex.def Info: images/zoomFilter.png used on input line 107.
+Package pdftex.def Info: images/zoomFilter.png used on input line 114.
 (pdftex.def)             Requested size: 352.8155pt x 183.24832pt.
+ [40 <./images/textBoxes.jpg>]
+<images/ESIKOI.pdf, id=202, 587.19376pt x 254.9525pt>
+File: images/ESIKOI.pdf Graphic file (type pdf)
+ <use images/ESIKOI.pdf>
+Package pdftex.def Info: images/ESIKOI.pdf used on input line 127.
+(pdftex.def)             Requested size: 441.01772pt x 191.48232pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [40 <./images/textBoxes.jpg>] <images/habitable.png, id=202, 960.58875pt x 402
-.50375pt>
-File: images/habitable.png Graphic file (type png)
-
-<use images/habitable.png>
-Package pdftex.def Info: images/habitable.png used on input line 114.
-(pdftex.def)             Requested size: 441.01772pt x 184.79774pt.
-
-<images/sameStar.png, id=203, 956.57375pt x 346.29375pt>
-File: images/sameStar.png Graphic file (type png)
-
-<use images/sameStar.png>
-Package pdftex.def Info: images/sameStar.png used on input line 121.
-(pdftex.def)             Requested size: 441.01772pt x 159.65636pt.
-
-<images/selectedPlanet.jpg, id=204, 1039.885pt x 311.1625pt>
+<images/selectedPlanet.jpg, id=203, 1039.885pt x 311.1625pt>
 File: images/selectedPlanet.jpg Graphic file (type jpg)
 
 <use images/selectedPlanet.jpg>
-Package pdftex.def Info: images/selectedPlanet.jpg used on input line 128.
+Package pdftex.def Info: images/selectedPlanet.jpg used on input line 140.
 (pdftex.def)             Requested size: 441.01772pt x 131.96455pt.
 
-Underfull \vbox (badness 3078) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41 <./images/zoomFilter.png> <./images/habitable.png> <./images/sameStar.png>
-]
-<images/nav.png, id=212, 244.112pt x 861.49126pt>
+ [41 <./images/zoomFilter.png> <./images/ESIKOI.pdf>]
+<images/sameStar.png, id=224, 956.57375pt x 346.29375pt>
+File: images/sameStar.png Graphic file (type png)
+
+<use images/sameStar.png>
+Package pdftex.def Info: images/sameStar.png used on input line 153.
+(pdftex.def)             Requested size: 441.01772pt x 159.65636pt.
+
+<images/habitable.png, id=225, 960.58875pt x 402.50375pt>
+File: images/habitable.png Graphic file (type png)
+
+<use images/habitable.png>
+Package pdftex.def Info: images/habitable.png used on input line 169.
+(pdftex.def)             Requested size: 441.01772pt x 184.79774pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42 <./images/selectedPlanet.jpg> <./images/sameStar.png>]
+<images/tooltip.jpg, id=230, 240.9pt x 48.18pt>
+File: images/tooltip.jpg Graphic file (type jpg)
+ <use images/tooltip.jpg>
+Package pdftex.def Info: images/tooltip.jpg used on input line 185.
+(pdftex.def)             Requested size: 352.8155pt x 70.57007pt.
+
+<images/nav.png, id=231, 244.112pt x 861.49126pt>
 File: images/nav.png Graphic file (type png)
  <use images/nav.png>
-Package pdftex.def Info: images/nav.png used on input line 137.
+Package pdftex.def Info: images/nav.png used on input line 199.
 (pdftex.def)             Requested size: 132.30666pt x 466.92038pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42 <./images/selectedPlanet.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [43 <./images/nav.png>] <images/layout_horizontal.jpg, id=220, 1686.3pt x 1017
-.8025pt>
+ [43 <./images/habitable.png> <./images/tooltip.jpg>]
+<images/layout_horizontal.jpg, id=236, 1686.3pt x 1017.8025pt>
 File: images/layout_horizontal.jpg Graphic file (type jpg)
 
 <use images/layout_horizontal.jpg>
-Package pdftex.def Info: images/layout_horizontal.jpg used on input line 168.
+Package pdftex.def Info: images/layout_horizontal.jpg used on input line 222.
 (pdftex.def)             Requested size: 352.8155pt x 212.93726pt.
 
-<images/layout_vertical.jpg, id=221, 1684.2925pt x 1020.81375pt>
+<images/layout_vertical.jpg, id=237, 1684.2925pt x 1020.81375pt>
 File: images/layout_vertical.jpg Graphic file (type jpg)
 
 <use images/layout_vertical.jpg>
-Package pdftex.def Info: images/layout_vertical.jpg used on input line 170.
+Package pdftex.def Info: images/layout_vertical.jpg used on input line 225.
 (pdftex.def)             Requested size: 352.8155pt x 213.83205pt.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 176--111
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44 <./images/nav.png>] <images/select.PNG, id=241, 670.00313pt x 340.27126pt>
+File: images/select.PNG Graphic file (type png)
+
+<use images/select.PNG>
+Package pdftex.def Info: images/select.PNG used on input line 241.
+(pdftex.def)             Requested size: 352.8155pt x 179.17987pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45 <./images/layout_horizontal.jpg> <./images/layout_vertical.jpg>]
+<images/up.PNG, id=245, 997.47656pt x 540.51938pt>
+File: images/up.PNG Graphic file (type png)
+ <use images/up.PNG>
+Package pdftex.def Info: images/up.PNG used on input line 249.
+(pdftex.def)             Requested size: 352.8155pt x 191.18054pt.
+
+<images/left.PNG, id=246, 921.4425pt x 402.75468pt>
+File: images/left.PNG Graphic file (type png)
+ <use images/left.PNG>
+Package pdftex.def Info: images/left.PNG used on input line 259.
+(pdftex.def)             Requested size: 352.8155pt x 154.20987pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46 <./images/select.PNG> <./images/up.PNG>]
+<images/in.PNG, id=252, 788.9475pt x 389.20406pt>
+File: images/in.PNG Graphic file (type png)
+ <use images/in.PNG>
+Package pdftex.def Info: images/in.PNG used on input line 267.
+(pdftex.def)             Requested size: 352.8155pt x 174.04747pt.
+
+<images/out.PNG, id=253, 694.84593pt x 318.43968pt>
+File: images/out.PNG Graphic file (type png)
+ <use images/out.PNG>
+Package pdftex.def Info: images/out.PNG used on input line 276.
+(pdftex.def)             Requested size: 352.8155pt x 161.6878pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--301
+
+ []
+
+[47 <./images/left.PNG> <./images/in.PNG> <./images/out.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 307--346
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--111
+Underfull \hbox (badness 10000) in paragraph at lines 307--346
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--111
+Underfull \hbox (badness 10000) in paragraph at lines 307--346
 
  []
 
-[44 <./images/layout_horizontal.jpg> <./images/layout_vertical.jpg>] [45]
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--346
+
+ []
+
+[48]) [49]
 \openout2 = `7.evaluation.aux'.
 
-
-(./7.evaluation.tex [46
+ (./7.evaluation.tex [50
 
 
 
 ]
 Chapter 8.
-[47] <images/environment.png, id=235, 615.29875pt x 478.78876pt>
+[51] <images/environment.png, id=273, 615.29875pt x 478.78876pt>
 File: images/environment.png Graphic file (type png)
 
 <use images/environment.png>
-Package pdftex.def Info: images/environment.png used on input line 69.
+Package pdftex.def Info: images/environment.png used on input line 67.
 (pdftex.def)             Requested size: 352.8155pt x 274.5416pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--90
+Underfull \hbox (badness 10000) in paragraph at lines 74--88
 
  []
 
-[48 <./images/environment.png>]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 91.
+[52 <./images/environment.png>]
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 89.
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 91.
- [49]
-<images/pilot.jpg, id=244, 1258.7025pt x 568.1225pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 89.
+ [53]
+<images/pilot.jpg, id=283, 1258.7025pt x 568.1225pt>
 File: images/pilot.jpg Graphic file (type jpg)
  <use images/pilot.jpg>
-Package pdftex.def Info: images/pilot.jpg used on input line 161.
+Package pdftex.def Info: images/pilot.jpg used on input line 159.
 (pdftex.def)             Requested size: 441.01772pt x 199.0539pt.
 
-[50 <./images/pilot.jpg>] [51]
+[54 <./images/pilot.jpg>] [55]
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ú in font pplr7t!
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ù in font pplr7t!
- [52]
-<images/comfort.pdf, id=254, 617.30624pt x 305.14pt>
+ [56]
+<images/comfort.pdf, id=293, 617.30624pt x 305.14pt>
 File: images/comfort.pdf Graphic file (type pdf)
  <use images/comfort.pdf>
-Package pdftex.def Info: images/comfort.pdf used on input line 338.
+Package pdftex.def Info: images/comfort.pdf used on input line 336.
 (pdftex.def)             Requested size: 441.01772pt x 218.00581pt.
 
-<images/summaryResults.pdf, id=255, 708.6475pt x 392.46625pt>
+<images/summaryResults.pdf, id=294, 708.6475pt x 392.46625pt>
 File: images/summaryResults.pdf Graphic file (type pdf)
 
 <use images/summaryResults.pdf>
-Package pdftex.def Info: images/summaryResults.pdf used on input line 353.
+Package pdftex.def Info: images/summaryResults.pdf used on input line 351.
 (pdftex.def)             Requested size: 441.01772pt x 244.24878pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [53 <./images/comfort.pdf>] <images/breakdown.pdf, id=267, 529.98pt x 437.635p
+ [57 <./images/comfort.pdf>] <images/breakdown.pdf, id=305, 529.98pt x 437.635p
 t>
 File: images/breakdown.pdf Graphic file (type pdf)
 
 <use images/breakdown.pdf>
-Package pdftex.def Info: images/breakdown.pdf used on input line 366.
+Package pdftex.def Info: images/breakdown.pdf used on input line 364.
 (pdftex.def)             Requested size: 441.01772pt x 364.17851pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [54 <./images/summaryResults.pdf>] [55 <./images/breakdown.pdf>]) [56]
+ [58 <./images/summaryResults.pdf>] [59 <./images/breakdown.pdf>]) [60]
 \openout2 = `8.conclusion.aux'.
 
 
 (./8.conclusion.tex
 Chapter 9.
-[57
+[61
 
 
 
-]) [58] (./proj_report_outline.bbl
+]) [62] (./proj_report_outline.bbl
 Underfull \hbox (badness 2012) in paragraph at lines 35--38
 []\OT1/ppl/m/sc/10.95 blprnt\OT1/ppl/m/n/10.95 .  Github:kepler vi-su-al-i-sa-t
 ion tool.  https://github.com/blprnt/Kepler-
@@ -830,11 +934,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--80
  can-di-dates, 2012.
  []
 
-[59
+[63
 
 
 
-]) [60] (./proj_report_outline.aux (./0.acknowledge.aux)
+]) [64] (./proj_report_outline.aux (./0.acknowledge.aux)
 (./1.introduction.aux) (./2.methodology.aux) (./3.requirements_analysis.aux)
 (./4aexisting.aux) (./4btechnology.aux) (./5.solution_design.aux)
 (./6.implementation.aux) (./7.evaluation.aux) (./8.conclusion.aux))
@@ -846,22 +950,22 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3461 strings out of 494071
- 50826 string characters out of 3160406
- 113682 words of memory out of 3000000
- 6522 multiletter control sequences out of 15000+200000
+ 3669 strings out of 494071
+ 53971 string characters out of 3160406
+ 116307 words of memory out of 3000000
+ 6714 multiletter control sequences out of 15000+200000
  28712 words of font info for 71 fonts, out of 3000000 for 9000
  648 hyphenation exceptions out of 8191
- 38i,7n,39p,1050b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,7n,39p,390b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
 ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 </usr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (68 pages, 2396982 bytes).
+Output written on proj_report_outline.pdf (72 pages, 2720194 bytes).
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
+ 379 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 191 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 226 words of extra memory for PDF output out of 10000 (max. 10000000)
 

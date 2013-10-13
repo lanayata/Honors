@@ -2,16 +2,12 @@
 Following the completion of the implementation stage of this project a final
 user evaluation was carried out on the visualisation. This evaluation was
 primarily designed to discover whether or not the visualisation created was
-successful in fulfilling the requirements of the project.
+successful in fulfilling the requirements of the project. For the evaluation of IKVT a within subjects experiment was conducted with 10
+participants. The evaluation of this project was designed to qualitatively and quantitatively assess users
+reactions and experiences with the IKVT. By mapping users experiences to the
+project requirements it was possible to evaluate the success of IKVT.
 
-\section{What did we do}
-For the evaluation of IKVT a within subjects experiment was conducted with 10
-participants. This experiment tested the IKVT against the system requirements
-and analysed the participants experiences to discover how successfully the
-visualisation solve the key issues that the project set out to address. 
-
-
-\section{Why did we do it}
+\section{Purpose of Evaluation}
 Visualisation methods are often designed and evaluated by presenting 
 results informally to potential users. No matter how 
 efficient a visualisation technique may be, or well planed it is, if it does
@@ -27,12 +23,6 @@ The fundamental goal of conducting user studies is to
 seek insights into why particular visualisation techniques are effective.
 \cite{kosara2003thoughts}.
 
-The evaluation of this project was designed to qualitatively assess users
-reactions and experiences with the IKVT. By mapping users experiences to the
-project requirements I was able qualitatively evaluate how successful the
-visualisation
-was a fulfilling these requirements. Qualitative evaluation was chosen over
-quantitative because of 3 main reasons ....~
 
 \section{Experimental Design}
 \subsection{Expectations of evaluation}
@@ -48,11 +38,12 @@ methods (Keyboard \& Mouse, and Kinect sensor). During the keyboard \& mouse
 portion of the experiment the users should make more accurate selections and
 exhibit more effective data seeking behavior, whereas during the Kinect portion
 they would be more interesting in experimenting with gestures rather than
-attempting to gain information about exoplanets. 
+attempting to gain information about exoplanets.
 
 When users have finished using the visualisation and fill in the questionnaire
 asking them about their experiences with the system the expectation was that
-they would detail the areas of the visualisation that ...~
+they would detail the areas of the visualisation that they had trouble with, felt needed improvement, and that they found useful and fun. These two forms of results gathering provided both qualitaive and quantitave results describing the users experiences.
+The expectation was that these qualitative and quantitative user results would provide a means of viewing how successfull the visualisation was in terms of fullfilling the system requirements.
 
 \subsection{Participants}
 The user study was undertaken by 9 participants P2 to P10 as well as a 1 user

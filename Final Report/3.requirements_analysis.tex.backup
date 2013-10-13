@@ -1,6 +1,6 @@
 \chapter{Requirements Analysis}\label{Chap:ra}
 To guide the creation of the visualisation a user oriented design approach was
-used, in particular making use of user models (personas). These personas were
+used \cite{AboutFace3}, in particular making use of user models (personas). These personas were
 created to give a sense of empathy and understanding for the foreseen users of
 the visualisation in order to better understand the requirements and design
 decisions to be made. 
@@ -116,7 +116,7 @@ planets.
  \end{enumerate}
  
   
- \subsubsection{Scenario 5: View the Goldilocks zones of each planet}
+ \subsubsection{Scenario 5: View the Goldilocks zones of each exoplanets star}
    Looking at the planets orbiting the sun in the visualisation John wonders
 whether any of them could support life. To see this John wants to see which
 planets are in the habitable zones of their stars. 
