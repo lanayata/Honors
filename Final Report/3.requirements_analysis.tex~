@@ -31,10 +31,10 @@ of a terminal or display in an observatory environment. These personas can be
 validated during the user evaluation of the visualisation by finding real users
 that
 match the core values of these personas. Although this visualisation would be
-suited towards teaching childeren about stelar information they were not
-focussed on during its planning. This was because of the increased ethical
-complexity of carrying out an evaluation with childeren. This could be done in
-the future once the visualisation is deemed successfull for users of other age
+suited towards teaching children about stellar information they were not
+focused on during its planning. This was because of the increased ethical
+complexity of carrying out an evaluation with children. This could be done in
+the future once the visualisation is deemed successful for users of other age
 ranges. 
 For each of the personas below there are a range of User Scenarios that outline the functionality needed for the deliverable of this project.
 
@@ -126,7 +126,7 @@ planets are in the habitable zones of their stars.
    \begin{enumerate}
  \item John selects that he wants to view the exoplanets compared to their stars
 habitable zones.
- \item The habitble zone of the selected planets star become visible.
+ \item The habitable zone of the selected planets star become visible.
  \item When a planet from a different star system is selected then the visible
 habitable
 zones will change to the new selected planets stars habitable zone.
@@ -206,7 +206,7 @@ Functional requirements define the behaviour of a system and are derived from
 the scenarios described above. These functions are
 described as a set of inputs, the behavior, and outputs from the system. The
 functional requirements for this visualisation are as follows:
-\begin{enumerate}
+\begin{description}
 
  \item[R1.] The visualisation needs to display planetary information to convey
 knowledge to
@@ -221,23 +221,23 @@ earth (ESI) and by their Kepler Object of Interest number (KOI).
  \item[R4.] The visualisation needs to allow users to define ranges of planetary
 attributes to filter which planets are displayed.
 
- \item[R5.] Users need to be able to view the habitable zones of stars in
+ \item[R5.] Users need to be able to view the habitable zones (Goldilocks zones) of stars in
 relation to the planets orbiting them.
 
-\end{enumerate}
+\end{description}
 
 \subsection{Nonfunctional Requirements}
  Functional requirements are supported by nonfunctional requirements. Nonfunctional requirements impose constraints on the design or implementation (such
 as performance, security, or usability) of a system. The non functional requirements for this visualisation are as follows:
-\begin{enumerate}
+\begin{description}
  \item[R6.] All interaction methods must be visible and intuitive.
 
  \item[R7.] The visualisation must remain uncluttered to reduce information
 overload.
 
- \item[R8.]  There needs to be two modes of interaction with the system,
-keyboard and mouse vs gesture based.
-\end{enumerate}
+ \item[R8.]  There needs to be two modes of interaction in the system,
+keyboard \& mouse vs gesture based.
+\end{description}
 
 %matrix
 \begin{figure}[H]

@@ -12,7 +12,7 @@ Kepler Exoplanet Database. The IKVT expands on this pre-existing
 visualisation by adding key elements of interactivity missing in the existing
  visualisation as well as further enhancing the range and amount of data that
 is available to users. The IKVT also incorporates a novel
-gesture based interactive mechanism for controling the visualisation using a Microsoft
+gesture based interactive mechanism for controlling the visualisation using a Microsoft
 Kinect Sensor.
 
 \section{System design and structure}
@@ -26,7 +26,7 @@ the system being modeled i.e. class diagrams, and or object diagrams. Behavioral
 diagrams show the dynamic behavior between the objects in
 the system, including aspects like their methods, collaborations, and activities
 i.e. use case, and sequence diagrams \ref{ibm}. For this project sequence diagrams and class diagrams were used to
-understand the exisiting system and plan out the extensions, these are discussed
+understand the existing system and plan out the extensions, these are discussed
 next.
 
 \begin{enumerate}
@@ -50,8 +50,8 @@ of the objects in the system are updated, and when they are rendered.
  Class diagrams describe the structure of a system by showing the system's
 classes, their attributes, methods, and the relationships among objects.
  Developers can use class diagrams to design and document the system's coded (or
-soon tbe coded) classes. For this project class diagrams were used to understand
-the makeup of the existing KVT and then to plan the extensions. This class
+soon to be coded) classes. For this project class diagrams were used to understand
+the makeup of the existing Kepler Visualisation Tool and then to plan the extensions. This class
 diagram was updated with the improvements introduced in the visualisation
 to provide an overview that could be used for further planning.
  \begin{figure}[H]
@@ -65,11 +65,11 @@ to provide an overview that could be used for further planning.
 By using
 the sequence diagram in Figure \ref{fig:sequenceDiagram} coupled with the class
 diagram in Figure \ref{fig:classDiagram} we can see where each method and field
-is located and modified. This is a powerfull way to understanding an
-exisiting system and then planning extensions.
+is located and modified. This is a powerful way to understanding an
+existing system and then planning extensions.
 
 \section{Visualisation Design}
-The requirements produced in Chapter \ref{Chap:ra}: Requriements Analysis
+The requirements produced in Chapter \ref{Chap:ra}: Requirements Analysis
 provide a
 description of the functionality needed for this
 visualisation. By adding additional details to these requirements we can specify
@@ -103,7 +103,7 @@ calls that would be used.
  \item[R2.] The visualisation needs to allow exoplanets to be compared against
 one another.}
 
-There are two steps to fullfilling this requirement\\ {\bf1.} Allow selection of
+There are two steps to fulfilling this requirement\\ {\bf1.} Allow selection of
 exoplanets \\ {\bf2.} Display additional information about exoplanets when they are
 selected.
 
@@ -133,8 +133,8 @@ by treating them as if they were selected and providing an additional indication
   \label{fig:sister}
 \end{figure}
 
-There needs to be an efficient way that users can make comparisons between the
-detailed textual information about exoplanets. By providing an additional text
+There needs to be an efficient way for users to make comparisons between the
+detailed textual information of exoplanets. By providing an additional text
 box and allowing users to select multiple planets this can be accomplished as shown in Figure \ref{fig:comp}.
 
 \begin{figure}[H]
@@ -149,7 +149,7 @@ box and allowing users to select multiple planets this can be accomplished as sh
  \item[R3.] The planets need to be able to be ordered by their similarity to
 earth (ESI) and by their Kepler Object of Interest number (KOI).}
 
-To fulfill this requirement the visualisation needs to allow users to view the
+The visualisation needs to allow users to view the
 exoplanets in a way that uses the Earth as a point of reference and their Earth
 Similarity Index (ESI) to order them and control their position. Figure \ref{fig:esiMock} displays a mockup of how this would be done.
 
@@ -165,22 +165,21 @@ Similarity Index (ESI) to order them and control their position. Figure \ref{fig
  \item[R4.] The visualisation needs to allow users to define ranges of planetary
 attributes to filter which planets are displayed.}
 
-To fulfill this requirement a method of filtering exoplanets by their attributes
-in order to control the number and types of planets displayed to the user. A
+A method of filtering the exoplanets displayed to the user by their attributes is needed. A
 common method of achieving this is to use a set of sliders that allow a user to
-filter something by a set of values. For example in this system a slider could
-be used to control the size of planets that are displayed.
-
+filter something by a set of values. In this system sliders would
+be used to control the planets displayed by the attributes size, temperature, Kepler Object of Interest number (KOI), and Earth Similarity Index (ESI) as in Figure \ref{fig:mockSlider}.
 \begin{figure}[H]
   \centering
       \includegraphics[width=.8\textwidth]{images/mockSlider.png}
   \caption{Mockup of range sliders}  
+  \label{fig:mockSlider}
 \end{figure}
 
-In addition to this users should be able to easily sort the exoplanets to make
+In addition to this users should be able to sort the exoplanets to make
 the most of the filtering. By allowing users to display the exoplanets sorted
-vertically by the same attribute as the filters, they can easily see how
-changing the filters affects the exoplanets displayed. This would be achieved by a set of interactive buttons as in Figure \ref{mockButtons}.
+vertically by the same attribute as the filters, they can see how
+changing the filters affects the exoplanets displayed as exoplanets on either side of the specified range are omitted. This would be achieved by a set of interactive buttons as in Figure \ref{fig:mockButtons}.
 
 \begin{figure}[H]
   \centering
@@ -191,8 +190,9 @@ changing the filters affects the exoplanets displayed. This would be achieved by
 
 \clearpage
 {\bf
- \item[R5.] Users need to be able to view the habitable zones of stars in
-relation to the planets orbiting them.}
+ \item[R5.] Users need to be able to view the habitable zones (Goldilocks zones) of stars in
+relation to the planets orbiting them.
+}
 
 To display the habitable zones of the stars of each exoplanet a way to display
 the hot (to close to the star), cold (to far from the star), and the habitable
@@ -220,12 +220,12 @@ depicting where the exoplanet sits inside the zones, as displayed in Figure
 
 {\bf \item[R6.] All interaction methods must be visible and intuitive.}
 
-To make an interactive visualisation useable the controlls and interactive
+To make an interactive visualisation usable the controls and interactive
 methods need to be clear to users. To achieve this for IKVT an interactive panel
 should be introduced. This panel should contain all of the interactive elements
-of the visualisation in a single central place that is spacially seperated from
-the main visualisation. This spacial seperation is imporatant as it reduces
-cognitive load on users by allowing them to focus on the visualisation iteslef
+of the visualisation in a single central place that is spatially separated from
+the main visualisation. This spacial separation is important as it reduces
+cognitive load on users by allowing them to focus on the visualisation itself
 until they need to use the panel in which case they can focus on that. It also
 means that users only need to look in one place for all of the interactive
 elements which reduces the risk of confusion. In this visualisation this
@@ -240,6 +240,7 @@ the previous requirements as displayed below in Figure
   \label{fig:interactionPanelMock}
 \end{figure}
 
+In the gesture based system intuitivity can be achieved by reusing effective and widely recognised gestures from other visualisations. In this case these would be push, pull, sweep left/right, raise, lower, and hover.
 \clearpage
 {\bf \item[R7.] The visualisation must remain uncluttered.}
 
@@ -247,20 +248,23 @@ The visualisation must not show so much information that it
 causes information overload for users. The ability to filter and sort the
 exoplanets gives a user the tools needed to
 reduce the quantity of planets displayed in the visualisation and thus the
-information load imposed on users. In addition to this, by having the text area
-that displays the information about
-selected planets separate from the main visualisation it reduces the cognitive
-load on users as they don't have to use this component until they want to.
+information load imposed on users. In addition to this, by having the interaction panel separate from the main visualisation it reduces the cognitive
+load on users as they don't have to use this component until they want to. Having the interaction broken up into 3 section also assists with this as it utilises Gestalt's law of proximity \cite{gestalt}~ which states that when an individual perceives an assortment of objects close together they are seen a group. This layout is shown in Figure \ref{fig:clutter}.
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.8\textwidth]{images/clutter.pdf}
+  \caption{TODO}
+  \label{fig:clutter}
+\end{figure}
 
 \clearpage
-{\bf  \item[R8.] There needs to be two modes of interaction with the system,
+{\bf  \item[R8.] There needs to be two modes of interaction in the system,
 keyboard and mouse vs gesture based.}
 
-The above requirements mostly relate to the keyboard an mouse system although
-some of the requirements can carry over to a gesture based system. By
+By
 incorporating a novel interactive method using a Microsoft Kinect sensor it
-gives users an alternative method of controlling the visualisation. For this to
-be successfull it means incorporating a
+gives users an alternative method of controlling the visualisation. To do this it means incorporating a
 means of detecting the gestures of users and linking them to an action in the
 visualisation. A simple way to do this is to provide an area for the user to
 gesture to on the screen that controls the movement of the camera in the
@@ -272,15 +276,14 @@ visualisation as shown in Figure \ref{fig:kinectMock}.
   \label{fig:kinectMock}
 \end{figure}
 
-In addition to controling the movement of the camera users need to be able to
+Users also need to be able to
 zoom in and out of the visualisation as well as select exoplanets for further
-examination as needed for the requirements. To do this a user should be able to
-push and pull his/her hand from the screen to zoom in and out, as well as
-gesturing to a planet to make a selection.
+examination. To do this users should be able to
+push and pull their hand from the screen to zoom in and out, as well as
+hover over a planet to make a selection.
 
-As the Kinect sensor no longer requires the use of a mouse the visualisation
-design needs to be modified to accommodate the use of gestures. This meant
-incorporating new cursors to indicate the state of the visualisation.
+Providing feedback to users is important for keeping them informed about the state of the visualisation, this means
+incorporating new cursors to indicate the gestures that have been detected.
 There are 7 states that the cursor needs to be able to be in to inform the user
 of what action they are performing. These states are
 
@@ -294,8 +297,8 @@ of what action they are performing. These states are
  \item zooming out, hand is pulled backwards
 \end{enumerate}
 Having a range of icons that clearly display these states is vital for keeping
-the user informed of what they are doing. The proposed icons for this are
-displayed below in Figure \ref{fig:cursors}
+the user informed of what they are doing. The proposed cursor icons for this are
+displayed in Figure \ref{fig:cursors}
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{images/curserImages.png}
@@ -303,12 +306,10 @@ displayed below in Figure \ref{fig:cursors}
   \label{fig:cursors}
 \end{figure}
 
-No gesture design has been included for interacting wiht the interaction panel.
+No gesture design has been included for interacting with the interaction panel.
 This is because the Microsoft Kinect sensor implementation in this visualisation
-is intended as a proof of concept that interaction via gestures can allow users
+is intended as a proof of concept that interaction via gestures allows users
 to access the information within the system. If the user study discussed in
 Chapter \ref{C:eval}: Visualisation Evaluation shows that gesture interaction is
-successfull in this regard then incorporating it further can be undertaken.
-\end{enumerate}
-
-These solution designs were used for the implementation of IKVT which is discussed in the next chapter, Chapter \ref{C:sd}.
+successful in this regard then incorporating it further can be undertaken.
+\end{enumerate}. The solution designs discussed above were used for the implementation of IKVT which is discussed in the next chapter, Chapter \ref{C:sd}.

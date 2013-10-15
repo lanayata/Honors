@@ -1,6 +1,6 @@
 \chapter{Introduction}\label{C:intro}
 The Kepler Exoplanet dataset \cite{datasetphl} \cite{dataset}  contains information about planets from outside of
-our solarsystem discovered by the Kepler space observatory, Figure
+our solar system discovered by the Kepler space observatory, Figure
 \ref{fig:keplerTele}. The Kepler space observatory was launched in 2009 by NASA
 to discover Earth like planets orbiting other stars \cite{keplerTele}.
 
@@ -14,7 +14,7 @@ to discover Earth like planets orbiting other stars \cite{keplerTele}.
 % Introduction to the Kepler Mission 
 This project seeks to design, implement, and evaluate an interactive 3D
 visualisation software system for displaying the content in the Kepler
-Exoplanet dataset using both gesures and traditional interactive methods
+Exoplanet dataset using both gestures and traditional interactive methods
 . This deliverable is intended as a standalone
 3D visualisation with two modes of interaction, keyboard and mouse or Microsoft
 Xbox Kinect sensor \cite{kinect}. The resulting visualisation will present the
@@ -37,7 +37,7 @@ in the dataset effectively to the users.
 The complex nature of the data involved in this project caused a range of
 problems revolving around understandability. This project
 attempts to address these issues in a way that results in increased
-accessability of the information contained in the dataset for laypeople. The
+accessibility of the information contained in the dataset for laypeople. The
 following subsections outline these in detail.
 
 \subsection{Understanding the content in the dataset}
@@ -109,7 +109,7 @@ and gesture recognition or even a combination of devices. Existing
 visualisations surrounding planetary data only allow access to a small subset of
 the information contained within the Kepler Exoplanet Database. In addition to
 this most solutions do not allow interaction with any advanced means with the
-exeption of Exo \cite{exo} which uses wired gloves to detect the gestures of of
+exception of Exo \cite{exo} which uses wired gloves to detect the gestures of of
 users. To address this this project incorporates a range of interactive
 components that allow the user to access large amounts of data. It also
 introduces a new novel method of interacting with the visualisation via gestures
@@ -118,7 +118,7 @@ with a Microsoft Kinect sensor.
 \section{Key issues project addresses}
 To summarise the above sections, this project addresses the following key
 issues:
-\begin{enumerate}
+\begin{description}
  \item[Issue 1.] Content in the Kepler Exoplanet Database is difficult to view
 and
 understand due to its amount and labeling.
@@ -131,7 +131,7 @@ functionality for exploring the information in effective ways.
  \item[Issue 4.] Visualisations need to allow user interaction to make the most
 of
 the data they display.
-\end{enumerate}
+\end{description}
 These issues are used in Chapter \ref{Chap:ra}: Requirements Analysis to create
 the project requirements.
 

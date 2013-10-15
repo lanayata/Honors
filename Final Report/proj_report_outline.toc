@@ -9,7 +9,7 @@
 \contentsline {chapter}{\numberline {2}Project Methodology}{5}
 \contentsline {section}{\numberline {2.1}Project management approach}{5}
 \contentsline {subsection}{\numberline {2.1.1}Software Development Life Cycle (SDLC)}{5}
-\contentsline {section}{\numberline {2.2}Other project methodologies explored}{6}
+\contentsline {section}{\numberline {2.2}Alternative methodologies explored}{6}
 \contentsline {section}{\numberline {2.3}Supporting Tools for project}{7}
 \contentsline {chapter}{\numberline {3}Requirements Analysis}{9}
 \contentsline {section}{\numberline {3.1}User models}{9}
@@ -45,9 +45,9 @@
 \contentsline {subsection}{\numberline {6.2.2}Nonfunctional Requirement}{32}
 \contentsline {chapter}{\numberline {7}Visualisation implementation of the Improved Kepler Visualisation Tool (IKVT)}{37}
 \contentsline {section}{\numberline {7.1}Tools and Artifacts Used}{37}
-\contentsline {subsection}{\numberline {7.1.1}Keyboard and Mouse System}{37}
+\contentsline {subsection}{\numberline {7.1.1}Keyboard \& Mouse System}{37}
 \contentsline {subsection}{\numberline {7.1.2}Microsoft Kinect System}{37}
-\contentsline {section}{\numberline {7.2}Implementation of IKVT}{38}
+\contentsline {section}{\numberline {7.2}Implementation of IKVT}{37}
 \contentsline {section}{\numberline {7.3}Problems encountered}{48}
 \contentsline {chapter}{\numberline {8}Visualisation Evaluation}{51}
 \contentsline {section}{\numberline {8.1}Purpose of Evaluation}{51}
@@ -65,9 +65,9 @@
 \contentsline {subsubsection}{Evaluation of Functional Requirements}{56}
 \contentsline {section}{\numberline {8.4}Discussion}{58}
 \contentsline {subsection}{\numberline {8.4.1}Threats to Validity}{58}
-\contentsline {subsection}{\numberline {8.4.2}Potential Improvments}{59}
+\contentsline {subsection}{\numberline {8.4.2}Potential Improvements}{59}
 \contentsline {section}{\numberline {8.5}Summary of Evaluation}{59}
-\contentsline {chapter}{\numberline {9}Conclusions}{61}
+\contentsline {chapter}{\numberline {9}Summary}{61}
 \contentsline {section}{\numberline {9.1}System Design}{61}
 \contentsline {section}{\numberline {9.2}System Implementation}{61}
 \contentsline {section}{\numberline {9.3}System Evaluation}{61}

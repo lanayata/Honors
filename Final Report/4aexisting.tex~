@@ -105,6 +105,7 @@ Celesia tries to give users, ie letting them explore the vastness of space in a
 3D simulation. 
 
 \section{Kepler Visualisation Tool}
+\label{sec:kep}
 The Kepler Visualisation tool \cite{kepler_github, kepler_article} is a 3D
 visualisation built with Processing (A Java library and development
 environment). It is a simple visualisation focusing

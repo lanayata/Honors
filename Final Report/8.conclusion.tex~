@@ -1,11 +1,11 @@
 \chapter{Summary}\label{C:con}
-This project contributes a design, implementaion, and evalutation of an
+This project contributes a design, implementation, and evaluation of an
 interactive 3D visualisation called the Improved Kepler Visualisation Tool
 (IKVT). IKVT has two modes of interaction; the traditional keyboard \& mouse and
 the more novel Microsoft Kinect sensor. 
 
 \section{System Design}
-The requiremnets for IKVT were designed using Cooper et al.'s user oriented
+The requirements for IKVT were designed using Cooper et al.'s user oriented
 design approach which emphasised using user models and user scenarios \cite{AboutFace3}.  Two user
 models and seven user scenarios were used in the creation of eight project requirements that
 were used extensively in the design, implementation and evaluation of IKVT to ensure that it
@@ -50,20 +50,20 @@ information in the visualisation. The evaluation also revealed that one area,
 viewing the habitable zones of stars, lacked
 usability because it was unintuitive for the users participating in the evaluation.     
 \section{Future Work}
-The IKVT taken further in many different ways depending
+IKVT  can be taken further in many ways depending
 on how it is intended to be used. There is the option of using the system as a
 terminal that users would use at an observatory or attraction where prior
 knowledge of the system is limited and amount of time users would spend on the
 system would be small. In this case further expanding the user experience and
 improved Kinect interaction would be beneficial as immersion would be the
-decider on its success. Another option for the system would be for a standalone
+decider on its success. Another option would be for a standalone
 desktop system that users would use multiple times and so prior knowledge of how
 to use the system could be expected. This would mean that more complex
-functionality could be introduced with the expectation that it could be used by
+functionality could be introduced with the expectation that it could be learned and used by
 users. The systems current state could me modified to fit into either of these
 two options.
 
-A weakness in the system that needs to be addressed is the star habibility view
+A weakness in the system that needs to be addressed is the Goldilocks zone view
 which the evaluation discovered was not intutive enough to make it effective. To
 address this the functionality needs to be evaluated to discover which aspects
 of it cause it to be unintuitive.
@@ -73,5 +73,5 @@ enjoyable way for users to interact with IKVT even though it was less effective
 at accessing information. This opens up the opportunity for further work to
 improve the level of gesture based control and accuracy so that it rivals the
 keyboard \& mouse. This could be done in a range of ways from simply enhancing
-the intutiveity, to more advanced methods of gesture detection.
+the intutiveity, to more advanced methods of gesture detection such as joining gestures together.
 

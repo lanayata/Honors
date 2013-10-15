@@ -6,26 +6,7 @@ It details the tools used, the deliverable features
 produced, and the problems encountered. 
 
 \section{Tools and Artifacts Used}
-% \subsection{Dataset used}
-% The dataset for this project is a comma separated values (CSV) file that
-% contains all of the data pertaining to the Exoplanets. At runtime this dataset
-% is read into the system and an exoplanet object is created for each element
-which
-% contains all of the information from the dataset record.
-% 
-% %possibly discuss how a real database could be used instead
-% \subsection{Integrated Development Environment (IDE)}
-% The IDE used for this project is one that is provided with Processing. This
-IDE
-% provided all of the tools and functionality that were required to effectively
-% implement the solution for this project. Another option that could have been
-% taken was to use Eclipse with the processing package and external libraries
-% imported. However I found that the processing IDE was entirely suitable for
-the
-% majority of my needs creating the visualisation. The key things that I did not
-% have access to with this choice was the Eclipse Debugger and JUnit tests.
-
-\subsection{Keyboard and Mouse System}
+\subsection{Keyboard \& Mouse System}
 In addition to Processing there was an additional opensource
 library required for effective user interface components called ControlP5
 \cite{controlp5}. This library provides customisable and intuitive
@@ -98,8 +79,8 @@ Detailed information can be accessed about each exoplanet by clicking on them in
 the main visualisation window to
 make a selection. To do this a user can click on any of the orbiting exoplanets.
 The effect of this selection is that a text box will have further textual
-information about the selected exoplanet appended to it. In addtion to this
-users have the option of clicking a button labelled  as ``Compare'', This allows
+information about the selected exoplanet appended to it. In addition to this
+users have the option of clicking a button labeled  as ``Compare'', This allows
 the user the option to select another exoplanet so that its information is
 appended to a second text area. This can be seen in Figure \ref{fig:textBoxes}. 
 \begin{figure}[H]
@@ -129,7 +110,7 @@ out vertically which allows more space between them to make selections.
     \label{fig:zoomFilter}
 \end{figure}
 
-The exisiting Kepler Visualisation Tool allowed users to sort the exoplanets on
+The existing Kepler Visualisation Tool allowed users to sort the exoplanets on
 the Y axis by their temperature and size. In IKVT this has been extended to
 allow sorting by Kepler Object of Interest number (KOI) and Earth Similarity
 Index (ESI) as shown in Figure \ref{fig:ESIKOI}.
@@ -145,7 +126,7 @@ Index (ESI) as shown in Figure \ref{fig:ESIKOI}.
 When a exoplanet is selected it is important that the user gets feedback about
 what they have done. In IKVT this happens in the form of the selected exoplanet
 becoming larger and a white outlining ring expanding out to encircle it. In
-adition to this a label appears to the right of the exoplanet and states the
+addition to this a label appears to the right of the exoplanet and states the
 Kepler Object of Interest number (KOI). 
 
 \begin{figure}[H]
@@ -205,7 +186,7 @@ click on a button to discover its effect.
 
 Due to the need for effective user interaction with the visualisation, a window
 is required to house all of the components discussed above. Having this window
-spacially separated from the main visualisation window means that users will not
+spatially separated from the main visualisation window means that users will not
 be drawn away from the visualisation by overlapping and intrusive controls. Each
 of the controls discussed above are included in this panel as shown below in
 Figure \ref{fig:nav}.
@@ -224,7 +205,7 @@ taking up the rest of the space as in Figure \ref{fig:layoutOld}.
  This was found not to be suitable as the majority of the interaction and
 animation of visualisation elements occurs
 in the center of the window which this layout did not effectively utilise as it
-caused a low aspect ratio that made the top and bottom of the visualisaion to be
+caused a low aspect ratio that made the top and bottom of the visualisation to be
 cut off. It
 was more effective to use two vertical columns as in Figure \ref{fig:layoutNew},
 to view and control the visualisation. This is because
@@ -245,7 +226,7 @@ choice.
 \end{figure}
 
 The Kinect Sensor system uses all of the features discussed above and extends it
-by encorporating in gesture based control by utilising a Microsoft Kinect
+by incorporating in gesture based control by utilising a Microsoft Kinect
 sensor. Incorporate these gesture based controls was completed by specifying
 gestures are detected by the visualisation which in turn modifies its state. As
 shown in the solution design stage there were eight gestures that were needed
@@ -304,17 +285,17 @@ figures. This is important as it gives the user a way to infer where they are
 gesturing and as a way to show them that they are being detected by the system.
 \\\\
 Each of the features discussed were implemented using the designs created in
-Chapter \ref{C:sd}: Solution Designs to fullfill the functional requirements.
+Chapter \ref{C:sd}: Solution Designs to fulfill the functional requirements.
 The visualisation IKVT that was created can successfully display planetary
 information to convey knowledge to users (Requirement 1), allow exoplanets to be
 compared against one another (Requirement 2), order exoplanets by their ESI and
 by their KOI (Requirement 3), allows users to define ranges of planetary
 attributes to filter which planets are displayed (Requirement 4), and view the
 habitable zones of stars in
-relation to the planets orbiting them (Requirement 5). These functionalisties
+relation to the planets orbiting them (Requirement 5). These functionalities
 are evaluated in the next chapter to ensure that they successfully fulfill the
 functional requirements as previously stated, as well as the non functional
-requirements that emphasise usablity for users.
+requirements that emphasises usability for users.
 
 
 
@@ -346,14 +327,14 @@ completely robust, for example when undoing multiple times in a row the file
 being
 modified would periodically become corrupted by lines of code being taken away
 or inserted into the wrong locations. The solution to this issue was to ensure
-that any changes were commited regularily to my repository on Github
+that any changes were committed regularly to my repository on Github
 \cite{github}. Doing this meant that if at any time a file became corrupted the
 incorrect changes could be easily compared against the previous commit and
 manually fixed. Any bugs found were reported in
 the hopes that people using Processing in the future wouldn't need to address
 them.
 \\\\
-The libraries used for gesture detection with the Kinect senser were opensource
+The libraries used for gesture detection with the Kinect sensor were opensource
 as this was the only way to get it to work with Processing. These open source
 libraries did not have the functionality, documentation, and support that the
 real Software Development Kit (SDK) that is available from Microsoft would have

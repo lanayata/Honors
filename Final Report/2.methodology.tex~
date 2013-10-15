@@ -23,7 +23,7 @@ this project was a customized Spiral Model \cite{boehm1988spiral} made up of
 requirements analysis, design, implementation, and evaluation stages as shown in
 Figure \ref{fig:spiralModel}. A software project repeatedly iterates through these stages for each functionality or component produced. The first stage of the spiral involves analysing the
 requirements of the functionality being created. Following this designs are created and then implemented to produce a deliverable artifact. Finally in the fourth stage the artifact is user tested by one
-or more people. This evaluation is in addition to the final user evaluation at the completion fo the project. 
+or more people. This evaluation is in addition to the final user evaluation at the completion of the project. 
 
 \begin{figure}[H]
   \centering
@@ -51,7 +51,7 @@ Following this SDLC allowed me to achieve all of the goals
 that I set, although some time frames and deadlines had to be revised as elements were completed before or behind schedule. 
 
 
-\section{Other project methodologies explored}
+\sectionprioritiseject methodologies explored}
 Two other project methodologies were explored before the
 Spiral Model was chosen. The alternatives were a loose agile method SCRUM \cite{schwaber2004agile}, and
 a strict Structured Method, the Waterfall Model \cite{royce1970managing}. 
@@ -84,7 +84,7 @@ of file system crashes and corruption. It also maintained effective revision
 history that could be used to backtrack to or view changes that were made
 earlier in the project. Version control was also valuable as it allowed me to
 maintain multiple branches (versions) of my project that could be swapped between whilst developing multiple features.
-This was important for the creation of the Keyboard and mouse system and the
+This was important for the creation of the keyboard \& mouse system and the
 Microsoft Kinect system as they were on separate branches in the repository. 
 The version control tool used for this project was Git which allowed
  the repository to be hosted on the repository hosting web service Github. A
@@ -99,4 +99,4 @@ deliverables were implemented in the required timeframe and also provided a
 sounding board for ideas.
 Another important aspect of having an involved supervisor was that he provided the guidance of an experienced academic which was indispensable when
 navigating the administrative side of organizing delicate matters such as ethics
-approval for human evaluation of the visualisation.
+approval for the user evaluation of the visualisation.

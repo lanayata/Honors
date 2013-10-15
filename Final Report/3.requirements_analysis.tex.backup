@@ -151,16 +151,15 @@ attractions. She finds that they are more entertaining and provide a more
 immersive experience than a visualisation with a keyboard and mouse. 
 
  \subsubsection{Scenario 3: Select planets to display more information}
- Cara wants to see more information about each of the planets she can see
-orbiting in the visualisation. To do this she wants to be able to hover her hand
-over a planet to get the information to display on screen.
+ Cara wants to see more information about the planets she can see
+orbiting in the visualisation. To do this she wants to be able to perform a gesture to select a planet to access more information.
  
   {\bf  Procedure:}
    \begin{enumerate}
  \item Cara hovers her hand over a planet to make a selection
- \item The planet selected becomes larger and its outline grows, making it more
+ \item The planet selected becomes more
 visible.
-\item The text window has all of the information about the planet selected added
+\item A text window has information about the planet selected added
 to it.
  \end{enumerate}
  
@@ -172,7 +171,7 @@ planet to become highlighted.
  
   {\bf  Procedure:}
    \begin{enumerate}
- \item When John selects a planet, all planets in the same Solar System become
+ \item When Cara selects a planet, all planets in the same Solar System become
 more visible.
  \item A label appears on these planets indicating that they are related
 planets.
@@ -189,7 +188,7 @@ gestures as it's more immersive.
  \item By moving her hand the visualisation pans
 in the corresponding direction, ie if the hand goes to the top of the screen
 the visualisation pans up.
- \item By moving her hand backwards and forwards the visualisation will zoom in
+ \item By moving her hand backwards and forwards the visualisation zooms in
 and out.
   \end{enumerate}
 Both of these users are similar in their need for information from the
@@ -203,7 +202,7 @@ From these User Scenarios we can see that behind each of them there is a
 requirement that a visualisation can address. The requirements that were
 extracted from the User Scenarios are introduced in the following subsections. 
 \subsection{Functional Requirements}
-Functional requirements define the functions of a system and are derived from
+Functional requirements define the behaviour of a system and are derived from
 the scenarios described above. These functions are
 described as a set of inputs, the behavior, and outputs from the system. The
 functional requirements for this visualisation are as follows:
@@ -228,25 +227,22 @@ relation to the planets orbiting them.
 \end{enumerate}
 
 \subsection{Nonfunctional Requirements}
- Functional requirements are supported by non functional requirements. Non
-functional requirements impose constraints on the design or implementation (such
-as performance, security, or usability) of a system.
- 
- The non functional requirements for this visualisation are as follows:
+ Functional requirements are supported by nonfunctional requirements. Nonfunctional requirements impose constraints on the design or implementation (such
+as performance, security, or usability) of a system. The non functional requirements for this visualisation are as follows:
 \begin{enumerate}
  \item[R6.] All interaction methods must be visible and intuitive.
 
  \item[R7.] The visualisation must remain uncluttered to reduce information
 overload.
 
- \item[R8.]  There needs to be two modes of interaction with the system,
+ \item[R8.]  There needs to be two modes of interaction in the system,
 keyboard and mouse vs gesture based.
 \end{enumerate}
 
 %matrix
 \begin{figure}[H]
   \centering
-      \includegraphics[width=1\textwidth]{images/issues_to_req_matrix.png}
-  \caption{Matrix of project requirements to issues project is attempting to
+      \includegraphics[width=1\textwidth]{images/issues_to_req_matrix.pdf}
+  \caption{Matrix of project requirements to the issues this project attempts to
 address}
 \end{figure}

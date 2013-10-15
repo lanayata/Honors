@@ -1,21 +1,21 @@
 \chapter{Introduction}\label{C:intro}
-This project seeks to design, implement, and evaluate an interactive 3D
-visualisation software system for displaying the content in the Kepler
-Exoplanet dataset using both gesures and traditional interactive methods
-\cite{dataset}.
-
-The Kepler Exoplanet dataset contains information about planets from outside of our solarsystem discovered by the Kepler space observatory, Figure \ref{keplerTele}. The Kepler space observatory was launched in 2009 by NASA to discover Earth like planets orbiting other stars \cite{keplerTele}. In January 2013, astronomers at the Harvard-Smithsonian Center for Astrophysics used Kepler's data to estimate that "at least 17 billion" Earth-sized exoplanets reside in the Milky Way Galaxy.[15]
+The Kepler Exoplanet dataset \cite{datasetphl} \cite{dataset}  contains information about planets from outside of
+our solar system discovered by the Kepler space observatory, Figure
+\ref{fig:keplerTele}. The Kepler space observatory was launched in 2009 by NASA
+to discover Earth like planets orbiting other stars \cite{keplerTele}.
 
 \begin{figure}[H]
   \centering
-      \includegraphics[width=0.5\textwidth]{images/keplerTele.jpg}
-  \caption{TODO~}  
+      \includegraphics[width=0.8\textwidth]{images/keplerTele.jpg}
+  \caption{The Kepler space observatory}  
     \label{fig:keplerTele}
 \end{figure}
 
-% Introduction to the Kepler Mission ~
-
-This deliverable is intended as a standalone
+% Introduction to the Kepler Mission 
+This project seeks to design, implement, and evaluate an interactive 3D
+visualisation software system for displaying the content in the Kepler
+Exoplanet dataset using both gestures and traditional interactive methods
+. This deliverable is intended as a standalone
 3D visualisation with two modes of interaction, keyboard and mouse or Microsoft
 Xbox Kinect sensor \cite{kinect}. The resulting visualisation will present the
 information from the dataset in a way that the target users, laypeople who have
@@ -26,7 +26,7 @@ There have been many planets located outside of our own solar system,
 these are called exoplanets, and are referred to interchangeably as planets and
 exoplanets for the remainder of this report. Information about these exoplanets
 is stored in the Kepler Exoplanet Dataset
-\cite{dataset}. This project seeks to develop and evaluate an interactive 3D
+. This project seeks to develop and evaluate an interactive 3D
 visualisation software system for the Kepler Exoplanets Dataset. Visualisations
 are valuable as they foster immersion and enjoyment, both of which result in
 improved learning and recall. This means that
@@ -37,7 +37,7 @@ in the dataset effectively to the users.
 The complex nature of the data involved in this project caused a range of
 problems revolving around understandability. This project
 attempts to address these issues in a way that results in increased
-accessability of the information contained in the dataset for laypeople. The
+accessibility of the information contained in the dataset for laypeople. The
 following subsections outline these in detail.
 
 \subsection{Understanding the content in the dataset}
@@ -54,7 +54,8 @@ image in our mind of a situation in order to make sense of it
 \cite{visualisingpiggott} which allows for faster and more comprehensive
 understanding. The content in the dataset used
 for this project is made up of records of every one of the 2234 exoplanets
-discovered by the Kepler Mission. Each of these records contains 46 fields shown in Figure \ref{fig:fields} which
+discovered by the Kepler Mission. Each of these records contains 46 fields shown
+in Figure \ref{fig:fields} which
 makes it next to impossible for someone to internally visualise as there is so
 much information, especially as most of it consists of floating point numbers.
 This means that an external
@@ -65,7 +66,8 @@ way of visualising the data is needed.
   \caption{Fields of the dataset to be visualised}
   \label{fig:fields}
 \end{figure}
- Therefore this project aims to find a way to display this information visually so that users can better understand it.
+ Therefore this project aims to find a way to display this information visually
+so that users can better understand it.
 \subsection{Comprehension of planetary information}
 Much of the information regarding planets is cryptic and unintuitive, this makes
 it difficult to understand. Data visualisation can therefore be effective
@@ -75,7 +77,8 @@ the brain's abilities. Seeing (i.e visual perception) which is handled by the
 visual cortex located in the rear of the brain, is extremely fast and efficient.
 We see immediately, with little effort. Thinking (i.e. cognition), which is
 handled primarily by the cerebral cortex in the front of the brain, is much
-slower and less efficient \cite{few}. Therefore this project will find ways of visually simplifying this data so that it conveys more meaning to users. 
+slower and less efficient \cite{few}. Therefore this project will find ways of
+visually simplifying this data so that it conveys more meaning to users. 
 
 
 \subsection{Existing solutions lack functionality}
@@ -106,7 +109,7 @@ and gesture recognition or even a combination of devices. Existing
 visualisations surrounding planetary data only allow access to a small subset of
 the information contained within the Kepler Exoplanet Database. In addition to
 this most solutions do not allow interaction with any advanced means with the
-exeption of Exo \cite{exo} which uses wired gloves to detect the gestures of of
+exception of Exo \cite{exo} which uses wired gloves to detect the gestures of of
 users. To address this this project incorporates a range of interactive
 components that allow the user to access large amounts of data. It also
 introduces a new novel method of interacting with the visualisation via gestures
@@ -115,31 +118,29 @@ with a Microsoft Kinect sensor.
 \section{Key issues project addresses}
 To summarise the above sections, this project addresses the following key
 issues:
-\begin{enumerate}
- \item[Issue 1.] Content in the Kepler Exoplanet Database is difficult to view and
+\begin{description}
+ \item[Issue 1.] Content in the Kepler Exoplanet Database is difficult to view
+and
 understand due to its amount and labeling.
- \item[Issue 2.] Planetary information is complex and difficult to comprehend without
+ \item[Issue 2.] Planetary information is complex and difficult to comprehend
+without
 a visual reference due to its scale.
- \item[Issue 3.] Existing visualisations for exploring planetary data have minimal
+ \item[Issue 3.] Existing visualisations for exploring planetary data have
+minimal
 functionality for exploring the information in effective ways.
- \item[Issue 4.] Visualisations need to allow user interaction to make the most of
+ \item[Issue 4.] Visualisations need to allow user interaction to make the most
+of
 the data they display.
-\end{enumerate}
-
-These issues are used in Chapter \ref{Chap:ra}: Requirements Analysis to create the project requirements.
+\end{description}
+These issues are used in Chapter \ref{Chap:ra}: Requirements Analysis to create
+the project requirements.
 
 \section{Contributions of this project}
-This project provides a visualisation that conveys more information and
+This project provides an interactive 3D visualisation that conveys more information and
 contains better interactivity than other visualisations in the same area. This
-extension is evaluated qualitatively by a user experiment to ensure that it
-is successful in conveying the information contained in the dataset.
-
-The interactivity that is provided by this project is a mix of keyboard and
-mouse as well as a more novel approach using a Microsoft Kinect sensor. This
-sensors provides a further contribution of gesture based interactivity of a 3D
-visualisation.
-
+extension is evaluated both qualitatively and quantitatively by a within subjects user experiment to ensure that it
+successfully conveys the information in the Kepler Exoplanet Database.
+A key part of this project is the development of interactive techniques to provide the best access to the data. These techniques are a mix of keyboard and
+mouse as well as a novel gesture based approach using a Microsoft Kinect sensor.
 The work and research completed for this project will provide the opportunity
-for further improvement of the created visualisation by other developers and
-researchers. This will create further exposure of the Kepler dataset which will
-encourage learning about exoplanets and the Kepler mission.
+for further improvement of the produced visualisation in the future.
