@@ -78,9 +78,21 @@ Simpleopenni.
 \newblock
   http://kepler.nasa.gov/multimedia/animations/scienceconcepts/?ImageID=229.
 
+\bibitem{datasetphl}
+{\sc PHL}.
+\newblock Phls exoplanets catalog.
+\newblock
+  http://phl.upr.edu/projects/habitable-exoplanets-catalog/data/database.
+  Accessed: 2013-04-20.
+
 \bibitem{visualisingpiggott}
 {\sc Piggott, J., and Woodham, L.}
 \newblock Thinking through, and by, visualising, 2008.
+
+\bibitem{royce1970managing}
+{\sc Royce, W.~W.}
+\newblock Managing the development of large software systems.
+\newblock In {\em proceedings of IEEE WESCON\/} (1970), vol.~26, Los Angeles.
 
 \bibitem{schwaber2004agile}
 {\sc Schwaber, K.}
@@ -96,5 +108,6 @@ Simpleopenni.
 {\sc Wright, J.~T., Fakhouri, O., Marcy, G.~W., Han, E., Feng, Y., Johnson,
   J.~A., Howard, A.~W., Valenti, J.~A., Anderson, J., and Piskunov, N.}
 \newblock {The Exoplanet Orbit Database}.
+\newblock http://arxiv.org/abs/1012.5676. Accessed: 2013-04-20.
 
 \end{thebibliography}

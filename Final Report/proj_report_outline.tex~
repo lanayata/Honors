@@ -70,7 +70,7 @@
 
 
 We have large amounts of information about planets outside of our solar system, and this can be accessed by anyone from the Kepler
-Exoplanets dataset \cite{dataset}. However this information is often
+Exoplanets dataset  \cite{datasetphl} \cite{dataset}. However this information is often
 complex not easily understood by laypeople who lack in depth knowledge of stellar objects. This is problematic as it
 means that the data gathered about these planets is not being used
 effectively to communicate to the masses. To resolve this a

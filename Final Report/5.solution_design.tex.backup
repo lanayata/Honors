@@ -5,31 +5,27 @@ the key design decisions revolving around structure, aesthetics, and
 functionality that were made about the visualisation. 
 % Description of tool
 This project aims to improve an existing visualisation, The Kepler Visualisation
-Tool which was discussed in the previous chapter. Whist this existing
-visualisation displays exoplanets and some of their features, it lacks
-interactivity for users trying to use it to gain information contained in the
-Kepler Exoplanet Database effectively. The IKVT expands on this pre-existing
+Tool which was discussed in the previous chapter. This 
+visualisation displays exoplanets and some of their features but lacks effective
+interactivity for users use it to gain detailed information contained in the
+Kepler Exoplanet Database. The IKVT expands on this pre-existing
 visualisation by adding key elements of interactivity missing in the existing
  visualisation as well as further enhancing the range and amount of data that
-is available to users about exoplanets. The IKVT also incorporates a novel
-gesture based interactive mechanism to the visualisation using a Microsoft
+is available to users. The IKVT also incorporates a novel
+gesture based interactive mechanism for controling the visualisation using a Microsoft
 Kinect Sensor.
 
 \section{System design and structure}
-Because this project builds upon an existing system, complete comprehension of
-how it is designed and how it functions is important. Going ahead in the
-creation of the visualisation without this knowledge would create opportunities
-for mistakes and incorrect assumptions about how the visualisation needs to be
-created. To solve this issue diagrams the Unified Modeling Language(UML) were
-used. In UML there are two basic categories of diagrams: structure diagrams and
+As this project builds upon the Kepler Visualisation
+Tool, complete comprehension of
+how it is designed and how it functions is important. Going ahead in extension without this knowledge would create opportunities
+for mistakes and incorrect assumptions. To solve this issue diagrams using the Unified Modeling Language(UML) were used. In UML there are two basic categories of diagrams: structure diagrams and
 behavior diagrams. Every UML diagram belongs to one these two diagram
 categories. The purpose of structure diagrams is to show the static structure of
-the system being modeled ie class diagrams, and or object diagrams. Behavioral
-diagrams, on the other hand, show the dynamic behavior between the objects in
-the system, including things like their methods, collaborations, and activities
-ie, use case, and sequence diagrams
-http://www.ibm.com/developerworks/rational/library/content/RationalEdge/sep04/be
-ll/. For this project sequence diagrams and and class diagrams were used to help
+the system being modeled i.e. class diagrams, and or object diagrams. Behavioral
+diagrams show the dynamic behavior between the objects in
+the system, including aspects like their methods, collaborations, and activities
+i.e. use case, and sequence diagrams \ref{ibm}. For this project sequence diagrams and class diagrams were used to
 understand the exisiting system and plan out the extensions, these are discussed
 next.
 
@@ -40,12 +36,12 @@ next.
 objects in the sequential order that those interactions occur.
 For this project it was used to understand how each of the objects in the system
 worked together to create the visualisation. Without understanding which objects
-were responsible for each part of the render cycle would have made it difficult
+were responsible for each part of the render cycle it would have been difficult
 to extend the visualisation. Through the sequence diagram we can see when each
 of the objects in the system are updated, and when they are rendered. 
    \begin{figure}[H]
   \centering
-      \includegraphics[width=0.8\textwidth]{images/sequence.png}
+      \includegraphics[width=1\textwidth]{images/sequence.png}
   \caption{Sequence Diagram of IKVT render cycle}  
     \label{fig:sequenceDiagram}
 \end{figure}
@@ -56,7 +52,7 @@ classes, their attributes, methods, and the relationships among objects.
  Developers can use class diagrams to design and document the system's coded (or
 soon tbe coded) classes. For this project class diagrams were used to understand
 the makeup of the existing KVT and then to plan the extensions. This class
-diagram was maintained with the improvements introduced in the the visualisation
+diagram was updated with the improvements introduced in the visualisation
 to provide an overview that could be used for further planning.
  \begin{figure}[H]
   \centering
@@ -68,23 +64,17 @@ to provide an overview that could be used for further planning.
 
 By using
 the sequence diagram in Figure \ref{fig:sequenceDiagram} coupled with the class
-diagram in Figure\ref{fig:classDiagram} you can see where each method and field
-is located and modified. This is a powerfull way of begining to understand an
-exisitng system and then planning extensions.
+diagram in Figure \ref{fig:classDiagram} we can see where each method and field
+is located and modified. This is a powerfull way to understanding an
+exisiting system and then planning extensions.
 
 \section{Visualisation Design}
 The requirements produced in Chapter \ref{Chap:ra}: Requriements Analysis
 provide a
-description of the functionality that needs to be designed for this
+description of the functionality needed for this
 visualisation. By adding additional details to these requirements we can specify
-how the visualisation should look, behave, and function.
+how the visualisation should look, behave, and function, this is done in the following subsections.
 
-% By using abstract user interface design the layout and configuration of each
-% element can be
-% planned and coordinated without the need for excessive details which are
-likely
-% to change
-% throughout the course of the project (e.g. colours and content) \cite{martin}.
 \clearpage
 \subsection{Functional Requirements}
 \begin{enumerate}
@@ -94,10 +84,9 @@ likely
 knowledge to users.
 }
 
-  This requirement needs some form of textual display in order to convey enough
-of the information about exoplanets to the user. This can be done with a Java
+  This requirement needs a textual display in order to convey information about exoplanets to the user. This can be done with a Java
 TextArea object to display each of the key
-attributes of each Exoplanet. The following figure is a mockup of the text area
+attributes of exoplanets. The following figure is a mockup of the text area
 showing the information about each planet that would be displayed and the method
 calls that would be used.
 
@@ -105,27 +94,26 @@ calls that would be used.
   \centering
       \includegraphics[width=0.8\textwidth]{images/textAreaMockup.png}
   \caption{Mockup of the TextArea}  
+  \label{fig:text}
 \end{figure}
 
-To populate this text area it needs to be possible to select exoplanets, which
-is discussed in the next requirement.
+
 \clearpage
 {\bf
  \item[R2.] The visualisation needs to allow exoplanets to be compared against
 one another.}
 
-There are two steps to fullfilling this requirement\\ 1. Allow selection of
-exoplanets \\ 2. Display additional information about exoplanets when they are
+There are two steps to fullfilling this requirement\\ {\bf1.} Allow selection of
+exoplanets \\ {\bf2.} Display additional information about exoplanets when they are
 selected.
 
-The selection of exoplanets involves detecting when a user clicks and then
+The selection of exoplanets involves detecting when and where a user clicks then 
 finding whether any planets are
 located in that space. This is more complex in this system as it requires
 detecting if the 3D space of each planet coincides with the 2D
 location of the mouse click. When a planet is successfully selected it needs to
-provide feedback and
-information to the user to inform them that it has been selected and also to
-provide relevant information.
+provide feedback to the user to inform them that it has been selected and also to
+provide information about the selected exoplanet as in Figure \ref{fig:text}.
 
 \begin{figure}[H]
   \centering
@@ -133,25 +121,27 @@ provide relevant information.
   \caption{Mockup selection process}  
 \end{figure}
 
-In addition to this, when a planet has been successfully selected all of the
+In addition to this, when a planet has been selected all 
 other planets in the
 same solar system (sister planets) need to become highlighted. This can be done
 by treating them as if they were selected and providing an additional indication
- to the user why they were highlighted.  
+ to the user why they were highlighted as in Figure \ref{fig:sister}.  
 \begin{figure}[H]
   \centering
       \includegraphics[width=.8\textwidth]{images/selectedSisterPlanets.png}
   \caption{Mockup highlight sister planets process}  
+  \label{fig:sister}
 \end{figure}
 
 There needs to be an efficient way that users can make comparisons between the
-detailed textal information about exoplanets. By providing an additional text
-box and allowing users to select multiple planets this can be accomplished.
+detailed textual information about exoplanets. By providing an additional text
+box and allowing users to select multiple planets this can be accomplished as shown in Figure \ref{fig:comp}.
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=.7\textwidth]{images/mockComparePlanets.png}
   \caption{Mockup compare planets text areas}  
+  \label{fig:comp}
 \end{figure}
 \clearpage
 
@@ -161,13 +151,13 @@ earth (ESI) and by their Kepler Object of Interest number (KOI).}
 
 To fulfill this requirement the visualisation needs to allow users to view the
 exoplanets in a way that uses the Earth as a point of reference and their Earth
-Similarity Index (ESI) to order them and control their position. The following
-figures display an abstract mockup of how this would be done.
+Similarity Index (ESI) to order them and control their position. Figure \ref{fig:esiMock} displays a mockup of how this would be done.
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=1\textwidth]{images/mockupESI.png}
-  \caption{Mockup of ESI views}  
+  \caption{Mockup of ESI views}
+  \label{fig:esiMock}
 \end{figure}
 
 \clearpage
@@ -190,7 +180,14 @@ be used to control the size of planets that are displayed.
 In addition to this users should be able to easily sort the exoplanets to make
 the most of the filtering. By allowing users to display the exoplanets sorted
 vertically by the same attribute as the filters, they can easily see how
-changing the filters affects the exoplanets displayed
+changing the filters affects the exoplanets displayed. This would be achieved by a set of interactive buttons as in Figure \ref{mockButtons}.
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.5\textwidth]{images/mockButtons.png}
+  \caption{Mockup of interactive buttons}  
+  \label{fig:mockButtons}
+\end{figure}
 
 \clearpage
 {\bf
@@ -253,7 +250,7 @@ reduce the quantity of planets displayed in the visualisation and thus the
 information load imposed on users. In addition to this, by having the text area
 that displays the information about
 selected planets separate from the main visualisation it reduces the cognitive
-load on users as they don't have to use this component until they want to. ...~
+load on users as they don't have to use this component until they want to.
 
 \clearpage
 {\bf  \item[R8.] There needs to be two modes of interaction with the system,
@@ -288,7 +285,7 @@ There are 7 states that the cursor needs to be able to be in to inform the user
 of what action they are performing. These states are
 
 \begin{enumerate}
- \item default cursor, hand is at rest
+ \item default cursor, hand is at rest or hovering over a planet
  \item panning up, hand is raised
  \item panning down, hand is lowered
  \item rotating left, hand is to the left

@@ -1,17 +1,16 @@
-\chapter{Conclusions}\label{C:con}
-\section{Summary}
-This project contributes an the design, implementaion, and evalutation of an
+\chapter{Summary}\label{C:con}
+This project contributes a design, implementaion, and evalutation of an
 interactive 3D visualisation called the Improved Kepler Visualisation Tool
 (IKVT). IKVT has two modes of interaction; the traditional keyboard \& mouse and
 the more novel Microsoft Kinect sensor. 
 
-\subsection{System Design}
+\section{System Design}
 The requiremnets for IKVT were designed using Cooper et al.'s user oriented
-design approach which emphasised using user models and user scenarios.  Two user
-models and seven scenarios were important for creating the requirements that
-were used in the design, implementation and evaluation of IKVT to ensure that it
-solved the 4 key issues that this project hoped to address.
-\begin{enumerate}
+design approach which emphasised using user models and user scenarios \cite{AboutFace3}.  Two user
+models and seven user scenarios were used in the creation of eight project requirements that
+were used extensively in the design, implementation and evaluation of IKVT to ensure that it
+solved the four key issues that this project hoped to address.
+\begin{description}
  \item[Issue 1.] Content in the Kepler Exoplanet Database is difficult to view
 and
 understand due to its amount and labeling.
@@ -24,18 +23,18 @@ functionality for exploring the information in effective ways.
  \item[Issue 4.] Visualisations need to allow user interaction to make the most
 of
 the data they display.
-\end{enumerate}
+\end{description}
 
-\subsection{System Implementation}
+\section{System Implementation}
 IKVT was implemented in Processing, an opensource Java programming language and
-integrated development environment (IDE). IKVT was build upon an existing
+integrated development environment (IDE). It was built upon an existing
 visualisation, the Kepler Visualisaion Tool \cite{kepler_github,
-kepler_article}. During the implementation stage of the project each of the
-designs created in the system design stage were implemented in a way that
-fulfilled the requirements of the system. 
+kepler_article} to create more effective interaction techniques and allow users to access more information in the Kepler Exoplanet dataset. During the implementation stage of the project each of the
+designs created in the system design stage were implemented in
+fulfillment of the project requirements. 
 
-\subsection{System Evaluation}
-IKVT was evaluated in a userstudy that gather both qualitative and quantitative
+\section{System Evaluation}
+IKVT was evaluated in a user study that gathered both qualitative and quantitative
 results. The evaluation was designed to gather users experiences with the IKVT
 to examine whether or not it fulfilled the system requirements designed to solve
 the issues mentioned above.
@@ -49,9 +48,8 @@ mouse because of its novelty, but lacked the control that the
 keyboard \& mouse allowed which made it less effective at accessing the
 information in the visualisation. The evaluation also revealed that one area,
 viewing the habitable zones of stars, lacked
-usability because it was unintuitive for the users participating.
+usability because it was unintuitive for the users participating in the evaluation.     
 \section{Future Work}
-\subsection{System Improvements}
 The IKVT taken further in many different ways depending
 on how it is intended to be used. There is the option of using the system as a
 terminal that users would use at an observatory or attraction where prior
@@ -74,5 +72,6 @@ The user evaluation found that gesture based control of IKVT was the most
 enjoyable way for users to interact with IKVT even though it was less effective
 at accessing information. This opens up the opportunity for further work to
 improve the level of gesture based control and accuracy so that it rivals the
-keyboard \& mouse. This could be done in a range of ways from simply enhancing the intutiveity, to more advanced methods of gesture detection.
+keyboard \& mouse. This could be done in a range of ways from simply enhancing
+the intutiveity, to more advanced methods of gesture detection.
 

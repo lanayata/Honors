@@ -1,5 +1,5 @@
 \chapter{Introduction}\label{C:intro}
-The Kepler Exoplanet dataset contains information about planets from outside of
+The Kepler Exoplanet dataset \cite{datasetphl} \cite{dataset}  contains information about planets from outside of
 our solarsystem discovered by the Kepler space observatory, Figure
 \ref{fig:keplerTele}. The Kepler space observatory was launched in 2009 by NASA
 to discover Earth like planets orbiting other stars \cite{keplerTele}.
@@ -15,7 +15,7 @@ to discover Earth like planets orbiting other stars \cite{keplerTele}.
 This project seeks to design, implement, and evaluate an interactive 3D
 visualisation software system for displaying the content in the Kepler
 Exoplanet dataset using both gesures and traditional interactive methods
-\cite{dataset}. This deliverable is intended as a standalone
+. This deliverable is intended as a standalone
 3D visualisation with two modes of interaction, keyboard and mouse or Microsoft
 Xbox Kinect sensor \cite{kinect}. The resulting visualisation will present the
 information from the dataset in a way that the target users, laypeople who have
@@ -26,7 +26,7 @@ There have been many planets located outside of our own solar system,
 these are called exoplanets, and are referred to interchangeably as planets and
 exoplanets for the remainder of this report. Information about these exoplanets
 is stored in the Kepler Exoplanet Dataset
-\cite{dataset}. This project seeks to develop and evaluate an interactive 3D
+. This project seeks to develop and evaluate an interactive 3D
 visualisation software system for the Kepler Exoplanets Dataset. Visualisations
 are valuable as they foster immersion and enjoyment, both of which result in
 improved learning and recall. This means that
@@ -143,5 +143,4 @@ successfully conveys the information in the Kepler Exoplanet Database.
 A key part of this project is the development of interactive techniques to provide the best access to the data. These techniques are a mix of keyboard and
 mouse as well as a novel gesture based approach using a Microsoft Kinect sensor.
 The work and research completed for this project will provide the opportunity
-for further improvement of the produced visualisation in the future. This will also create further exposure of the Kepler Database which will
-encourage learning about exoplanets and the Kepler mission.
+for further improvement of the produced visualisation in the future.
