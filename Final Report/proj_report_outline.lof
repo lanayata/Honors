@@ -1,55 +1,63 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces The Kepler space observatory}}{1}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Fields of the dataset to be visualised}}{2}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Kepler space observatory}}{1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Kepler Exoplanet dataset fields}}{2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Spiral process model followed}}{6}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Spiral Model}}{6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Matrix of project requirements to the issues this project attempts to address}}{13}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Matrix of requirements to issues}}{13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Image of Worlds Visualisation}}{15}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Image of The Kepler Orrery Visualisation}}{16}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Image of Celestia Visualisation}}{17}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Kepler Visualisation Tool Orbital View}}{18}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Matrix of existing solutions mapped to scenarios}}{19}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Image of the Worlds visualisation}}{15}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Image of the Kepler Orrery}}{16}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Image of the Celestia visualisation}}{17}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Image of the Kepler Visualisation Tool}}{18}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Matrix of existing solutions mapped to user scenarios}}{19}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Table of technology choices}}{22}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Matrix of technology options to desirable qualities}}{22}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Sequence Diagram of IKVT render cycle}}{24}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Class Diagram of IKVT}}{25}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Mockup of the TextArea}}{26}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Mockup selection process}}{27}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Mockup highlight sister planets process}}{27}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Mockup compare planets text areas}}{28}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Mockup of ESI views}}{29}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Mockup of range sliders}}{30}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Mockup of interactive buttons}}{30}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Mockup star habitability zone}}{31}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Mockup of the interaction panel}}{32}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces TODO}}{33}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Mockup of the Kinect system}}{34}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Mockup of cursor images for Kinect system}}{35}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Example of the text area}}{26}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Example of exoplanet selection process}}{27}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Example of exoplanets in the same solar system}}{27}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Example of exoplanet comparison}}{28}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Example of ESI views}}{29}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Example of range sliders}}{30}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Example of interactive buttons}}{30}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Example of Goldilocks zones}}{31}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Example of the control panel}}{32}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Layout of visualisation}}{33}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Example of the Kinect system}}{34}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Example of cursor images for Kinect system}}{35}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Panel of interactive range sliders}}{38}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Panel of interactive buttons}}{39}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Text boxes in each possible state}}{40}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces TODO\nobreakspace {}}}{41}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces TODO\nobreakspace {}}}{41}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces TODO\nobreakspace {}}}{42}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces TODO\nobreakspace {}}}{42}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces TODO\nobreakspace {}}}{43}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Implementation of interactive range sliders}}{38}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Implementation of interactive buttons}}{39}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Implemented text areas in each possible state}}{40}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Zooming effect provided by filtering}}{41}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Implementation of sort by KOI and ESI}}{41}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Implentation of the exoplanet selection process}}{42}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Implementation of exoplanets in the same solar system}}{42}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Implementation of Goldilocks zones}}{43}
 \contentsline {figure}{\numberline {7.9}{\ignorespaces Tooltip on hover}}{43}
-\contentsline {figure}{\numberline {7.10}{\ignorespaces Navigation Panel Overview}}{44}
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Implementation of Control Panel}}{44}
 \contentsline {figure}{\numberline {7.11}{\ignorespaces Original Horizontal Layout}}{45}
 \contentsline {figure}{\numberline {7.12}{\ignorespaces Improved Vertical Layout}}{45}
-\contentsline {figure}{\numberline {7.13}{\ignorespaces TODO}}{46}
-\contentsline {figure}{\numberline {7.14}{\ignorespaces TODO}}{46}
-\contentsline {figure}{\numberline {7.15}{\ignorespaces TODO}}{47}
-\contentsline {figure}{\numberline {7.16}{\ignorespaces TODO}}{47}
-\contentsline {figure}{\numberline {7.17}{\ignorespaces TODO}}{47}
+\contentsline {figure}{\numberline {7.13}{\ignorespaces Kinect system visualisation window}}{46}
+\contentsline {figure}{\numberline {7.14}{\ignorespaces Selecting a planet by gesture}}{46}
+\contentsline {figure}{\numberline {7.15}{\ignorespaces Panning the visualisation by raising hand}}{47}
+\contentsline {figure}{\numberline {7.16}{\ignorespaces Rotating visualisation be swiping hand}}{47}
+\contentsline {figure}{\numberline {7.17}{\ignorespaces Zooming in by pushing hand}}{48}
+\contentsline {figure}{\numberline {7.18}{\ignorespaces Zooming out by pulling hand}}{48}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Evaluation environment}}{52}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Pilot study results of P1}}{54}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Amount of time taken out of a possible 5 minutes for users to feel comfortable with visualisation before moving onto the worksheet. }}{57}
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Summary of the quantitative results gathered from participants.}}{57}
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Breakdown of quantitative results between users}}{58}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Summary of participants}}{52}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Image of evaluation environment}}{53}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Evaluation environment plan}}{53}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Pilot study results}}{56}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Participant using Kinect visualisation}}{59}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Time taken to feel familiar with IKVT}}{60}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Summary of the quantitative results}}{61}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Summary quantitative results}}{62}
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Gantt Chart used for project}}{70}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Gantt Chart used for project}}{72}

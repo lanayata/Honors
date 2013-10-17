@@ -38,12 +38,11 @@
 %                          (see below)
 % [font|image]            Use a font or an image for the VUW logo
 %                          The font option will only work on ECS systems
-%
+
 \usepackage[font,ecs,mcompsci]{vuwproject}
 \usepackage{graphicx}
 \usepackage{pdfpages}
 \usepackage{float}
- \usepackage{subcaption}
   \usepackage{subfigure}
 % You should specifiy your supervisor here with
      \supervisor{Stuart Marshall}
@@ -69,17 +68,17 @@
 \begin{abstract}
 
 
-We have large amounts of information about planets outside of our solar system, and this can be accessed by anyone from the Kepler
-Exoplanets dataset  \cite{datasetphl} \cite{dataset}. However this information is often
-complex not easily understood by laypeople who lack in depth knowledge of stellar objects. This is problematic as it
+Large amounts of information has been discovered about planets outside our solar system, and this can be accessed by anyone from the Kepler
+Exoplanets dataset \cite{datasetphl} \cite{dataset}. However this information is often
+complex and therefore not easily understood by laypeople who lack in depth knowledge of stellar objects. This is problematic as it
 means that the data gathered about these planets is not being used
 effectively to communicate to the masses. To resolve this a
 visualisation has been created that can convey this information in a way that
 interested laypeople can understand. This visualisation can be used as an
 information source for those wanting to increase their knowledge about the
 planets residing outside of our solar system. This report outlines the project                                                                                                                                                                                                                                    
-carried out including the planning of the deliverable visualisation, its implementation, and its
-evaluation to discover how its effectiveness at fulfilling the requirements driving its
+carried out and includes the planning of the deliverable visualisation, its implementation, and its
+evaluation to discover its effectiveness at fulfilling the requirements driving its
 creation.
 
 
@@ -122,9 +121,25 @@ creation.
  
 
 %\bibliographystyle{ieeetr}
-%\nocite{*}
+% \nocite{*}
 \bibliographystyle{acm}
 \bibliography{refs}
+\appendix
+\clearpage
+\chapter{Project Gantt Chart}
+\label{ap:gantt}
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=1.3\textwidth,angle=90]{images/gantt.jpg}
+  \caption{Gantt Chart used for project}
+\end{figure}
 
+\chapter{Ethical Approval for Experiment}
+\label{ap:gantt}
+\begin{figure}[h!]
+  \centering
+      \includegraphics[length=.9\textwidth]{evaluation/ethicsAproval.pdf}
+  \caption{Gantt Chart used for project}
+\end{figure}
 
 \end{document}

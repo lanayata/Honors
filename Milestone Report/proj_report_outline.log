@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  7 JUN 2013 16:49
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  17 OCT 2013 23:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -218,39 +218,39 @@ e
 ))
 \AtBeginShipoutBox=\box32
 \big@size=\dimen109
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 79.
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 81.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 79.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 81.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 79.
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 81.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 79.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 81.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 79.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 79.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 81.
  [-1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [0]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 82.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 84.
  (./proj_report_outline.toc [1
 
 
@@ -261,14 +261,14 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
  [2]
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 92.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 94.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 93.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 95.
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ô in font pplr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--107
+Underfull \hbox (badness 10000) in paragraph at lines 103--126
 
  []
 
@@ -277,9 +277,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--107
 
 ]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 112.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 151.
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--134
+Underfull \hbox (badness 10000) in paragraph at lines 175--185
 
  []
 
@@ -291,17 +291,17 @@ Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ô in font pplr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--149
+Underfull \hbox (badness 10000) in paragraph at lines 188--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--149
+Underfull \hbox (badness 10000) in paragraph at lines 188--207
 
  []
 
 
-Overfull \hbox (3.62305pt too wide) in paragraph at lines 137--149
+Overfull \hbox (3.62305pt too wide) in paragraph at lines 188--207
 \OT1/ppl/m/n/10.95 This pro-vides im-por-tant in-sights into how the dif-fer-en
 t win-dows for this vi-su-al-i-sa-tion should
  []
@@ -310,22 +310,22 @@ Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ô in font pplr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--153
+Underfull \hbox (badness 10000) in paragraph at lines 208--220
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--157
+Underfull \hbox (badness 10000) in paragraph at lines 222--232
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 158--169
+Underfull \hbox (badness 10000) in paragraph at lines 233--246
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--173
+Underfull \hbox (badness 10000) in paragraph at lines 247--257
 
  []
 
@@ -342,7 +342,7 @@ Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ù in font pplr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--177
+Underfull \hbox (badness 10000) in paragraph at lines 259--277
 
  []
 
@@ -350,19 +350,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--177
 File: images/worlds.jpg Graphic file (type jpg)
 
 <use images/worlds.jpg>
-Package pdftex.def Info: images/worlds.jpg used on input line 183.
+Package pdftex.def Info: images/worlds.jpg used on input line 290.
 (pdftex.def)             Requested size: 352.8155pt x 198.75287pt.
  [7 <./images/worlds.jpg>]
 <images/orrery.jpg, id=42, 238.25275pt x 135.40698pt>
 File: images/orrery.jpg Graphic file (type jpg)
  <use images/orrery.jpg>
-Package pdftex.def Info: images/orrery.jpg used on input line 193.
+Package pdftex.def Info: images/orrery.jpg used on input line 310.
 (pdftex.def)             Requested size: 352.8155pt x 200.51695pt.
 
 <images/celestia.jpg, id=43, 803.0pt x 602.25pt>
 File: images/celestia.jpg Graphic file (type jpg)
  <use images/celestia.jpg>
-Package pdftex.def Info: images/celestia.jpg used on input line 202.
+Package pdftex.def Info: images/celestia.jpg used on input line 324.
 (pdftex.def)             Requested size: 220.50885pt x 165.37573pt.
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
@@ -372,14 +372,14 @@ Missing character: There is no ô in font pplr7t!
 File: images/kepler_orbital.jpg Graphic file (type jpg)
 
 <use images/kepler_orbital.jpg>
-Package pdftex.def Info: images/kepler_orbital.jpg used on input line 211.
+Package pdftex.def Info: images/kepler_orbital.jpg used on input line 343.
 (pdftex.def)             Requested size: 352.8155pt x 206.94647pt.
 
 <images/kepler_graph.jpg, id=45, 985.6825pt x 578.16pt>
 File: images/kepler_graph.jpg Graphic file (type jpg)
 
 <use images/kepler_graph.jpg>
-Package pdftex.def Info: images/kepler_graph.jpg used on input line 216.
+Package pdftex.def Info: images/kepler_graph.jpg used on input line 348.
 (pdftex.def)             Requested size: 352.8155pt x 206.94647pt.
 
 Underfull \vbox (badness 5288) has occurred while \output is active []
@@ -395,22 +395,22 @@ Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ô in font pplr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--233
+Underfull \hbox (badness 10000) in paragraph at lines 361--392
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--233
+Underfull \hbox (badness 10000) in paragraph at lines 361--392
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--233
+Underfull \hbox (badness 10000) in paragraph at lines 361--392
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--233
+Underfull \hbox (badness 10000) in paragraph at lines 361--392
 
  []
 
@@ -418,25 +418,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 224--233
 File: images/table_technologies.jpg Graphic file (type jpg)
 
 <use images/table_technologies.jpg>
-Package pdftex.def Info: images/table_technologies.jpg used on input line 236.
+Package pdftex.def Info: images/table_technologies.jpg used on input line 395.
 (pdftex.def)             Requested size: 352.8155pt x 212.245pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--242
+Underfull \hbox (badness 10000) in paragraph at lines 398--412
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--247
+Underfull \hbox (badness 10000) in paragraph at lines 414--431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--253
+Underfull \hbox (badness 10000) in paragraph at lines 432--438
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--253
+Underfull \hbox (badness 10000) in paragraph at lines 432--438
 
  []
 
@@ -446,10 +446,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 248--253
 <images/table.jpg, id=63, 948.54375pt x 927.465pt>
 File: images/table.jpg Graphic file (type jpg)
  <use images/table.jpg>
-Package pdftex.def Info: images/table.jpg used on input line 259.
+Package pdftex.def Info: images/table.jpg used on input line 444.
 (pdftex.def)             Requested size: 352.8155pt x 344.96812pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--262
+Underfull \hbox (badness 10000) in paragraph at lines 440--447
 
  []
 
@@ -458,12 +458,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 255--262
 ]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--284
+Underfull \hbox (badness 10000) in paragraph at lines 468--484
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--284
+Underfull \hbox (badness 10000) in paragraph at lines 468--484
 
  []
 
@@ -471,95 +471,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 279--284
 File: images/layouts.jpg Graphic file (type jpg)
 
 <use images/layouts.jpg>
-Package pdftex.def Info: images/layouts.jpg used on input line 292.
+Package pdftex.def Info: images/layouts.jpg used on input line 497.
 (pdftex.def)             Requested size: 352.8155pt x 96.06863pt.
  [16 <./images/layouts.jpg>]
 Chapter 5.
-<images/KeplerVisualizationTool.png, id=78, 695.59875pt x 572.1375pt>
-File: images/KeplerVisualizationTool.png Graphic file (type png)
 
-<use images/KeplerVisualizationTool.png>
-Package pdftex.def Info: images/KeplerVisualizationTool.png used on input line 
-305.
-(pdftex.def)             Requested size: 352.8155pt x 290.18864pt.
+LaTeX Warning: File `images/KeplerVisualizationTool.png' not found on input lin
+e 520.
 
-<images/system_so_far.jpg, id=80, 1927.2pt x 1021.8175pt>
+
+! Package pdftex.def Error: File `images/KeplerVisualizationTool.png' not found
+.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.520 ...idth]{images/KeplerVisualizationTool.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<images/system_so_far.jpg, id=78, 1927.2pt x 1021.8175pt>
 File: images/system_so_far.jpg Graphic file (type jpg)
 
 <use images/system_so_far.jpg>
-Package pdftex.def Info: images/system_so_far.jpg used on input line 310.
+Package pdftex.def Info: images/system_so_far.jpg used on input line 525.
 (pdftex.def)             Requested size: 352.8155pt x 187.05313pt.
+ [17
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[17
-
- <./images/KeplerVisualizationTool.png>]
-<images/interaction_panel.jpg, id=85, 640.3925pt x 229.85875pt>
+]
+<images/interaction_panel.jpg, id=83, 640.3925pt x 229.85875pt>
 File: images/interaction_panel.jpg Graphic file (type jpg)
 
 <use images/interaction_panel.jpg>
-Package pdftex.def Info: images/interaction_panel.jpg used on input line 317.
+Package pdftex.def Info: images/interaction_panel.jpg used on input line 542.
 (pdftex.def)             Requested size: 352.8155pt x 126.64014pt.
 
-<images/greyed_out.jpg, id=86, 734.745pt x 616.3025pt>
+<images/greyed_out.jpg, id=84, 734.745pt x 616.3025pt>
 File: images/greyed_out.jpg Graphic file (type jpg)
 
 <use images/greyed_out.jpg>
-Package pdftex.def Info: images/greyed_out.jpg used on input line 323.
+Package pdftex.def Info: images/greyed_out.jpg used on input line 548.
 (pdftex.def)             Requested size: 352.8155pt x 295.94409pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--359
+Underfull \hbox (badness 10000) in paragraph at lines 556--607
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--359
+Underfull \hbox (badness 10000) in paragraph at lines 556--607
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--359
+Underfull \hbox (badness 10000) in paragraph at lines 556--607
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--359
+Underfull \hbox (badness 10000) in paragraph at lines 556--607
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--359
+Underfull \hbox (badness 10000) in paragraph at lines 556--607
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--359
+Underfull \hbox (badness 10000) in paragraph at lines 556--607
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--359
+Underfull \hbox (badness 10000) in paragraph at lines 556--607
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--359
+Underfull \hbox (badness 10000) in paragraph at lines 556--607
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--359
+Underfull \hbox (badness 10000) in paragraph at lines 556--607
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--359
+Underfull \hbox (badness 10000) in paragraph at lines 556--607
 
  []
 
@@ -567,27 +573,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 328--359
 s/greyed_out.jpg>] [20]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--366
+Underfull \hbox (badness 10000) in paragraph at lines 609--621
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--366
+Underfull \hbox (badness 10000) in paragraph at lines 609--621
 
  []
 
-<images/gantt_chart.jpg, id=96, 2472.23625pt x 912.40875pt>
+<images/gantt_chart.jpg, id=94, 2472.23625pt x 912.40875pt>
 File: images/gantt_chart.jpg Graphic file (type jpg)
 
 <use images/gantt_chart.jpg>
-Package pdftex.def Info: images/gantt_chart.jpg used on input line 390.
+Package pdftex.def Info: images/gantt_chart.jpg used on input line 656.
 (pdftex.def)             Requested size: 661.52657pt x 244.14001pt.
 
 
-LaTeX Warning: Float too large for page by 5.34827pt on input line 392.
+LaTeX Warning: Float too large for page by 5.34827pt on input line 658.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--393
+Underfull \hbox (badness 10000) in paragraph at lines 651--659
 
  []
 
@@ -625,23 +631,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--120
 
 ) [28]
 Appendix A.
-<images/d31.jpg, id=123, 951.555pt x 542.025pt>
+<images/d31.jpg, id=121, 951.555pt x 542.025pt>
 File: images/d31.jpg Graphic file (type jpg)
  <use images/d31.jpg>
-Package pdftex.def Info: images/d31.jpg used on input line 416.
+Package pdftex.def Info: images/d31.jpg used on input line 699.
 (pdftex.def)             Requested size: 352.8155pt x 200.96791pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--419
+Underfull \hbox (badness 10000) in paragraph at lines 678--702
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--419
+Underfull \hbox (badness 10000) in paragraph at lines 678--702
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--419
+Underfull \hbox (badness 10000) in paragraph at lines 678--702
 
  []
 
@@ -649,74 +655,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 408--419
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--425
+Underfull \hbox (badness 10000) in paragraph at lines 703--721
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--425
+Underfull \hbox (badness 10000) in paragraph at lines 703--721
 
  []
 
 [29
 
-] <images/interaction_mock.jpg, id=127, 1297.84875pt x 256.96pt>
+] <images/interaction_mock.jpg, id=125, 1297.84875pt x 256.96pt>
 File: images/interaction_mock.jpg Graphic file (type jpg)
 
 <use images/interaction_mock.jpg>
-Package pdftex.def Info: images/interaction_mock.jpg used on input line 430.
+Package pdftex.def Info: images/interaction_mock.jpg used on input line 726.
 (pdftex.def)             Requested size: 352.8155pt x 69.85063pt.
 
-<images/planet_mock.jpg, id=128, 917.4275pt x 576.1525pt>
+<images/planet_mock.jpg, id=126, 917.4275pt x 576.1525pt>
 File: images/planet_mock.jpg Graphic file (type jpg)
 
 <use images/planet_mock.jpg>
-Package pdftex.def Info: images/planet_mock.jpg used on input line 439.
+Package pdftex.def Info: images/planet_mock.jpg used on input line 741.
 (pdftex.def)             Requested size: 352.8155pt x 221.56883pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/esi_mock.jpg, id=129, 1021.8175pt x 644.4075pt>
+<images/esi_mock.jpg, id=127, 1021.8175pt x 644.4075pt>
 File: images/esi_mock.jpg Graphic file (type jpg)
 
 <use images/esi_mock.jpg>
-Package pdftex.def Info: images/esi_mock.jpg used on input line 449.
+Package pdftex.def Info: images/esi_mock.jpg used on input line 753.
 (pdftex.def)             Requested size: 352.8155pt x 222.49782pt.
  [30 <./images/d31.jpg> <./images/interaction_mock.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 452--467
+Underfull \hbox (badness 10000) in paragraph at lines 756--773
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--467
+Underfull \hbox (badness 10000) in paragraph at lines 756--773
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--467
+Underfull \hbox (badness 10000) in paragraph at lines 756--773
 
  []
 
 [31 <./images/planet_mock.jpg> <./images/esi_mock.jpg>] [32]
 (./proj_report_outline.aux) ) 
 Here is how much of TeX's memory you used:
- 3225 strings out of 494071
- 46064 string characters out of 3160406
+ 3223 strings out of 494071
+ 45929 string characters out of 3160406
  109600 words of memory out of 3000000
- 6384 multiletter control sequences out of 15000+200000
- 28455 words of font info for 70 fonts, out of 3000000 for 9000
+ 6381 multiletter control sequences out of 15000+200000
+ 28623 words of font info for 71 fonts, out of 3000000 for 9000
  648 hyphenation exceptions out of 8191
- 38i,9n,39p,1049b,256s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,9n,39p,270b,256s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r
-.enc}</usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/pkg/s
-hare/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/pkg/share/texmf-dist/
-fonts/type1/urw/palatino/uplri8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/vuw
-/vuw20.pfb>
-Output written on proj_report_outline.pdf (36 pages, 2976126 bytes).
+.enc}</usr/pkg/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr
+/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf
+-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type
+1/urw/palatino/uplri8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb
+>
+Output written on proj_report_outline.pdf (36 pages, 2970491 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
+ 156 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

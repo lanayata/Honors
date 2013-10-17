@@ -1,14 +1,14 @@
 \chapter{Requirements Analysis}\label{Chap:ra}
-To guide the creation of the visualisation a User Oriented design approach was
+To guide the creation of the visualisation Cooper et al.'s User Oriented design approach was
 used \cite{AboutFace3}, in particular making use of user personas (also known as
 archetypal users). These personas are
 created to give a sense of empathy and understanding for the foreseen users of
 the visualisation in order to better understand the requirements and design
-decisions to be made. These personas are a personification the
+decisions to be made. These personas personify the
 needs of a larger group of related users. They act as stand-ins for
 real users, describing them in terms of their goals and personal
 characteristics, and although they are fictitious, they are based on knowledge
-of real users. An additional tool used was User Scenarios which
+of the traits of the intended users. An additional tool used was User Scenarios which
 describe the foreseeable interactions of the user personas within the
 visualisation. A Scenario is made up of a functional goal for the visualisation
 and describes how it is carried out by a persona. 
@@ -22,17 +22,16 @@ Models and User Scenarios for this project are described in the following
 sections.
 
 
-\section{User models}
+\section{User Models Used}
 Below are the two personas that were used
-%in the design of the visualisation for
 in this project. They depict users that would use the visualisation in the
 context
 of a terminal or display in an observatory environment. These personas can be
 validated during the user evaluation of the visualisation by finding real users
 that
-match the core values of these personas. Although this visualisation would be
-suited towards teaching children about stellar information they were not
-focused on during its planning. This was because of the increased ethical
+match the core values of these personas. Although this visualisation would also be
+suited towards teaching children about stellar information this was not
+focused on during planning. This was because of the increased ethical
 complexity of carrying out an evaluation with children. This could be done in
 the future once the visualisation is deemed successful for users of other age
 ranges. 
@@ -66,7 +65,7 @@ point of reference which is well documented and known by most.
 similarity to earth.
  \item The planets on screen move so that they are placed in a way that John can
 compare them to Earth.
- \item From here John can select any of the planets for further analysis.
+ \item John can now select any of the planets for further analysis.
  \end{enumerate}
 
   \subsubsection{Scenario 2: Select ranges for attributes of each planet
@@ -104,9 +103,8 @@ to it.
  
  \subsubsection{Scenario 4: View planets in the same solar system}
 John is curious about which of the planets he can see in the
-visualisation are in the same Solar System. To discover this he wants that when
-a planet is selected all other planets in the same Solar System as the selected
-planet become highlighted.
+visualisation are in the same Solar System. He wants that when
+a planet is selected all other planets in the same Solar System become highlighted.
  
   {\bf  Procedure:}
    \begin{enumerate}
@@ -145,9 +143,9 @@ comparisons.
   \end{enumerate}
 
 \subsection{Cara Thompson (Secondary Persona - Likes gesture based systems)}
-23 year old Cara likes using interactive visualisations with novel means of
+Cara is a 23 year old woman interested in visiting interesting attractions. She especially enjoys using interactive visualisations with novel means of
 interaction when visiting
-attractions. She finds that they are more entertaining and provide a more
+attractions. This is because she finds that they are more entertaining and provide a more
 immersive experience than a visualisation with a keyboard and mouse. 
 
  \subsubsection{Scenario 3: Select planets to display more information}
@@ -165,9 +163,7 @@ to it.
  
  \subsubsection{Scenario 4: View planets in the same solar system}
 Cara is curious about which of the planets she can see in the
-visualisation are in the same Solar System. To discover this she wants that when
-a planet is selected all other planets in the same Solar System as the selected
-planet to become highlighted.
+visualisation are in the same Solar System. To discover this she wants all other planets in the same Solar System to become highlighted when an exoplanet is selected.
  
   {\bf  Procedure:}
    \begin{enumerate}
@@ -178,15 +174,15 @@ planets.
  \end{enumerate}
 
  \subsubsection{Scenario 7: Navigate the visualisation with gestures}
-Cara doesn't find using keyboard and mouse interesting enough for interacting
-with the visualisation. She would rather navigate around the visualisation by
+Cara doesn't find using a keyboard and mouse interesting for interacting
+with a visualisation. She would rather navigate around a visualisation by
 using hand
 gestures as it's more immersive.
 
   {\bf  Procedure:}
    \begin{enumerate}
  \item By moving her hand the visualisation pans
-in the corresponding direction, ie if the hand goes to the top of the screen
+in the corresponding direction, i.e. if the hand goes to the top of the screen
 the visualisation pans up.
  \item By moving her hand backwards and forwards the visualisation zooms in
 and out.
@@ -197,7 +193,7 @@ and interact with the visualisation. John wants to interact with keyboard and
 mouse as it is more straight forward and accurate. Cara wants to interact with
 gestures as she finds it more of a novelty and more immersive.
   
-\section{Requirements summary}
+\section{Requirements Summary}
 From these User Scenarios we can see that behind each of them there is a
 requirement that a visualisation can address. The requirements that were
 extracted from the User Scenarios are introduced in the following subsections. 
@@ -228,7 +224,7 @@ relation to the planets orbiting them.
 
 \subsection{Nonfunctional Requirements}
  Functional requirements are supported by nonfunctional requirements. Nonfunctional requirements impose constraints on the design or implementation (such
-as performance, security, or usability) of a system. The non functional requirements for this visualisation are as follows:
+as performance, security, or usability) of a system. The nonfunctional requirements for this visualisation are as follows:
 \begin{description}
  \item[R6.] All interaction methods must be visible and intuitive.
 
@@ -243,6 +239,6 @@ keyboard \& mouse vs gesture based.
 \begin{figure}[H]
   \centering
       \includegraphics[width=1\textwidth]{images/issues_to_req_matrix.pdf}
-  \caption{Matrix of project requirements to the issues this project attempts to
+  \caption[Matrix of requirements to issues]{A matrix of the project requirements mapped to the issues they attempt to
 address}
 \end{figure}

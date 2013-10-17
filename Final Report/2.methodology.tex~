@@ -1,7 +1,7 @@
 
 \chapter{Project Methodology}\label{C:m}
 
-\section{Project management approach}
+\section{Project Management Approach}
 % Why Project Management is important
 Project management is the discipline of planning, executing, monitoring, and
 evaluating a project. It is a vital role as it is the glue between all of the
@@ -28,12 +28,12 @@ or more people. This evaluation is in addition to the final user evaluation at t
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.6\textwidth]{images/spiral_model.png}
-  \caption{Spiral process model followed}
+  \caption[Spiral Model]{The Spiral Model was the SDLC chosen for this project, the above image shows the stages in the spiral}
   \label{fig:spiralModel}
 \end{figure}
 
 This SDLC supported the creation of a visualisation as
-it allowed the flexibility to add and remove components into the visualisation
+it allowed the flexibility to add and remove components from the visualisation
 as they were discovered to be beneficial or not. The choice of this project management approach
 meant that whilst I had the freedom to explore visualisation options I also had
 a structured software development life cycle to guide me and the project through
@@ -49,14 +49,14 @@ visualisation, reducing the risk of missing or incomplete
 artifacts at the end of the project. 
 Following this SDLC allowed me to achieve all of the goals
 that I set, although some time frames and deadlines had to be revised as elements were completed before or behind schedule. 
+nightmare
 
-
-\sectionprioritiseject methodologies explored}
+\section{Alternative Methodologies Explored}
 Two other project methodologies were explored before the
 Spiral Model was chosen. The alternatives were a loose agile method SCRUM \cite{schwaber2004agile}, and
 a strict Structured Method, the Waterfall Model \cite{royce1970managing}. 
 %Advantages of Spiral
-The advantages of the Spiral model over these alternatives was that it provided
+The Spiral model provided
 me with the benefits of a structured work flow that is a feature of the
 Waterfall Model as
 well as a flexible iterative process that is a feature of Agile methodologies
@@ -70,13 +70,12 @@ I was agile in my approach to the project and embraced changing requirements,
 collaborated with my supervisor (the customer) regularly, and emphasized working
 software over large amounts of documentation \cite{beck2001agile}. 
 
-\section{Supporting Tools for project}
+\section{Supporting Tools for Project}
 %Other tools used to support me
 Supporting this project methodology with other project management tools such
-as Gantt charts [APPENDIX~] and work breakdown structures(WBS) [APPENDIX~]
+as Gantt charts (Appendix \ref{ap:gantt})
 encouraged efficient documentation of planning and work completed in the project
 as well as displaying the upcoming stages required to complete the project.
-\\
 
 %Version Control
 Version control was important for this project as it mitigated against the risks
@@ -88,13 +87,12 @@ This was important for the creation of the keyboard \& mouse system and the
 Microsoft Kinect system as they were on separate branches in the repository. 
 The version control tool used for this project was Git which allowed
  the repository to be hosted on the repository hosting web service Github. A
-limitation of this choice was that the repository was hosted on a free Github license which meant that the
-repository would be open to the public to view.
+limitation of this choice was that the repository was hosted on a free Github license which meant that it would be open to the public to view.
 
 %Meetings with supervisor
 Weekly meetings with the supervisor of the project, Dr Stuart Marshall, were
 used to provide guidance and ideas for innovation of the visualisation
-throughout the project. These meeting ensured that vital components and
+throughout the project. These meetings ensured that vital components and
 deliverables were implemented in the required timeframe and also provided a
 sounding board for ideas.
 Another important aspect of having an involved supervisor was that he provided the guidance of an experienced academic which was indispensable when

@@ -1,27 +1,26 @@
 \chapter{Visualisation implementation of the Improved Kepler Visualisation Tool
-(IKVT)}\label{C:sd}
+(IKVT)}\label{C:imp}
 This chapter discusses the implementation of the visulisation using the designs
-discussed in the previous chapter to fulfill the requirements for this project.
+from Chapter \ref{C:sd} to fulfill the requirements of this project.
 It details the tools used, the deliverable features
 produced, and the problems encountered. 
 
 \section{Tools and Artifacts Used}
-\subsection{Keyboard and Mouse System}
-In addition to Processing there was an additional opensource
+\subsection{Keyboard \& Mouse System}
+In addition to Processing there was an additional open-source
 library required for effective user interface components called ControlP5
-\cite{controlp5}. This library provides customisable and intuitive
-
-user interface components. It allows for the creation of visually appealing and
+\cite{controlp5}. This library provides customisable and intuitive user
+interface components. It allows for the creation of visually appealing and
 precisely
-laid out interactive GUI components.
+aligned interactive GUI components.
 
 \subsection{Microsoft Kinect System}
 For the Microsoft Kinect version of IKVT two additional libraries were required
 to integrate the Kinect sensor
 with Processing, these were:
 \begin{enumerate}
- \item NITE \cite{nite}
- \item SimpleOpenNi \cite{simpleopenni}
+ \item NITE \cite{nite}.
+ \item SimpleOpenNi \cite{simpleopenni}.
 \end{enumerate}
 These libraries provided drivers to run the Kinect sensor in Processing
 (SimpleOpenNi) as well
@@ -32,7 +31,7 @@ with
 Processing. This meant the gesture recognition was not as user friendly or
 effective as the
 official libraries. The effect of this was that the gesture tracking used in the
-system had to be created sup-optimally from the opensource libraries which took
+system had to be created sup-optimally from the open-source libraries which took
 more time and resources. 
 
 \section{Implementation of IKVT}
@@ -42,36 +41,44 @@ in the Kepler exoplanets dataset \cite{dataset}. Each of these exoplanets are
 represented as coloured
 ellipses, of which the colour and size are representative of the exoplanets
 temperature and size respectively. IKVT displays all of these exoplanets as if
-they are orbiting a single star which in reality would result in planetary
-collisions but in the visualisation provides users with a way to effectively
+they are orbiting a single star. In reality this would result in planetary
+collisions, but in this visualisation provides users with a way to effectively
 make observations and comparisons about each of the exoplanets in a single
 view. 
 
-There are two panels that make up the visualisation, the visualisation panel,
+There are two panels that make up the visualisation: the visualisation panel,
 and the control panel. The visualisation panel is where the exoplanets
-are displayed as well as a text boxes describing the state of the visualisation
+are displayed along with a text box describing the state of the visualisation
 to
 keep the user informed. The control panel contains all of the interactive
 components that the user can use to change the state of the visualisation. The
-components it contains are; two text areas that cane be used interchangeably to
-display information about selected planets, four range sliders shown in Figure 
+components it contains are; two text areas that can be used interchangeably to
+display information about selected planets (Requirment 1), four range sliders
+(Requirment 4) shown in Figure 
 \ref{fig:sliders} that are used to
 filter the exoplanets as discussed previously, and eight buttons to toggle the
-state of the visualisations. These buttons are "Sort by KOI", "Sort by Temp",
-"Sort by Size", "Sort by ESI", "Change View", "Suns Habitable Zone", "Pause",
-and "Unsort" as shown in Figure: \ref{fig:buttons}. 
+state of the visualisations. These buttons are ``Sort by KOI'', ``Sort by Temp'',
+``Sort by Size'', ``Sort by ESI'', ``Change View'', ``Suns Habitable Zone'', ``Pause'',
+and ``Unsort'' as shown in Figure: \ref{fig:buttons}. 
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.6\textwidth]{images/sliders.jpg}
-  \caption{Panel of interactive range sliders}
+  \caption[Implementation of interactive range sliders]{Implementation of
+interactive range sliders a various stages of filtering. The light grey bar in
+the center of the sliders is the range of the attributes selected to filter by.
+These can be modified by clicking and dragging on either end of the filter to
+change the ranges, or selecting the middle to move the selected range up and
+down the continuum}
   \label{fig:sliders}
 \end{figure}
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.6\textwidth]{images/buttons.jpg}
-  \caption{Panel of interactive buttons}
+  \caption[Implementation of interactive buttons]{Implementation of interactive
+buttons, each one of which corresponds to a key functionality in the
+visualisation}
   \label{fig:buttons}
 \end{figure}
 
@@ -80,59 +87,79 @@ the main visualisation window to
 make a selection. To do this a user can click on any of the orbiting exoplanets.
 The effect of this selection is that a text box will have further textual
 information about the selected exoplanet appended to it. In addition to this
-users have the option of clicking a button labeled  as ``Compare'', This allows
+users have the option of clicking a button labeled ``Compare''. This allows
 the user the option to select another exoplanet so that its information is
-appended to a second text area. This can be seen in Figure \ref{fig:textBoxes}. 
+appended to a second text area (Requirment 2). This can be seen in Figure
+\ref{fig:textBoxes}. 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.7\textwidth]{images/textBoxes.jpg}
-  \caption{Text boxes in each possible state}
+  \caption[Implemented text areas in each possible state]{Implemented text areas
+in each possible state, Stage 1: No selection has been made so boxes are empty,
+Stage 2: A single exoplanet has been selected and its information is displayed
+as well as the option to compare, Stage 3: The user has chosen to compare the
+selected exoplanet to another, Stage 4: A second exoplanet has been seleced and
+its information added to the second text area.}
   \label{fig:textBoxes}
 \end{figure}
 When a user is unable to accurately select an
-exoplanet due to clustering or
+exoplanet due to the clustering or
 overlapping of exoplanets they can move the camera around in space to gain a
-better viewing position with which to make their selection. If this is not
+better viewing position. If this is not
 enough, the user can use a set of range selectors to filter the exoplanets
-displayed, as shown in Figure \ref{fig:zoomFilter}. The attributes that can be
-filtered by are the Kepler Object of Interest number (KOI),
-temperature, size, and Earth Similarity Index (ESI). These filters allow for
+displayed, as shown in Figure \ref{fig:zoomFilter}. The exoplanets can be
+filtered by their KOI,
+temperature, size, and ESI. These filters allow for
 users to fine tune the exoplanets they wish to view, thus allowing them to work
-with small multiples rather than the entire dataset. A further effect of using
-these filters is that a zooming effect occurs as exoplanets are filtered out.
+with small multiples rather than the entire dataset. Using
+these filters also causes a zooming effect to occur as exoplanets are filtered
+out.
 This zooming occurs each time the filters are changed as the exoplanets spread
-out vertically which allows more space between them to make selections.
+out vertically and allows more space between them to make selections.
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/zoomFilter.png}
-  \caption{TODO~}  
+  \caption[Zooming effect provided by filtering]{The above images display the
+zooming effect provided by filtering. In the left image we can see that the
+filters have not been used yet and all exoplanets are present which causes
+clustering. In the right image the range has been  shrunk to filter out hot
+exoplanets. This causes the colder planets to take up the space that was
+originally occupied by all exoplanets which allows them to spread out.}  
     \label{fig:zoomFilter}
 \end{figure}
 
 The existing Kepler Visualisation Tool allowed users to sort the exoplanets on
 the Y axis by their temperature and size. In IKVT this has been extended to
-allow sorting by Kepler Object of Interest number (KOI) and Earth Similarity
-Index (ESI) as shown in Figure \ref{fig:ESIKOI}.
+allow sorting by KOI and ESI (Requirment 3)as shown in Figure \ref{fig:ESIKOI}.
 
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=1\textwidth]{images/ESIKOI.pdf}
-  \caption{TODO~}  
+  \caption[Implementation of sort by KOI and ESI]{The above images display the
+implementation of sort by KOI and ESI. The left image shows the exoplanets sorted on the Y axis
+by their KOI, this allows users to get an idea of which exoplanets share a solar
+system as they will have similar KOI values. In the right image exoplanets are
+sorted by their ESI on both the Y and X axis so that planets closer to the
+center and the top are most similar to Earth}  
     \label{fig:ESIKOI}
 \end{figure}
 
 When a exoplanet is selected it is important that the user gets feedback about
 what they have done. In IKVT this happens in the form of the selected exoplanet
 becoming larger and a white outlining ring expanding out to encircle it. In
-addition to this a label appears to the right of the exoplanet and states the
-Kepler Object of Interest number (KOI). 
+addition to this a label appears to the right of the exoplanet stating the
+KOI. 
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=1\textwidth]{images/selectedPlanet.jpg}
-  \caption{TODO~}  
+  \caption[Implentation of the exoplanet selection process]{The above images
+display the implentation of the exoplanet selection process. We can see the
+result of an exoplanet being selected, first the planet expands, then a white
+circle expands out to outline it and a label appears to inform the user about
+the exoplanet they selected.}  
     \label{fig:selectedPlanet}
 \end{figure}
 
@@ -146,25 +173,31 @@ Star'' as displayed in Figure \ref{fig:sameStar}.
 \begin{figure}[H]
   \centering
       \includegraphics[width=1\textwidth]{images/sameStar.png}
-  \caption{TODO~}  
+  \caption[Implementation of exoplanets in the same solar system]{This image
+displays how the planets in the same solar system as a selected planet become
+highlighted in the same way but with a different label.}  
     \label{fig:sameStar}
 \end{figure}
 
 
 To display the Goldilocks zone of selected exoplanets coloured rings appear to
 display the habitable
-and inhabitable zones of the star. Each time a new planet is selected the
-coloured rings change to represent the newly selected exoplanets star, this can
+and inhabitable zones of the star (Requirment 5). Each time a new planet is
+selected the
+coloured rings change to represent the newly selected exoplanet's star, this can
 be seen in Figure
 \ref{fig:habitable}. In addition to the coloured rings the selected planet also
 becomes highlighted
-and the rest become transparent making it stand out to help users understand
+and all of the other exoplanets become transparent making it stand out to help users understand
 whether it is in a habitable zone or not.
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=1\textwidth]{images/habitable.png}
-  \caption{TODO~}  
+  \caption[Implementation of Goldilocks zones]{This image displays the
+implementation the view Goldilocks zones feature which show how the coloured
+rings are used, and how the planets relation to them infers their habitability.}
+  
     \label{fig:habitable}
 \end{figure}
 
@@ -180,7 +213,10 @@ click on a button to discover its effect.
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/tooltip.jpg}
-  \caption{Tooltip on hover}
+  \caption[Tooltip on hover]{This image displays the implemented tooltips which
+allow users to hover over interactive elements to discover what they do which
+removes the need to
+click on a button to discover its effect}
   \label{fig:tooltip}
 \end{figure}
 
@@ -194,23 +230,25 @@ Figure \ref{fig:nav}.
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.3\textwidth]{images/nav.png}
-  \caption{Navigation Panel Overview}
+  \caption[Implementation of Control Panel]{Shows the implemented Control Panel
+that contains all of the interactive components discussed previously.}
   \label{fig:nav}
 \end{figure}
 
-At first the visualisation was laid out so that the interaction panel took up a
+At first the visualisation was laid out so that the control panel took up a
 300 pixel strip along the bottom of the screen with the main visualisation
 window
 taking up the rest of the space as in Figure \ref{fig:layoutOld}.
- This was found not to be suitable as the majority of the interaction and
+ This was found to be unsuitable as the majority of the interaction and
 animation of visualisation elements occurs
 in the center of the window which this layout did not effectively utilise as it
-caused a low aspect ratio that made the top and bottom of the visualisation to be
+caused a low aspect ratio that made the top and bottom of the visualisation to
+be
 cut off. It
-was more effective to use two vertical columns as in Figure \ref{fig:layoutNew},
+was more effective to use two vertical columns as in Figure \ref{fig:layoutNew}
 to view and control the visualisation. This is because
 the higher aspect ratio allowed more of the content to be seen on the
-screen at once, thanks to the fact that the majority of computer screens have a
+screen at once as the majority of computer screens have a
 wide aspect ratio. As you can see by comparing the two figures, Figure
 \ref{fig:layoutNew} cuts off less of the visualisation and so is a more suitable
 choice.
@@ -218,65 +256,87 @@ choice.
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/layout_horizontal.jpg}
-  \caption{Original Horizontal Layout}  
+  \caption[Original Horizontal Layout]{Original Horizontal Layout that had an
+unsuitable aspect ratio that occluded part of the visualisation.}  
     \label{fig:layoutOld}
         \includegraphics[width=0.8\textwidth]{images/layout_vertical.jpg}
-  \caption{Improved Vertical Layout}
+  \caption[Improved Vertical Layout]{Improved Vertical Layout that had a higher
+aspect ratio that did not hide any of the visualisation.}
   \label{fig:layoutNew}
 \end{figure}
 
 The Kinect Sensor system uses all of the features discussed above and extends it
 by incorporating in gesture based control by utilising a Microsoft Kinect
 sensor. Incorporate these gesture based controls was completed by specifying
-gestures are detected by the visualisation which in turn modifies its state. As
+gestures are detected by the visualisation which in turn modifies its state. 
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.8\textwidth]{images/full.jpg}
+  \caption[Kinect system visualisation window]{Kinect system visualisation
+window with the basic cursor visible on the outline of the users hand. Also
+visible are the blue areas on the outsides of the visualisation indicating how
+to perform gestures}
+  \label{fig:left}
+\end{figure}
+
+
+As
 shown in the solution design stage there were eight gestures that were needed
 for the visualisation, each of which was implemented as described below
-\begin{enumerate}
- \item[1.] default cursor, hand is at rest or hovering over a planet
+\begin{description}
+ \item[1. Default cursor, hand is at rest or hovering over a planet.]
  
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/select.PNG}
-  \caption{TODO}
+  \caption[Selecting a planet by gesture]{Selecting a planet by gesture by
+hovering a hand over it. The basic cursor appears behind the selected planet.}
   \label{fig:left}
 \end{figure}
 
- \item[2 \& 3.] panning up, hand is raised or panning down, hand is lowered
+ \item[2 \& 3. Panning up, hand is raised or panning down, hand is lowered.]
  \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/up.PNG}
-  \caption{TODO}
+  \caption[Panning the visualisation by raising hand]{Panning the visualisation
+by raising hand to the top blue area. The cursor indicates the visualisation is
+panning up.}
   \label{fig:up}
 \end{figure}
  
- \item[4 \& 5.] rotating left, hand is to the left or rotating right, hand is to
-the right
+ \item[4 \& 5. Rotating left, hand is to the left or rotating right, hand is to
+the right.]
  
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/left.PNG}
-  \caption{TODO}
+  \caption[Rotating visualisation be swiping hand]{Rotating visualisation be
+swiping hand to the left of the screen. The cursor indicates the visualisation
+is rotating left.}
   \label{fig:left}
 \end{figure}
 
- \item[6.] zooming in, hand is pressed forward
+ \item[6. Zooming in, hand is pressed forward.]
  \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/in.PNG}
-  \caption{TODO}
+  \caption[Zooming in by pushing hand]{Zooming in by pushing hand towards the
+screen. The cursor indicates the visualisation is zooming in.}
   \label{fig:in}
 \end{figure}
 
- \item[7.] zooming out, hand is pulled backwards
+ \item[7. Zooming out, hand is pulled backwards.]
  
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/out.PNG}
-  \caption{TODO}
+\caption[Zooming out by pulling hand]{Zooming out by pulling hand from the
+screen. The cursor indicates the visualisation is zooming out.}
   \label{fig:out}
 \end{figure}
 
-\end{enumerate}
+\end{description}
 
 In addition to this, the screen displays the user in relation to the
 the visualisation, this is done by displaying a transparent outline of
@@ -285,7 +345,7 @@ figures. This is important as it gives the user a way to infer where they are
 gesturing and as a way to show them that they are being detected by the system.
 \\\\
 Each of the features discussed were implemented using the designs created in
-Chapter \ref{C:sd}: Solution Designs to fulfill the functional requirements.
+Chapter \ref{C:sd} to fulfill the functional requirements.
 The visualisation IKVT that was created can successfully display planetary
 information to convey knowledge to users (Requirement 1), allow exoplanets to be
 compared against one another (Requirement 2), order exoplanets by their ESI and
@@ -300,24 +360,24 @@ requirements that emphasises usability for users.
 
 
 
-\section{Problems encountered}
+\section{Problems Encountered}
 
 As this project builds upon a previous system, much of the existing code and
-execution flow needed to be modified. This required understanding of how the
+execution flow required modification. This required understanding of how the
 system was originally built and designed. Because this system did not have any
 unit or integration tests, going ahead without a comprehensive knowledge of the
 core functionality would be have led to ineffective planning and errors being
-introduced into the system. To address this extra time and resources were
+introduced into the system. To address this, extra time and resources were
 allocated to the requirements analysis and solution design stages of the
 project.
 \\\\
 %Making use of tall of the data
 Due to the number of elements that needed to be displayed on screen at any one
-time (ie 2234 exoplanets), the load placed on a system is very high due to the
-need to render 2234 eclipses to represent the planets. This uncovered a bug in
+time (i.e. 2234 ellipses to represent the exoplanets), the load placed on the
+system was very high. This uncovered a bug in
 the Processing library in which the memory use of the visualisation would
 periodically increase until it crashed due to an Out of Memory Exception. After
-much experimentation of how to overcome this issue, I discovered that rather
+much experimentation with how to overcome this issue, I discovered that rather
 than trying to render a native ellipse shape in processing, if I instead
 rendered
 a Scalable Vector Graphic this bug would not manifest. 
@@ -331,13 +391,13 @@ that any changes were committed regularly to my repository on Github
 \cite{github}. Doing this meant that if at any time a file became corrupted the
 incorrect changes could be easily compared against the previous commit and
 manually fixed. Any bugs found were reported in
-the hopes that people using Processing in the future wouldn't need to address
+the hopes that others using Processing in the future wouldn't need to address
 them.
 \\\\
-The libraries used for gesture detection with the Kinect sensor were opensource
+The libraries used for gesture detection with the Kinect sensor were open-source
 as this was the only way to get it to work with Processing. These open source
 libraries did not have the functionality, documentation, and support that the
-real Software Development Kit (SDK) that is available from Microsoft would have
+official Software Development Kit (SDK) that is available from Microsoft has
 had. Whilst this was not a roadblock in terms of development it did mean that
 more time was required for research and experimentation during implementation.
 \\\\

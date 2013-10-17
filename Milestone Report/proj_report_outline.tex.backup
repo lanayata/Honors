@@ -102,12 +102,12 @@ is accurately depicted, and each planet is color-coded according to its estimate
 temperature.
 \\\\
 While this is a lot of information that can be used to inform users of important facts about
-the planets, it does leave a lot of potential information undisplayed and overlooked. Currently only the size, temperature, and orbit sizes of Exoplanets have been displayed. This leaves a lot of information unseen, for example, informtion about the type of planet, planets with similar traits, solar system information, similarity to earth and habitability. This project will therefore be focused on researching, implementing, and evaluating a new
+the planets, it does leave a lot of potential information undisplayed and overlooked. Currently only the size, temperature, and orbit sizes of Exoplanets have been displayed. This leaves a lot of information unseen, for example, information about the type of planet, planets with similar traits, solar system information, similarity to earth and habitability. This project will therefore be focused on researching, implementing, and evaluating a new
 interactive visualisation system that will display additional information to users not included in previous visualisation systems.
 \section{Proposed Solution}
 The visualisation for this project will be created using Processing, a Java framework for visualisations. As the time is short for this project, I am extending a previous visualisation that uses the same dataset, the Kepler Visualisation Tool \cite{kepler_github, kepler_article}. The techniques that I will use to improve this visualisation will involve improving the methods of interaction that users can use with the system, as well as displaying more of the attributes of Exoplanets from the dataset in an informative visual way. 
 \section{Variations from Project Proposal}
-A variation in the current design of the system is that now emphasises small multiples and filtering of the Exoplanets to display the information more clearly to users. Instead of the visualisation only answering the 5 key questions as proposed in the proposal, the aim will now be displaying as much of the information in the dataset as possible without detracting from the effectiveness of the visualisation whilst still answering the questions. This is because the 5 questions did not fully utilize the information in the dataset. Howeve I will need to ensure the effectiveness of the visualisation does not become diminished by trying to convey to much information which would lead to cluttering and overlapping in the visualisation, as well as information overload for users. There will also be larger emphasis placed on making the existing system more usable by improving the interaction methods for users. The following list outlines the new requirements for the visualisation being developed. This will be done by 
+A variation in the current design of the system is that now emphasises small multiples and filtering of the Exoplanets to display the information more clearly to users. Instead of the visualisation only answering the 5 key questions as proposed in the proposal, the aim will now be displaying as much of the information in the dataset as possible without detracting from the effectiveness of the visualisation whilst still answering the questions. This is because the 5 questions did not fully utilize the information in the dataset. However I will need to ensure the effectiveness of the visualisation does not become diminished by trying to convey to much information which would lead to cluttering and overlapping in the visualisation, as well as information overload for users. There will also be larger emphasis placed on making the existing system more usable by improving the interaction methods for users. The following list outlines the new requirements for the visualisation being developed. This will be done by 
 providing GUI elements for each form of interaction with the system, as well as ensuring all interaction methods are intuitive for users. 
 \subsection{Changed Technology Requirements}
 \begin{enumerate}
@@ -149,7 +149,7 @@ This provides important insights into how the different windows for this visuali
 \subsection{A Survey on Multivariate Data Visualization}
 However, extracting the meaningful information is a difficult task when large quantities of data are presented in plain text or traditional tabular form  \cite{chan}. Effective graphical representations of the data thus enjoy popularity by harnessing the human’s visual perception capabilities. Visualisations aim to help users to effectively detect and explore the expected, as well as discovering the unexpected to gain insight into the data. For multivariate data visualization, the dataset to be visually analyzed is of high dimensionality and these attributes are correlated in some way.
 \\\\
-This paper outlines many of the design techniques and tradeoffs that are used when creating viusalisations for multivariate data. This will be useful as it provides insights into the effectiveness of different layouts of data.
+This paper outlines many of the design techniques and tradeoffs that are used when creating visualisations for multivariate data. This will be useful as it provides insights into the effectiveness of different layouts of data.
 \subsection{Exploratory Visualization of Multivariate Data with Variable Quality }
 Real-world data is known to be imperfect, suffering from various forms of defects. An effective visualization system must make users aware of the quality of their data by explicitly conveying not only the actual data content, but also its quality attributes \cite{huang}.
 \\\\
@@ -170,7 +170,7 @@ This provides information on how to rapidly develop and prototype elements for m
 Finding a way for interactively exploring data through visualisation enables users to improve their understanding of provided information . They gain knowledge by "connecting the dots``, establishing mental relationships between individual pieces of data in an intuitive manor. The goal was to create an interface for users to explore already available information in a user friendly and insightful manor \cite{devezas}. 
 \\\\
 The interaction techniques of interest in this paper are, zooming, and pinning interesting elements for further analysis. A challenge they faced and solved was the identification of descriptive node labels, as well as their positioning .
-\subsection{Position Statment Evaluating Information Visualizations: Issues and Opportunities}
+\subsection{Position Statement Evaluating Information Visualizations: Issues and Opportunities}
 It is still relatively common to see new information visualization techniques proposed that have high “wow” value: being visually striking and products of impressive technical engineering. Unfortunately, the potential value of many of these techniques in actually helping end-users solve problems and perform tasks is dubious in many cases \cite{stasko}. Evaluating information visualisation techniques and systems is important in order to understand how to improve them and to create innovative, useful new techniques. By better identifying the tasks that people perform using information visualisation tools as well as the insights gained within, one can conduct more rigorous and comprehensive assessments \cite{stasko}.
 \\\\
 While this paper is focused on creating and evaluation new visualisation techniques, it also provides insight into visualisations themselves. This is important for my visualisation as I will need to ensure that all visualisation techniques have the potential to help people and are not just “cool”. The information in this paper is important as it gives me many ways of carrying out, improving the evaluation of my visualisation as well as some of the challenges I will face.
@@ -187,6 +187,7 @@ This animation is layed out very similarly to the Kepler Visualisation Tool that
 
 \subsection{The Kepler Orrery and The Kepler Orrery 2 - Non interactive}
 The Kepler Orrery \cite{orrery} illustrates the exoplanet candidates in their own solar systems. The orbit radii are to scale with respect to each other and planet sizes are to scale with respect to each other, but orbits and planet sizes are different scales. The colors are in order of semi-major axis: two-planet systems (242 in all) have a yellow outer planet; 3-planet (85) green, 4-planet (25) light blue, 5-planet (8) dark blue, 6-planet (1, Kepler-11) purple. 
+\clearpage
 \begin{figure}[h!]
   \centering
       \includegraphics[width=0.8\textwidth]{images/orrery.jpg}
@@ -204,8 +205,7 @@ Celestia \cite{celestia} is a free real-time space simulation that lets you visu
 This visualisation is much larger and more encompassing system than is needed for this project, as it is a full 3D space simulation. However is does offer insights into how to effectively portray planets and their orbits (See Figure 2.3). It also provides textures that can be used in my visualisation to depict what planets actually look like to increase user immersion.
 
 \subsection{Kepler Visualisation Tool}
-An existing system built with Processing \cite{processing} is the Kepler Visualisation Tool\cite{kepler_github, kepler_article}. It is a simple visualisation focusing on displaying the candidate Exoplanets temperatures and their locations in relation to their distance from their nearest star, so that a sense of scale can be perceived. Each candidate’s estimated size, orbital speed, and orbital separation is accurately depicted, and each planet is color-coded according to its estimated effective temperature.
-\clearpage
+An existing system built with Processing is the Kepler Visualisation Tool\cite{kepler_github, kepler_article}. It is a simple visualisation focusing on displaying the candidate Exoplanets temperatures and their locations in relation to their distance from their nearest star, so that a sense of scale can be perceived. Each candidate’s estimated size, orbital speed, and orbital separation is accurately depicted, and each planet is color-coded according to its estimated effective temperature.
 \begin{figure}[h!]
   \centering
       \includegraphics[width=0.8\textwidth]{images/kepler_orbital.jpg}
@@ -229,7 +229,7 @@ Using this solution would involve learning the Processing language, however Proc
 \\\\
 Using processing and would mean that 3D elements could be included, this wouldn’t be possible with D3. However it does require a strong knowledge in 3D transformations which I do not possess. This may be a limiting factor in the speed at which I could understand the existing code and may push using this solution out of scope in favor of D3.
 \\\\
-Two other techologies were researched before choosing processing, these were Prefuse, and D3.js (Appendix A.1). The Below table illustrates the reasons for choosing Processing.
+Two other technologies were researched before choosing processing, these were Prefuse, and D3.js (Appendix A.1). The Below table illustrates the reasons for choosing Processing.
 \clearpage
 \begin{figure}[h!]
   \centering

@@ -2,27 +2,39 @@
 
 \bibitem{celestia}
 Celestia.
-\newblock http://www.shatters.net/celestia/.
+\newblock http://www.shatters.net/celestia/. Accessed: 2013-05-10.
 
 \bibitem{controlp5}
 Controlp5.
-\newblock www.sojamo.de/libraries/controlP5.
+\newblock www.sojamo.de/libraries/controlP5. Accessed on: 2013-04-20.
+
+\bibitem{exo}
+Exo: A visualization of kepler's exoplanet candidates.
+\newblock http://vimeo.com/41655330. Accessed on: 2013-08-20.
 
 \bibitem{github}
 Github.
-\newblock https://github.com/.
+\newblock https://github.com/. Accessed on: 2013-04-01.
+
+\bibitem{kde}
+Kde - experience freedom.
+\newblock http://www.kde.org/. Accessed on: 2013-08-20.
 
 \bibitem{kinect}
 Kinect.
-\newblock http://www.xbox.com/en-GB/kinect.
+\newblock http://www.xbox.com/en-GB/kinect. Accessed on: 2013-05-20.
 
 \bibitem{nite}
 Nite.
-\newblock www.primesense.com.
+\newblock www.primesense.com. Accessed on: 2013-05-20.
+
+\bibitem{processing}
+Processing.
+\newblock www.processing.org. Accessed: 2013-05-10.
 
 \bibitem{simpleopenni}
 Simpleopenni.
-\newblock code.google.com/p/simple-openni.
+\newblock code.google.com/p/simple-openni. Accessed on: 2013-05-20.
 
 \bibitem{beck2001agile}
 {\sc Beck, K., Beedle, M., van Bennekum, A., Cockburn, A., Cunningham, W.,
@@ -31,10 +43,14 @@ Simpleopenni.
   Thomas, D.}
 \newblock Manifesto for agile software development, 2001.
 
+\bibitem{ibm}
+{\sc Bell, D.}
+\newblock Uml basics: The class diagram.
+
 \bibitem{kepler_github}
 {\sc blprnt}.
 \newblock Github:kepler visualisation tool.
-\newblock https://github.com/blprnt/Kepler-Visualization.
+\newblock https://github.com/blprnt/Kepler-Visualization. Accessed: 2013-05-10.
 
 \bibitem{boehm1988spiral}
 {\sc Boehm, B.~W.}
@@ -47,6 +63,18 @@ Simpleopenni.
 \newblock Kepler planet-detection mission: introduction and first results.
 \newblock {\em Science 327}, 5968 (2010), 977--980.
 
+\bibitem{d3}
+{\sc Bostock, M., Ogievetsky, V., and Heer, J.}
+\newblock D3: Data-driven documents.
+\newblock {\em IEEE Trans. Visualization \& Comp. Graphics (Proc. InfoVis)\/}
+  (2011).
+
+\bibitem{chan}
+{\sc Chan, W. W.-Y.}
+\newblock A survey on multivariate data visualization.
+\newblock {\em Department of Computer Science and Engineering. Hong Kong
+  University of Science and Technology 8}, 6 (2006), 1--29.
+
 \bibitem{AboutFace3}
 {\sc Cooper, A., Reimann, R., and Cronin, D.}
 \newblock {\em {About Face 3 The Essentials of Interaction Design}}.
@@ -55,35 +83,61 @@ Simpleopenni.
 \bibitem{orrery}
 {\sc Fabrycky, D.}
 \newblock The kepler orrery, 2012.
-\newblock http://kepler.nasa.gov/multimedia/animations/?ImageID=219.
+\newblock kepler.nasa.gov. Accessed: 2013-05-11.
 
 \bibitem{few}
 {\sc Few, S.}
 \newblock {\em Data Visualization for Human Perception}.
 \newblock The Interaction Design Foundation, Aarhus, Denmark, 2013.
 
+\bibitem{InformationCapacity}
+{\sc Fitts, P.~M.}
+\newblock {The information capacity of the human motor system in controlling
+  the amplitude of movement}.
+\newblock {\em Journal of Experimental Psychology 47}, 6 (1954), 381--391.
+
 \bibitem{foote1997big}
 {\sc Foote, B., and Yoder, J.}
 \newblock Big ball of mud.
 \newblock {\em Pattern languages of program design 4\/} (1997), 654--692.
+
+\bibitem{withinSubject}
+{\sc Hall, R.}
+\newblock Within subjects designs, 1998.
+\newblock web.mst.edu. Accessed: 2013-05-14.
+
+\bibitem{prefuse}
+{\sc Heer, J., Card, S.~K., and Landay, J.~A.}
+\newblock Prefuse: a toolkit for interactive information visualization.
+\newblock In {\em Proceedings of the SIGCHI conference on Human factors in
+  computing systems\/} (2005), ACM, pp.~421--430.
 
 \bibitem{kosara2003thoughts}
 {\sc Kosara, R., Healey, C.~G., Interrante, V., Laidlaw, D.~H., and Ware, C.}
 \newblock Thoughts on user studies: Why, how, and when.
 \newblock {\em IEEE Computer Graphics and Applications 23}, 4 (2003), 20--25.
 
+\bibitem{lewis}
+{\sc Lewis, D., Haroz, S., and liu Ma, K.}
+\newblock Layout of multiple views for volume visualization: A user study.
+
+\bibitem{mendel}
+{\sc Mendel, J., and Pak, R.}
+\newblock The effect of interface consistency and cognitive load on user
+  performance in an information search task.
+\newblock {\em Proceedings of the Human Factors and Ergonomics Society Annual
+  Meeting 53}, 22 (2009), 1684--1688.
+
 \bibitem{worlds}
 {\sc Parker, A.}
 \newblock Worlds: The kepler planet candidates, 2012.
-\newblock
-  http://kepler.nasa.gov/multimedia/animations/scienceconcepts/?ImageID=229.
+\newblock kepler.nasa.gov. Accessed: 2013-05-10.
 
 \bibitem{datasetphl}
 {\sc PHL}.
 \newblock Phls exoplanets catalog.
-\newblock
-  http://phl.upr.edu/projects/habitable-exoplanets-catalog/data/database.
-  Accessed: 2013-04-20.
+\newblock phl.upr.edu/projects/habitable-exoplanets-catalog/. Accessed:
+  2013-04-15.
 
 \bibitem{visualisingpiggott}
 {\sc Piggott, J., and Woodham, L.}
@@ -98,6 +152,11 @@ Simpleopenni.
 {\sc Schwaber, K.}
 \newblock {\em Agile project management with Scrum}.
 \newblock O'Reilly Media, Inc., 2004.
+
+\bibitem{stasko}
+{\sc Stasko, J.}
+\newblock Position statement evaluating information visualizations: Issues and
+  opportunities.
 
 \bibitem{kepler_article}
 {\sc Thorp, J.}

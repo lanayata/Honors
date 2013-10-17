@@ -13,57 +13,60 @@ A level-1 auxiliary file: 7.evaluation.aux
 A level-1 auxiliary file: 8.conclusion.aux
 The style file: acm.bst
 Database file #1: refs.bib
-Warning--I didn't find a database entry for "exo"
 Warning--to sort, need author or key in kinect
+Warning--to sort, need author or key in exo
 Warning--to sort, need author or key in celestia
+Warning--to sort, need author or key in processing
 Warning--to sort, need author or key in controlp5
 Warning--to sort, need author or key in nite
 Warning--to sort, need author or key in simpleopenni
 Warning--to sort, need author or key in github
+Warning--to sort, need author or key in kde
+Warning--empty journal in ibm
 Warning--can't use both author and editor fields in few
 Warning--empty chapter and pages in few
 Warning--empty journal in datasetphl
 Warning--can't use both volume and number fields in royce1970managing
 Warning--empty journal in dataset
-You've used 22 entries,
+You've used 34 entries,
             2253 wiz_defined-function locations,
-            651 strings with 7151 characters,
-and the built_in function-call counts, 6003 in all, are:
-= -- 523
-> -- 333
+            709 strings with 8788 characters,
+and the built_in function-call counts, 8955 in all, are:
+= -- 800
+> -- 434
 < -- 0
-+ -- 143
-- -- 118
-* -- 416
-:= -- 971
-add.period$ -- 58
-call.type$ -- 22
-change.case$ -- 121
++ -- 189
+- -- 150
+* -- 597
+:= -- 1416
+add.period$ -- 88
+call.type$ -- 34
+change.case$ -- 173
 chr.to.int$ -- 0
-cite$ -- 33
-duplicate$ -- 197
-empty$ -- 508
-format.name$ -- 118
-if$ -- 1231
+cite$ -- 49
+duplicate$ -- 310
+empty$ -- 800
+format.name$ -- 150
+if$ -- 1872
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 13
-newline$ -- 105
-num.names$ -- 32
-pop$ -- 208
+int.to.str$ -- 34
+missing$ -- 19
+newline$ -- 159
+num.names$ -- 50
+pop$ -- 293
 preamble$ -- 1
-purify$ -- 102
+purify$ -- 142
 quote$ -- 0
-skip$ -- 133
+skip$ -- 223
 stack$ -- 0
-substring$ -- 201
-swap$ -- 38
+substring$ -- 359
+swap$ -- 66
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 82
-warning$ -- 11
-while$ -- 40
-width$ -- 24
-write$ -- 199
-(There were 12 warnings)
+type$ -- 130
+warning$ -- 15
+while$ -- 65
+width$ -- 36
+write$ -- 301
+(There were 15 warnings)
