@@ -36,23 +36,6 @@ next.
 
 \begin{enumerate}
 \clearpage
-{\bf \item UML Sequence Diagram}
-  A sequence diagram primarily shows the interactions between
-objects in the sequential order that those interactions occur.
-For this project it was used to understand how each of the objects in the system
-worked together to create the visualisation. Without understanding which objects
-were responsible for each part of the render cycle it would have been difficult
-to extend the visualisation. Through the sequence diagram we can see when each
-of the objects in the system are updated, and when they are rendered. 
-   \begin{figure}[H]
-  \centering
-      \includegraphics[width=1\textwidth]{images/sequence.png}
-  \caption[Sequence Diagram of IKVT render cycle]{Sequence Diagram of IKVT
-render cycle, it shows when each component of the visualisation is updated and
-rendered.}  
-    \label{fig:sequenceDiagram}
-\end{figure}
-\clearpage
  {\bf \item UML Class Diagram}
  Class diagrams describe the structure of a system by showing the systems
 classes, their attributes, methods, and the relationships among objects.
@@ -70,6 +53,23 @@ to provide an overview that could be used for further planning.
 the structure of the existing Kepler Visualisation Tool and plan the
 extensions.}  
   \label{fig:classDiagram}
+\end{figure}
+\clearpage
+{\bf \item UML Sequence Diagram}
+  A sequence diagram primarily shows the interactions between
+objects in the sequential order that those interactions occur.
+For this project it was used to understand how each of the objects in the system
+worked together to create the visualisation. Without understanding which objects
+were responsible for each part of the render cycle it would have been difficult
+to extend the visualisation. Through the sequence diagram we can see when each
+of the objects in the system are updated, and when they are rendered. 
+   \begin{figure}[H]
+  \centering
+      \includegraphics[width=1\textwidth]{images/sequence.png}
+  \caption[Sequence Diagram of IKVT render cycle]{Sequence Diagram of IKVT
+render cycle, it shows when each component of the visualisation is updated and
+rendered.}  
+    \label{fig:sequenceDiagram}
 \end{figure}
 \end{enumerate}
 
@@ -98,7 +98,7 @@ knowledge to users.
 
   This requirement needs a textual display in order to convey information about
 exoplanets to the user. This can be done with a Java
-TextArea object to display each of the key
+text area object to display each of the key
 attributes of exoplanets. The following figure is an example of the text area
 showing the information about each planet that would be displayed and the method
 calls that would be used.
@@ -106,7 +106,7 @@ calls that would be used.
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/textAreaMockup.png}
-  \caption[Example of the TextArea]{Example of the TextArea that displays
+  \caption[Example of the text area]{Example of the text area that displays
 information about selected exoplanets. Also included are the planned method
 calls for populating the fields}
   \label{fig:text}
@@ -164,8 +164,8 @@ shown in Figure \ref{fig:comp}.
   \centering
       \includegraphics[width=.7\textwidth]{images/mockComparePlanets.png}
   \caption[Example of exoplanet comparison]{Example of exoplanet comparison
-TextAreas, included are the planned method calls for populating the fields of
-the second TextArea}
+text areas, included are the planned method calls for populating the fields of
+the second text area}
   \label{fig:comp}
 \end{figure}
 \clearpage
@@ -244,9 +244,6 @@ habitability.}
   \label{fig:hab}
 \end{figure}
 
-
-
-
 \end{enumerate}
 \clearpage
 \subsection{Nonfunctional Requirement}
@@ -262,10 +259,10 @@ control panel
 is introduced. This panel contains all of the interactive elements
 of the visualisation in a single central place that is spatially separated from
 the main visualisation. This spacial separation is important as it reduces
-cognitive load on users. It does this by allowing them to focus on the
+cognitive load on users \cite{InformationCapacity}. It does this by allowing them to focus on the
 visualisation itself
 until they need to use the control panel in which case they can switch focus to
-that. It also
+that \cite{mendel}. It also
 means that users only need to look in one place for all of the interactive
 elements which reduces the risk of confusion. The
 control panel would contain all of the interactive elements as discussed in
@@ -290,8 +287,8 @@ The visualisation must not show so much information that it
 causes information overload for users. The ability to filter and sort the
 exoplanets gives a user the tools needed to
 reduce the quantity of planets displayed in the visualisation and thus the
-information load imposed on users. In addition to this, by having the control
-panel separate from the main visualisation it reduces the cognitive
+information load imposed on users \cite{lewis}. In addition to this, having the control
+panel separate from the main visualisation reduces the cognitive
 load on users as they don't have to use this component until they want to.
 Having the interaction broken up into three sections also assists with this as it
 utilises Gestalt's law of proximity \cite{withinSubject} which states that when an
@@ -310,9 +307,8 @@ element is arranged to utilise grouping of similar components}
 {\bf  \item[R8.] There needs to be two modes of interaction in the system,
 keyboard \& mouse vs gesture based.}
 
-By
-incorporating a novel interactive method using a Microsoft Kinect sensor it
-gives users an alternative method of controlling the visualisation. To do this
+Incorporating a novel interactive method using a Microsoft Kinect sensor
+gives users an alternative method of controlling the visualisation. This
 requires incorporating a
 means of detecting the gestures of users and linking them to an action in the
 visualisation. A simple way to do this is to provide an area for the user to
@@ -337,13 +333,14 @@ There are seven states that the cursor needs to be able to display to inform the
 of what action they are performing. These states are
 
 \begin{enumerate}
- \item default cursor, hand is at rest or hovering over a planet
- \item panning up, hand is raised
- \item panning down, hand is lowered
- \item rotating left, hand is to the left
- \item rotating right, hand is to the right
- \item zooming in, hand is pressed forward
- \item zooming out, hand is pulled backwards
+\item[1.]  {\bf Default cursor, hand is at rest or hovering over a planet}
+ \item[2.] {\bf Panning up, hand is raised}
+ \item[3.] {\bf Panning down, hand is lowered}
+ \item[4.] {\bf Rotating left, hand is to the left}
+ \item[5.] {\bf Rotating right, hand is to the right}
+ \item[6.] {\bf Zooming in, hand is pressed forward}
+ \item[7.] {\bf Zooming out, hand is pulled backwards}
+ 
 \end{enumerate}
 Having a range of icons that clearly display these states is vital for keeping
 the user informed of what they are doing. The proposed cursor icons for this are
@@ -352,7 +349,7 @@ displayed in Figure \ref{fig:cursors}
   \centering
       \includegraphics[width=0.9\textwidth]{images/curserImages.png}
   \caption[Example of cursor images for Kinect system]{Example of cursor images
-for Kinect system to inform user of the gesture they are performing}  
+for Kinect system to inform user of the gesture they are performing.}  
   \label{fig:cursors}
 \end{figure}
 

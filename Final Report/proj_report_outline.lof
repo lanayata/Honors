@@ -1,6 +1,5 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Kepler space observatory}}{1}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Kepler Exoplanet dataset fields}}{2}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Kepler Exoplanet dataset fields}}{2}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Spiral Model}}{6}
 \addvspace {10\p@ }
@@ -14,8 +13,8 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Matrix of technology options to desirable qualities}}{22}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Sequence Diagram of IKVT render cycle}}{24}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Class Diagram of IKVT}}{25}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Class Diagram of IKVT}}{24}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Sequence Diagram of IKVT render cycle}}{25}
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Example of the text area}}{26}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Example of exoplanet selection process}}{27}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Example of exoplanets in the same solar system}}{27}
@@ -34,7 +33,7 @@
 \contentsline {figure}{\numberline {7.3}{\ignorespaces Implemented text areas in each possible state}}{40}
 \contentsline {figure}{\numberline {7.4}{\ignorespaces Zooming effect provided by filtering}}{41}
 \contentsline {figure}{\numberline {7.5}{\ignorespaces Implementation of sort by KOI and ESI}}{41}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Implentation of the exoplanet selection process}}{42}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Implementation of the exoplanet selection process}}{42}
 \contentsline {figure}{\numberline {7.7}{\ignorespaces Implementation of exoplanets in the same solar system}}{42}
 \contentsline {figure}{\numberline {7.8}{\ignorespaces Implementation of Goldilocks zones}}{43}
 \contentsline {figure}{\numberline {7.9}{\ignorespaces Tooltip on hover}}{43}
@@ -58,6 +57,9 @@
 \contentsline {figure}{\numberline {8.8}{\ignorespaces Summary quantitative results}}{62}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Gantt Chart used for project}}{70}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Gantt Chart used for project}}{72}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Gantt Chart used for project}}{72}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

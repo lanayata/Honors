@@ -68,17 +68,22 @@
 \begin{abstract}
 
 
-Large amounts of information has been discovered about planets outside our solar system, and this can be accessed by anyone from the Kepler
-Exoplanets dataset \cite{datasetphl} \cite{dataset}. However this information is often
-complex and therefore not easily understood by laypeople who lack in depth knowledge of stellar objects. This is problematic as it
+Large amounts of information has been discovered about planets outside our solar
+system, and this can be accessed by anyone from the Kepler
+Exoplanets dataset \cite{datasetphl} \cite{dataset}. However this data is
+often
+complex and therefore not easily understood by laypeople who lack in depth
+knowledge of stellar information. This is problematic as it
 means that the data gathered about these planets is not being used
-effectively to communicate to the masses. To resolve this a
-visualisation has been created that can convey this information in a way that
+effectively to communicate to the masses. To resolve this an interactive
+visualisation called IKVT was created to convey this information in a way that
 interested laypeople can understand. This visualisation can be used as an
 information source for those wanting to increase their knowledge about the
-planets residing outside of our solar system. This report outlines the project                                                                                                                                                                                                                                    
-carried out and includes the planning of the deliverable visualisation, its implementation, and its
-evaluation to discover its effectiveness at fulfilling the requirements driving its
+planets residing outside of our solar system. This report outlines the project
+carried out and includes the planning of the deliverable visualisation, its
+implementation, and its
+evaluation to discover its effectiveness at fulfilling the requirements driving
+its
 creation.
 
 
@@ -121,7 +126,7 @@ creation.
  
 
 %\bibliographystyle{ieeetr}
-\nocite{*}
+% \nocite{*}
 \bibliographystyle{acm}
 \bibliography{refs}
 \appendix
@@ -133,5 +138,27 @@ creation.
       \includegraphics[width=1.3\textwidth,angle=90]{images/gantt.jpg}
   \caption{Gantt Chart used for project}
 \end{figure}
+
+\chapter{Ethical Approval for User evaluation}
+\section{Information Sheet for Experiment}
+\label{ap:info}
+\includepdf[pages={1,2}]{evaluation/OwensHonorsInformationSheet.pdf}
+
+\chapter{Consent Form for Experiment}
+\label{ap:consent}
+\includepdf[pages={1}]{evaluation/OwensHonorsConsentForm.pdf}
+
+\chapter{Worksheet for Experiment}
+\label{ap:work}
+\includepdf[pages={1,2,3,4}]{evaluation/OwensHonorsQuestionswhileusingsystem.pdf}
+
+\chapter{Questionnaire for Experiment}
+\label{ap:quest}
+\includepdf[pages={1,2,3}]{evaluation/OwensHonorsUserQuestionaire.pdf}
+
+\chapter{Ethical Approval for Experiment}
+\label{ap:approval}
+\includepdf[pages={1}]{evaluation/ethicsAproval.pdf}
+
 
 \end{document}

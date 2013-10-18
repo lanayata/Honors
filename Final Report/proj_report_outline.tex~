@@ -45,12 +45,12 @@
 \usepackage{float}
   \usepackage{subfigure}
 % You should specifiy your supervisor here with
-     \supervisor{Stuart Marshall}
+     \supervisor{Dr Stuart Marshall}
 % use \supervisors if there is more than one supervisor
 
 % Unless you've used the bschonscomp or mcompsci
 %  options above use
-   \otherdegree{Bachelor of Software Engineering with Honors}
+   \otherdegree{Bachelor of Engineering in Software Engineering with Honours}
 % here to specify degree
 
 % Comment this out if you want the date printed.
@@ -66,19 +66,28 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
+Dr
 
-
-Large amounts of information has been discovered about planets outside our solar system, and this can be accessed by anyone from the Kepler
-Exoplanets dataset \cite{datasetphl} \cite{dataset}. However this information is often
-complex and therefore not easily understood by laypeople who lack in depth knowledge of stellar objects. This is problematic as it
+Large amounts of information has been discovered about planets outside our solar
+system, and this can be accessed by anyone from the Kepler
+Exoplanets dataset \cite{datasetphl} \cite{dataset}. However this data is
+complex and therefore not easily understood by laypeople who lack in depth
+knowledge of stellar information. This is problematic as it
 means that the data gathered about these planets is not being used
-effectively to communicate to the masses. To resolve this a
-visualisation has been created that can convey this information in a way that
-interested laypeople can understand. This visualisation can be used as an
+effectively to communicate to the masses. To resolve this a 3D interactive
+visualisation called the Improved Kepler Visualisation Tool (IKVT) was created
+by extending the exisiting Kepler Visualisation Tool to convey this information
+in a way that
+interested laypeople can understand. IKVT allows two methods of interaction by
+keyboard \& mouse and by Microsoft Kinect sensor. This allows users, interested laypeople, to interact
+with the visualisation via traditional means or by a more novel approach
+respectively. This visualisation can be used as an
 information source for those wanting to increase their knowledge about the
-planets residing outside of our solar system. This report outlines the project                                                                                                                                                                                                                                    
-carried out and includes the planning of the deliverable visualisation, its implementation, and its
-evaluation to discover its effectiveness at fulfilling the requirements driving its
+planets residing outside of our solar system. This report outlines the project
+carried out and includes the planning of IKVT, its
+implementation, and its user
+evaluation to discover how effectively it fulfilled the system requirements
+driving its
 creation.
 
 
@@ -128,18 +137,32 @@ creation.
 \clearpage
 \chapter{Project Gantt Chart}
 \label{ap:gantt}
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=1.3\textwidth,angle=90]{images/gantt.jpg}
   \caption{Gantt Chart used for project}
 \end{figure}
 
+\chapter{Ethical Approval for User evaluation}
+\section{Information Sheet for Experiment}
+\label{ap:info}
+\includepdf[pages={-}]{evaluation/OwensHonorsInformationSheet.pdf}
+
+\chapter{Consent Form for Experiment}
+\label{ap:consent}
+\includepdf[pages={-}]{evaluation/OwensHonorsConsentForm.pdf}
+
+\chapter{Worksheet for Experiment}
+\label{ap:work}
+\includepdf[pages={-}]{evaluation/worksheet.pdf}
+
+\chapter{Questionnaire for Experiment}
+\label{ap:quest}
+\includepdf[pages={-}]{evaluation/OwensHonorsUserQuestionaire.pdf}
+
 \chapter{Ethical Approval for Experiment}
-\label{ap:gantt}
-\begin{figure}[h!]
-  \centering
-      \includegraphics[length=.9\textwidth]{evaluation/ethicsAproval.pdf}
-  \caption{Gantt Chart used for project}
-\end{figure}
+\label{ap:approval}
+\includepdf[pages={-}]{evaluation/ethicsAproval.pdf}
+
 
 \end{document}

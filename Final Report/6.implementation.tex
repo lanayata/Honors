@@ -53,8 +53,8 @@ to
 keep the user informed. The control panel contains all of the interactive
 components that the user can use to change the state of the visualisation. The
 components it contains are; two text areas that can be used interchangeably to
-display information about selected planets (Requirment 1), four range sliders
-(Requirment 4) shown in Figure 
+display information about selected planets (Requirement 1), four range sliders
+(Requirement 4) shown in Figure 
 \ref{fig:sliders} that are used to
 filter the exoplanets as discussed previously, and eight buttons to toggle the
 state of the visualisations. These buttons are ``Sort by KOI'', ``Sort by Temp'',
@@ -73,6 +73,7 @@ down the continuum}
   \label{fig:sliders}
 \end{figure}
 
+\clearpage
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.6\textwidth]{images/buttons.jpg}
@@ -89,8 +90,9 @@ The effect of this selection is that a text box will have further textual
 information about the selected exoplanet appended to it. In addition to this
 users have the option of clicking a button labeled ``Compare''. This allows
 the user the option to select another exoplanet so that its information is
-appended to a second text area (Requirment 2). This can be seen in Figure
+appended to a second text area (Requirement 2). This can be seen in Figure
 \ref{fig:textBoxes}. 
+\clearpage
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.7\textwidth]{images/textBoxes.jpg}
@@ -98,7 +100,7 @@ appended to a second text area (Requirment 2). This can be seen in Figure
 in each possible state, Stage 1: No selection has been made so boxes are empty,
 Stage 2: A single exoplanet has been selected and its information is displayed
 as well as the option to compare, Stage 3: The user has chosen to compare the
-selected exoplanet to another, Stage 4: A second exoplanet has been seleced and
+selected exoplanet to another, Stage 4: A second exoplanet has been selected and
 its information added to the second text area.}
   \label{fig:textBoxes}
 \end{figure}
@@ -131,7 +133,7 @@ originally occupied by all exoplanets which allows them to spread out.}
 
 The existing Kepler Visualisation Tool allowed users to sort the exoplanets on
 the Y axis by their temperature and size. In IKVT this has been extended to
-allow sorting by KOI and ESI (Requirment 3)as shown in Figure \ref{fig:ESIKOI}.
+allow sorting by KOI and ESI (Requirement 3)as shown in Figure \ref{fig:ESIKOI}.
 
 
 \begin{figure}[H]
@@ -155,8 +157,8 @@ KOI.
 \begin{figure}[H]
   \centering
       \includegraphics[width=1\textwidth]{images/selectedPlanet.jpg}
-  \caption[Implentation of the exoplanet selection process]{The above images
-display the implentation of the exoplanet selection process. We can see the
+  \caption[Implementation of the exoplanet selection process]{The above images
+display the implementation of the exoplanet selection process. We can see the
 result of an exoplanet being selected, first the planet expands, then a white
 circle expands out to outline it and a label appears to inform the user about
 the exoplanet they selected.}  
@@ -182,7 +184,7 @@ highlighted in the same way but with a different label.}
 
 To display the Goldilocks zone of selected exoplanets coloured rings appear to
 display the habitable
-and inhabitable zones of the star (Requirment 5). Each time a new planet is
+and inhabitable zones of the star (Requirement 5). Each time a new planet is
 selected the
 coloured rings change to represent the newly selected exoplanet's star, this can
 be seen in Figure
@@ -226,7 +228,7 @@ spatially separated from the main visualisation window means that users will not
 be drawn away from the visualisation by overlapping and intrusive controls. Each
 of the controls discussed above are included in this panel as shown below in
 Figure \ref{fig:nav}.
-
+\clearpage
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.3\textwidth]{images/nav.png}
@@ -270,6 +272,7 @@ by incorporating in gesture based control by utilising a Microsoft Kinect
 sensor. Incorporate these gesture based controls was completed by specifying
 gestures are detected by the visualisation which in turn modifies its state. 
 
+\clearpage
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/full.jpg}
@@ -284,9 +287,8 @@ to perform gestures}
 As
 shown in the solution design stage there were eight gestures that were needed
 for the visualisation, each of which was implemented as described below
-\begin{description}
- \item[1. Default cursor, hand is at rest or hovering over a planet.]
- 
+
+ {\bf 1. Default cursor, hand is at rest or hovering over a planet.}
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/select.PNG}
@@ -294,8 +296,8 @@ for the visualisation, each of which was implemented as described below
 hovering a hand over it. The basic cursor appears behind the selected planet.}
   \label{fig:left}
 \end{figure}
-
- \item[2 \& 3. Panning up, hand is raised or panning down, hand is lowered.]
+\clearpage
+ {\bf 2 \& 3. Panning up, hand is raised or panning down, hand is lowered.}
  \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/up.PNG}
@@ -304,10 +306,8 @@ by raising hand to the top blue area. The cursor indicates the visualisation is
 panning up.}
   \label{fig:up}
 \end{figure}
- 
- \item[4 \& 5. Rotating left, hand is to the left or rotating right, hand is to
-the right.]
- 
+  {\bf 4 \& 5. Rotating left, hand is to the left or rotating right, hand is to
+the right.}
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/left.PNG}
@@ -316,8 +316,8 @@ swiping hand to the left of the screen. The cursor indicates the visualisation
 is rotating left.}
   \label{fig:left}
 \end{figure}
-
- \item[6. Zooming in, hand is pressed forward.]
+\clearpage
+  {\bf 6. Zooming in, hand is pressed forward.}
  \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/in.PNG}
@@ -325,9 +325,7 @@ is rotating left.}
 screen. The cursor indicates the visualisation is zooming in.}
   \label{fig:in}
 \end{figure}
-
- \item[7. Zooming out, hand is pulled backwards.]
- 
+ {\bf 7. Zooming out, hand is pulled backwards.}
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/out.PNG}
@@ -336,7 +334,6 @@ screen. The cursor indicates the visualisation is zooming out.}
   \label{fig:out}
 \end{figure}
 
-\end{description}
 
 In addition to this, the screen displays the user in relation to the
 the visualisation, this is done by displaying a transparent outline of

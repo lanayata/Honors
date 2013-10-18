@@ -4,21 +4,24 @@ user evaluation was carried out. This evaluation was
  designed to discover whether the implemented visualisation
 successfully fulfilled the requirements of the project. The evaluation
 was a within subjects experiment conducted with 10
-participants. This means that all participants were exposed to every condition in the experiment. Each participant took turns using the IKVT with both keyboard \&
+participants. This means that all participants were exposed to every condition
+in the experiment. Each participant took turns using the IKVT with both keyboard
+\&
 mouse and Kinect sensor whilst answering a set of questions.
 The evaluation was designed to qualitatively and
 quantitatively assess users
-reactions and experiences with the IKVT. By mapping the experiences of users to the
-project requirements it was possible to evaluate the success of IKVT. The choice
-of using a ... rather than a comparative evaluation was made for three main
-reasons; (1.) new features were being implemented that no previous visualisations
-had, (2.) the inclusion of interaction via gesture was intended as a proof of
-concept and so users experiences were important, and (3.) The goal of the
-evaluation was to evaluate IKVT against the project requirements.
+reactions and experiences with the IKVT. By mapping the experiences of users to
+the
+project requirements it was possible to evaluate the success of IKVT. The choice not to perform comparative evaluation against other existing visualisations was made for three main
+reasons; (1.) new features were being implemented that no previous
+visualisations had, (2.) the inclusion of interaction via gesture was intended
+as a proof of concept and so users experiences were important, and (3.) The goal
+of the evaluation was to evaluate IKVT against the project requirements.
 
 \section{Purpose of Evaluation}
 User studies offer a 
-scientifically sound method to measure the performance of a visualisation. Studies can 
+scientifically sound method to measure the performance of a visualisation.
+Studies can 
 be used to evaluate the strengths and weaknesses of 
 different visualisation techniques or show that a visualisation technique is 
 useful in a practical sense, according to some objective 
@@ -38,7 +41,8 @@ filter the exoplanets.
 Following this acclimitisation time it was expected that users could accurately
 complete the set of questions in a worksheet (APPENDIX QUESTIONS) whilst using
 the visualisation. During this stage users were expected to use both interaction
-methods (Keyboard \& Mouse, and Kinect sensor). It was predicted that during the keyboard \& mouse
+methods (Keyboard \& Mouse, and Kinect sensor). It was predicted that during the
+keyboard \& mouse
 portion of the experiment the users should make more accurate selections and
 exhibit more effective data seeking behavior, whereas during the Kinect portion
 they would be more interested in experimenting with gestures rather than
@@ -56,7 +60,8 @@ provide a means of viewing how successful the visualisation was in terms of
 fulfilling the system requirements.
 
 \subsection{Participants}
-The user study was undertaken by 9 participants referred to as P2 through P10 as well
+The user study was undertaken by 9 participants referred to as P2 through P10 as
+well
 as  
 a pilot study by a single participant referred to as P1. All were either
 students
@@ -77,10 +82,24 @@ of the participants in the evaluation.}
 \end{figure}
 
 \subsection{Evaluation Environment}
+The environment of the evaluation was set in a closed computer laboratory of
+twelve computer stations. One duel monitor PC was set asside for the evaluation.
+This PC had an i7 processor, 8gb ram, and was running KDE \cite{kde} as the
+opperating system.  
+
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.8\textwidth]{images/environmentPhoto.pdf}
+  \caption[Image of evaluation environment]{Image of evaluation environment showing the seating positions and hardware locations.}  
+    \label{fig:environment}
+\end{figure}
+
+
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/environment.png}
-  \caption{Evaluation environment}  
+  \caption[Evaluation environment plan]{Evaluation environment plan showing layout of all hardware components.}  
     \label{fig:environment}
 \end{figure}
 
@@ -89,7 +108,8 @@ of the participants in the evaluation.}
 A poorly designed experiment will only yield results of limited value, because
 of this it was important to ensure that each stage of the experiment was
 focused on evaluating a specific area of the visualisation in relation to the
-project requirements. There were three key methods of gathering results during this
+project requirements \cite{stasko}. There were three key methods of gathering results during
+this
 evaluation; a
 worksheet to fill out whilst using the visualisation made up of two sets of
 questions (one for the keyboard \& mouse system and one for the Kinect
@@ -127,7 +147,8 @@ to leave.
 \end{enumerate}
 
 \subsection{Pilot Study}
-Due to the significant financial and resource costs associated with running an experiment, it 
+Due to the significant financial and resource costs associated with running an
+experiment, it 
 is valuable to conduct a pilot study with one or two 
 participants. This allows testing and refining of the experimental
 design before starting a full-fledged study with numerous 
@@ -233,7 +254,8 @@ about planets so far away.
 one another.}
 
 Whilst all participants used the comparison functionality during the
-familiarisation stage, only three of the participants (P3, P8, P10) used it while completing the
+familiarisation stage, only three of the participants (P3, P8, P10) used it
+while completing the
 worksheet. This could be because it was not made obvious enough, or because the
 questions asked of users did not force users to use this feature to get an
 answer. When the participants did use the comparison tool they were able to use
@@ -255,7 +277,8 @@ P7 found the exoplanets sorted by ESI to be the most interesting view. She
 spent an extended period of time experimenting with this during question 8 of
 the
 worksheet before moving on the later questions. P7 stated that she could find
-the potentially habitable planets easily as she could see that they were similar to Earth which was displayed clearly.
+the potentially habitable planets easily as she could see that they were similar
+to Earth which was displayed clearly.
 
 {\bf \item[R4.] The visualisation needs to allow users to define ranges of
 planetary attributes to filter which planets are displayed.}
@@ -328,7 +351,8 @@ keyboard \& mouse vs gesture based.}
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{evaluation/fra.jpg}
-  \caption[Participant using Kinect visualisation]{Participant using Kinect visualisation performing selection of an exoplanet}
+  \caption[Participant using Kinect visualisation]{Participant using Kinect
+visualisation performing selection of an exoplanet}
   \label{fig:fra}
 \end{figure}
 
@@ -412,10 +436,13 @@ enjoyed the visualisation more than others.}
     \label{fig:breakdown}
 \end{figure}
 
+
+
 \section{Discussion}
 \subsection{Threats to Validity}
 A key factor in this user evaluation was the small number of users
-chosen due to the time limit of 300 hours which did not allow for a larger and more
+chosen due to the time limit of 300 hours which did not allow for a larger and
+more
 in depth study. Because of this, the results gathered may
 not be representative of a larger population. It was also limited to a narrow
 demographic of young professionals and students which does not cover all of the
@@ -469,7 +496,8 @@ information in the Kepler Exoplanet dataset. The findings pointed to it
 being successful in this regard. However, there are areas that this evaluation
 could be improved to strengthen this result. The main improvement for this
 evaluation is to include a larger number of participants more representative of
-the wider population.
+the wider population. These results were first gathered in the qualitative
+study, and were then confirmed by the quantitative results that found the same.
 
 
 

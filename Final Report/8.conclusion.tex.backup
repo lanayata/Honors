@@ -1,14 +1,18 @@
 \chapter{Summary}\label{C:con}
-This project contributes a design, implementaion, and evalutation of an
+This project contributes the design,
+implementation, and evaluation of an
 interactive 3D visualisation called the Improved Kepler Visualisation Tool
-(IKVT). IKVT has two modes of interaction; the traditional keyboard \& mouse and
+(IKVT) to the field of Human Computer Interaction. IKVT has two modes of interaction; the traditional keyboard \& mouse and
 the more novel Microsoft Kinect sensor. 
 
 \section{System Design}
-The requiremnets for IKVT were designed using Cooper et al.'s user oriented
-design approach which emphasised using user models and user scenarios \cite{AboutFace3}.  Two user
-models and seven user scenarios were used in the creation of eight project requirements that
-were used extensively in the design, implementation and evaluation of IKVT to ensure that it
+The requirements for IKVT were designed using Cooper et al.'s user oriented
+design approach which emphasised using user models and user scenarios
+\cite{AboutFace3}.  Two user
+models and seven user scenarios were used in the creation of eight project
+requirements that
+were used extensively in the design, implementation and evaluation of IKVT to
+ensure that it
 solved the four key issues that this project hoped to address.
 \begin{description}
  \item[Issue 1.] Content in the Kepler Exoplanet Database is difficult to view
@@ -21,26 +25,30 @@ a visual reference due to its scale.
 minimal
 functionality for exploring the information in effective ways.
  \item[Issue 4.] Visualisations need to allow user interaction to make the most
-of
-the data they display.
+of the data they display.
+
+
 \end{description}
 
 \section{System Implementation}
-IKVT was implemented in Processing, an opensource Java programming language and
+IKVT was implemented in Processing, an open-source Java programming language and
 integrated development environment (IDE). It was built upon an existing
-visualisation, the Kepler Visualisaion Tool \cite{kepler_github,
-kepler_article} to create more effective interaction techniques and allow users to access more information in the Kepler Exoplanet dataset. During the implementation stage of the project each of the
+visualisation, the Kepler Visualisation Tool \cite{kepler_github,
+kepler_article} to create more effective interaction techniques and allow users
+to access more information in the Kepler Exoplanet dataset. During the
+implementation stage of the project each of the
 designs created in the system design stage were implemented in
 fulfillment of the project requirements. 
 
 \section{System Evaluation}
-IKVT was evaluated in a user study that gathered both qualitative and quantitative
+IKVT was evaluated in a user study that gathered both qualitative and
+quantitative
 results. The evaluation was designed to gather users experiences with the IKVT
 to examine whether or not it fulfilled the system requirements designed to solve
 the issues mentioned above.
 
 The evaluation found that all of these requirements were fulfilled by the
-visualisation. In additon to this the participants in general found that the
+visualisation. In addition to this the participants in general found that the
 IKVT had a low learning curve, was enjoyable to use, and allowed
 access to interesting information. There was also a common consensus among the
 participants that the Kinect system was more fun to use than the keyboard \&
@@ -48,7 +56,8 @@ mouse because of its novelty, but lacked the control that the
 keyboard \& mouse allowed which made it less effective at accessing the
 information in the visualisation. The evaluation also revealed that one area,
 viewing the habitable zones of stars, lacked
-usability because it was unintuitive for the users participating in the evaluation.     
+usability because it was unintuitive for the users participating in the
+evaluation.     
 \section{Future Work}
 IKVT  can be taken further in many ways depending
 on how it is intended to be used. There is the option of using the system as a
@@ -59,19 +68,42 @@ improved Kinect interaction would be beneficial as immersion would be the
 decider on its success. Another option would be for a standalone
 desktop system that users would use multiple times and so prior knowledge of how
 to use the system could be expected. This would mean that more complex
-functionality could be introduced with the expectation that it could be learned and used by
+functionality could be introduced with the expectation that it could be learned
+and used by
 users. The systems current state could me modified to fit into either of these
 two options.
 
 A weakness in the system that needs to be addressed is the Goldilocks zone view
-which the evaluation discovered was not intutive enough to make it effective. To
+which the evaluation discovered was not intuitive enough to make it effective.
+To
 address this the functionality needs to be evaluated to discover which aspects
-of it cause it to be unintuitive.
+of it cause it to be unintuitive. The first improvement is to provide a common
+point of reference for the habitable zones. This is because the area that
+confused users the most was that when they selected a new planet Goldilocks
+zones changed. 
 
 The user evaluation found that gesture based control of IKVT was the most
 enjoyable way for users to interact with IKVT even though it was less effective
 at accessing information. This opens up the opportunity for further work to
 improve the level of gesture based control and accuracy so that it rivals the
 keyboard \& mouse. This could be done in a range of ways from simply enhancing
-the intutiveity, to more advanced methods of gesture detection such as joining gestures together.
+the intuitivity, to more advanced methods of gesture detection such as joining
+gestures together.
+\\\\ 
+These three future improvements are ordered by importance below.
+\begin{enumerate}
+ \item Address Goldilocks zone view
+ \item Improve gesture based control
+ \item Focus IKVT towards a set environment to focus futher development
+\end{enumerate}
 
+\section{Project Contributions}
+This project delivered an interactive 3D visualisation that conveys more
+information and contains interactivity to allow users to access more of the information contained in the Kepler Exoplanet dataset than other visualisations in the same field. This
+extension was evaluated both qualitatively and quantitatively by a within
+subjects user experiment with the results indicating that it fulfilled the requirements.
+A key part of this project was the development of interactive techniques to
+provide improved access to this data. These techniques are a mix of keyboard and
+mouse as well as a novel gesture based approach using a Microsoft Kinect sensor.
+The work and research completed for this project will provide the opportunity
+for further improvement of the produced visualisation in the future.

@@ -73,6 +73,7 @@ down the continuum}
   \label{fig:sliders}
 \end{figure}
 
+\clearpage
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.6\textwidth]{images/buttons.jpg}
@@ -91,6 +92,7 @@ users have the option of clicking a button labeled ``Compare''. This allows
 the user the option to select another exoplanet so that its information is
 appended to a second text area (Requirment 2). This can be seen in Figure
 \ref{fig:textBoxes}. 
+\clearpage
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.7\textwidth]{images/textBoxes.jpg}
@@ -226,7 +228,7 @@ spatially separated from the main visualisation window means that users will not
 be drawn away from the visualisation by overlapping and intrusive controls. Each
 of the controls discussed above are included in this panel as shown below in
 Figure \ref{fig:nav}.
-
+\clearpage
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.3\textwidth]{images/nav.png}
@@ -270,6 +272,7 @@ by incorporating in gesture based control by utilising a Microsoft Kinect
 sensor. Incorporate these gesture based controls was completed by specifying
 gestures are detected by the visualisation which in turn modifies its state. 
 
+\clearpage
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/full.jpg}
@@ -284,9 +287,8 @@ to perform gestures}
 As
 shown in the solution design stage there were eight gestures that were needed
 for the visualisation, each of which was implemented as described below
-\begin{description}
- \item[1. Default cursor, hand is at rest or hovering over a planet.]
- 
+
+ {\bf 1. Default cursor, hand is at rest or hovering over a planet.}
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/select.PNG}
@@ -294,8 +296,8 @@ for the visualisation, each of which was implemented as described below
 hovering a hand over it. The basic cursor appears behind the selected planet.}
   \label{fig:left}
 \end{figure}
-
- \item[2 \& 3. Panning up, hand is raised or panning down, hand is lowered.]
+\clearpage
+ {\bf 2 \& 3. Panning up, hand is raised or panning down, hand is lowered.}
  \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/up.PNG}
@@ -304,10 +306,8 @@ by raising hand to the top blue area. The cursor indicates the visualisation is
 panning up.}
   \label{fig:up}
 \end{figure}
- 
- \item[4 \& 5. Rotating left, hand is to the left or rotating right, hand is to
-the right.]
- 
+  {\bf 4 \& 5. Rotating left, hand is to the left or rotating right, hand is to
+the right.}
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/left.PNG}
@@ -316,8 +316,8 @@ swiping hand to the left of the screen. The cursor indicates the visualisation
 is rotating left.}
   \label{fig:left}
 \end{figure}
-
- \item[6. Zooming in, hand is pressed forward.]
+\clearpage
+  {\bf 6. Zooming in, hand is pressed forward.}
  \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/in.PNG}
@@ -325,9 +325,7 @@ is rotating left.}
 screen. The cursor indicates the visualisation is zooming in.}
   \label{fig:in}
 \end{figure}
-
- \item[7. Zooming out, hand is pulled backwards.]
- 
+ {\bf 7. Zooming out, hand is pulled backwards.}
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{images/out.PNG}
@@ -336,7 +334,6 @@ screen. The cursor indicates the visualisation is zooming out.}
   \label{fig:out}
 \end{figure}
 
-\end{description}
 
 In addition to this, the screen displays the user in relation to the
 the visualisation, this is done by displaying a transparent outline of

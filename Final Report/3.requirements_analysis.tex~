@@ -240,5 +240,5 @@ keyboard \& mouse vs gesture based.
   \centering
       \includegraphics[width=1\textwidth]{images/issues_to_req_matrix.pdf}
   \caption[Matrix of requirements to issues]{A matrix of the project requirements mapped to the issues they attempt to
-address}
+address.}
 \end{figure}

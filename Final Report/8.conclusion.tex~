@@ -2,7 +2,8 @@
 This project contributes the design,
 implementation, and evaluation of an
 interactive 3D visualisation called the Improved Kepler Visualisation Tool
-(IKVT) to the field of Human Computer Interaction. IKVT has two modes of interaction; the traditional keyboard \& mouse and
+(IKVT) to the field of Human Computer Interaction. IKVT has two modes of
+interaction; the traditional keyboard \& mouse and
 the more novel Microsoft Kinect sensor. 
 
 \section{System Design}
@@ -25,12 +26,17 @@ a visual reference due to its scale.
 minimal
 functionality for exploring the information in effective ways.
  \item[Issue 4.] Visualisations need to allow user interaction to make the most
-of
-the data they display.
+of the data they display.
 \end{description}
 
+
+The solution designs created were used to guide the implementation of IKVT to
+ensure that it completed each of the system requirements. Using class and
+sequence diagrams provided a means of understanding the exisitng system in terms
+of its structure and execution. The designs were used to guide the asthetics of
+each of the functionalities produced. 
 \section{System Implementation}
-IKVT was implemented in Processing, an opensource Java programming language and
+IKVT was implemented in Processing, an open-source Java programming language and
 integrated development environment (IDE). It was built upon an existing
 visualisation, the Kepler Visualisation Tool \cite{kepler_github,
 kepler_article} to create more effective interaction techniques and allow users
@@ -88,7 +94,7 @@ improve the level of gesture based control and accuracy so that it rivals the
 keyboard \& mouse. This could be done in a range of ways from simply enhancing
 the intuitivity, to more advanced methods of gesture detection such as joining
 gestures together.
- 
+\\\\ 
 These three future improvements are ordered by importance below.
 \begin{enumerate}
  \item Address Goldilocks zone view
@@ -96,3 +102,16 @@ These three future improvements are ordered by importance below.
  \item Focus IKVT towards a set environment to focus futher development
 \end{enumerate}
 
+\section{Project Contributions}
+This project delivered an interactive 3D visualisation that conveys more
+information and contains interactivity to allow users to access more of the
+information contained in the Kepler Exoplanet dataset than other visualisations
+in the same field. This
+extension was evaluated both qualitatively and quantitatively by a within
+subjects user experiment with the results indicating that it fulfilled the
+requirements.
+A key part of this project was the development of interactive techniques to
+provide improved access to this data. These techniques are a mix of keyboard and
+mouse as well as a novel gesture based approach using a Microsoft Kinect sensor.
+The work and research completed for this project will provide the opportunity
+for further improvement of the produced visualisation in the future.

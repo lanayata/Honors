@@ -4,7 +4,8 @@ Kepler Visualisation Tool (IKVT). It details
 the key design decisions revolving around structure, aesthetics, and
 functionality that were made about the visualisation. 
 % Description of tool
-This project aimed to improve an existing visualisation, The Kepler Visualisation
+This project aimed to improve an existing visualisation, The Kepler
+Visualisation
 Tool which was discussed in the previous chapter. This 
 visualisation displays exoplanets and some of their features but lacks effective
 interactivity for users to access the detailed information contained in the
@@ -36,6 +37,26 @@ next.
 
 \begin{enumerate}
 \clearpage
+ {\bf \item UML Class Diagram}
+ Class diagrams describe the structure of a system by showing the systems
+classes, their attributes, methods, and the relationships among objects.
+ Developers can use class diagrams to design and document the systems coded (or
+soon to be coded) classes. For this project class diagrams were used to
+understand
+the makeup of the existing Kepler Visualisation Tool and then to plan the
+extensions. The diagram in Figure \ref{fig:classDiagram} shows the structure and
+attributes of the Kepler Visualisation Tool. This class
+diagram was updated with the improvements introduced in the visualisation
+to provide an overview that could be used for further planning.
+ \begin{figure}[H]
+  \centering
+      \includegraphics[width=0.8\textwidth]{images/classDiagram.png}
+  \caption[Class Diagram of IKVT]{The class diagram used to understand
+the structure of the existing Kepler Visualisation Tool and plan the
+extensions.}  
+  \label{fig:classDiagram}
+\end{figure}
+\clearpage
 {\bf \item UML Sequence Diagram}
   A sequence diagram primarily shows the interactions between
 objects in the sequential order that those interactions occur.
@@ -52,25 +73,6 @@ render cycle, it shows when each component of the visualisation is updated and
 rendered.}  
     \label{fig:sequenceDiagram}
 \end{figure}
-\clearpage
- {\bf \item UML Class Diagram}
- Class diagrams describe the structure of a system by showing the systems
-classes, their attributes, methods, and the relationships among objects.
- Developers can use class diagrams to design and document the systems coded (or
-soon to be coded) classes. For this project class diagrams were used to
-understand
-the makeup of the existing Kepler Visualisation Tool and then to plan the
-extensions. The diagram in Figure \ref{fig:classDiagram} shows the structure and attributes of the Kepler Visualisation Tool. This class
-diagram was updated with the improvements introduced in the visualisation
-to provide an overview that could be used for further planning.
- \begin{figure}[H]
-  \centering
-      \includegraphics[width=0.8\textwidth]{images/classDiagram.png}
-  \caption[Class Diagram of IKVT]{The class diagram used to understand
-the structure of the existing Kepler Visualisation Tool and plan the
-extensions.}  
-  \label{fig:classDiagram}
-\end{figure}
 \end{enumerate}
 
 By using
@@ -78,7 +80,7 @@ the sequence diagram in Figure \ref{fig:sequenceDiagram} coupled with the class
 diagram in Figure \ref{fig:classDiagram} we can see where each method and field
 is located and modified. This is a powerful way to understanding an
 existing system and then planning extensions.
-
+\clearpage
 \section{Visualisation Design}
 The requirements produced in Chapter \ref{Chap:ra}: Requirements Analysis
 provide a
@@ -244,9 +246,6 @@ habitability.}
   \label{fig:hab}
 \end{figure}
 
-
-
-
 \end{enumerate}
 \clearpage
 \subsection{Nonfunctional Requirement}
@@ -262,10 +261,11 @@ control panel
 is introduced. This panel contains all of the interactive elements
 of the visualisation in a single central place that is spatially separated from
 the main visualisation. This spacial separation is important as it reduces
-cognitive load on users \cite{InformationCapacity}. It does this by allowing them to focus on the
+cognitive load on users \cite{InformationCapacity}. It does this by allowing
+them to focus on the
 visualisation itself
 until they need to use the control panel in which case they can switch focus to
-that \cite{mendel}. . It also
+that \cite{mendel}. It also
 means that users only need to look in one place for all of the interactive
 elements which reduces the risk of confusion. The
 control panel would contain all of the interactive elements as discussed in
@@ -290,11 +290,14 @@ The visualisation must not show so much information that it
 causes information overload for users. The ability to filter and sort the
 exoplanets gives a user the tools needed to
 reduce the quantity of planets displayed in the visualisation and thus the
-information load imposed on users \cite{lewis}. In addition to this, having the control
+information load imposed on users \cite{lewis}. In addition to this, having the
+control
 panel separate from the main visualisation reduces the cognitive
 load on users as they don't have to use this component until they want to.
-Having the interaction broken up into three sections also assists with this as it
-utilises Gestalt's law of proximity \cite{withinSubject} which states that when an
+Having the interaction broken up into three sections also assists with this as
+it
+utilises Gestalt's law of proximity \cite{withinSubject} which states that when
+an
 individual perceives an assortment of objects close together they are seen a
 group. This layout is shown in Figure \ref{fig:clutter}.
 
@@ -329,10 +332,12 @@ Users also need to be able to
 zoom in and out of the visualisation as well as select exoplanets for further
 examination. To do this users should be able to
 push and pull their hand from the screen to zoom in and out, as well as
-hover over a planet to make a selection. Providing feedback to users is important in keeping them informed about the
+hover over a planet to make a selection. Providing feedback to users is
+important in keeping them informed about the
 state of the visualisation, this means
 incorporating new cursors to indicate the gestures that have been detected.
-There are seven states that the cursor needs to be able to display to inform the user
+There are seven states that the cursor needs to be able to display to inform the
+user
 of what action they are performing. These states are
 
 \begin{enumerate}
@@ -355,6 +360,12 @@ displayed in Figure \ref{fig:cursors}
 for Kinect system to inform user of the gesture they are performing.}  
   \label{fig:cursors}
 \end{figure}
+
+Special consideration will need to be given to the viewing position of the user
+using a Kinect sensor as they will be located further from the screen due to the
+optimal sensor angle. This means that the size of the visual components in the
+visualisation will need to be balanced to be large enough to be seen from a
+distance but not to large to be ineffective in the keyboard \& mouse system.
 
 No gesture design has been included for interacting with the control panel.
 This is because the Microsoft Kinect sensor implementation in this visualisation
